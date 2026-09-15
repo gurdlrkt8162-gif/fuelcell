@@ -1,0 +1,44 @@
+name: Smoke public-data download
+
+on:
+  push:
+    paths:
+      - '.github/workflows/smoke-download.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  PYTHONUNBUFFERED: '1'
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Download and verify two public datasets
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          mkdir -p bundle/FC04 bundle/FC17
+          curl -fL --retry 5 --retry-all-errors --connect-timeout 30 \
+            'https://zenodo.org/records/13166135/files/DataSet.zip?download=1' \
+            -o bundle/FC04/DataSet.zip
+          echo 'e7fce01111c0621630a7b3be766f9028  bundle/FC04/DataSet.zip' | md5sum -c -
+          curl -fL --retry 5 --retry-all-errors --connect-timeout 30 \
+            'https://github.com/ECSIM/pem-dataset1/archive/refs/tags/v1.1.zip' \
+            -o bundle/FC17/pem-dataset1-v1.1.zip
+          file bundle/FC04/DataSet.zip bundle/FC17/pem-dataset1-v1.1.zip
+          unzip -t bundle/FC04/DataSet.zip
+          unzip -t bundle/FC17/pem-dataset1-v1.1.zip
+          find bundle -type f -print0 | sort -z | xargs -0 sha256sum > bundle/SHA256SUMS.txt
+          du -ah bundle | sort -h | tail -n 20
+      - name: Upload smoke artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: smoke-public-data
+          path: bundle
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 0
