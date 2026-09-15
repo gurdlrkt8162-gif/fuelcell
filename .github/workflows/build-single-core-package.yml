@@ -1,0 +1,183 @@
+name: Build one verified P1-P5 core RAW package
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/build-single-core-package.yml'
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  build-single-package:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    steps:
+      - name: Checkout audit code
+        uses: actions/checkout@v4
+
+      - name: Install Python dependency
+        run: python -m pip install --disable-pip-version-check requests
+
+      - name: Download verified PEMFC core artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: open-fuelcell-core
+          path: package/01_PEMFC/OPEN_FUELCELL_CORE
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          run-id: 34954368816
+
+      - name: Download verified battery core artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: open-battery-a
+          path: package/02_BATTERY/OPEN_BATTERY_A
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          run-id: 34954368816
+
+      - name: Download verified BoP artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: open-bop
+          path: package/04_BOP/OPEN_BOP
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          run-id: 34954368816
+
+      - name: Download verified 1 kW PEMFC purge artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: mendeley-FC06
+          path: package/01_PEMFC/FC06_MENDELEY
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          run-id: 34954143937
+
+      - name: Download verified AERO4River USV artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: mendeley-MIS04
+          path: package/03_MISSION/MIS04_MENDELEY
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          run-id: 34954143937
+
+      - name: Download and verify CMU UAV mission data
+        run: |
+          set -o pipefail
+          python scripts/download_open_group.py --ids MIS01 --out package/03_MISSION/CMU_UAV 2>&1 | tee download-MIS01.log
+
+      - name: Download and verify 100 F EDLC data
+        run: |
+          set -o pipefail
+          python scripts/download_open_group.py --ids SC01 --out package/05_SUPERCAP/UTWENTE_100F_40C 2>&1 | tee download-SC01.log
+
+      - name: Repair missing CALCE CS2_33 file and preserve original error evidence
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib, json, time, zipfile
+          import requests
+
+          package = Path('package')
+          audit = package / '99_AUDIT'
+          audit.mkdir(parents=True, exist_ok=True)
+          original_errors = package / '02_BATTERY' / 'OPEN_BATTERY_A' / 'ERRORS.json'
+          if original_errors.exists():
+              (audit / 'ORIGINAL_BATTERY_A_ERRORS.json').write_bytes(original_errors.read_bytes())
+
+          url = 'https://web.calce.umd.edu/batteries/data/CS2_33.zip'
+          dest = package / '02_BATTERY' / 'OPEN_BATTERY_A' / 'BAT04' / 'original' / 'CS2_33.zip'
+          dest.parent.mkdir(parents=True, exist_ok=True)
+          tmp = dest.with_suffix('.zip.part')
+          session = requests.Session()
+          session.headers['User-Agent'] = 'P1-P5-final-package/2026-09-15'
+          last = None
+          for attempt in range(8):
+              try:
+                  with session.get(url, stream=True, timeout=(60, 600), allow_redirects=True) as r:
+                      r.raise_for_status()
+                      with tmp.open('wb') as f:
+                          for block in r.iter_content(8 * 1024 * 1024):
+                              if block:
+                                  f.write(block)
+                  last = None
+                  break
+              except Exception as exc:
+                  last = exc
+                  if tmp.exists(): tmp.unlink()
+                  time.sleep(min(60, 2 ** attempt))
+          if last is not None:
+              raise last
+          tmp.replace(dest)
+          if not zipfile.is_zipfile(dest):
+              raise RuntimeError('CS2_33 is not a ZIP file')
+          with zipfile.ZipFile(dest) as zf:
+              bad = zf.testzip()
+              if bad is not None:
+                  raise RuntimeError(f'CS2_33 CRC failure: {bad}')
+              entries = len(zf.infolist())
+          h = hashlib.sha256()
+          with dest.open('rb') as f:
+              for b in iter(lambda: f.read(16 * 1024 * 1024), b''):
+                  h.update(b)
+          evidence = {
+              'source_url': url,
+              'path': dest.as_posix(),
+              'size_bytes': dest.stat().st_size,
+              'sha256': h.hexdigest(),
+              'zip_crc': 'pass',
+              'zip_entries': entries,
+              'resolution': 'Previously interrupted download was repeated and verified. metadata.html remains intentionally excluded because it is an HTML representation, not a scientific RAW file.'
+          }
+          (audit / 'CS2_33_REPAIR.json').write_text(json.dumps(evidence, indent=2), encoding='utf-8')
+          PY
+
+      - name: Add guide, scripts, and execution evidence
+        run: |
+          mkdir -p package/99_AUDIT
+          cp docs/FINAL_PACKAGE_README_KO.md package/README_KO.md
+          cp scripts/download_open_group.py package/99_AUDIT/
+          cp scripts/build_final_package_audit.py package/99_AUDIT/
+          cp download-MIS01.log package/99_AUDIT/
+          cp download-SC01.log package/99_AUDIT/
+          cat > package/99_AUDIT/FINAL_CORRECTIONS.md <<'EOF'
+          # Final corrections
+
+          - `CS2_33.zip` was re-downloaded with retry logic and CRC-tested.
+          - Zenodo `metadata.html` is intentionally not treated as RAW scientific data.
+          - Original battery-a error evidence is retained separately.
+          - FC01/FC02 duplicate files remain traceable through their source manifests and must not be split across training and external validation.
+          - ECSIM spectra lacking a validated frequency column are restricted to Nyquist-shape/geometric-feature analysis; no fabricated frequency axis is permitted.
+          EOF
+          df -h > package/99_AUDIT/DISK_BEFORE_AUDIT.txt
+
+      - name: Strict recursive package audit
+        run: |
+          set -o pipefail
+          python scripts/build_final_package_audit.py package 2>&1 | tee package/99_AUDIT/FINAL_AUDIT_EXECUTION_LOG.txt
+          df -h > package/99_AUDIT/DISK_AFTER_AUDIT.txt
+
+      - name: Upload one final ZIP artifact
+        id: upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: P1-P5_VERIFIED_CORE_RAW_2026-09-15
+          path: package
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 90
+
+      - name: Publish artifact receipt
+        run: |
+          {
+            echo '# Final single-package artifact'
+            echo
+            echo '- Artifact ID: `${{ steps.upload.outputs.artifact-id }}`'
+            echo '- Artifact URL: ${{ steps.upload.outputs.artifact-url }}'
+            echo '- Artifact SHA-256: `${{ steps.upload.outputs.artifact-digest }}`'
+          } | tee -a "$GITHUB_STEP_SUMMARY"
