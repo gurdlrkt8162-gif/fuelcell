@@ -1,10 +1,11 @@
-name: Render temporary study guide assets
+name: Build three-lecture study guide pages
 
 on:
   push:
     branches: [main]
     paths:
       - 'scripts/render_study_assets.py'
+      - 'scripts/build_study_guide_pages.py'
       - '.github/workflows/render_study_assets.yml'
   workflow_dispatch:
 
@@ -14,7 +15,7 @@ permissions:
 jobs:
   render:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 35
     env:
       ELECTRO_URL: 'https://sdmntprcentralus.oaiusercontent.com/files/00000000-5504-81f5-9c26-c739fcb13ecc/raw?se=2026-09-15T11%3A30%3A38Z&sp=r&sv=2026-02-06&sr=b&scid=739f3f78-8f58-53ad-bc33-d4918b86f41b&skoid=bb372dd6-3b2a-4af2-b355-c26497ba23cd&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-15T00%3A56%3A06Z&ske=2026-09-16T00%3A56%3A06Z&sks=b&skv=2026-02-06&sig=a4CYYU0DgIXGxbIVK4rj0LFAqdDj53vQsUhUzejZ4GM%3D'
       PEMFC_URL: 'https://sdmntprkoreacentral.oaiusercontent.com/files/00000000-c954-8206-abe9-ac8dd68cc208/raw?se=2026-09-15T11%3A30%3A44Z&sp=r&sv=2026-02-06&sr=b&scid=c62e10ac-ec5a-5f6a-80e4-8864233b7a99&skoid=bb372dd6-3b2a-4af2-b355-c26497ba23cd&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-15T00%3A35%3A59Z&ske=2026-09-16T00%3A35%3A59Z&sks=b&skv=2026-02-06&sig=g38WH%2BnwrG9aGqrNGL9Pzg9hCKhfRCOmW6OhFQ/U8Y0%3D'
@@ -23,8 +24,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Install renderer
-        run: pip install --disable-pip-version-check pymupdf pillow
+      - name: Install fonts and renderer
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-nanum
+          pip install --disable-pip-version-check pymupdf pillow
       - name: Download exact source PDFs
         run: |
           mkdir -p _source
@@ -32,17 +36,30 @@ jobs:
           curl --fail --location --retry 4 --retry-delay 2 "$PEMFC_URL" -o _source/pemfc.pdf
           test "$(stat -c%s _source/electrochemistry.pdf)" -gt 5000000
           test "$(stat -c%s _source/pemfc.pdf)" -gt 1300000
-      - name: Render pages and manifest
+      - name: Render source pages
         run: python scripts/render_study_assets.py
-      - name: Validate asset counts
+      - name: Build final 16:9 study-guide pages
+        run: python scripts/build_study_guide_pages.py
+      - name: Validate source and final page counts
         run: |
           test "$(find study_guide_assets/electro -name 'e*.jpg' | wc -l)" -eq 85
           test "$(find study_guide_assets/pemfc -name 'p*.jpg' | wc -l)" -eq 30
           test -s study_guide_assets/manifest.json
-      - name: Commit temporary public assets
+          COUNT=$(find study_guide_final_pages -name 'slide*.jpg' | wc -l)
+          test "$COUNT" -ge 130
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data=json.loads(Path('study_guide_final_pages/manifest.json').read_text(encoding='utf-8'))
+          assert data['page_count'] == len(data['files'])
+          assert data['page_count'] >= 130
+          print(data['page_count'])
+          PY
+      - name: Commit temporary public images
         run: |
           git config user.name 'study-guide-builder'
           git config user.email 'actions@users.noreply.github.com'
-          git add study_guide_assets
-          git commit -m 'Add temporary rendered lecture assets [skip ci]'
+          git add study_guide_assets study_guide_final_pages
+          git diff --cached --quiet && exit 0
+          git commit -m 'Add rendered final study-guide pages [skip ci]'
           git push
