@@ -1,0 +1,49 @@
+name: Download verified open public-data groups
+
+on:
+  push:
+    paths:
+      - '.github/workflows/download-open-groups.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  group:
+    strategy:
+      fail-fast: false
+      max-parallel: 7
+      matrix:
+        group: [fuelcell-core, battery-a, battery-b, supercap-a, supercap-b, missions, bop]
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Python dependency
+        run: python -m pip install --disable-pip-version-check requests
+      - name: Download and strictly verify ${{ matrix.group }}
+        id: download
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          python scripts/download_open_group.py --group '${{ matrix.group }}' --out 'bundle/${{ matrix.group }}' 2>&1 | tee 'download-${{ matrix.group }}.log'
+          test ${PIPESTATUS[0]} -eq 0
+      - name: Preserve execution log
+        if: always()
+        run: |
+          mkdir -p 'bundle/${{ matrix.group }}'
+          cp 'download-${{ matrix.group }}.log' 'bundle/${{ matrix.group }}/EXECUTION_LOG.txt' || true
+          df -h . > 'bundle/${{ matrix.group }}/DISK_REPORT.txt'
+      - name: Upload ${{ matrix.group }} artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: open-${{ matrix.group }}
+          path: bundle/${{ matrix.group }}
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 14
+      - name: Enforce verification success
+        if: steps.download.outcome != 'success'
+        run: exit 1
