@@ -27,26 +27,34 @@ def main():
                 responses.append({'url':u,'status':resp.status,'content_type':resp.headers.get('content-type'),'content_length':resp.headers.get('content-length')})
         page.on('response',on_response)
         page.goto(url,wait_until='networkidle',timeout=args.timeout_ms)
-        # Dismiss common cookie UI if rendered.
         for label in ('Accept All Cookies','Accept all cookies','I agree','Accept'):
             try:
                 page.get_by_role('button',name=label,exact=False).first.click(timeout=1500)
                 break
-            except Exception: pass
+            except Exception:
+                pass
         buttons=page.get_by_text('Download All',exact=False)
         if buttons.count()==0:
             (out/f'{args.dataset_id}_page.html').write_text(page.content(),encoding='utf-8')
             (out/f'{args.dataset_id}_network.json').write_text(json.dumps(responses,indent=2),encoding='utf-8')
-            print('Download All button not found',file=sys.stderr); sys.exit(2)
+            print('Download All button not found',file=sys.stderr)
+            sys.exit(2)
         with page.expect_download(timeout=args.timeout_ms) as info:
             buttons.first.click()
         dl=info.value
         name=safe(dl.suggested_filename or f'{args.dataset_id}_v{args.version}.zip')
         target=out/name
         dl.save_as(str(target))
-        metadata={'dataset_id':args.dataset_id,'version':args.version,'page_url':url,'suggested_filename':dl.suggested_filename,'saved_as':str(target),'failure':dl.failure,'network':responses}
+        failure=dl.failure()
+        metadata={'dataset_id':args.dataset_id,'version':args.version,'page_url':url,
+                  'suggested_filename':dl.suggested_filename,'saved_as':str(target),
+                  'failure':failure,'network':responses}
         (out/f'{args.dataset_id}_download.json').write_text(json.dumps(metadata,indent=2),encoding='utf-8')
+        if failure:
+            print(f'Download failure: {failure}',file=sys.stderr)
+            sys.exit(3)
         print(target)
         browser.close()
 
-if __name__=='__main__': main()
+if __name__=='__main__':
+    main()
