@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import csv, json, os, time
+import csv, html, json, os, re, time
 from pathlib import Path
+from urllib.parse import unquote
 import requests
 
 SOURCES = [
@@ -40,7 +41,7 @@ def get(url, **kw):
     last=None
     for a in range(5):
         try:
-            r=S.get(url,timeout=60,allow_redirects=True,**kw)
+            r=S.get(url,timeout=90,allow_redirects=True,**kw)
             if r.status_code in (429,500,502,503,504):
                 time.sleep(2**a); last=r; continue
             return r
@@ -54,16 +55,21 @@ def headish(url):
         r=S.head(url,timeout=45,allow_redirects=True)
         if r.status_code>=400 or 'content-length' not in r.headers:
             r=S.get(url,timeout=45,allow_redirects=True,headers={'Range':'bytes=0-0','User-Agent':UA},stream=True)
-        return {'url':url,'status':r.status_code,'final_url':r.url,'size':int(r.headers.get('content-length','0') or 0),
-                'content_type':r.headers.get('content-type'),'etag':r.headers.get('etag'),'content_range':r.headers.get('content-range')}
+        size=int(r.headers.get('content-length','0') or 0)
+        cr=r.headers.get('content-range')
+        if cr and '/' in cr:
+            try: size=int(cr.rsplit('/',1)[1])
+            except ValueError: pass
+        return {'name':unquote(url.rstrip('/').rsplit('/',1)[-1]) or 'download','url':url,'status':r.status_code,'final_url':r.url,'size':size,
+                'content_type':r.headers.get('content-type'),'etag':r.headers.get('etag'),'content_range':cr}
     except Exception as e:
-        return {'url':url,'error':repr(e)}
+        return {'name':unquote(url.rstrip('/').rsplit('/',1)[-1]) or 'download','url':url,'error':repr(e)}
 
 def discover_zenodo(rec):
     r=get(f'https://zenodo.org/api/records/{rec}')
     out={'api_url':r.url,'status':r.status_code}
     if r.status_code!=200:
-        out['body']=r.text[:1000]; return out
+        out['body']=r.text[:2000]; return out
     j=r.json(); out['title']=j.get('metadata',{}).get('title'); out['access']=j.get('access',{}); out['license']=j.get('metadata',{}).get('rights') or j.get('metadata',{}).get('license')
     fs=[]
     for f in j.get('files',[]):
@@ -72,34 +78,92 @@ def discover_zenodo(rec):
                    'url':links.get('content') or links.get('self'),'mimetype':f.get('mimetype')})
     out['files']=fs; out['total_size']=sum((f.get('size') or 0) for f in fs); return out
 
+def _mendeley_files(obj):
+    arr=[]
+    if isinstance(obj,dict):
+        arr=obj.get('files') or []
+        title=obj.get('name') or obj.get('title')
+        licence=obj.get('data_licence') or obj.get('license')
+    else:
+        title=licence=None
+    files=[]
+    for f in arr:
+        if not isinstance(f,dict): continue
+        cd=f.get('content_details') or {}
+        url=(f.get('download_url') or f.get('downloadUrl') or f.get('url') or
+             cd.get('download_url') or cd.get('downloadUrl') or cd.get('url'))
+        name=f.get('filename') or f.get('name') or f.get('file_name') or cd.get('filename') or f.get('id')
+        size=f.get('size') or f.get('filesize') or f.get('file_size') or cd.get('size') or cd.get('file_size')
+        checksum=f.get('checksum') or f.get('md5') or cd.get('checksum') or cd.get('md5')
+        files.append({'name':name,'size':size,'checksum':checksum,'url':url,'raw':f})
+    return title,licence,files
+
+def _walk_json(obj):
+    if isinstance(obj,dict):
+        yield obj
+        for v in obj.values(): yield from _walk_json(v)
+    elif isinstance(obj,list):
+        for v in obj: yield from _walk_json(v)
+
 def discover_mendeley(dsid,ver):
-    endpoints=[
-      f'https://data.mendeley.com/public-api/datasets/{dsid}/versions/{ver}/files',
-      f'https://api.data.mendeley.com/datasets/{dsid}/versions/{ver}/files',
-      f'https://data.mendeley.com/public-api/datasets/{dsid}/versions/{ver}'
-    ]
     attempts=[]
-    for u in endpoints:
-        r=get(u); attempts.append({'url':u,'status':r.status_code,'content_type':r.headers.get('content-type'),'body':r.text[:500] if r.status_code!=200 else None})
-        if r.status_code==200:
-            try: j=r.json()
-            except Exception: continue
-            arr=j if isinstance(j,list) else j.get('files') or j.get('data') or []
-            files=[]
-            for f in arr:
-                if not isinstance(f,dict): continue
-                url=f.get('download_url') or f.get('downloadUrl') or f.get('url') or f.get('content_details',{}).get('download_url')
-                name=f.get('filename') or f.get('name') or f.get('file_name') or f.get('id')
-                size=f.get('size') or f.get('filesize') or f.get('file_size') or f.get('content_details',{}).get('size')
-                files.append({'name':name,'size':size,'checksum':f.get('checksum') or f.get('md5'),'url':url,'raw':f})
+    api=f'https://api.mendeley.com/datasets/{dsid}?version={ver}&fields=*'
+    headers={'Accept':'application/vnd.mendeley-public-dataset.1+json','User-Agent':UA}
+    r=get(api,headers=headers)
+    attempts.append({'url':api,'status':r.status_code,'content_type':r.headers.get('content-type'),'body':r.text[:1000] if r.status_code!=200 else None})
+    if r.status_code==200:
+        try:
+            j=r.json(); title,licence,files=_mendeley_files(j)
             if files:
-                return {'api_url':u,'status':200,'files':files,'total_size':sum(int(f.get('size') or 0) for f in files),'attempts':attempts}
+                return {'api_url':api,'status':200,'title':title,'license':licence,'files':files,
+                        'total_size':sum(int(f.get('size') or 0) for f in files),'attempts':attempts,'method':'official-api'}
+        except Exception as e:
+            attempts[-1]['parse_error']=repr(e)
+    # Anonymous landing-page fallback. Preserve the page and only accept URLs actually embedded in its structured data.
+    landing=f'https://data.mendeley.com/datasets/{dsid}/{ver}'
+    p=get(landing,headers={'Accept':'text/html,application/xhtml+xml','User-Agent':UA})
+    attempts.append({'url':landing,'status':p.status_code,'content_type':p.headers.get('content-type'),'body_prefix':p.text[:500] if p.status_code!=200 else None})
+    if p.status_code==200:
+        text=html.unescape(p.text)
+        candidates=[]
+        # Parse JSON script blocks, including Next.js __NEXT_DATA__.
+        for m in re.finditer(r'<script[^>]*type=["\']application/json["\'][^>]*>(.*?)</script>',text,re.I|re.S):
+            try:
+                obj=json.loads(m.group(1))
+            except Exception:
+                continue
+            for d in _walk_json(obj):
+                name=d.get('filename') or d.get('name') or d.get('file_name')
+                url=d.get('download_url') or d.get('downloadUrl') or d.get('downloadLink')
+                size=d.get('size') or d.get('filesize') or d.get('file_size')
+                checksum=d.get('checksum') or d.get('md5')
+                cd=d.get('content_details') or {}
+                url=url or cd.get('download_url') or cd.get('downloadUrl')
+                size=size or cd.get('size')
+                checksum=checksum or cd.get('checksum') or cd.get('md5')
+                if url and ('download' in url.lower() or 'api.mendeley' in url.lower() or 'data.mendeley' in url.lower()):
+                    candidates.append({'name':name or unquote(url.rsplit('/',1)[-1]),'url':url,'size':size,'checksum':checksum})
+        # Last-resort URL extraction from page source; retain only apparent file-download URLs.
+        if not candidates:
+            for raw in re.findall(r'https?://[^"\'<>\\\s]+',text):
+                u=raw.replace('\\u0026','&').replace('\\/','/')
+                if ('download' in u.lower() or 'file_contents' in u.lower()) and dsid not in u:
+                    candidates.append({'name':unquote(u.split('?',1)[0].rstrip('/').rsplit('/',1)[-1]),'url':u,'size':None,'checksum':None})
+        # De-duplicate by URL.
+        seen=set(); files=[]
+        for f in candidates:
+            u=f.get('url')
+            if not u or u in seen: continue
+            seen.add(u); files.append(f)
+        if files:
+            return {'landing_url':landing,'status':200,'files':files,
+                    'total_size':sum(int(f.get('size') or 0) for f in files),'attempts':attempts,'method':'landing-page-structured-data'}
     return {'status':'unresolved','attempts':attempts}
 
 def discover_figshare(article):
     r=get(f'https://api.figshare.com/v2/articles/{article}')
     out={'api_url':r.url,'status':r.status_code}
-    if r.status_code!=200: out['body']=r.text[:1000]; return out
+    if r.status_code!=200: out['body']=r.text[:2000]; return out
     j=r.json(); fs=[]
     for f in j.get('files',[]): fs.append({'name':f.get('name'),'size':f.get('size'),'checksum':f.get('supplied_md5') or f.get('computed_md5'),'url':f.get('download_url')})
     out.update(title=j.get('title'),license=j.get('license'),files=fs,total_size=sum((f.get('size') or 0) for f in fs)); return out
@@ -109,7 +173,7 @@ def discover_uci(dsid):
     out={'attempts':[]}
     for u in urls:
         r=get(u,stream=True); out['attempts'].append({'url':u,'status':r.status_code,'content_type':r.headers.get('content-type'),'size':r.headers.get('content-length'),'final_url':r.url})
-    out['files']=[{'name':'metropt+3+dataset.zip','url':urls[1],'size':None}]; return out
+    out['files']=[headish(urls[1])]; return out
 
 def main():
     root=Path('discovery'); root.mkdir(exist_ok=True)
