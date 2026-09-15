@@ -1,0 +1,35 @@
+name: Inspect public data portal download controls
+
+on:
+  push:
+    paths:
+      - '.github/workflows/inspect-gated-pages.yml'
+      - 'scripts/inspect_page.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {id: BAT05_ORA, url: 'https://ora.ox.ac.uk/objects/uuid:03ba4b01-cfed-46d3-9b1a-7d4a7bdf6fac'}
+          - {id: BAT06_MATR, url: 'https://data.matr.io/1/'}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          python -m pip install --disable-pip-version-check playwright
+          python -m playwright install --with-deps chromium
+      - name: Inspect ${{ matrix.id }}
+        run: python scripts/inspect_page.py '${{ matrix.url }}' --out 'inspection/${{ matrix.id }}'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: inspection-${{ matrix.id }}
+          path: inspection/${{ matrix.id }}
+          if-no-files-found: error
+          retention-days: 14
