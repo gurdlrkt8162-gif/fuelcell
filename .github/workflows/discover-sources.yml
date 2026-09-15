@@ -1,0 +1,41 @@
+name: Discover public dataset files
+
+on:
+  push:
+    paths:
+      - '.github/workflows/discover-sources.yml'
+      - 'scripts/discover_sources.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check requests
+      - name: Query official repository APIs
+        run: python scripts/discover_sources.py
+      - name: Show summary
+        run: |
+          cat discovery/SUMMARY.md
+          python - <<'PY'
+          import json
+          j=json.load(open('discovery/discovery.json'))
+          for x in j:
+              fs=x['data'].get('files') or []
+              total=sum(int(f.get('size') or 0) for f in fs)
+              print(f"{x['id']:6s} {x['source']:9s} {x['discovery_status']:9s} files={len(fs):3d} bytes={total}")
+          PY
+      - name: Upload discovery evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: source-discovery-evidence
+          path: discovery
+          if-no-files-found: error
+          retention-days: 14
+          compression-level: 6
