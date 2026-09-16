@@ -1,0 +1,162 @@
+name: Split verified package into 90 MB Drive parts
+
+on:
+  push:
+    paths:
+      - '.github/workflows/split-final-for-drive-90m.yml'
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  split-and-upload:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - name: Download verified source artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: P1-P5_VERIFIED_CORE_RAW_2026-09-15
+          path: source_artifact
+          repository: gurdlrkt8162-gif/fuelcell
+          run-id: 34962017417
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build canonical ZIP and split into 90,000,000-byte parts
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p out manifest uploader
+          python - <<'PY'
+          from pathlib import Path
+          import shutil, zipfile
+
+          src = Path('source_artifact')
+          out = Path('out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip')
+          candidates = [p for p in src.rglob('P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip') if p.is_file()]
+          if len(candidates) == 1:
+              shutil.copyfile(candidates[0], out)
+              print(f'Copied existing canonical ZIP: {candidates[0]}')
+          else:
+              files = sorted(p for p in src.rglob('*') if p.is_file())
+              if not files:
+                  raise SystemExit('No files found in source artifact')
+              with zipfile.ZipFile(out, 'w', compression=zipfile.ZIP_STORED, allowZip64=True) as zf:
+                  for p in files:
+                      arc = Path('P1-P5_VERIFIED_CORE_RAW_2026-09-15') / p.relative_to(src)
+                      zf.write(p, arc.as_posix())
+              print(f'Created canonical ZIP from {len(files)} files')
+          PY
+
+          sha256sum out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip | tee manifest/FINAL_ZIP_SHA256.txt
+          stat --printf='%n\t%s bytes\n' out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip | tee manifest/FINAL_ZIP_SIZE.txt
+          split -b 90000000 -d -a 3 \
+            out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip \
+            out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip.part-
+          sha256sum out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip.part-* | tee manifest/PART_SHA256.txt
+          ls -ln out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip.part-* | tee manifest/PART_FILE_LIST.txt
+
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib, json
+          out = Path('out')
+          final = out / 'P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip'
+          parts = sorted(out.glob(final.name + '.part-*'))
+          if not parts:
+              raise SystemExit('No split parts created')
+          total = sum(p.stat().st_size for p in parts)
+          if total != final.stat().st_size:
+              raise SystemExit(f'Part total {total} != final ZIP size {final.stat().st_size}')
+          rows=[]
+          for p in parts:
+              h=hashlib.sha256()
+              with p.open('rb') as f:
+                  for b in iter(lambda:f.read(8*1024*1024), b''):
+                      h.update(b)
+              rows.append({'name':p.name,'bytes':p.stat().st_size,'sha256':h.hexdigest()})
+          Path('manifest/PARTS.json').write_text(json.dumps(rows,indent=2),encoding='utf-8')
+          Path('manifest/PART_COUNT.txt').write_text(str(len(parts))+'\n',encoding='utf-8')
+          print(f'Created {len(parts)} parts; byte total verified: {total}')
+          PY
+
+      - name: Create reconstruction guides
+        shell: bash
+        run: |
+          cat > manifest/README_KO.txt <<'EOF'
+          P1-P5 검증 코어 RAW 데이터 — Google Drive 분할본
+
+          같은 Google Drive 폴더의 part-000, part-001, ... 파일을 전부 다운로드하십시오.
+          파일 이름을 변경하지 마십시오.
+          Windows에서는 REASSEMBLE_WINDOWS.ps1을, Linux/macOS에서는 REASSEMBLE_LINUX_MAC.sh를 실행하십시오.
+          복원된 ZIP의 SHA-256을 FINAL_ZIP_SHA256.txt와 비교하십시오.
+          모든 part가 있어야 원본 ZIP이 복원됩니다.
+          EOF
+
+          cat > manifest/REASSEMBLE_WINDOWS.ps1 <<'EOF'
+          $ErrorActionPreference = 'Stop'
+          $base = 'P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip'
+          $parts = Get-ChildItem "$base.part-*" | Sort-Object Name
+          if ($parts.Count -eq 0) { throw '분할 파일을 찾지 못했습니다.' }
+          $out = [System.IO.File]::Create($base)
+          try {
+            foreach ($p in $parts) {
+              $input = [System.IO.File]::OpenRead($p.FullName)
+              try { $input.CopyTo($out) } finally { $input.Dispose() }
+            }
+          } finally { $out.Dispose() }
+          Get-FileHash $base -Algorithm SHA256
+          EOF
+
+          cat > manifest/REASSEMBLE_LINUX_MAC.sh <<'EOF'
+          #!/usr/bin/env bash
+          set -euo pipefail
+          base='P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip'
+          cat "$base".part-* > "$base"
+          shasum -a 256 "$base"
+          EOF
+          chmod +x manifest/REASSEMBLE_LINUX_MAC.sh
+
+      - name: Dynamically upload each part as a separate artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd uploader
+          npm init -y >/dev/null 2>&1
+          npm install @actions/artifact@2 >/dev/null 2>&1
+          cat > upload.mjs <<'EOF'
+          import fs from 'fs'
+          import path from 'path'
+          import { DefaultArtifactClient } from '@actions/artifact'
+
+          const client = new DefaultArtifactClient()
+          const root = path.resolve('../out')
+          const files = fs.readdirSync(root)
+            .filter(n => n.includes('.zip.part-'))
+            .sort()
+          if (files.length === 0) throw new Error('No part files found')
+          for (const name of files) {
+            const suffix = name.split('.part-').pop()
+            const full = path.join(root, name)
+            const stat = fs.statSync(full)
+            if (stat.size > 100000000) throw new Error(`${name} exceeds safe Drive bridge size`)
+            const result = await client.uploadArtifact(
+              `drive90-part-${suffix}`,
+              [full],
+              root,
+              { retentionDays: 30, compressionLevel: 0 }
+            )
+            console.log(JSON.stringify({name, bytes: stat.size, artifact: result}))
+          }
+          const manifestRoot = path.resolve('../manifest')
+          const manifestFiles = fs.readdirSync(manifestRoot).map(n => path.join(manifestRoot,n))
+          const result = await client.uploadArtifact(
+            'drive90-manifest-and-guides',
+            manifestFiles,
+            manifestRoot,
+            { retentionDays: 30, compressionLevel: 6 }
+          )
+          console.log(JSON.stringify({manifestArtifact: result}))
+          EOF
+          node upload.mjs
