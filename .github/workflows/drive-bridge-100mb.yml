@@ -1,0 +1,128 @@
+name: Create sub-100 MB Google Drive bridge artifacts
+
+on:
+  push:
+    paths:
+      - '.github/workflows/drive-bridge-100mb.yml'
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  bridge-parts:
+    name: bridge-${{ matrix.idx }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - idx: '00'
+            source: drive-part-00
+          - idx: '01'
+            source: drive-part-01
+          - idx: '02'
+            source: drive-part-02
+          - idx: '03'
+            source: drive-part-03
+          - idx: '04'
+            source: drive-part-04
+          - idx: '05'
+            source: drive-part-05
+          - idx: '06'
+            source: drive-part-06
+          - idx: '07'
+            source: drive-part-07
+          - idx: '08'
+            source: drive-part-08
+          - idx: '09'
+            source: drive-part-09
+          - idx: '10'
+            source: drive-part-10
+          - idx: '11'
+            source: drive-part-11
+          - idx: '12'
+            source: drive-part-12
+
+    steps:
+      - name: Download verified 350 MiB source part
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ matrix.source }}
+          path: source
+          repository: gurdlrkt8162-gif/fuelcell
+          run-id: 35056781775
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Split source part into four sub-100 MB chunks
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p out
+          source_file="$(find source -type f | head -n 1)"
+          if [ -z "$source_file" ]; then
+            echo 'No source file found' >&2
+            exit 1
+          fi
+          prefix="out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip.bridge-${{ matrix.idx }}-"
+          split -b 100000000 -d -a 2 "$source_file" "$prefix"
+          count="$(find out -type f -name '*.bridge-${{ matrix.idx }}-*' | wc -l)"
+          if [ "$count" -ne 4 ]; then
+            echo "Expected exactly 4 chunks, got $count" >&2
+            exit 1
+          fi
+          for f in out/*; do
+            bytes="$(stat -c %s "$f")"
+            if [ "$bytes" -gt 100000000 ]; then
+              echo "$f exceeds 100,000,000 bytes" >&2
+              exit 1
+            fi
+            sha256sum "$f" > "$f.sha256"
+          done
+          ls -l out
+
+      - name: Upload bridge chunk 00
+        uses: actions/upload-artifact@v4
+        with:
+          name: drive100-${{ matrix.idx }}-00
+          path: |
+            out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip.bridge-${{ matrix.idx }}-00
+            out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip.bridge-${{ matrix.idx }}-00.sha256
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 30
+
+      - name: Upload bridge chunk 01
+        uses: actions/upload-artifact@v4
+        with:
+          name: drive100-${{ matrix.idx }}-01
+          path: |
+            out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip.bridge-${{ matrix.idx }}-01
+            out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip.bridge-${{ matrix.idx }}-01.sha256
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 30
+
+      - name: Upload bridge chunk 02
+        uses: actions/upload-artifact@v4
+        with:
+          name: drive100-${{ matrix.idx }}-02
+          path: |
+            out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip.bridge-${{ matrix.idx }}-02
+            out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip.bridge-${{ matrix.idx }}-02.sha256
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 30
+
+      - name: Upload bridge chunk 03
+        uses: actions/upload-artifact@v4
+        with:
+          name: drive100-${{ matrix.idx }}-03
+          path: |
+            out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip.bridge-${{ matrix.idx }}-03
+            out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip.bridge-${{ matrix.idx }}-03.sha256
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 30
