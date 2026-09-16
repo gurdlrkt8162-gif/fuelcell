@@ -1,0 +1,232 @@
+name: Split verified package for Google Drive
+
+on:
+  push:
+    paths:
+      - '.github/workflows/split-final-for-drive.yml'
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  split:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - name: Download verified source artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: P1-P5_VERIFIED_CORE_RAW_2026-09-15
+          path: source_artifact
+          repository: gurdlrkt8162-gif/fuelcell
+          run-id: 34962017417
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build one canonical ZIP and split into 350 MiB parts
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p out manifest
+          python - <<'PY'
+          from pathlib import Path
+          import shutil, zipfile
+
+          src = Path('source_artifact')
+          out = Path('out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip')
+          candidates = [p for p in src.rglob('P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip') if p.is_file()]
+          if len(candidates) == 1:
+              shutil.copyfile(candidates[0], out)
+              print(f'Copied existing canonical ZIP: {candidates[0]}')
+          else:
+              files = sorted(p for p in src.rglob('*') if p.is_file())
+              if not files:
+                  raise SystemExit('No files found in source artifact')
+              with zipfile.ZipFile(out, 'w', compression=zipfile.ZIP_STORED, allowZip64=True) as zf:
+                  for p in files:
+                      arc = Path('P1-P5_VERIFIED_CORE_RAW_2026-09-15') / p.relative_to(src)
+                      zf.write(p, arc.as_posix())
+              print(f'Created canonical ZIP from {len(files)} files')
+          PY
+
+          sha256sum out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip | tee manifest/FINAL_ZIP_SHA256.txt
+          stat --printf='%n\t%s bytes\n' out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip | tee manifest/FINAL_ZIP_SIZE.txt
+          split -b 350M -d -a 2 \
+            out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip \
+            out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip.part-
+          sha256sum out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip.part-* | tee manifest/PART_SHA256.txt
+          ls -lh out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip.part-* | tee manifest/PART_FILE_LIST.txt
+          python - <<'PY'
+          from pathlib import Path
+          parts = sorted(Path('out').glob('P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip.part-*'))
+          if not parts:
+              raise SystemExit('No split parts created')
+          total = sum(p.stat().st_size for p in parts)
+          final = Path('out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip')
+          if total != final.stat().st_size:
+              raise SystemExit(f'Part total {total} != final ZIP size {final.stat().st_size}')
+          print(f'Created {len(parts)} parts; byte total verified: {total}')
+          PY
+
+      - name: Create Korean reconstruction guide
+        shell: bash
+        run: |
+          cat > manifest/README_KO.txt <<'EOF'
+          P1-P5 검증 코어 RAW 데이터 — Google Drive 분할본
+
+          1. 같은 폴더의 part-00, part-01 ... 파일을 전부 다운로드하십시오.
+          2. 파일 이름을 변경하지 마십시오.
+          3. Windows PowerShell에서는 REASSEMBLE_WINDOWS.ps1을 실행하십시오.
+          4. Linux/macOS에서는 REASSEMBLE_LINUX_MAC.sh를 실행하십시오.
+          5. 복원된 ZIP의 SHA-256을 FINAL_ZIP_SHA256.txt와 비교하십시오.
+          6. 일치하면 ZIP을 압축 해제하여 사용하십시오.
+
+          분할 파일 중 하나라도 빠지거나 손상되면 원본 ZIP은 복원되지 않습니다.
+          EOF
+
+          cat > manifest/REASSEMBLE_WINDOWS.ps1 <<'EOF'
+          $ErrorActionPreference = 'Stop'
+          $base = 'P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip'
+          $parts = Get-ChildItem "$base.part-*" | Sort-Object Name
+          if ($parts.Count -eq 0) { throw '분할 파일을 찾지 못했습니다.' }
+          $out = [System.IO.File]::Create($base)
+          try {
+            foreach ($p in $parts) {
+              $input = [System.IO.File]::OpenRead($p.FullName)
+              try { $input.CopyTo($out) } finally { $input.Dispose() }
+            }
+          } finally { $out.Dispose() }
+          Get-FileHash $base -Algorithm SHA256
+          EOF
+
+          cat > manifest/REASSEMBLE_LINUX_MAC.sh <<'EOF'
+          #!/usr/bin/env bash
+          set -euo pipefail
+          base='P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip'
+          cat "$base".part-* > "$base"
+          shasum -a 256 "$base"
+          EOF
+          chmod +x manifest/REASSEMBLE_LINUX_MAC.sh
+
+      - name: Upload manifest and guides
+        uses: actions/upload-artifact@v4
+        with:
+          name: drive-manifest-and-guides
+          path: manifest/
+          if-no-files-found: error
+          compression-level: 6
+          retention-days: 30
+
+      - name: Upload part 00
+        uses: actions/upload-artifact@v4
+        with:
+          name: drive-part-00
+          path: out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip.part-00
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 30
+      - name: Upload part 01
+        uses: actions/upload-artifact@v4
+        with:
+          name: drive-part-01
+          path: out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip.part-01
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 30
+      - name: Upload part 02
+        uses: actions/upload-artifact@v4
+        with:
+          name: drive-part-02
+          path: out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip.part-02
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 30
+      - name: Upload part 03
+        uses: actions/upload-artifact@v4
+        with:
+          name: drive-part-03
+          path: out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip.part-03
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 30
+      - name: Upload part 04
+        uses: actions/upload-artifact@v4
+        with:
+          name: drive-part-04
+          path: out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip.part-04
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 30
+      - name: Upload part 05
+        uses: actions/upload-artifact@v4
+        with:
+          name: drive-part-05
+          path: out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip.part-05
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 30
+      - name: Upload part 06
+        uses: actions/upload-artifact@v4
+        with:
+          name: drive-part-06
+          path: out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip.part-06
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 30
+      - name: Upload part 07
+        uses: actions/upload-artifact@v4
+        with:
+          name: drive-part-07
+          path: out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip.part-07
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 30
+      - name: Upload part 08
+        uses: actions/upload-artifact@v4
+        with:
+          name: drive-part-08
+          path: out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip.part-08
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 30
+      - name: Upload part 09
+        uses: actions/upload-artifact@v4
+        with:
+          name: drive-part-09
+          path: out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip.part-09
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 30
+      - name: Upload part 10
+        uses: actions/upload-artifact@v4
+        with:
+          name: drive-part-10
+          path: out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip.part-10
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 30
+      - name: Upload part 11
+        uses: actions/upload-artifact@v4
+        with:
+          name: drive-part-11
+          path: out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip.part-11
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 30
+      - name: Upload part 12
+        uses: actions/upload-artifact@v4
+        with:
+          name: drive-part-12
+          path: out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip.part-12
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 30
+      - name: Upload optional part 13
+        uses: actions/upload-artifact@v4
+        with:
+          name: drive-part-13
+          path: out/P1-P5_VERIFIED_CORE_RAW_2026-09-15.zip.part-13
+          if-no-files-found: ignore
+          compression-level: 0
+          retention-days: 30
