@@ -1,0 +1,37 @@
+name: Publish verified study guide release
+
+on:
+  push:
+    branches:
+      - study-guide-audit-20260918
+    paths:
+      - .github/workflows/publish-study-guide-release.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout generated branch
+        uses: actions/checkout@v4
+        with:
+          ref: study-guide-audit-20260918
+
+      - name: Create or update release asset
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="study-guide-20260918"
+          PDF="generated/hydrogen_energy_complete_guide_verified.pdf"
+          QA="generated/qa_report.json"
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" "$PDF" "$QA" --clobber
+          else
+            gh release create "$TAG" "$PDF" "$QA" \
+              --target study-guide-audit-20260918 \
+              --title "Hydrogen Energy Complete Study Guide — Verified" \
+              --notes "Source-faithful electrochemistry and PEMFC study guide with explicit transcript-preview limits, page alignment audit, and QA receipt."
+          fi
