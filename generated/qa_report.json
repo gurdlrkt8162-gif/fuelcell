@@ -1,0 +1,82 @@
+{
+  "file": "hydrogen_energy_complete_guide_verified.pdf",
+  "bytes": 5597188,
+  "sha256": "5e17ca91054ddfb90ce1015f9c8eeda33e09bb2b01275cba98015b4e1fa25069",
+  "pages": 123,
+  "page_size_pt": [
+    720,
+    405
+  ],
+  "source_slides": {
+    "electrochemistry": 85,
+    "pemfc": 30
+  },
+  "accuratescribe_completed_videos": 4,
+  "total_video_duration_seconds": 7692.56,
+  "direct_transcript_preview_ranges": 4,
+  "replaced_evidence_cards": [
+    3,
+    37,
+    88,
+    103
+  ],
+  "appendix_pages": 6,
+  "broken_text_counts": {
+    "�": 0,
+    "尀": 0,
+    "[[": 0,
+    "\u0000": 0
+  },
+  "representative_render_checks": [
+    {
+      "page": 1,
+      "nonwhite_ratio": 0.19646
+    },
+    {
+      "page": 2,
+      "nonwhite_ratio": 0.54678
+    },
+    {
+      "page": 3,
+      "nonwhite_ratio": 0.56706
+    },
+    {
+      "page": 37,
+      "nonwhite_ratio": 0.54615
+    },
+    {
+      "page": 88,
+      "nonwhite_ratio": 0.56219
+    },
+    {
+      "page": 103,
+      "nonwhite_ratio": 0.56199
+    },
+    {
+      "page": 118,
+      "nonwhite_ratio": 0.26104
+    },
+    {
+      "page": 119,
+      "nonwhite_ratio": 0.26136
+    },
+    {
+      "page": 120,
+      "nonwhite_ratio": 0.26024
+    },
+    {
+      "page": 121,
+      "nonwhite_ratio": 0.28461
+    },
+    {
+      "page": 122,
+      "nonwhite_ratio": 0.26639
+    },
+    {
+      "page": 123,
+      "nonwhite_ratio": 0.2574
+    }
+  ],
+  "blank_pages": [],
+  "release_scope": "source-faithful integrated study guide; not a full verbatim transcript"
+}
