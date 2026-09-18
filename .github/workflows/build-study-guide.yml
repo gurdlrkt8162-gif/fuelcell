@@ -1,0 +1,57 @@
+name: Build verified hydrogen-energy study guide
+
+on:
+  push:
+    branches:
+      - study-guide-audit-20260918
+    paths:
+      - .github/workflows/build-study-guide.yml
+      - tools/build_verified_study_guide.py
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install fonts and Python dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-nanum
+          python -m pip install --upgrade pip
+          python -m pip install PyMuPDF requests
+
+      - name: Build and verify PDF
+        run: python tools/build_verified_study_guide.py
+
+      - name: Publish generated PDF and QA receipt
+        run: |
+          mkdir -p generated
+          cp dist/hydrogen_energy_complete_guide_verified.pdf generated/hydrogen_energy_complete_guide_verified.pdf
+          cp dist/qa_report.json generated/qa_report.json
+          git config user.name 'study-guide-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add generated/hydrogen_energy_complete_guide_verified.pdf generated/qa_report.json
+          git commit -m 'Publish verified hydrogen-energy study guide PDF' || exit 0
+          git push
+
+      - name: Upload workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: verified-study-guide
+          path: |
+            dist/hydrogen_energy_complete_guide_verified.pdf
+            dist/qa_report.json
+          if-no-files-found: error
+          retention-days: 7
