@@ -31,14 +31,34 @@ jobs:
           unzip -qo previous_raw/PEMFC_STAGE3_CANDIDATE_NOT_APPROVED.zip
           unzip -qo previous_qc/PEMFC_COMPLETE_QC_EVIDENCE.zip
           pip install numpy pandas scipy h5py mat-io
+      - name: Reconcile narrative counts with actual test coverage
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          q=Path('pemfc_complete_qc')
+          kk=json.loads((q/'LINKK_FULL_BAND.json').read_text())
+          rows=json.loads((q/'DIFFERENTIAL_FILE_QC.json').read_text())
+          tested={x['file'] for x in kk['results']}
+          not_tested=[x for x in rows if 'EIS' in x['file'] and x['file'] not in tested]
+          coverage={'EIS_total_by_path':sum('EIS' in x['file'] for x in rows),'full_band_attempts':len(tested),'screen_pass':kk['pass_count'],'not_tested_records':not_tested}
+          Path('pemfc_delivery_scope_checks_20260922.json').write_text(json.dumps(coverage,indent=2),encoding='utf-8')
+          p=Path('scripts/package_curated_pemfc_20260922.py')
+          s=p.read_text();s=s.replace('나머지 108개 전 대역 자동 Lin-KK 검사',f'실행된 {len(tested)}개 전 대역 자동 Lin-KK 검사')
+          anchor='files=[]\nfor p in sorted(P.rglob'
+          replacement="out('90_AUDIT/SCREEN_COVERAGE.json',json.loads(Path('pemfc_delivery_scope_checks_20260922.json').read_text()))\n"+anchor
+          if "out('90_AUDIT/SCREEN_COVERAGE.json'" not in s:
+              assert anchor in s;s=s.replace(anchor,replacement)
+          p.write_text(s,encoding='utf-8')
+          PY
       - name: Package admitted subsets with checksum and exact CSV round-trip checks
         run: python scripts/package_curated_pemfc_20260922.py
       - name: Preserve final delivery receipt
         run: |
           git config user.name 'public-data-audit'
           git config user.email 'public-data-audit@users.noreply.github.com'
-          git add pemfc_delivery_receipt_20260922.json
-          git commit -m 'Record final limited-scope PEMFC supplement inventory and integrity'
+          git add pemfc_delivery_receipt_20260922.json pemfc_delivery_scope_checks_20260922.json scripts/package_curated_pemfc_20260922.py
+          git diff --cached --quiet || git commit -m 'Record final limited-scope PEMFC supplement and exact screen coverage'
           git push origin HEAD:research/pemfc-quality-audit-20260922
       - uses: actions/upload-artifact@v4
         with:
