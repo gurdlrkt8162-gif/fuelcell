@@ -1,0 +1,100 @@
+{
+  "EIS_total_by_path": 111,
+  "full_band_attempts": 107,
+  "screen_pass": 0,
+  "not_tested_records": [
+    {
+      "file": "Data/EIS_45mA/Break-in_EIS_45mA.txt",
+      "bytes": 8699,
+      "sha256": "70444d627f39b97bb447517c40d9ae45d9863e49ee48246070ada68e4962792e",
+      "md5": "aeb3e8dfe22e9ce4382149c72ccc5744",
+      "rows": 108,
+      "cols": 7,
+      "headers": [
+        "Ewe/V",
+        "I/A",
+        "freq/Hz",
+        "Re(Z)/Ohm",
+        "-Im(Z)/Ohm",
+        "|Z|/Ohm",
+        "Phase(Z)/deg"
+      ],
+      "nonfinite": 0,
+      "locale_replacements": 7,
+      "provider_md5_match": true,
+      "kind": "EIS",
+      "freq_min_Hz": 0.0,
+      "freq_max_Hz": 199998.14,
+      "unique_freq": 108,
+      "negative_real_points": 5,
+      "inductive_points": 29,
+      "imaginary_sign": "-im(z)/ohm",
+      "magnitude_relative_error_max": 9.58151395695746e-08,
+      "phase_error_deg_max": 2.0593162162185763e-06
+    },
+    {
+      "file": "Data/EIS_45mA/C17_EIS_45mA.txt",
+      "bytes": 8541,
+      "sha256": "ad46ed7043d7cf93cbf7396d6006d6490207eb18837c2bb0e913e863ece624b5",
+      "md5": "1138c3086de6d5dcf70434314fd0f3db",
+      "rows": 106,
+      "cols": 7,
+      "headers": [
+        "0.85783452",
+        "0.045149113",
+        "199998.14",
+        "-0.020460078",
+        "-0.10943104",
+        "0.11132729",
+        "100.59019"
+      ],
+      "nonfinite": 0,
+      "locale_replacements": 1,
+      "provider_md5_match": true,
+      "kind": "IV"
+    },
+    {
+      "file": "Data/EIS_45mA/C35_EIS_45mA.txt",
+      "bytes": 8564,
+      "sha256": "272a04a69b82a145a0bb9d6851838d82eec13d67a171d76b8c024061c4649ab1",
+      "md5": "808fcbac38e7db4b273563b265a62ef0",
+      "rows": 106,
+      "cols": 7,
+      "headers": [
+        "0.84261584",
+        "0.045443165",
+        "199998.14",
+        "-0.016213801",
+        "-0.11162534",
+        "0.11279674",
+        "98.264526"
+      ],
+      "nonfinite": 0,
+      "locale_replacements": 1,
+      "provider_md5_match": true,
+      "kind": "IV"
+    },
+    {
+      "file": "Data/EIS_45mA/C7_EIS_45mA.txt",
+      "bytes": 8625,
+      "sha256": "a4022bbd5597a9c686dcc0e8e34a97893d35ef69fb509ca67c39bef0685de283",
+      "md5": "94383a11aeda3f2f3c63582a8519a2dc",
+      "rows": 107,
+      "cols": 7,
+      "headers": [
+        "Ewe/V",
+        "I/A",
+        "freq/Hz",
+        "Re(Z)/Ohm",
+        "#NOM?",
+        "|Z|/Ohm",
+        "Phase(Z)/deg"
+      ],
+      "nonfinite": 0,
+      "locale_replacements": 1,
+      "provider_md5_match": true,
+      "kind": "EIS",
+      "error": "unresolved header ['Ewe/V', 'I/A', 'freq/Hz', 'Re(Z)/Ohm', '#NOM?', '|Z|/Ohm', 'Phase(Z)/deg']"
+    }
+  ]
+}

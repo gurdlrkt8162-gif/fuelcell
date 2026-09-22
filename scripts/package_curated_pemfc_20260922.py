@@ -81,7 +81,7 @@ MPC 3개 운전 파일은 순간 전류–전압–출력 대응/명령값 의�
 CSV의 j=I/1.8, V>=0.6V 표시는 파생값입니다. 후자는 원 논문이 재현성 한계를 설명한 구간을 나타내는 모델링 참고 마스크일 뿐, 안전/정상 고장 라벨이 아닙니다. 0.6V 미만의 물방울 관련 변동을 제거하거나 임의 정상화하지 않았습니다.
 전체 조건 공간이 완전 요인실험은 아니므로 단일 인자의 순수 인과효과나 모든 상호작용을 식별한다고 주장하지 마십시오.
 원 조건 XLSX는 Dataverse original 형식으로 받아 originalFileSize 12,519bytes와 제공자 MD5를 확인했습니다. 자동 변환 TAB의 filesize와 혼용하지 마십시오.
-EIS 원본 111개는 이번 추가본에 전혀 포함하지 않습니다. 두 파일에 헤더가 없고 한 파일은 #NOM? 헤더이며, 나머지 108개 전 대역 자동 Lin-KK 검사가 이 감사의 RMS1%/최대5% 기준을 통과하지 못했습니다. 이는 진위 부정이나 보편적인 EIS 부적합 판정이 아닙니다. 특정 대역 선별/배선 인덕턴스·이상점/선형성·정상성 검토가 필요합니다.
+EIS 원본 111개는 이번 추가본에 전혀 포함하지 않습니다. 두 파일에 헤더가 없고 한 파일은 #NOM? 헤더이며, 실행된 107개 전 대역 자동 Lin-KK 검사가 이 감사의 RMS1%/최대5% 기준을 통과하지 못했습니다. 이는 진위 부정이나 보편적인 EIS 부적합 판정이 아닙니다. 특정 대역 선별/배선 인덕턴스·이상점/선형성·정상성 검토가 필요합니다.
 
 ## 허가조건과 인용
 RWTH: https://data.mendeley.com/datasets/mc46tw9t8m/1 ; DOI 10.17632/mc46tw9t8m.1 ; CC BY-NC 4.0. 비상업 조건을 확인하십시오.
@@ -103,6 +103,7 @@ for n in ('pemfc_complete_qc_20260922.py','package_curated_pemfc_20260922.py'):s
 if (Q/'requirements_executed.txt').exists():shutil.copy2(Q/'requirements_executed.txt',P/'91_REPRODUCE/requirements_executed.txt')
 # Public provenance metadata from provider, not private manuscript material.
 shutil.copy2(Path('pemfc_candidate_audit/DIFFERENTIAL_source.json'),P/'90_AUDIT/CEA_PROVIDER_METADATA.json')
+out('90_AUDIT/SCREEN_COVERAGE.json',json.loads(Path('pemfc_delivery_scope_checks_20260922.json').read_text()))
 files=[]
 for p in sorted(P.rglob('*')):
  if p.is_file():files.append({'path':str(p.relative_to(P)),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})

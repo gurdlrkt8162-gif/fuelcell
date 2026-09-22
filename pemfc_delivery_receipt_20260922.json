@@ -7,7 +7,7 @@
   "CEA_conditions_files": 1,
   "EIS_raw_files_in_package": 0,
   "MPC_raw_files_in_package": 0,
-  "payload_files_before_manifest": 97,
+  "payload_files_before_manifest": 98,
   "RWTH_QC": [
     {
       "file": "cycle_1_TSOS.mat",
@@ -48,7 +48,7 @@
   "CEA_EIS_excluded": 111,
   "CEA_EIS_parsed_and_screened": 107,
   "CEA_EIS_screen_pass": 0,
-  "zip_bytes": 28057285,
-  "zip_sha256": "d8367ee680e12e7d70c96a59b91c0d1945019f71b3ed3c0d17800e7118e139fb",
+  "zip_bytes": 28058486,
+  "zip_sha256": "28019dd1dd5a67f72b6a2eb0ea86083d0494922f23a27cc13e64cf9ef2d1ef3b",
   "zip_crc": "PASS"
 }
