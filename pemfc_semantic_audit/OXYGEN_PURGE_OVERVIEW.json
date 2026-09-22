@@ -1,0 +1,950 @@
+[
+  {
+    "path": "candidate_bytes/OXYGEN_PURGE/jy5vxystwd.zip_unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar_unpacked/Data_Matlabcode/1.Highloadlevel/Input_Data_104.mat",
+    "bytes": 638,
+    "sha256": "439f5245fa6772c3aa0387c1bd8133a00fd597e0f5183aa3f84316e04975906c",
+    "mat_variables": [
+      [
+        "Input_Data_104",
+        [
+          43,
+          6
+        ],
+        "double"
+      ]
+    ],
+    "mat_fields": [
+      {
+        "key": "mat.Input_Data_104",
+        "shape": [
+          43,
+          6
+        ],
+        "dtype": "float64",
+        "nan": 0,
+        "inf": 0,
+        "min": 0.1,
+        "max": 100.0,
+        "head": [
+          0.1,
+          10.0,
+          65.0,
+          60.0,
+          100.0
+        ]
+      }
+    ]
+  },
+  {
+    "path": "candidate_bytes/OXYGEN_PURGE/jy5vxystwd.zip_unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar_unpacked/Data_Matlabcode/1.Highloadlevel/1. High load level (experiments).xlsx",
+    "bytes": 13460,
+    "sha256": "ee1d8d699f0ff45e9f9bda2f4475bec623c664f5c0574e27b83a65901a0ce2ba",
+    "sheets": [
+      {
+        "sheet": "Experiments_0.8 Acm^(-2)",
+        "rows": 73,
+        "cols": 9,
+        "missing": 212,
+        "numeric": 435,
+        "head": [
+          [
+            "",
+            "",
+            "",
+            "Purge duration \n( s )",
+            "Purge interval \n( s )",
+            "Operating Cell Temp \n(oC)",
+            "Anode Humidity Temp \n( oC)",
+            "Current \n( A )",
+            "Oxygen utilization\n( kJ/L ) "
+          ],
+          [
+            "At operating current (A):",
+            "100.0",
+            "",
+            "0.1",
+            "10",
+            "65",
+            "60",
+            "100",
+            "8.69204"
+          ],
+          [
+            "Cell activation area (cm^2):",
+            "125.0",
+            "",
+            "0.1",
+            "15",
+            "65",
+            "60",
+            "100",
+            "9.04187"
+          ]
+        ],
+        "min_by_col": [
+          null,
+          0.8,
+          null,
+          0.1,
+          10.0,
+          65.0,
+          60.0,
+          100.0,
+          6.44511
+        ],
+        "max_by_col": [
+          null,
+          125.0,
+          null,
+          0.9,
+          85.0,
+          65.0,
+          60.0,
+          100.0,
+          9.43755
+        ]
+      }
+    ]
+  },
+  {
+    "path": "candidate_bytes/OXYGEN_PURGE/jy5vxystwd.zip_unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar_unpacked/Data_Matlabcode/1.Highloadlevel/1. High load level (training).xlsx",
+    "bytes": 13396,
+    "sha256": "9dcfb3fa65543fd52e0c8992d3bba2f4982a4fe3be066a8699e5319534ed59e8",
+    "sheets": [
+      {
+        "sheet": "Training data_0.8 Acm^(-2)",
+        "rows": 44,
+        "cols": 9,
+        "missing": 125,
+        "numeric": 261,
+        "head": [
+          [
+            "",
+            "",
+            "",
+            "Purge duration \n( s )",
+            "Purge interval \n( s )",
+            "Operating Cell Temp \n(oC)",
+            "Anode Humidity Temp \n( oC)",
+            "Current \n( A )",
+            "Oxygen utilization\n( kJ/L ) "
+          ],
+          [
+            "At operating current (A):",
+            "100.0",
+            "",
+            "0.1",
+            "10",
+            "65",
+            "60",
+            "100",
+            "8.69204"
+          ],
+          [
+            "Cell activation area (cm^2):",
+            "125.0",
+            "",
+            "0.1",
+            "15",
+            "65",
+            "60",
+            "100",
+            "9.04187"
+          ]
+        ],
+        "min_by_col": [
+          null,
+          0.8,
+          null,
+          0.1,
+          10.0,
+          65.0,
+          60.0,
+          100.0,
+          6.44511
+        ],
+        "max_by_col": [
+          null,
+          125.0,
+          null,
+          0.9,
+          85.0,
+          65.0,
+          60.0,
+          100.0,
+          9.43755
+        ]
+      }
+    ]
+  },
+  {
+    "path": "candidate_bytes/OXYGEN_PURGE/jy5vxystwd.zip_unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar_unpacked/Data_Matlabcode/2. Mediumloadlevel/2. Medium load level (experiments).xlsx",
+    "bytes": 17727,
+    "sha256": "49c2855af72a4946ec94da47a79f8883f7721889dadd6827d06facc01a38c40a",
+    "sheets": [
+      {
+        "sheet": "Experimental data_0.4 Acm^(-2)",
+        "rows": 186,
+        "cols": 9,
+        "missing": 551,
+        "numeric": 1113,
+        "head": [
+          [
+            "",
+            "",
+            "",
+            "Purge duration \n( s )",
+            "Purge interval \n( s )",
+            "Operating Cell Temp \n(oC)",
+            "Anode Humidity Temp \n( oC)",
+            "Current \n( A )",
+            "Oxygen utilization\n( kJ/L ) "
+          ],
+          [
+            "At operating current (A):",
+            "50.0",
+            "",
+            "0.1",
+            "10",
+            "65",
+            "60",
+            "50",
+            "8.76328"
+          ],
+          [
+            "Cell activation area (cm^2):",
+            "125.0",
+            "",
+            "0.1",
+            "20",
+            "65",
+            "60",
+            "50",
+            "10.05258"
+          ]
+        ],
+        "min_by_col": [
+          null,
+          0.4,
+          null,
+          0.1,
+          10.0,
+          65.0,
+          60.0,
+          50.0,
+          5.73934
+        ],
+        "max_by_col": [
+          null,
+          125.0,
+          null,
+          0.9,
+          400.0,
+          65.0,
+          60.0,
+          50.0,
+          11.18018
+        ]
+      }
+    ]
+  },
+  {
+    "path": "candidate_bytes/OXYGEN_PURGE/jy5vxystwd.zip_unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar_unpacked/Data_Matlabcode/2. Mediumloadlevel/2. Medium load level (training).xlsx",
+    "bytes": 14944,
+    "sha256": "845e4742a1cabbefe5da32cea1ba41aa5e61bfd58702a3637cd77dbcd8e630d4",
+    "sheets": [
+      {
+        "sheet": "Training data_0.4 Acm^(-2)",
+        "rows": 111,
+        "cols": 9,
+        "missing": 326,
+        "numeric": 663,
+        "head": [
+          [
+            "",
+            "",
+            "",
+            "Purge duration \n( s )",
+            "Purge interval \n( s )",
+            "Operating Cell Temp \n(oC)",
+            "Anode Humidity Temp \n( oC)",
+            "Current \n( A )",
+            "Oxygen utilization\n( kJ/L ) "
+          ],
+          [
+            "At operating current (A):",
+            "50.0",
+            "",
+            "0.1",
+            "10",
+            "65",
+            "60",
+            "50",
+            "8.76328"
+          ],
+          [
+            "Cell activation area (cm^2):",
+            "125.0",
+            "",
+            "0.1",
+            "20",
+            "65",
+            "60",
+            "50",
+            "10.05258"
+          ]
+        ],
+        "min_by_col": [
+          null,
+          0.4,
+          null,
+          0.1,
+          10.0,
+          65.0,
+          60.0,
+          50.0,
+          5.73934
+        ],
+        "max_by_col": [
+          null,
+          125.0,
+          null,
+          0.9,
+          400.0,
+          65.0,
+          60.0,
+          50.0,
+          11.18018
+        ]
+      }
+    ]
+  },
+  {
+    "path": "candidate_bytes/OXYGEN_PURGE/jy5vxystwd.zip_unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar_unpacked/Data_Matlabcode/2. Mediumloadlevel/Input_Data_104.mat",
+    "bytes": 1199,
+    "sha256": "97180fe893043248370aa45473ac55173146265a88415c1a08f82996b8b87217",
+    "mat_variables": [
+      [
+        "Input_Data_104",
+        [
+          110,
+          6
+        ],
+        "double"
+      ]
+    ],
+    "mat_fields": [
+      {
+        "key": "mat.Input_Data_104",
+        "shape": [
+          110,
+          6
+        ],
+        "dtype": "float64",
+        "nan": 0,
+        "inf": 0,
+        "min": 0.1,
+        "max": 400.0,
+        "head": [
+          0.1,
+          10.0,
+          65.0,
+          60.0,
+          50.0
+        ]
+      }
+    ]
+  },
+  {
+    "path": "candidate_bytes/OXYGEN_PURGE/jy5vxystwd.zip_unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar_unpacked/Data_Matlabcode/3. Lowloadlevel/Input_Data_104.mat",
+    "bytes": 1246,
+    "sha256": "3a10ac4b73cf995818e812b4c401902bb19115f5785baa3c08d782bab8740e6e",
+    "mat_variables": [
+      [
+        "Input_Data_104",
+        [
+          109,
+          6
+        ],
+        "double"
+      ]
+    ],
+    "mat_fields": [
+      {
+        "key": "mat.Input_Data_104",
+        "shape": [
+          109,
+          6
+        ],
+        "dtype": "float64",
+        "nan": 0,
+        "inf": 0,
+        "min": 0.1,
+        "max": 750.0,
+        "head": [
+          0.1,
+          10.0,
+          65.0,
+          60.0,
+          12.5
+        ]
+      }
+    ]
+  },
+  {
+    "path": "candidate_bytes/OXYGEN_PURGE/jy5vxystwd.zip_unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar_unpacked/Data_Matlabcode/3. Lowloadlevel/3. Low load level (training).xlsx",
+    "bytes": 14630,
+    "sha256": "31209184067be0ab1ead26dd891adcba6c6d4bc9d9dcdb462b70e36c198c6622",
+    "sheets": [
+      {
+        "sheet": "Training data_0.1 Acm^(-2)",
+        "rows": 110,
+        "cols": 9,
+        "missing": 323,
+        "numeric": 657,
+        "head": [
+          [
+            "",
+            "",
+            "",
+            "Purge duration \n( s )",
+            "Purge interval \n( s )",
+            "Operating Cell Temp \n(oC)",
+            "Anode Humidity Temp \n( oC)",
+            "Current \n( A )",
+            "Oxygen utilization\n( kJ/L ) "
+          ],
+          [
+            "At operating current (A)",
+            "12.5",
+            "",
+            "0.1",
+            "10",
+            "65",
+            "60",
+            "12.5",
+            "5.83279"
+          ],
+          [
+            "Cell activation area (cm^2)",
+            "125.0",
+            "",
+            "0.1",
+            "20",
+            "65",
+            "60",
+            "12.5",
+            "7.88347"
+          ]
+        ],
+        "min_by_col": [
+          null,
+          0.1,
+          null,
+          0.1,
+          10.0,
+          65.0,
+          60.0,
+          12.5,
+          1.69466
+        ],
+        "max_by_col": [
+          null,
+          125.0,
+          null,
+          0.9,
+          750.0,
+          65.0,
+          60.0,
+          12.5,
+          13.01511
+        ]
+      }
+    ]
+  },
+  {
+    "path": "candidate_bytes/OXYGEN_PURGE/jy5vxystwd.zip_unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar_unpacked/Data_Matlabcode/3. Lowloadlevel/3. Low load level (experiments).xlsx",
+    "bytes": 17316,
+    "sha256": "b6c0ecc209cd24c5f47cabd822adfc69b96cc0bc12fae859142d3d5f3e764c62",
+    "sheets": [
+      {
+        "sheet": "Experiment data_0.1 Acm^(-2)",
+        "rows": 183,
+        "cols": 9,
+        "missing": 542,
+        "numeric": 1095,
+        "head": [
+          [
+            "",
+            "",
+            "",
+            "Purge duration \n( s )",
+            "Purge interval \n( s )",
+            "Operating Cell Temp \n(oC)",
+            "Anode Humidity Temp \n( oC)",
+            "Current \n( A )",
+            "Oxygen utilization\n( kJ/L ) "
+          ],
+          [
+            "At operating current (A)",
+            "12.5",
+            "",
+            "0.1",
+            "10",
+            "65",
+            "60",
+            "12.5",
+            "5.83279"
+          ],
+          [
+            "Cell activation area (cm^2)",
+            "125.0",
+            "",
+            "0.1",
+            "20",
+            "65",
+            "60",
+            "12.5",
+            "7.88347"
+          ]
+        ],
+        "min_by_col": [
+          null,
+          0.1,
+          null,
+          0.1,
+          10.0,
+          65.0,
+          60.0,
+          12.5,
+          1.69466
+        ],
+        "max_by_col": [
+          null,
+          125.0,
+          null,
+          0.9,
+          750.0,
+          65.0,
+          60.0,
+          12.5,
+          13.01511
+        ]
+      }
+    ]
+  },
+  {
+    "path": "candidate_bytes/OXYGEN_PURGE/jy5vxystwd.zip_unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar_unpacked/Data_Matlabcode/1.Highloadlevel/slprj/sim/varcache/ANN_highload/checksumOfCache.mat",
+    "bytes": 392,
+    "sha256": "ba9d9b854862ea73deb12bd2e88cd5b70e76eb75c9b38d90b81b97870db67cab",
+    "mat_variables": [
+      [
+        "GlobalWorkspace",
+        [
+          4,
+          1
+        ],
+        "uint32"
+      ],
+      [
+        "ConfigSetRef",
+        [
+          4,
+          1
+        ],
+        "uint32"
+      ],
+      [
+        "ModelWorkspace",
+        [
+          4,
+          1
+        ],
+        "uint32"
+      ]
+    ],
+    "mat_fields": [
+      {
+        "key": "mat.GlobalWorkspace",
+        "shape": [
+          4
+        ],
+        "dtype": "uint32",
+        "nan": 0,
+        "inf": 0,
+        "min": 1379954502.0,
+        "max": 3593057757.0,
+        "head": [
+          2789214418.0,
+          1379954502.0,
+          3584476141.0,
+          3593057757.0
+        ]
+      },
+      {
+        "key": "mat.ConfigSetRef",
+        "shape": [
+          4
+        ],
+        "dtype": "uint32",
+        "nan": 0,
+        "inf": 0,
+        "min": 78774415.0,
+        "max": 3649838548.0,
+        "head": [
+          3649838548.0,
+          78774415.0,
+          2550759657.0,
+          2118318316.0
+        ]
+      },
+      {
+        "key": "mat.ModelWorkspace",
+        "shape": [
+          4
+        ],
+        "dtype": "uint32",
+        "nan": 0,
+        "inf": 0,
+        "min": 78774415.0,
+        "max": 3649838548.0,
+        "head": [
+          3649838548.0,
+          78774415.0,
+          2550759657.0,
+          2118318316.0
+        ]
+      }
+    ]
+  },
+  {
+    "path": "candidate_bytes/OXYGEN_PURGE/jy5vxystwd.zip_unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar_unpacked/Data_Matlabcode/1.Highloadlevel/slprj/sim/varcache/ANN_highload/varInfo.mat",
+    "bytes": 664,
+    "sha256": "5b24e37a4e4a304ca4d2a335dcb5d86023c0022a21b8f693902750d3ef09c25f",
+    "mat_variables": [
+      [
+        "GlobalWorkspace",
+        [
+          5,
+          1
+        ],
+        "cell"
+      ],
+      [
+        "ConfigSetRef",
+        [
+          5,
+          0
+        ],
+        "cell"
+      ],
+      [
+        "ModelWorkspace",
+        [
+          5,
+          0
+        ],
+        "cell"
+      ]
+    ],
+    "mat_fields": [
+      {
+        "key": "mat.GlobalWorkspace",
+        "shape": [
+          5
+        ],
+        "dtype": "object"
+      },
+      {
+        "key": "mat.ConfigSetRef",
+        "shape": [
+          0
+        ],
+        "dtype": "object"
+      },
+      {
+        "key": "mat.ModelWorkspace",
+        "shape": [
+          0
+        ],
+        "dtype": "object"
+      }
+    ]
+  },
+  {
+    "path": "candidate_bytes/OXYGEN_PURGE/jy5vxystwd.zip_unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar_unpacked/Data_Matlabcode/2. Mediumloadlevel/slprj/sim/varcache/ANN_mediumload/checksumOfCache.mat",
+    "bytes": 392,
+    "sha256": "76fe3871f397d1522a9518af72b4464f836770ad7fedef5ae2135d5ade365320",
+    "mat_variables": [
+      [
+        "GlobalWorkspace",
+        [
+          4,
+          1
+        ],
+        "uint32"
+      ],
+      [
+        "ConfigSetRef",
+        [
+          4,
+          1
+        ],
+        "uint32"
+      ],
+      [
+        "ModelWorkspace",
+        [
+          4,
+          1
+        ],
+        "uint32"
+      ]
+    ],
+    "mat_fields": [
+      {
+        "key": "mat.GlobalWorkspace",
+        "shape": [
+          4
+        ],
+        "dtype": "uint32",
+        "nan": 0,
+        "inf": 0,
+        "min": 1379954502.0,
+        "max": 3593057757.0,
+        "head": [
+          2789214418.0,
+          1379954502.0,
+          3584476141.0,
+          3593057757.0
+        ]
+      },
+      {
+        "key": "mat.ConfigSetRef",
+        "shape": [
+          4
+        ],
+        "dtype": "uint32",
+        "nan": 0,
+        "inf": 0,
+        "min": 78774415.0,
+        "max": 3649838548.0,
+        "head": [
+          3649838548.0,
+          78774415.0,
+          2550759657.0,
+          2118318316.0
+        ]
+      },
+      {
+        "key": "mat.ModelWorkspace",
+        "shape": [
+          4
+        ],
+        "dtype": "uint32",
+        "nan": 0,
+        "inf": 0,
+        "min": 78774415.0,
+        "max": 3649838548.0,
+        "head": [
+          3649838548.0,
+          78774415.0,
+          2550759657.0,
+          2118318316.0
+        ]
+      }
+    ]
+  },
+  {
+    "path": "candidate_bytes/OXYGEN_PURGE/jy5vxystwd.zip_unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar_unpacked/Data_Matlabcode/2. Mediumloadlevel/slprj/sim/varcache/ANN_mediumload/varInfo.mat",
+    "bytes": 664,
+    "sha256": "99383d9f8013f06839cd2b99808a1cdc283af522dcde3fa6861c1e1850fa8418",
+    "mat_variables": [
+      [
+        "GlobalWorkspace",
+        [
+          5,
+          1
+        ],
+        "cell"
+      ],
+      [
+        "ConfigSetRef",
+        [
+          5,
+          0
+        ],
+        "cell"
+      ],
+      [
+        "ModelWorkspace",
+        [
+          5,
+          0
+        ],
+        "cell"
+      ]
+    ],
+    "mat_fields": [
+      {
+        "key": "mat.GlobalWorkspace",
+        "shape": [
+          5
+        ],
+        "dtype": "object"
+      },
+      {
+        "key": "mat.ConfigSetRef",
+        "shape": [
+          0
+        ],
+        "dtype": "object"
+      },
+      {
+        "key": "mat.ModelWorkspace",
+        "shape": [
+          0
+        ],
+        "dtype": "object"
+      }
+    ]
+  },
+  {
+    "path": "candidate_bytes/OXYGEN_PURGE/jy5vxystwd.zip_unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar_unpacked/Data_Matlabcode/3. Lowloadlevel/slprj/sim/varcache/ANN_lowload/checksumOfCache.mat",
+    "bytes": 392,
+    "sha256": "4d3005437abdabfaf64915d0d83cc1790f16db1615009902d6998b83a28337d6",
+    "mat_variables": [
+      [
+        "GlobalWorkspace",
+        [
+          4,
+          1
+        ],
+        "uint32"
+      ],
+      [
+        "ConfigSetRef",
+        [
+          4,
+          1
+        ],
+        "uint32"
+      ],
+      [
+        "ModelWorkspace",
+        [
+          4,
+          1
+        ],
+        "uint32"
+      ]
+    ],
+    "mat_fields": [
+      {
+        "key": "mat.GlobalWorkspace",
+        "shape": [
+          4
+        ],
+        "dtype": "uint32",
+        "nan": 0,
+        "inf": 0,
+        "min": 1379954502.0,
+        "max": 3593057757.0,
+        "head": [
+          2789214418.0,
+          1379954502.0,
+          3584476141.0,
+          3593057757.0
+        ]
+      },
+      {
+        "key": "mat.ConfigSetRef",
+        "shape": [
+          4
+        ],
+        "dtype": "uint32",
+        "nan": 0,
+        "inf": 0,
+        "min": 78774415.0,
+        "max": 3649838548.0,
+        "head": [
+          3649838548.0,
+          78774415.0,
+          2550759657.0,
+          2118318316.0
+        ]
+      },
+      {
+        "key": "mat.ModelWorkspace",
+        "shape": [
+          4
+        ],
+        "dtype": "uint32",
+        "nan": 0,
+        "inf": 0,
+        "min": 78774415.0,
+        "max": 3649838548.0,
+        "head": [
+          3649838548.0,
+          78774415.0,
+          2550759657.0,
+          2118318316.0
+        ]
+      }
+    ]
+  },
+  {
+    "path": "candidate_bytes/OXYGEN_PURGE/jy5vxystwd.zip_unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar_unpacked/Data_Matlabcode/3. Lowloadlevel/slprj/sim/varcache/ANN_lowload/varInfo.mat",
+    "bytes": 664,
+    "sha256": "146ae7c593a7b673ccf76451f2a358e1ef38f0730142eaaf74f1dcbd22f823a6",
+    "mat_variables": [
+      [
+        "GlobalWorkspace",
+        [
+          5,
+          1
+        ],
+        "cell"
+      ],
+      [
+        "ConfigSetRef",
+        [
+          5,
+          0
+        ],
+        "cell"
+      ],
+      [
+        "ModelWorkspace",
+        [
+          5,
+          0
+        ],
+        "cell"
+      ]
+    ],
+    "mat_fields": [
+      {
+        "key": "mat.GlobalWorkspace",
+        "shape": [
+          5
+        ],
+        "dtype": "object"
+      },
+      {
+        "key": "mat.ConfigSetRef",
+        "shape": [
+          0
+        ],
+        "dtype": "object"
+      },
+      {
+        "key": "mat.ModelWorkspace",
+        "shape": [
+          0
+        ],
+        "dtype": "object"
+      }
+    ]
+  }
+]

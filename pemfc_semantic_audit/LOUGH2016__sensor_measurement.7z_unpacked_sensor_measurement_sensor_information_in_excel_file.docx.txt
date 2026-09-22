@@ -1,0 +1,26 @@
+Each column in excel file represents measurement from each sensor, which each row in excel file represents the measurements collected at each sampling time;
+Column 1: anode outlet pressure from stack 1
+Column 2: anode outlet pressure from stack 2
+Column 3: cathode outlet pressure from stack 1
+Column 4: cathode outlet pressure from stack 2
+Column 5: current
+Column 6: anode reactant flow
+Column 7: anode inlet pressure from stack 1
+Column 8: anode inlet pressure from stack 2
+Column 9: cathode air inlet flow
+Column 10: cathode inlet pressure from stack 1
+Column 11: cathode stoichiometry
+Column 12: cathode outlet temperature from stack 2
+Column 13: cathode inlet temperature from stack 2
+Column 14: cathode outlet temperature from stack 1
+Column 15: cathode inlet temperature from stack 1
+Column 16: primary water inlet pressure from stack 2
+Column 17: primary water inlet pressure from stack 1
+Column 18: primary water inlet flow from stack 2
+Column 19: primary water inlet flow from stack 1
+Column 20: water inlet temperature
+
+
+
+
+

@@ -1,0 +1,50 @@
+[
+  {
+    "path": "candidate_bytes/RWTH/mc46tw9t8m.zip_unpacked/Experimental dataset Two-Stage Model Predictive St/00_readme.txt",
+    "bytes": 24676,
+    "sha256": "76932274a2ff24d70c8f20c15cba22f3deb50cfbf257eda747a7e0fbaea006fb",
+    "first_lines": [
+      "% -------------------------------------------------------------------------",
+      " Experimental Dataset: Two-Stage Model Predictive Stack Control for PEM ",
+      " Fuel Cell Systems",
+      "% -------------------------------------------------------------------------",
+      "",
+      "%% INFORMATION:",
+      "",
+      "1. Abstract: ",
+      "Proton-exchange membrane fuel cells (PEMFCs) play a pivotal role in ",
+      "decarbonizing the transport sector due to their high efficiency and Zero"
+    ],
+    "parse_error": "Expected 11 fields in line 116, saw 12"
+  },
+  {
+    "path": "candidate_bytes/RWTH/mc46tw9t8m.zip_unpacked/Experimental dataset Two-Stage Model Predictive St/01_ExperimentalData/cycle_2_TSOS.mat",
+    "bytes": 940885,
+    "sha256": "540d7780de515fa592e7f06b90a825171ab8801b513ce1453df83519cd04d06e",
+    "error": "'NoneType' object is not iterable"
+  },
+  {
+    "path": "candidate_bytes/RWTH/mc46tw9t8m.zip_unpacked/Experimental dataset Two-Stage Model Predictive St/01_ExperimentalData/cycle_2_MPC.mat",
+    "bytes": 956655,
+    "sha256": "63251f1b050145771fcea69d467731d1baab8e8a83c797e83250a744223b5ae1",
+    "error": "'NoneType' object is not iterable"
+  },
+  {
+    "path": "candidate_bytes/RWTH/mc46tw9t8m.zip_unpacked/Experimental dataset Two-Stage Model Predictive St/01_ExperimentalData/cycle_1_MPC.mat",
+    "bytes": 3099517,
+    "sha256": "2505b23ec40acd68dd373a46098ceb4cfba984b6abc8bae682fcf0d2afcc09fa",
+    "error": "'NoneType' object is not iterable"
+  },
+  {
+    "path": "candidate_bytes/RWTH/mc46tw9t8m.zip_unpacked/Experimental dataset Two-Stage Model Predictive St/01_ExperimentalData/cycle_1_TSOS.mat",
+    "bytes": 10018827,
+    "sha256": "af1a7d698d915261853f18fbdc79f2ad4cf4d01775cfbb7104060d7f9fd87788",
+    "error": "'NoneType' object is not iterable"
+  },
+  {
+    "path": "candidate_bytes/RWTH/mc46tw9t8m.zip_unpacked/Experimental dataset Two-Stage Model Predictive St/01_ExperimentalData/cycle_3_MPC.mat",
+    "bytes": 5793043,
+    "sha256": "9ea6f5fbf9112465650f249c4840435f4ec7d93a67708177cd65c668af507bd8",
+    "error": "'NoneType' object is not iterable"
+  }
+]

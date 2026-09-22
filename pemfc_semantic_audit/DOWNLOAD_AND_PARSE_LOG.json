@@ -1,0 +1,30 @@
+[
+  {
+    "tag": "RWTH",
+    "source": "https://data.mendeley.com/datasets/mc46tw9t8m/1",
+    "file": "candidate_bytes/RWTH/mc46tw9t8m.zip",
+    "size": 20680323,
+    "sha256": "8dceee1467afb83b9e801f70fa4542855286b90d2dd48e1b4a46db0bd965e67a",
+    "source_download_url": "https://prod-dcd-datasets-cache-zipfiles.s3.eu-west-1.amazonaws.com/mc46tw9t8m-1.zip?X-Amz-Security-Token=IQoJb3JpZ2luX2VjENr%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMSJIMEYCIQD6IZ7iGVXuy5hKLBJuGfLwJbVwY8JpoBR2DTBpbaYTpQIhAN8D%2BoOUPQW%2BG0u9zXX8oaBPV9jNXKrpY2hZLMbdhGDUKpUFCKL%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQBBoMMzY3MTQ3MzgzODI1IgxFM8B3FUk257XugT8q6QRuC4gaEiJIxtPncULuI5YDbh41np7%2BshFn11PQSccQ%2F8Q0C9ds4%2BOAady7GZn5J6lwuD30hbVdEoXjaQq878GGDV3GxSs23oTraZwjDftOclYytpmdZYqEBm4v2XoDGkqZzCsNbvZ7WbgFs%2Fp6AFLt%2Fs3hhoXf%2Bwd2BAiv9XIiN9RYP%2B0jAs0HwrBn9L5St3ybGz3HxjILbW4OAG2cbylaAAsOMd7JE7V90iP%2BxfJ6T8SLTdPZuUI2CRiUg1kASHbCZba4KGBNWXiOquMgZaFGYnnODiLHZS0%2FLNrHxN0kb%2BqSTCNN0ZsJF6AEhN%2FF2STsiNLc7o0FUslMbnMTAIuA79FAYyINBieIWQKRnZwUE8L4FRZIT8BQzBkK3O3EZjR8GP9mkR6CG5p4dzf9vRoX77Qfm91NXcCE%2FxUgWNVp55yBa6lH1VyGrp8V9hPiu%2FSxdzhtJ2dI%2FKPikXpld2JMUTI3Oq305spQgs5mKm7FMRuDwVa7ZX1K22fek3eSGGQspvXD6FZ217tqv86VYKZcC%2BXx5r%2BmOfwL4r3F%2FCJCzNX4De1F9DUiBVZQmqxUnx7r6CG4B6KcBFSzSpKJZE%2BSf%2BimMzfNQ7vKDXUjzqspT4J4jSOGXYMIt9JZf90F9q7A9uUGrKn0OOHW9jD%2Bc9YbPgImZS98MJy%2FnVycd5T0m9idGO27ebw0MYM4i1Kc4GQG%2FGIEEafvYLUP0OUqQLpKFZNlRAuwwqhC9KdeudehkTv5n6r95JrP9NFyRl0Jgm9vtbjFmHJ6NPlMmftXRkc4EmSqVRE86CJWfEKFON1L8RFMyl71pOJiwTCOj8nVBjqYAVvnQ1S%2BUsM3RvJtocn8JM8tUKQCkx6xdsuqw6XsjvnMk1%2FmGDx2s1VBwudutLUWq3v2IFk7EK91pr%2BRiuypdy4yMnFMsxakNl%2B2zwCOckHgd7zS6fuij%2Fvwoo2ZlteoQdVmyzoxscAypIIekN2RIkVW5eujQeBtHRXg5E7IAFa4sNoJ%2BioPt3ZNjZvu0I3gKlctlqkvJ0hq&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260922T093430Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIAVK65QPQITHAEAPJB%2F20260922%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Expires=300&X-Amz-Signature=6afdb5fdc275846050763a2c3dee6d0c04e25b4fb09f7b8b95aa9f5e8b82f95d",
+    "state": "BYTES"
+  },
+  {
+    "tag": "OXYGEN_PURGE",
+    "source": "https://data.mendeley.com/datasets/jy5vxystwd/2",
+    "file": "candidate_bytes/OXYGEN_PURGE/jy5vxystwd.zip",
+    "size": 177269,
+    "sha256": "8d9ef72cabfe8eb7964122767cbb38a323b4fde16dfc61eef274b278608151f4",
+    "source_download_url": "https://prod-dcd-datasets-cache-zipfiles.s3.eu-west-1.amazonaws.com/jy5vxystwd-2.zip?X-Amz-Security-Token=IQoJb3JpZ2luX2VjENr%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMSJIMEYCIQD6IZ7iGVXuy5hKLBJuGfLwJbVwY8JpoBR2DTBpbaYTpQIhAN8D%2BoOUPQW%2BG0u9zXX8oaBPV9jNXKrpY2hZLMbdhGDUKpUFCKL%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQBBoMMzY3MTQ3MzgzODI1IgxFM8B3FUk257XugT8q6QRuC4gaEiJIxtPncULuI5YDbh41np7%2BshFn11PQSccQ%2F8Q0C9ds4%2BOAady7GZn5J6lwuD30hbVdEoXjaQq878GGDV3GxSs23oTraZwjDftOclYytpmdZYqEBm4v2XoDGkqZzCsNbvZ7WbgFs%2Fp6AFLt%2Fs3hhoXf%2Bwd2BAiv9XIiN9RYP%2B0jAs0HwrBn9L5St3ybGz3HxjILbW4OAG2cbylaAAsOMd7JE7V90iP%2BxfJ6T8SLTdPZuUI2CRiUg1kASHbCZba4KGBNWXiOquMgZaFGYnnODiLHZS0%2FLNrHxN0kb%2BqSTCNN0ZsJF6AEhN%2FF2STsiNLc7o0FUslMbnMTAIuA79FAYyINBieIWQKRnZwUE8L4FRZIT8BQzBkK3O3EZjR8GP9mkR6CG5p4dzf9vRoX77Qfm91NXcCE%2FxUgWNVp55yBa6lH1VyGrp8V9hPiu%2FSxdzhtJ2dI%2FKPikXpld2JMUTI3Oq305spQgs5mKm7FMRuDwVa7ZX1K22fek3eSGGQspvXD6FZ217tqv86VYKZcC%2BXx5r%2BmOfwL4r3F%2FCJCzNX4De1F9DUiBVZQmqxUnx7r6CG4B6KcBFSzSpKJZE%2BSf%2BimMzfNQ7vKDXUjzqspT4J4jSOGXYMIt9JZf90F9q7A9uUGrKn0OOHW9jD%2Bc9YbPgImZS98MJy%2FnVycd5T0m9idGO27ebw0MYM4i1Kc4GQG%2FGIEEafvYLUP0OUqQLpKFZNlRAuwwqhC9KdeudehkTv5n6r95JrP9NFyRl0Jgm9vtbjFmHJ6NPlMmftXRkc4EmSqVRE86CJWfEKFON1L8RFMyl71pOJiwTCOj8nVBjqYAVvnQ1S%2BUsM3RvJtocn8JM8tUKQCkx6xdsuqw6XsjvnMk1%2FmGDx2s1VBwudutLUWq3v2IFk7EK91pr%2BRiuypdy4yMnFMsxakNl%2B2zwCOckHgd7zS6fuij%2Fvwoo2ZlteoQdVmyzoxscAypIIekN2RIkVW5eujQeBtHRXg5E7IAFa4sNoJ%2BioPt3ZNjZvu0I3gKlctlqkvJ0hq&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260922T093436Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIAVK65QPQITHAEAPJB%2F20260922%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Expires=300&X-Amz-Signature=8cab66addcf7ffbba890f8ccabeab903561e1456b01ab56fdb5c1e4404cf85ff",
+    "state": "BYTES"
+  },
+  {
+    "tag": "SEVILLA",
+    "error": "No accessible supplementary archive link found",
+    "page_text": "Access Denied\nYou don't have permission to access \"http://www.mdpi.com/2306-5729/5/2/47\" on this server.\n\nReference #18.8a1c2117.1790069676.a292727\n\nhttps://errors.edgesuite.net/18.8a1c2117.1790069676.a292727"
+  },
+  {
+    "tag": "DIFFERENTIAL",
+    "file": "Operating_conditions_Cell.tab",
+    "error": "byte mismatch 4730 != 4674"
+  }
+]

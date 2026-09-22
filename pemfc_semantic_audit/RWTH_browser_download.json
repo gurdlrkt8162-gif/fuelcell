@@ -1,0 +1,69 @@
+{
+  "events": [
+    {
+      "url": "https://data.mendeley.com/public-api/datasets/mc46tw9t8m/versions",
+      "body": [
+        {
+          "version": 1,
+          "publish_date": "2026-07-12",
+          "available": true
+        }
+      ]
+    },
+    {
+      "url": "https://data.mendeley.com/public-api/datasets/mc46tw9t8m/folders/1",
+      "body": [
+        {
+          "id": "3ddc3e9a-57e4-451e-9a90-a0bab079c492",
+          "name": "01_ExperimentalData",
+          "created_date": "2026-02-26T23:39:06.393"
+        },
+        {
+          "id": "660b47cb-86e3-4279-93c0-2a3aea403718",
+          "name": "02_Functions",
+          "created_date": "2026-02-26T23:39:06.396"
+        }
+      ]
+    },
+    {
+      "url": "https://data.mendeley.com/public-api/datasets/mc46tw9t8m/files?folder_id=root&version=1",
+      "body": [
+        {
+          "filename": "00_readme.txt",
+          "id": "95df1d70-e575-4d17-b6be-08201d904825",
+          "content_details": {
+            "id": "77f44742-da9f-4ca2-a8dc-afbd23ede082",
+            "sha256_hash": "76932274a2ff24d70c8f20c15cba22f3deb50cfbf257eda747a7e0fbaea006fb",
+            "content_type": "text/plain",
+            "size": 24676,
+            "created_date": "2026-02-26T23:39:06.897Z",
+            "download_url": "https://data.mendeley.com/public-files/datasets/mc46tw9t8m/files/95df1d70-e575-4d17-b6be-08201d904825/file_downloaded",
+            "view_url": "https://data.mendeley.com/public-files/datasets/mc46tw9t8m/files/95df1d70-e575-4d17-b6be-08201d904825/file_viewed",
+            "download_expiry_time": "2126-09-22T09:34:29.406312086Z"
+          },
+          "size": 24676,
+          "last_modified_date": "2026-02-26T23:39:06.897Z",
+          "status": "COMPLETED"
+        },
+        {
+          "filename": "run.m",
+          "id": "8b45a354-bf3b-419e-b79c-c8ca4da09917",
+          "content_details": {
+            "id": "4d233024-a592-4931-b212-032ce97f7022",
+            "sha256_hash": "01872b780b461061456d24e103eb54ea81adc4f9624b842010dc4786d4f75b04",
+            "content_type": "text/plain",
+            "size": 855,
+            "created_date": "2026-02-26T23:39:06.917Z",
+            "download_url": "https://data.mendeley.com/public-files/datasets/mc46tw9t8m/files/8b45a354-bf3b-419e-b79c-c8ca4da09917/file_downloaded",
+            "view_url": "https://data.mendeley.com/public-files/datasets/mc46tw9t8m/files/8b45a354-bf3b-419e-b79c-c8ca4da09917/file_viewed",
+            "download_expiry_time": "2126-09-22T09:34:29.406315976Z"
+          },
+          "size": 855,
+          "last_modified_date": "2026-02-26T23:39:06.917Z",
+          "status": "COMPLETED"
+        }
+      ]
+    }
+  ],
+  "page_text": "Skip to main content\nSign In / Register\nExperimental dataset: Two-Stage Model Predictive Stack Control for PEM Fuel Cell Systems\nPublished: 12 July 2026\n|\nVersion 1\n|\nDOI:\n10.17632/mc46tw9t8m.1\nContributors:\nN Weber\n,\nDaniel Sallach\nDescription\n\nProton-exchange membrane fuel cells (PEMFCs) play a pivotal role in decarbonizing the transport sector due to their high efficiency and zero local emissions. This work proposes an embedded, nonlinear, two-stage model predictive control (MPC) that optimally allocates the stack supply from the air, hydrogen, and coolant subsystems. A physics-based process model of the stack captures the dominant dynamics of membrane hydration, temperature, and reactant pressures, representing key internal states that influence performance and durability. The two-stage structure separates the optimal economic planning from the real-time tracking MPC, (1) ensuring constraint-compliant regulation of the considered states under highly dynamic operation, (2) maintaining efficient stack operation, and (3) resolving the over-actuated nature of the multi-input system. Experimental validation on a full-scale PEMFC test bench demonstrates efficiency gains of up to 8% and reduced reactant consumption compared to a nominal stack control. At the same time, membrane temperature and water content remain within prescribed limits.\n\nDownload All 19.7 MB\nFiles\n01_ExperimentalData\n02_Functions\nTXT\n00_readme.txt\n24.1 KB\nM\nrun.m\n855 B\nInstitutions\nRWTH Aachen University\nNorth Rhine-Westphalia, Aachen\nCategories\nControl Engineering, Proton-Exchange Membrane Fuel Cells, Real-Time Control System, Predictive Control Model, Real Time Optimization\nFunders\nBundesministerium für Forschung, Technologie und Raumfahrt\nNorth Rhine-Westphalia, Germany\nGrant ID: 03ZU1115EC\nLicence\nCC BY-NC 4.0\nLearn more\nUsage\nViews:\n51\nDownloads:\n15\nView details\nLatest version\nVersion 1\nPublished:\n12 Jul 2026\nDOI:\n10.17632/mc46tw9t8m.1\n\nCite this dataset\n\nCopy to clipboard\nHome\n|\nAbout\n|\nAccessibility Statement\n|\nArchive Policy\n|\nFile Formats\n|\nAPI Docs\n|\nOAI\n|\nMission\n|\nStatus Updates\nTerms of Use\n|\nPrivacy Policy\n|\nCookie settings\nAll content on this site: Copyright © 2026 Elsevier inc, its licensors, and contributors. All rights are reserved, including those for text and data mining, AI training and similar technologies. For all open access content, the Creative Commons licensing terms apply."
+}
