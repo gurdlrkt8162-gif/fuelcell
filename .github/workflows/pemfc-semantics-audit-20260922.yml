@@ -22,7 +22,7 @@ jobs:
           name: PEMFC_CANDIDATE_RAW_NOT_APPROVED
           path: previous_artifact
       - run: |
-          unzip -q previous_artifact/PEMFC_CANDIDATE_RAW_NOT_APPROVED.zip
+          unzip -qo previous_artifact/PEMFC_CANDIDATE_RAW_NOT_APPROVED.zip
           pip install requests numpy pandas scipy openpyxl xlrd beautifulsoup4 playwright python-docx
           python -m playwright install --with-deps chromium
           sudo apt-get install -y -qq p7zip-full p7zip-rar
