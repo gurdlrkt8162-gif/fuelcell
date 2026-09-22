@@ -1,0 +1,175 @@
+{
+  "tag": "NPL_CO",
+  "url": "https://data.mendeley.com/datasets/sp4pc8w9xh/1",
+  "network_json": [
+    {
+      "url": "https://data.mendeley.com/public-api/datasets/sp4pc8w9xh/versions",
+      "body": [
+        {
+          "version": 1,
+          "publish_date": "2021-10-18",
+          "available": true
+        }
+      ]
+    },
+    {
+      "url": "https://data.mendeley.com/public-api/datasets/sp4pc8w9xh/folders/1",
+      "body": []
+    },
+    {
+      "url": "https://data.mendeley.com/public-api/datasets/sp4pc8w9xh/versions",
+      "body": [
+        {
+          "version": 1,
+          "publish_date": "2021-10-18",
+          "available": true
+        }
+      ]
+    },
+    {
+      "url": "https://data.mendeley.com/public-api/datasets/sp4pc8w9xh/files?folder_id=root&version=1",
+      "body": [
+        {
+          "filename": "13CO_single_cell_public_data.csv",
+          "id": "08f08035-b81b-4334-8c99-7645abd61660",
+          "content_details": {
+            "id": "e05e1326-9a00-4faf-ba9f-9156a4f10150",
+            "sha256_hash": "ff2c6797bc23b3b988a4a06419cb3b8a93683b078874b80daa2c449512d4d052",
+            "content_type": "application/vnd.ms-excel",
+            "size": 3985998,
+            "created_date": "2021-10-13T14:36:04.623Z",
+            "download_url": "https://data.mendeley.com/public-files/datasets/sp4pc8w9xh/files/08f08035-b81b-4334-8c99-7645abd61660/file_downloaded",
+            "view_url": "https://data.mendeley.com/public-files/datasets/sp4pc8w9xh/files/08f08035-b81b-4334-8c99-7645abd61660/file_viewed",
+            "download_expiry_time": "2126-09-22T09:17:53.979722218Z"
+          },
+          "size": 3985998,
+          "last_modified_date": "2021-10-13T14:36:04.623Z",
+          "status": "COMPLETED"
+        },
+        {
+          "filename": "13CO_single_cell_public_data.xlsx",
+          "id": "536de8d3-8d14-4675-9548-69a71c5c77ae",
+          "content_details": {
+            "id": "ba3b7189-918d-48ce-8d97-44a80b118648",
+            "sha256_hash": "44517bfb7b78e3163bd08680db840e58fc98f9e84acd2a363ed8b090fe8d54ce",
+            "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "size": 7538166,
+            "created_date": "2021-10-13T14:54:07.875Z",
+            "download_url": "https://data.mendeley.com/public-files/datasets/sp4pc8w9xh/files/536de8d3-8d14-4675-9548-69a71c5c77ae/file_downloaded",
+            "view_url": "https://data.mendeley.com/public-files/datasets/sp4pc8w9xh/files/536de8d3-8d14-4675-9548-69a71c5c77ae/file_viewed",
+            "download_expiry_time": "2126-09-22T09:17:53.979726758Z"
+          },
+          "size": 7538166,
+          "last_modified_date": "2021-10-13T14:54:07.875Z",
+          "status": "COMPLETED"
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Skip to main content",
+      "url": "https://data.mendeley.com/datasets/sp4pc8w9xh/1#main"
+    },
+    {
+      "text": "",
+      "url": "https://data.mendeley.com/"
+    },
+    {
+      "text": "",
+      "url": "https://data.mendeley.com/faq"
+    },
+    {
+      "text": "FAQ",
+      "url": "https://data.mendeley.com/faq"
+    },
+    {
+      "text": "Download All 7.98 MB",
+      "url": "https://data.mendeley.com/public-api/zip/sp4pc8w9xh/download/1"
+    },
+    {
+      "text": "",
+      "url": "https://data.mendeley.com/public-files/datasets/sp4pc8w9xh/files/08f08035-b81b-4334-8c99-7645abd61660/file_downloaded"
+    },
+    {
+      "text": "",
+      "url": "https://data.mendeley.com/public-files/datasets/sp4pc8w9xh/files/536de8d3-8d14-4675-9548-69a71c5c77ae/file_downloaded"
+    },
+    {
+      "text": "View details",
+      "url": "https://plu.mx/plum/a/?doi=10.17632/sp4pc8w9xh&theme=plum-bigben-theme"
+    },
+    {
+      "text": "Home",
+      "url": "https://data.mendeley.com/"
+    },
+    {
+      "text": "About",
+      "url": "https://data.mendeley.com/about"
+    },
+    {
+      "text": "Accessibility Statement",
+      "url": "https://data.mendeley.com/accessibility"
+    },
+    {
+      "text": "Archive Policy",
+      "url": "https://data.mendeley.com/archive-process"
+    },
+    {
+      "text": "File Formats",
+      "url": "https://data.mendeley.com/file-formats"
+    },
+    {
+      "text": "API Docs",
+      "url": "https://data.mendeley.com/api/docs"
+    },
+    {
+      "text": "OAI",
+      "url": "https://data.mendeley.com/oai?verb=Identify"
+    },
+    {
+      "text": "Mission",
+      "url": "https://data.mendeley.com/mission"
+    },
+    {
+      "text": "Status Updates",
+      "url": "https://digitalcommons.elsevier.com/status"
+    },
+    {
+      "text": "Terms of Use",
+      "url": "https://www.mendeley.com/terms/"
+    },
+    {
+      "text": "Privacy Policy",
+      "url": "https://www.elsevier.com/legal/privacy-policy"
+    },
+    {
+      "text": "Cookie settings",
+      "url": "https://data.mendeley.com/datasets/sp4pc8w9xh/1#"
+    },
+    {
+      "text": "Cookie Policy",
+      "url": "https://www.elsevier.com/legal/cookienotice"
+    },
+    {
+      "text": "Cookie Policy",
+      "url": "https://www.elsevier.com/legal/cookienotice"
+    },
+    {
+      "text": "Google Ad-Tech Vendors",
+      "url": "https://support.google.com/admanager/answer/9012903"
+    },
+    {
+      "text": "Privacy Policy",
+      "url": "https://www.elsevier.com/legal/privacy-policy"
+    },
+    {
+      "text": "",
+      "url": "https://www.onetrust.com/products/cookie-consent/"
+    }
+  ],
+  "page_text": "Skip to main content\nSign In / Register\nOperando characterisation of the impact of carbon monoxide on PEMFC performance using isotopic labelling and gas analysis\nPublished: 18 October 2021\n|\nVersion 1\n|\nDOI:\n10.17632/sp4pc8w9xh.1\nContributors:\nHans Becker\n,\nThomas Bacquart\n,\nMark Perkins\n,\nNiamh Moore\n,\nJari Ihonen\n,\nGareth Hinds\n,\nGraham Smith\nDescription\n\nDataset for the published communications paper of the same title in Journal of Power Sources Advances (doi:10.1016/j.powera.2020.100036)\nData consists of fuel cell performance data, GC-methaniser data, SIFT-MS data, and calculated CO adsorbed data. \nThe data can be found all on 1 page in a .csv format or .xlsx format with separate sheets for each data group.\n\n\nDownload All 7.98 MB\nFiles\nCSV\n13CO_single_cell_public_data.csv\n3.8 MB\nXLSX\n13CO_single_cell_public_data.xlsx\n7.19 MB\nInstitutions\nNational Physical Laboratory\nCategories\nProton-Exchange Membrane Fuel Cells, Hydrogen\nLicence\nCC BY 4.0\nLearn more\nUsage\nViews:\n192\nDownloads:\n63\nView details\nLatest version\nVersion 1\nPublished:\n18 Oct 2021\nDOI:\n10.17632/sp4pc8w9xh.1\n\nCite this dataset\n\nCopy to clipboard\nHome\n|\nAbout\n|\nAccessibility Statement\n|\nArchive Policy\n|\nFile Formats\n|\nAPI Docs\n|\nOAI\n|\nMission\n|\nStatus Updates\nTerms of Use\n|\nPrivacy Policy\n|\nCookie Settings\nAll content on this site: Copyright © 2026 Elsevier inc, its licensors, and contributors. All rights are reserved, including those for text and data mining, AI training and similar technologies. For all open access content, the Creative Commons licensing terms apply.\nWe use cookies that are necessary to make our site work. We may also use additional cookies to analyze, improve, and personalize our content and your digital experience. You can manage your cookie preferences using theCookie settings link. For more information, see ourCookie Policy\nCookie settings\nAccept all cookies",
+  "embedded_state": [
+    "window.INITIAL_STATE = {\"archive\":{\"data\":{\"status\":\"PENDING\"},\"error\":null,\"loading\":false},\"articles\":{\"list\":[],\"loading\":true},\"citations\":{\"data\":{},\"count\":0,\"error\":false,\"loading\":true},\"configClient\":{\"environment\":\"live\",\"recaptchaV3SiteKey\":\"6LcEHc8ZAAAAAMenhT9jO_B-EJAoGq_v29B7HaCf\",\"adobeAnalytics\":{\"newPage\":{\"page\":{\"businessUnit\":\"els:rp:st\",\"language\":\"en\",\"productName\":\"md\",\"environment\":\"dev\",\"noTracking\":\"false\",\"sectionName\":\"md:data\",\"type\":\"cp-ca\"},\"content\":{\"type\":\"md:datasets\",\"format\":\"MIME-HTML\"}}},\"apiBaseUrl\":\"/api/datasets-v2\",\"publicApiBaseUrl\":\"/public-api\",\"baseUrl\":\"/datasets\",\"baseAssetsUrl\":\"/datasets\"},\"customer\":{\"customer\":null,\"institution\":null},\"dataset\":{\"snapshot\":{\"id\":\"sp4pc8w9xh\",\"version\":1,\"name\":\"Operando characterisation of the impact of carbon monoxide on PEMFC performance using isotopic labelling and gas analysis\",\"description\":\"Dataset for the published communications paper of the same title in Journal of Power Sources Advances (doi:10.1016/j.powera.2020.100036)\\nData consists of fuel cell performance data, GC-methaniser data, SIFT-MS data, and calculated CO adsorbed data. \\nThe data can be found all on 1 page in a .csv format or .xlsx format with separate sheets for each data group.\\n\",\"doi\":\"10.17632/sp4pc8w9xh.1\",\"publish_date\":\"2021-10-18T07:19:42.902Z\",\"last_modification_date\":\"2021-10-13T14:55:26.072Z\",\"is_confidential\":false,\"customer\":{\"id\":\"7377952c-6404-4428-bbfc-77242cfc301e\",\"name\":\"Mendeley Guests\",\"chief_id\":810289,\"config\":{\"repository_id\":\"MENDELEY_DATA\",\"dataset_size_limit\":10737418240,\"doi_prefix\":\"10.17632\"},\"is_user_mendeley_admin\":false,\"customer_roles\":[],\"is_guest\":true,\"is_user_customer_moderator\":false},\"owner\":{\"id\":\"999cb18d-4a24-33bd-a910-3e27b5e7ae9d\",\"first_name\":\"Hans\",\"last_name\":\"Becker\",\"display_name\":\"Hans Becker\",\"$ref\":\"/profiles/999cb18d-4a24-33bd-a910-3e27b5e7ae9d\"},\"categories\":[{\"id\":\"data.elsevier.com/vocabulary/OmniScience/Concept-209895198\",\"label\":\"Proton-Exchange Membrane Fuel Cells\"},{\"id\":\"data.elsevier.com/vocabulary/OmniScience/Concept-253226719\",\"label\":\"Hydrogen\"}],\"licence\":{\"id\":\"01d9c749-3c4d-4431-9df3-620b2dcfe144\",\"short_name\":\"CC BY 4.0\",\"full_name\":\"Creative Commons Attribution 4.0 International\",\"description\":\"You can share, copy and modify this dataset so long as you give appropriate credit, provide a link to the CC BY license, and indicate if changes were made, but you may not do so in a way that suggests the rights holder has endorsed you or your use of the dataset. Note that further permission may be required for any content within the dataset that is identified as belonging to a third party.\",\"url\":\"http://creativecommons.org/licenses/by/4.0\",\"category\":\"Creative\",\"customer_id\":null},\"institutions\":[{\"id\":\"eb7e64a8-db8f-5f6c-83e7-6ac4959efd29\",\"name\":\"National Physical Laboratory\"}],\"organisational_unit_names\":[],\"contributors\":[{\"id\":\"999cb18d-4a24-33bd-a910-3e27b5e7ae9d\",\"first_name\":\"Hans\",\"last_name\":\"Becker\",\"$ref\":\"/profiles/999cb18d-4a24-33bd-a910-3e27b5e7ae9d\"},{\"first_name\":\"Thomas\",\"last_name\":\"Bacquart\"},{\"first_name\":\"Mark\",\"last_name\":\"Perkins\"},{\"id\":\"3b0c0e43-7c32-3247-9a4e-ebe96ff4d07b\",\"first_name\":\"Niamh\",\"last_name\":\"Moore\",\"$ref\":\"/profiles/3b0c0e43-7c32-3247-9a4e-ebe96ff4d07b\"},{\"id\":\"d2b0a464-dbd9-3c0e-aa08-6b77ba80b0b9\",\"first_name\":\"Jari\",\"last_name\":\"Ihonen\",\"$ref\":\"/profiles/d2b0a464-dbd9-3c0e-aa08-6b77ba80b0b9\"},{\"id\":\"250cb167-5010-37b3-8da4-50806fa6f641\",\"first_name\":\"Gareth\",\"last_name\":\"Hinds\",\"$ref\":\"/profiles/250cb167-5010-37b3-8da4-50806fa6f641\"},{\"id\":\"38f39718-1ffc-3d6b-af44-560025432aca\",\"first_name\":\"Graham\",\"last_name\":\"Smith\",\"$ref\":\"/profiles/38f39718-1ffc-3d6b-af44-560025432aca\"}],\"related_links\":[],\"custom_metadata\":{},\"is_metadata_only\":false},\"contributors\":[],\"doi\":\"\",\"status\":200,\"loading\":false},\"environment\":\"live\",\"files\":{\"list\":[],\"currentFile\":{},\"folders\":[],\"currentFolder\":{},\"filesLoading\":true,\"foldersLoading\":true},\"fileViewer\":{\"navigationLoaded\":false,\"metadataLoaded\":false},\"hostname\":\"data.mendeley.com\",\"idToken\":null,\"orcidDomain\":\"https://orcid.org\",\"repository\":{\"repository\":null,\"loading\":true},\"s3\":\"https://static.data.mendeley.com\",\"versions\":{\"list\":[],\"loading\":true}}\n      window.initialTime = 1790068672617"
+  ]
+}

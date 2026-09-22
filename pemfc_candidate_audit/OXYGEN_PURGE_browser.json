@@ -1,0 +1,184 @@
+{
+  "tag": "OXYGEN_PURGE",
+  "url": "https://data.mendeley.com/datasets/jy5vxystwd/2",
+  "network_json": [
+    {
+      "url": "https://data.mendeley.com/public-api/datasets/jy5vxystwd/versions",
+      "body": [
+        {
+          "version": 1,
+          "publish_date": "2025-08-12",
+          "available": true
+        },
+        {
+          "version": 2,
+          "publish_date": "2025-08-13",
+          "available": true
+        }
+      ]
+    },
+    {
+      "url": "https://data.mendeley.com/public-api/datasets/jy5vxystwd/folders/2",
+      "body": []
+    },
+    {
+      "url": "https://data.mendeley.com/public-api/datasets/jy5vxystwd/versions",
+      "body": [
+        {
+          "version": 1,
+          "publish_date": "2025-08-12",
+          "available": true
+        },
+        {
+          "version": 2,
+          "publish_date": "2025-08-13",
+          "available": true
+        }
+      ]
+    },
+    {
+      "url": "https://data.mendeley.com/public-api/datasets/jy5vxystwd/files?folder_id=root&version=2",
+      "body": [
+        {
+          "filename": "Data_Matlabcode.rar",
+          "id": "50152e6d-6807-4ee2-8876-acebccb2ce24",
+          "content_details": {
+            "id": "6ae973ab-dc96-43ba-923d-0626d857d70a",
+            "sha256_hash": "586a76e7240d35d5e1959072436e17a762f724763625bb34e76eeb0f7f1f6d42",
+            "content_type": "application/octet-stream",
+            "size": 179674,
+            "created_date": "2025-08-12T03:48:03.367Z",
+            "download_url": "https://data.mendeley.com/public-files/datasets/jy5vxystwd/files/50152e6d-6807-4ee2-8876-acebccb2ce24/file_downloaded",
+            "view_url": "https://data.mendeley.com/public-files/datasets/jy5vxystwd/files/50152e6d-6807-4ee2-8876-acebccb2ce24/file_viewed",
+            "download_expiry_time": "2126-09-22T09:17:27.827039107Z"
+          },
+          "size": 179674,
+          "last_modified_date": "2025-08-12T03:48:03.367Z",
+          "status": "COMPLETED"
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Skip to main content",
+      "url": "https://data.mendeley.com/datasets/jy5vxystwd/2#main"
+    },
+    {
+      "text": "",
+      "url": "https://data.mendeley.com/"
+    },
+    {
+      "text": "",
+      "url": "https://data.mendeley.com/faq"
+    },
+    {
+      "text": "FAQ",
+      "url": "https://data.mendeley.com/faq"
+    },
+    {
+      "text": "Download All 173 KB",
+      "url": "https://data.mendeley.com/public-api/zip/jy5vxystwd/download/2"
+    },
+    {
+      "text": "",
+      "url": "https://data.mendeley.com/public-files/datasets/jy5vxystwd/files/50152e6d-6807-4ee2-8876-acebccb2ce24/file_downloaded"
+    },
+    {
+      "text": "National Chung Cheng University",
+      "url": "https://ror.org/0028v3876"
+    },
+    {
+      "text": "Ministry of Education",
+      "url": "https://ror.org/01kcva023"
+    },
+    {
+      "text": "National Science and Technology Council",
+      "url": "https://ror.org/00wnb9798"
+    },
+    {
+      "text": "View details",
+      "url": "https://plu.mx/plum/a/?doi=10.17632/jy5vxystwd&theme=plum-bigben-theme"
+    },
+    {
+      "text": "Version 1",
+      "url": "https://data.mendeley.com/datasets/jy5vxystwd/1"
+    },
+    {
+      "text": "Compare versions",
+      "url": "https://data.mendeley.com/datasets/compare/jy5vxystwd"
+    },
+    {
+      "text": "Home",
+      "url": "https://data.mendeley.com/"
+    },
+    {
+      "text": "About",
+      "url": "https://data.mendeley.com/about"
+    },
+    {
+      "text": "Accessibility Statement",
+      "url": "https://data.mendeley.com/accessibility"
+    },
+    {
+      "text": "Archive Policy",
+      "url": "https://data.mendeley.com/archive-process"
+    },
+    {
+      "text": "File Formats",
+      "url": "https://data.mendeley.com/file-formats"
+    },
+    {
+      "text": "API Docs",
+      "url": "https://data.mendeley.com/api/docs"
+    },
+    {
+      "text": "OAI",
+      "url": "https://data.mendeley.com/oai?verb=Identify"
+    },
+    {
+      "text": "Mission",
+      "url": "https://data.mendeley.com/mission"
+    },
+    {
+      "text": "Status Updates",
+      "url": "https://digitalcommons.elsevier.com/status"
+    },
+    {
+      "text": "Terms of Use",
+      "url": "https://www.mendeley.com/terms/"
+    },
+    {
+      "text": "Privacy Policy",
+      "url": "https://www.elsevier.com/legal/privacy-policy"
+    },
+    {
+      "text": "Cookie settings",
+      "url": "https://data.mendeley.com/datasets/jy5vxystwd/2#"
+    },
+    {
+      "text": "Cookie Policy",
+      "url": "https://www.elsevier.com/legal/cookienotice"
+    },
+    {
+      "text": "Cookie Policy",
+      "url": "https://www.elsevier.com/legal/cookienotice"
+    },
+    {
+      "text": "Google Ad-Tech Vendors",
+      "url": "https://support.google.com/admanager/answer/9012903"
+    },
+    {
+      "text": "Privacy Policy",
+      "url": "https://www.elsevier.com/legal/privacy-policy"
+    },
+    {
+      "text": "",
+      "url": "https://www.onetrust.com/products/cookie-consent/"
+    }
+  ],
+  "page_text": "Skip to main content\nSign In / Register\nPrediction of oxygen utilization and purge strategy optimization for proton exchange membrane fuel cell using an Artificial Neural Network approach\nPublished: 13 August 2025\n|\nVersion 2\n|\nDOI:\n10.17632/jy5vxystwd.2\nContributors:\nTan Thich Do\n,\nVinh-Dat Ly\n,\nAmornchai Arpornwichanop\n,\nYong-Song Chen\nDescription\n\nData from experiments and MATLAB code for predicting oxygen utilization in an oxygen–hydrogen proton exchange membrane fuel cell.\nExperimental data were used to train the ANN model under various purge operations (including purge interval and purge duration) and load levels. Several experimental data were used to validate the model. Additionally, the MATLAB code was used to predict oxygen utilization at new purge durations and to evaluate the model’s performance.\n\nDownload All 173 KB\nFiles\nRAR\nData_Matlabcode.rar\n175 KB\nInstitutions\nNational Chung Cheng University\nMinhsiung\nCategories\nArtificial Neural Network, Code of Practice, Oxygen\nFunders\nMinistry of Education\nSG.01, Singapore\nGrant ID: Ph.D. Project Cooperation between Academia and Industry\nNational Science and Technology Council\nLusaka Province, Zambia\nGrant ID: 110-2622-E-194-003\nLicence\nCC BY 4.0\nLearn more\nUsage\nViews:\n139\nDownloads:\n19\nView details\nLatest version\nVersion 2\nPublished:\n13 Aug 2025\nDOI:\n10.17632/jy5vxystwd.2\n\nCite this dataset\n\nCopy to clipboard\nPrevious versions\nVersion 1\n12 August 2025\nVersion comparison\nCompare versions\nHome\n|\nAbout\n|\nAccessibility Statement\n|\nArchive Policy\n|\nFile Formats\n|\nAPI Docs\n|\nOAI\n|\nMission\n|\nStatus Updates\nTerms of Use\n|\nPrivacy Policy\n|\nCookie Settings\nAll content on this site: Copyright © 2026 Elsevier inc, its licensors, and contributors. All rights are reserved, including those for text and data mining, AI training and similar technologies. For all open access content, the Creative Commons licensing terms apply.\nWe use cookies that are necessary to make our site work. We may also use additional cookies to analyze, improve, and personalize our content and your digital experience. You can manage your cookie preferences using theCookie settings link. For more information, see ourCookie Policy\nCookie settings\nAccept all cookies",
+  "embedded_state": [
+    "window.INITIAL_STATE = {\"archive\":{\"data\":{\"status\":\"PENDING\"},\"error\":null,\"loading\":false},\"articles\":{\"list\":[],\"loading\":true},\"citations\":{\"data\":{},\"count\":0,\"error\":false,\"loading\":true},\"configClient\":{\"environment\":\"live\",\"recaptchaV3SiteKey\":\"6LcEHc8ZAAAAAMenhT9jO_B-EJAoGq_v29B7HaCf\",\"adobeAnalytics\":{\"newPage\":{\"page\":{\"businessUnit\":\"els:rp:st\",\"language\":\"en\",\"productName\":\"md\",\"environment\":\"dev\",\"noTracking\":\"false\",\"sectionName\":\"md:data\",\"type\":\"cp-ca\"},\"content\":{\"type\":\"md:datasets\",\"format\":\"MIME-HTML\"}}},\"apiBaseUrl\":\"/api/datasets-v2\",\"publicApiBaseUrl\":\"/public-api\",\"baseUrl\":\"/datasets\",\"baseAssetsUrl\":\"/datasets\"},\"customer\":{\"customer\":null,\"institution\":null},\"dataset\":{\"snapshot\":{\"id\":\"jy5vxystwd\",\"version\":2,\"name\":\"Prediction of oxygen utilization and purge strategy optimization for proton exchange membrane fuel cell using an Artificial Neural Network approach\",\"description\":\"Data from experiments and MATLAB code for predicting oxygen utilization in an oxygen–hydrogen proton exchange membrane fuel cell.\\nExperimental data were used to train the ANN model under various purge operations (including purge interval and purge duration) and load levels. Several experimental data were used to validate the model. Additionally, the MATLAB code was used to predict oxygen utilization at new purge durations and to evaluate the model’s performance.\",\"doi\":\"10.17632/jy5vxystwd.2\",\"publish_date\":\"2025-08-13T15:16:37.133Z\",\"last_modification_date\":\"2025-08-13T01:28:55.467Z\",\"is_confidential\":false,\"customer\":{\"id\":\"7377952c-6404-4428-bbfc-77242cfc301e\",\"name\":\"Mendeley Guests\",\"chief_id\":810289,\"config\":{\"repository_id\":\"MENDELEY_DATA\",\"dataset_size_limit\":10737418240,\"doi_prefix\":\"10.17632\"},\"is_user_mendeley_admin\":false,\"customer_roles\":[],\"is_guest\":true,\"is_user_customer_moderator\":false},\"owner\":{\"id\":\"888fb562-99be-49e2-998f-ee080021f301\",\"first_name\":\"Tan-Thich\",\"last_name\":\"Do\",\"display_name\":\"Tan-Thich Do\",\"$ref\":\"/profiles/888fb562-99be-49e2-998f-ee080021f301\",\"profile\":{\"id\":\"888fb562-99be-49e2-998f-ee080021f301\",\"$ref\":\"/profiles/888fb562-99be-49e2-998f-ee080021f301\"}},\"categories\":[{\"id\":\"data.elsevier.com/vocabulary/OmniScience/Concept-190195178\",\"label\":\"Artificial Neural Network\"},{\"id\":\"data.elsevier.com/vocabulary/OmniScience/Concept-253046064\",\"label\":\"Code of Practice\"},{\"id\":\"data.elsevier.com/vocabulary/OmniScience/Concept-253226721\",\"label\":\"Oxygen\"}],\"licence\":{\"id\":\"01d9c749-3c4d-4431-9df3-620b2dcfe144\",\"short_name\":\"CC BY 4.0\",\"full_name\":\"Creative Commons Attribution 4.0 International\",\"description\":\"You can share, copy and modify this dataset so long as you give appropriate credit, provide a link to the CC BY license, and indicate if changes were made, but you may not do so in a way that suggests the rights holder has endorsed you or your use of the dataset. Note that further permission may be required for any content within the dataset that is identified as belonging to a third party.\",\"url\":\"http://creativecommons.org/licenses/by/4.0\",\"category\":\"Creative\",\"customer_id\":null},\"institutions\":[{\"id\":\"a1c0b984-9342-5d8b-ab9f-b45f5a798565\",\"name\":\"National Chung Cheng University\",\"url\":\"www.ccu.edu.tw\",\"location\":{\"name\":\"Minhsiung\",\"country\":\"TW\",\"country_code\":\"TW\",\"country_subdivision\":\"\"},\"edm:identifier\":[{\"type\":\"idtype:ROR\",\"value\":\"https://ror.org/0028v3876\"}]}],\"funders\":[{\"grant_id\":\"Ph.D. Project Cooperation between Academia and Industry\",\"identity\":\"https://ror.org/01kcva023\",\"name\":\"Ministry of Education\",\"parent_name\":null,\"location\":\"Singapore\",\"subdivision_location\":\"SG.01\"},{\"grant_id\":\"110-2622-E-194-003\",\"identity\":\"https://ror.org/00wnb9798\",\"name\":\"National Science and Technology Council\",\"parent_name\":null,\"location\":\"Zambia\",\"subdivision_location\":\"Lusaka Province\"}],\"organisational_unit_names\":[],\"contributors\":[{\"id\":\"888fb562-99be-49e2-998f-ee080021f301\",\"first_name\":\"Tan Thich\",\"last_name\":\"Do\",\"orcid_id\":\"0000-0001-7851-0244\",\"$ref\":\"/profiles/888fb562-99be-49e2-998f-ee080021f301\",\"profile\":{\"id\":\"888fb562-99be-49e2-998f-ee080021f301\",\"$ref\":\"/profiles/888fb562-99be-49e2-998f-ee080021f301\"},\"institution\":\"National Chung Cheng University\",\"institution_detail\":{\"id\":\"a1c0b984-9342-5d8b-ab9f-b45f5a798565\",\"name\":\"National Chung Cheng University\",\"url\":\"www.ccu.edu.tw\",\"location\":{\"name\":\"Minhsiung\",\"country\":\"TW\",\"country_code\":\"TW\",\"country_subdivision\":\"\"},\"edm:identifier\":[{\"type\":\"idtype:ROR\",\"value\":\"https://ror.org/0028v3876\"}]},\"contribution\":\"First author\"},{\"first_name\":\"Vinh-Dat\",\"last_name\":\"Ly\",\"orcid_id\":\"0000-0002-1490-8197\",\"institution\":\"Ho Chi Minh City University of Technology and Education\",\"institution_detail\":{\"id\":\"14c37c64-d21f-5440-ad7b-2eaf4e840589\",\"name\":\"Ho Chi Minh City University of Technology and Education\",\"url\":\"hcmute.edu.vn\",\"location\":{\"name\":\"Ho Chi Minh City\",\"country\":\"VN\",\"country_code\":\"VN\",\"country_subdivision\":\"Ho Chi Minh City\"},\"edm:identifier\":[{\"type\":\"idtype:ROR\",\"value\":\"https://ror.org/05hzn5427\"}]},\"contribution\":\"Co-Author\"},{\"first_name\":\"Amornchai\",\"last_name\":\"Arpornwichanop\",\"orcid_id\":\"0000-0001-9259-5010\",\"institution\":\"Chulalongkorn University\",\"institution_detail\":{\"id\":\"7072eb2f-57eb-57f4-aeb0-297dc0b5d811\",\"name\":\"Chulalongkorn University\",\"url\":\"www.chula.ac.th\",\"location\":{\"name\":\"Bangkok\",\"country\":\"TH\",\"country_code\":\"TH\",\"country_subdivision\":\"\"},\"edm:identifier\":[{\"type\":\"idtype:ROR\",\"value\":\"https://ror.org/028wp3y58\"}]},\"contribution\":\"Co-Author\"},{\"first_name\":\"Yong-Song\",\"last_name\":\"Chen\",\"orcid_id\":\"0000-0002-6182-6418\",\"institution\":\"National Chung Cheng University\",\"institution_detail\":{\"id\":\"a1c0b984-9342-5d8b-ab9f-b45f5a798565\",\"name\":\"National Chung Cheng University\",\"url\":\"www.ccu.edu.tw\",\"location\":{\"name\":\"Minhsiung\",\"country\":\"TW\",\"country_code\":\"TW\",\"country_subdivision\":\"\"},\"edm:identifier\":[{\"type\":\"idtype:ROR\",\"value\":\"https://ror.org/0028v3876\"}]},\"contribution\":\"Corresponding Author\"}],\"related_links\":[],\"custom_metadata\":{},\"is_metadata_only\":false},\"contributors\":[],\"doi\":\"\",\"status\":200,\"loading\":false},\"environment\":\"live\",\"files\":{\"list\":[],\"currentFile\":{},\"folders\":[],\"currentFolder\":{},\"filesLoading\":true,\"foldersLoading\":true},\"fileViewer\":{\"navigationLoaded\":false,\"metadataLoaded\":false},\"hostname\":\"data.mendeley.com\",\"idToken\":null,\"orcidDomain\":\"https://orcid.org\",\"repository\":{\"repository\":null,\"loading\":true},\"s3\":\"https://static.data.mendeley.com\",\"versions\":{\"list\":[],\"loading\":true}}\n      window.initialTime = 1790068645966"
+  ]
+}

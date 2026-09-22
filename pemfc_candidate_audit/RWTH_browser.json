@@ -1,0 +1,194 @@
+{
+  "tag": "RWTH",
+  "url": "https://data.mendeley.com/datasets/mc46tw9t8m/1",
+  "network_json": [
+    {
+      "url": "https://data.mendeley.com/public-api/datasets/mc46tw9t8m/versions",
+      "body": [
+        {
+          "version": 1,
+          "publish_date": "2026-07-12",
+          "available": true
+        }
+      ]
+    },
+    {
+      "url": "https://data.mendeley.com/public-api/datasets/mc46tw9t8m/versions",
+      "body": [
+        {
+          "version": 1,
+          "publish_date": "2026-07-12",
+          "available": true
+        }
+      ]
+    },
+    {
+      "url": "https://data.mendeley.com/public-api/datasets/mc46tw9t8m/folders/1",
+      "body": [
+        {
+          "id": "3ddc3e9a-57e4-451e-9a90-a0bab079c492",
+          "name": "01_ExperimentalData",
+          "created_date": "2026-02-26T23:39:06.393"
+        },
+        {
+          "id": "660b47cb-86e3-4279-93c0-2a3aea403718",
+          "name": "02_Functions",
+          "created_date": "2026-02-26T23:39:06.396"
+        }
+      ]
+    },
+    {
+      "url": "https://data.mendeley.com/public-api/datasets/mc46tw9t8m/files?folder_id=root&version=1",
+      "body": [
+        {
+          "filename": "00_readme.txt",
+          "id": "95df1d70-e575-4d17-b6be-08201d904825",
+          "content_details": {
+            "id": "77f44742-da9f-4ca2-a8dc-afbd23ede082",
+            "sha256_hash": "76932274a2ff24d70c8f20c15cba22f3deb50cfbf257eda747a7e0fbaea006fb",
+            "content_type": "text/plain",
+            "size": 24676,
+            "created_date": "2026-02-26T23:39:06.897Z",
+            "download_url": "https://data.mendeley.com/public-files/datasets/mc46tw9t8m/files/95df1d70-e575-4d17-b6be-08201d904825/file_downloaded",
+            "view_url": "https://data.mendeley.com/public-files/datasets/mc46tw9t8m/files/95df1d70-e575-4d17-b6be-08201d904825/file_viewed",
+            "download_expiry_time": "2126-09-22T09:17:14.246785703Z"
+          },
+          "size": 24676,
+          "last_modified_date": "2026-02-26T23:39:06.897Z",
+          "status": "COMPLETED"
+        },
+        {
+          "filename": "run.m",
+          "id": "8b45a354-bf3b-419e-b79c-c8ca4da09917",
+          "content_details": {
+            "id": "4d233024-a592-4931-b212-032ce97f7022",
+            "sha256_hash": "01872b780b461061456d24e103eb54ea81adc4f9624b842010dc4786d4f75b04",
+            "content_type": "text/plain",
+            "size": 855,
+            "created_date": "2026-02-26T23:39:06.917Z",
+            "download_url": "https://data.mendeley.com/public-files/datasets/mc46tw9t8m/files/8b45a354-bf3b-419e-b79c-c8ca4da09917/file_downloaded",
+            "view_url": "https://data.mendeley.com/public-files/datasets/mc46tw9t8m/files/8b45a354-bf3b-419e-b79c-c8ca4da09917/file_viewed",
+            "download_expiry_time": "2126-09-22T09:17:14.246790793Z"
+          },
+          "size": 855,
+          "last_modified_date": "2026-02-26T23:39:06.917Z",
+          "status": "COMPLETED"
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Skip to main content",
+      "url": "https://data.mendeley.com/datasets/mc46tw9t8m/1#main"
+    },
+    {
+      "text": "",
+      "url": "https://data.mendeley.com/"
+    },
+    {
+      "text": "",
+      "url": "https://data.mendeley.com/faq"
+    },
+    {
+      "text": "FAQ",
+      "url": "https://data.mendeley.com/faq"
+    },
+    {
+      "text": "Download All 19.7 MB",
+      "url": "https://data.mendeley.com/public-api/zip/mc46tw9t8m/download/1"
+    },
+    {
+      "text": "",
+      "url": "https://data.mendeley.com/public-files/datasets/mc46tw9t8m/files/95df1d70-e575-4d17-b6be-08201d904825/file_downloaded"
+    },
+    {
+      "text": "",
+      "url": "https://data.mendeley.com/public-files/datasets/mc46tw9t8m/files/8b45a354-bf3b-419e-b79c-c8ca4da09917/file_downloaded"
+    },
+    {
+      "text": "RWTH Aachen University",
+      "url": "https://ror.org/04xfq0f34"
+    },
+    {
+      "text": "Bundesministerium für Forschung, Technologie und Raumfahrt",
+      "url": "https://ror.org/04pz7b180"
+    },
+    {
+      "text": "View details",
+      "url": "https://plu.mx/plum/a/?doi=10.17632/mc46tw9t8m&theme=plum-bigben-theme"
+    },
+    {
+      "text": "Home",
+      "url": "https://data.mendeley.com/"
+    },
+    {
+      "text": "About",
+      "url": "https://data.mendeley.com/about"
+    },
+    {
+      "text": "Accessibility Statement",
+      "url": "https://data.mendeley.com/accessibility"
+    },
+    {
+      "text": "Archive Policy",
+      "url": "https://data.mendeley.com/archive-process"
+    },
+    {
+      "text": "File Formats",
+      "url": "https://data.mendeley.com/file-formats"
+    },
+    {
+      "text": "API Docs",
+      "url": "https://data.mendeley.com/api/docs"
+    },
+    {
+      "text": "OAI",
+      "url": "https://data.mendeley.com/oai?verb=Identify"
+    },
+    {
+      "text": "Mission",
+      "url": "https://data.mendeley.com/mission"
+    },
+    {
+      "text": "Status Updates",
+      "url": "https://digitalcommons.elsevier.com/status"
+    },
+    {
+      "text": "Terms of Use",
+      "url": "https://www.mendeley.com/terms/"
+    },
+    {
+      "text": "Privacy Policy",
+      "url": "https://www.elsevier.com/legal/privacy-policy"
+    },
+    {
+      "text": "Cookie settings",
+      "url": "https://data.mendeley.com/datasets/mc46tw9t8m/1#"
+    },
+    {
+      "text": "Cookie Policy",
+      "url": "https://www.elsevier.com/legal/cookienotice"
+    },
+    {
+      "text": "Cookie Policy",
+      "url": "https://www.elsevier.com/legal/cookienotice"
+    },
+    {
+      "text": "Google Ad-Tech Vendors",
+      "url": "https://support.google.com/admanager/answer/9012903"
+    },
+    {
+      "text": "Privacy Policy",
+      "url": "https://www.elsevier.com/legal/privacy-policy"
+    },
+    {
+      "text": "",
+      "url": "https://www.onetrust.com/products/cookie-consent/"
+    }
+  ],
+  "page_text": "Skip to main content\nSign In / Register\nExperimental dataset: Two-Stage Model Predictive Stack Control for PEM Fuel Cell Systems\nPublished: 12 July 2026\n|\nVersion 1\n|\nDOI:\n10.17632/mc46tw9t8m.1\nContributors:\nN Weber\n,\nDaniel Sallach\nDescription\n\nProton-exchange membrane fuel cells (PEMFCs) play a pivotal role in decarbonizing the transport sector due to their high efficiency and zero local emissions. This work proposes an embedded, nonlinear, two-stage model predictive control (MPC) that optimally allocates the stack supply from the air, hydrogen, and coolant subsystems. A physics-based process model of the stack captures the dominant dynamics of membrane hydration, temperature, and reactant pressures, representing key internal states that influence performance and durability. The two-stage structure separates the optimal economic planning from the real-time tracking MPC, (1) ensuring constraint-compliant regulation of the considered states under highly dynamic operation, (2) maintaining efficient stack operation, and (3) resolving the over-actuated nature of the multi-input system. Experimental validation on a full-scale PEMFC test bench demonstrates efficiency gains of up to 8% and reduced reactant consumption compared to a nominal stack control. At the same time, membrane temperature and water content remain within prescribed limits.\n\nDownload All 19.7 MB\nFiles\n01_ExperimentalData\n02_Functions\nTXT\n00_readme.txt\n24.1 KB\nM\nrun.m\n855 B\nInstitutions\nRWTH Aachen University\nNorth Rhine-Westphalia, Aachen\nCategories\nControl Engineering, Proton-Exchange Membrane Fuel Cells, Real-Time Control System, Predictive Control Model, Real Time Optimization\nFunders\nBundesministerium für Forschung, Technologie und Raumfahrt\nNorth Rhine-Westphalia, Germany\nGrant ID: 03ZU1115EC\nLicence\nCC BY-NC 4.0\nLearn more\nUsage\nViews:\n51\nDownloads:\n15\nView details\nLatest version\nVersion 1\nPublished:\n12 Jul 2026\nDOI:\n10.17632/mc46tw9t8m.1\n\nCite this dataset\n\nCopy to clipboard\nHome\n|\nAbout\n|\nAccessibility Statement\n|\nArchive Policy\n|\nFile Formats\n|\nAPI Docs\n|\nOAI\n|\nMission\n|\nStatus Updates\nTerms of Use\n|\nPrivacy Policy\n|\nCookie Settings\nAll content on this site: Copyright © 2026 Elsevier inc, its licensors, and contributors. All rights are reserved, including those for text and data mining, AI training and similar technologies. For all open access content, the Creative Commons licensing terms apply.\nWe use cookies that are necessary to make our site work. We may also use additional cookies to analyze, improve, and personalize our content and your digital experience. You can manage your cookie preferences using theCookie settings link. For more information, see ourCookie Policy\nCookie settings\nAccept all cookies",
+  "embedded_state": [
+    "window.INITIAL_STATE = {\"archive\":{\"data\":{\"status\":\"PENDING\"},\"error\":null,\"loading\":false},\"articles\":{\"list\":[],\"loading\":true},\"citations\":{\"data\":{},\"count\":0,\"error\":false,\"loading\":true},\"configClient\":{\"environment\":\"live\",\"recaptchaV3SiteKey\":\"6LcEHc8ZAAAAAMenhT9jO_B-EJAoGq_v29B7HaCf\",\"adobeAnalytics\":{\"newPage\":{\"page\":{\"businessUnit\":\"els:rp:st\",\"language\":\"en\",\"productName\":\"md\",\"environment\":\"dev\",\"noTracking\":\"false\",\"sectionName\":\"md:data\",\"type\":\"cp-ca\"},\"content\":{\"type\":\"md:datasets\",\"format\":\"MIME-HTML\"}}},\"apiBaseUrl\":\"/api/datasets-v2\",\"publicApiBaseUrl\":\"/public-api\",\"baseUrl\":\"/datasets\",\"baseAssetsUrl\":\"/datasets\"},\"customer\":{\"customer\":null,\"institution\":null},\"dataset\":{\"snapshot\":{\"id\":\"mc46tw9t8m\",\"version\":1,\"name\":\"Experimental dataset: Two-Stage Model Predictive Stack Control for PEM Fuel Cell Systems\",\"description\":\"Proton-exchange membrane fuel cells (PEMFCs) play a pivotal role in decarbonizing the transport sector due to their high efficiency and zero local emissions. This work proposes an embedded, nonlinear, two-stage model predictive control (MPC) that optimally allocates the stack supply from the air, hydrogen, and coolant subsystems. A physics-based process model of the stack captures the dominant dynamics of membrane hydration, temperature, and reactant pressures, representing key internal states that influence performance and durability. The two-stage structure separates the optimal economic planning from the real-time tracking MPC, (1) ensuring constraint-compliant regulation of the considered states under highly dynamic operation, (2) maintaining efficient stack operation, and (3) resolving the over-actuated nature of the multi-input system. Experimental validation on a full-scale PEMFC test bench demonstrates efficiency gains of up to 8% and reduced reactant consumption compared to a nominal stack control. At the same time, membrane temperature and water content remain within prescribed limits.\",\"method\":\"\",\"doi\":\"10.17632/mc46tw9t8m.1\",\"publish_date\":\"2026-07-12T22:44:04.621Z\",\"last_modification_date\":\"2026-07-09T22:30:05.172Z\",\"is_confidential\":false,\"customer\":{\"id\":\"7377952c-6404-4428-bbfc-77242cfc301e\",\"name\":\"Mendeley Guests\",\"chief_id\":810289,\"config\":{\"repository_id\":\"MENDELEY_DATA\",\"dataset_size_limit\":10737418240,\"doi_prefix\":\"10.17632\"},\"is_user_mendeley_admin\":false,\"customer_roles\":[],\"is_guest\":true,\"is_user_customer_moderator\":false},\"owner\":{\"id\":\"6ac02870-717d-464c-8dff-3ee9e153c12a\",\"first_name\":\"N\",\"last_name\":\"Weber\",\"display_name\":\"N Weber\",\"$ref\":\"/profiles/6ac02870-717d-464c-8dff-3ee9e153c12a\",\"profile\":{\"id\":\"6ac02870-717d-464c-8dff-3ee9e153c12a\",\"$ref\":\"/profiles/6ac02870-717d-464c-8dff-3ee9e153c12a\"}},\"categories\":[{\"id\":\"data.elsevier.com/vocabulary/OmniScience/Concept-189720839\",\"label\":\"Control Engineering\"},{\"id\":\"data.elsevier.com/vocabulary/OmniScience/Concept-209895198\",\"label\":\"Proton-Exchange Membrane Fuel Cells\"},{\"id\":\"data.elsevier.com/vocabulary/OmniScience/Concept-252789492\",\"label\":\"Real-Time Control System\"},{\"id\":\"data.elsevier.com/vocabulary/OmniScience/Concept-253477201\",\"label\":\"Predictive Control Model\"},{\"id\":\"data.elsevier.com/vocabulary/OmniScience/Concept-253478627\",\"label\":\"Real Time Optimization\"}],\"licence\":{\"id\":\"0d71fb43-13d8-49b7-960c-68c7f09ec605\",\"short_name\":\"CC BY-NC 4.0\",\"full_name\":\"Attribution Noncommercial 4.0 International\",\"description\":\"This license enables reusers to distribute, remix, adapt, and build upon the material in any medium or format for noncommercial purposes only, and only so long as attribution is given to the creator.\",\"url\":\"https://creativecommons.org/licenses/by-nc/4.0/\",\"category\":\"Creative\",\"customer_id\":null},\"institutions\":[{\"id\":\"e798b599-33dd-45a8-831a-ed9b8e6560fc\",\"name\":\"RWTH Aachen University\",\"url\":\"http://www.rwth-aachen.de/cms/~a/root/lidx/1/\",\"location\":{\"name\":\"Aachen\",\"country\":\"Germany\",\"country_code\":\"DE\",\"country_subdivision\":\"North Rhine-Westphalia\"},\"edm:identifier\":[{\"type\":\"idtype:ROR\",\"value\":\"https://ror.org/04xfq0f34\"}]}],\"funders\":[{\"grant_id\":\"03ZU1115EC\",\"identity\":\"https://ror.org/04pz7b180\",\"name\":\"Bundesministerium für Forschung, Technologie und Raumfahrt\",\"parent_name\":null,\"location\":\"Germany\",\"subdivision_location\":\"North Rhine-Westphalia\"}],\"organisational_unit_names\":[],\"contributors\":[{\"id\":\"6ac02870-717d-464c-8dff-3ee9e153c12a\",\"first_name\":\"N\",\"last_name\":\"Weber\",\"orcid_id\":\"0009-0004-1626-7639\",\"$ref\":\"/profiles/6ac02870-717d-464c-8dff-3ee9e153c12a\",\"profile\":{\"id\":\"6ac02870-717d-464c-8dff-3ee9e153c12a\",\"$ref\":\"/profiles/6ac02870-717d-464c-8dff-3ee9e153c12a\"}},{\"first_name\":\"Daniel\",\"last_name\":\"Sallach\",\"orcid_id\":\"0009-0001-3041-7515\"}],\"related_links\":[],\"custom_metadata\":{},\"is_metadata_only\":false},\"contributors\":[],\"doi\":\"\",\"status\":200,\"loading\":false},\"environment\":\"live\",\"files\":{\"list\":[],\"currentFile\":{},\"folders\":[],\"currentFolder\":{},\"filesLoading\":true,\"foldersLoading\":true},\"fileViewer\":{\"navigationLoaded\":false,\"metadataLoaded\":false},\"hostname\":\"data.mendeley.com\",\"idToken\":null,\"orcidDomain\":\"https://orcid.org\",\"repository\":{\"repository\":null,\"loading\":true},\"s3\":\"https://static.data.mendeley.com\",\"versions\":{\"list\":[],\"loading\":true}}\n      window.initialTime = 1790068631407"
+  ]
+}

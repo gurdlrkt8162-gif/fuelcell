@@ -1,0 +1,3797 @@
+{
+  "status": "OK",
+  "data": {
+    "id": 534712,
+    "identifier": "YLCIPH",
+    "persistentUrl": "https://doi.org/10.57745/YLCIPH",
+    "protocol": "doi",
+    "authority": "10.57745",
+    "publisher": "Recherche Data Gouv",
+    "publicationDate": "2024-12-17",
+    "storageIdentifier": "univ-grenoble-alpes://10.57745/YLCIPH",
+    "metadataLanguage": "en",
+    "latestVersion": {
+      "id": 275249,
+      "datasetId": 534712,
+      "datasetPersistentId": "doi:10.57745/YLCIPH",
+      "storageIdentifier": "univ-grenoble-alpes://10.57745/YLCIPH",
+      "versionNumber": 1,
+      "versionMinorNumber": 1,
+      "versionState": "RELEASED",
+      "productionDate": "2022",
+      "UNF": "UNF:6:s4HOTiboT3NEBxDIwYLIdw==",
+      "lastUpdateTime": "2024-12-18T14:48:55Z",
+      "releaseTime": "2024-12-18T14:48:55Z",
+      "createTime": "2024-12-18T10:43:48Z",
+      "publicationDate": "2024-12-17",
+      "citationDate": "2024-12-17",
+      "license": {
+        "name": "etalab 2.0",
+        "uri": "https://spdx.org/licenses/etalab-2.0.html",
+        "iconUri": "https://entrepot.recherche.data.gouv.fr/assets/licence-ouverte.png"
+      },
+      "fileAccessRequest": false,
+      "metadataBlocks": {
+        "citation": {
+          "displayName": "Citation Metadata",
+          "name": "citation",
+          "fields": [
+            {
+              "typeName": "title",
+              "multiple": false,
+              "typeClass": "primitive",
+              "value": "Emulating local operating conditions in Proton Exchange Membrane Fuel Cells"
+            },
+            {
+              "typeName": "datasetContact",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "datasetContactName": {
+                    "typeName": "datasetContactName",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Bultel, Yann"
+                  },
+                  "datasetContactAffiliation": {
+                    "typeName": "datasetContactAffiliation",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "LEPMI ; UGA, CNRS, Grenoble INP, USMB ; France"
+                  },
+                  "datasetContactEmail": {
+                    "typeName": "datasetContactEmail",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Yann.Bultel@grenoble-inp.fr"
+                  }
+                }
+              ]
+            },
+            {
+              "typeName": "author",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "authorName": {
+                    "typeName": "authorName",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Bultel, Yann"
+                  },
+                  "authorAffiliation": {
+                    "typeName": "authorAffiliation",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "LEPMI ; UGA, CNRS, Grenoble INP, USMB ; France"
+                  },
+                  "authorIdentifierScheme": {
+                    "typeName": "authorIdentifierScheme",
+                    "multiple": false,
+                    "typeClass": "controlledVocabulary",
+                    "value": "ORCID"
+                  },
+                  "authorIdentifier": {
+                    "typeName": "authorIdentifier",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "0000-0001-7092-6296"
+                  }
+                },
+                {
+                  "authorName": {
+                    "typeName": "authorName",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Cornet, Marine"
+                  },
+                  "authorAffiliation": {
+                    "typeName": "authorAffiliation",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "CEA - LITEN ; CEA ; France"
+                  }
+                },
+                {
+                  "authorName": {
+                    "typeName": "authorName",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Morin, Arnaud"
+                  },
+                  "authorAffiliation": {
+                    "typeName": "authorAffiliation",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "CEA - LITEN ; CEA ; France"
+                  },
+                  "authorIdentifierScheme": {
+                    "typeName": "authorIdentifierScheme",
+                    "multiple": false,
+                    "typeClass": "controlledVocabulary",
+                    "value": "ORCID"
+                  },
+                  "authorIdentifier": {
+                    "typeName": "authorIdentifier",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "0000-0002-3757-9963"
+                  }
+                },
+                {
+                  "authorName": {
+                    "typeName": "authorName",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Poirot-Crouvezier, Jean-Philippe"
+                  },
+                  "authorAffiliation": {
+                    "typeName": "authorAffiliation",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "CEA - LITEN ; CEA ; France"
+                  },
+                  "authorIdentifierScheme": {
+                    "typeName": "authorIdentifierScheme",
+                    "multiple": false,
+                    "typeClass": "controlledVocabulary",
+                    "value": "ORCID"
+                  },
+                  "authorIdentifier": {
+                    "typeName": "authorIdentifier",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "0000-0003-4352-0930"
+                  }
+                }
+              ]
+            },
+            {
+              "typeName": "producer",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "producerName": {
+                    "typeName": "producerName",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Laboratoire d'innovation pour les technologies des énergies nouvelles et les nanomatériaux"
+                  },
+                  "producerAffiliation": {
+                    "typeName": "producerAffiliation",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "CEA ; France"
+                  },
+                  "producerAbbreviation": {
+                    "typeName": "producerAbbreviation",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "LITEN"
+                  },
+                  "producerURL": {
+                    "typeName": "producerURL",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "https://liten.cea.fr/cea-tech/liten/"
+                  },
+                  "producerLogoURL": {
+                    "typeName": "producerLogoURL",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "https://liten.cea.fr/cea-tech/liten/PublishingImages/Accueil/CEA-Liten-Logo.png?rev=43"
+                  }
+                }
+              ]
+            },
+            {
+              "typeName": "productionDate",
+              "multiple": false,
+              "typeClass": "primitive",
+              "value": "2022"
+            },
+            {
+              "typeName": "distributor",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "distributorName": {
+                    "typeName": "distributorName",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Entrepôt-Catalogue Recherche Data Gouv"
+                  },
+                  "distributorURL": {
+                    "typeName": "distributorURL",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "https://entrepot.recherche.data.gouv.fr"
+                  },
+                  "distributorLogoURL": {
+                    "typeName": "distributorLogoURL",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "https://s3.fr-par.scw.cloud/rdg-portal/logos-macarons/Macarons%20Recherche%20Data%20Gouv_Entrep%C3%B4t.png"
+                  }
+                }
+              ]
+            },
+            {
+              "typeName": "dsDescription",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "dsDescriptionValue": {
+                    "typeName": "dsDescriptionValue",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "The 37 conditions investigated in this work are therefore emulated using the differential cell. The methodology allows to emulate a wider range of local values of relative humidity, temperature, species concentrations and gas pressure collected for three different areas of the simulated cell (air inlet, middle and air outlet) at the anode and cathode. The 37 different operating con-ditions are referenced in file (Operating_conditions_Cell). For each condition, the polarization curve is measure during the first scan from OCV down to the lower cell voltage, i.e., 0.2 V and Electrochemical Impedance Spectroscopy measurement are done at 3 different currents (45 mA, 180 mA and 900 mA).\nEach file contains either data from polarization curve or electrochemical impedance spectrum:\n•\tBreak-in_IV and CX_IV. This file contains the experimental raw data of the polar-ization curve of the operating condition X. All raw data files are organized with the same structure: the first column provides the current density and the second one the corresponding cell voltage;\n•\tBreak-in_EIS and CX_EIS. This file contains the experimental raw data of the im-pedance spectrum of the operating condition X at low (i.e., 45 mA, 180 mA) or medium current (i.e., 900 mA). All raw data files are organized with the same structure: The first and second columns refer to current density and cell voltage. The columns 3, 4 and five report the frequency, the real(Z) and -Im(Z) respectively. Finally, the columns 6 and 7 give module and the phase angle respectively."
+                  },
+                  "dsDescriptionLanguage": {
+                    "typeName": "dsDescriptionLanguage",
+                    "multiple": false,
+                    "typeClass": "controlledVocabulary",
+                    "value": "English"
+                  },
+                  "dsDescriptionDate": {
+                    "typeName": "dsDescriptionDate",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "2024"
+                  }
+                }
+              ]
+            },
+            {
+              "typeName": "subject",
+              "multiple": true,
+              "typeClass": "controlledVocabulary",
+              "value": [
+                "Chemistry",
+                "Engineering",
+                "Physics"
+              ]
+            },
+            {
+              "typeName": "keyword",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "keywordValue": {
+                    "typeName": "keywordValue",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "PEM Fuel Cell"
+                  }
+                },
+                {
+                  "keywordValue": {
+                    "typeName": "keywordValue",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Local operating conditions"
+                  }
+                },
+                {
+                  "keywordValue": {
+                    "typeName": "keywordValue",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Polarization curves"
+                  }
+                },
+                {
+                  "keywordValue": {
+                    "typeName": "keywordValue",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Electrochemical Impedance spectra"
+                  }
+                }
+              ]
+            },
+            {
+              "typeName": "kindOfData",
+              "multiple": true,
+              "typeClass": "controlledVocabulary",
+              "value": [
+                "Dataset"
+              ]
+            },
+            {
+              "typeName": "depositor",
+              "multiple": false,
+              "typeClass": "primitive",
+              "value": "Bultel, Yann"
+            },
+            {
+              "typeName": "dateOfDeposit",
+              "multiple": false,
+              "typeClass": "primitive",
+              "value": "2024-11-04"
+            }
+          ]
+        },
+        "geospatial": {
+          "displayName": "Geospatial Metadata",
+          "name": "geospatial",
+          "fields": []
+        },
+        "socialscience": {
+          "displayName": "Social Science and Humanities Metadata",
+          "name": "socialscience",
+          "fields": []
+        },
+        "journal": {
+          "displayName": "Journal Metadata",
+          "name": "journal",
+          "fields": []
+        },
+        "semantics": {
+          "displayName": "Semantic resource",
+          "name": "semantics",
+          "fields": []
+        }
+      },
+      "files": [
+        {
+          "label": "Break-in_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534793,
+            "persistentId": "doi:10.57745/UKKLQ9",
+            "pidURL": "https://doi.org/10.57745/UKKLQ9",
+            "filename": "Break-in_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8543,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f760e7ff-bcfb4369e880",
+            "rootDataFileId": -1,
+            "md5": "0b3cee0ce82b91339e2e2f29190ecf1c",
+            "checksum": {
+              "type": "MD5",
+              "value": "0b3cee0ce82b91339e2e2f29190ecf1c"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "Break-in_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534784,
+            "persistentId": "doi:10.57745/TLBOED",
+            "pidURL": "https://doi.org/10.57745/TLBOED",
+            "filename": "Break-in_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8699,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75ded33-0c5a98e906db",
+            "rootDataFileId": -1,
+            "md5": "aeb3e8dfe22e9ce4382149c72ccc5744",
+            "checksum": {
+              "type": "MD5",
+              "value": "aeb3e8dfe22e9ce4382149c72ccc5744"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "Break-in_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534835,
+            "persistentId": "doi:10.57745/RWLFKU",
+            "pidURL": "https://doi.org/10.57745/RWLFKU",
+            "filename": "Break-in_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8656,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7650bf1-dc9705456aa8",
+            "rootDataFileId": -1,
+            "md5": "336d5bf4d7549b2ce82bb844aca8ef79",
+            "checksum": {
+              "type": "MD5",
+              "value": "336d5bf4d7549b2ce82bb844aca8ef79"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "break-in_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534738,
+            "persistentId": "doi:10.57745/Y59VM2",
+            "pidURL": "https://doi.org/10.57745/Y59VM2",
+            "filename": "break-in_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 71073,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75ac384-3d19ce7a0434",
+            "rootDataFileId": -1,
+            "md5": "b4478285216b9c5f296bcb4865b5211a",
+            "checksum": {
+              "type": "MD5",
+              "value": "b4478285216b9c5f296bcb4865b5211a"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C10_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534819,
+            "persistentId": "doi:10.57745/NCL7B0",
+            "pidURL": "https://doi.org/10.57745/NCL7B0",
+            "filename": "C10_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8494,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f760fcde-7b87da374511",
+            "rootDataFileId": -1,
+            "md5": "3be96b99cb7356da046a2a371bf8d627",
+            "checksum": {
+              "type": "MD5",
+              "value": "3be96b99cb7356da046a2a371bf8d627"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C10_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534756,
+            "persistentId": "doi:10.57745/A7OGTH",
+            "pidURL": "https://doi.org/10.57745/A7OGTH",
+            "filename": "C10_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8600,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75dfef5-b7b3eabbf016",
+            "rootDataFileId": -1,
+            "md5": "3a8932f942548dc9cfe799de3b0418d9",
+            "checksum": {
+              "type": "MD5",
+              "value": "3a8932f942548dc9cfe799de3b0418d9"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C10_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534826,
+            "persistentId": "doi:10.57745/7UWJVD",
+            "pidURL": "https://doi.org/10.57745/7UWJVD",
+            "filename": "C10_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8571,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7651f08-b1ee352f9adb",
+            "rootDataFileId": -1,
+            "md5": "443117231d4c32e6182567e8f41fbd29",
+            "checksum": {
+              "type": "MD5",
+              "value": "443117231d4c32e6182567e8f41fbd29"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C10_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534747,
+            "persistentId": "doi:10.57745/SEFPSH",
+            "pidURL": "https://doi.org/10.57745/SEFPSH",
+            "filename": "C10_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 63802,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75ae573-34a606034abf",
+            "rootDataFileId": -1,
+            "md5": "c32fb7ebb9f495844c53ee295764e7ba",
+            "checksum": {
+              "type": "MD5",
+              "value": "c32fb7ebb9f495844c53ee295764e7ba"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C11_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534804,
+            "persistentId": "doi:10.57745/I8ZNQF",
+            "pidURL": "https://doi.org/10.57745/I8ZNQF",
+            "filename": "C11_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8523,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f761014c-29af3aa5f132",
+            "rootDataFileId": -1,
+            "md5": "8f7875f31050e182ee78c9c36f0bda24",
+            "checksum": {
+              "type": "MD5",
+              "value": "8f7875f31050e182ee78c9c36f0bda24"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C11_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534766,
+            "persistentId": "doi:10.57745/GTUD1G",
+            "pidURL": "https://doi.org/10.57745/GTUD1G",
+            "filename": "C11_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8599,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75e0443-5825a381ae25",
+            "rootDataFileId": -1,
+            "md5": "4158bb4a44049e98602aab33413ae6da",
+            "checksum": {
+              "type": "MD5",
+              "value": "4158bb4a44049e98602aab33413ae6da"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C11_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534842,
+            "persistentId": "doi:10.57745/R5LBPW",
+            "pidURL": "https://doi.org/10.57745/R5LBPW",
+            "filename": "C11_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8591,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f765228b-2b2d5477d61b",
+            "rootDataFileId": -1,
+            "md5": "973b991eafee1ee34a33b96b158a5402",
+            "checksum": {
+              "type": "MD5",
+              "value": "973b991eafee1ee34a33b96b158a5402"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C11_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534729,
+            "persistentId": "doi:10.57745/WZLQGB",
+            "pidURL": "https://doi.org/10.57745/WZLQGB",
+            "filename": "C11_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 63345,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75ae233-813927278204",
+            "rootDataFileId": -1,
+            "md5": "ed9c59bac2aa8d08c92d0ac80513428e",
+            "checksum": {
+              "type": "MD5",
+              "value": "ed9c59bac2aa8d08c92d0ac80513428e"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C12_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534790,
+            "persistentId": "doi:10.57745/BGFZOH",
+            "pidURL": "https://doi.org/10.57745/BGFZOH",
+            "filename": "C12_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8527,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7610025-15007bd323f0",
+            "rootDataFileId": -1,
+            "md5": "f1e9ba7695589d95a67de565a9f2b273",
+            "checksum": {
+              "type": "MD5",
+              "value": "f1e9ba7695589d95a67de565a9f2b273"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C12_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534759,
+            "persistentId": "doi:10.57745/FXIA6Z",
+            "pidURL": "https://doi.org/10.57745/FXIA6Z",
+            "filename": "C12_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8608,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75e054f-f23ae19d9419",
+            "rootDataFileId": -1,
+            "md5": "2716c009a7f7376ac84b9304ced83c08",
+            "checksum": {
+              "type": "MD5",
+              "value": "2716c009a7f7376ac84b9304ced83c08"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C12_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534831,
+            "persistentId": "doi:10.57745/VPOWIG",
+            "pidURL": "https://doi.org/10.57745/VPOWIG",
+            "filename": "C12_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8631,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f76524fc-aaed9a5e454e",
+            "rootDataFileId": -1,
+            "md5": "58635b4763b884b214dd86bd217d7e6b",
+            "checksum": {
+              "type": "MD5",
+              "value": "58635b4763b884b214dd86bd217d7e6b"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C12_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534716,
+            "persistentId": "doi:10.57745/CJ0TL7",
+            "pidURL": "https://doi.org/10.57745/CJ0TL7",
+            "filename": "C12_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 63372,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75ae70f-4b77bc691a06",
+            "rootDataFileId": -1,
+            "md5": "51be0ca18dbe1083bd57162166990b02",
+            "checksum": {
+              "type": "MD5",
+              "value": "51be0ca18dbe1083bd57162166990b02"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C13_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534816,
+            "persistentId": "doi:10.57745/CHQROA",
+            "pidURL": "https://doi.org/10.57745/CHQROA",
+            "filename": "C13_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8521,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f76103b1-84c6c08b8714",
+            "rootDataFileId": -1,
+            "md5": "dcad5eca1ad6544f323af08b79294ef5",
+            "checksum": {
+              "type": "MD5",
+              "value": "dcad5eca1ad6544f323af08b79294ef5"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C13_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534776,
+            "persistentId": "doi:10.57745/IRMIKP",
+            "pidURL": "https://doi.org/10.57745/IRMIKP",
+            "filename": "C13_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8610,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75e087c-7607f2b9bd26",
+            "rootDataFileId": -1,
+            "md5": "fee01dadc4f25fef08a20aa2acc26662",
+            "checksum": {
+              "type": "MD5",
+              "value": "fee01dadc4f25fef08a20aa2acc26662"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C13_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534846,
+            "persistentId": "doi:10.57745/XYSON0",
+            "pidURL": "https://doi.org/10.57745/XYSON0",
+            "filename": "C13_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8601,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7652bcd-2ec71437a020",
+            "rootDataFileId": -1,
+            "md5": "e4c916aa0ae462d152c8e7c59fdaa741",
+            "checksum": {
+              "type": "MD5",
+              "value": "e4c916aa0ae462d152c8e7c59fdaa741"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C13_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534713,
+            "persistentId": "doi:10.57745/KDYBKU",
+            "pidURL": "https://doi.org/10.57745/KDYBKU",
+            "filename": "C13_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 62522,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75aebf7-db81f1fdb0f9",
+            "rootDataFileId": -1,
+            "md5": "30f4c503e74305214aa8b8d8ccd4b306",
+            "checksum": {
+              "type": "MD5",
+              "value": "30f4c503e74305214aa8b8d8ccd4b306"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C14_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534823,
+            "persistentId": "doi:10.57745/NYOHKM",
+            "pidURL": "https://doi.org/10.57745/NYOHKM",
+            "filename": "C14_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8519,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f76105e6-26b4ade7fea3",
+            "rootDataFileId": -1,
+            "md5": "fcfaa5b536d1c542f0ed335db8de58ed",
+            "checksum": {
+              "type": "MD5",
+              "value": "fcfaa5b536d1c542f0ed335db8de58ed"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C14_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534775,
+            "persistentId": "doi:10.57745/FDAVTB",
+            "pidURL": "https://doi.org/10.57745/FDAVTB",
+            "filename": "C14_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8635,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75e10ff-8931ad7e23a6",
+            "rootDataFileId": -1,
+            "md5": "742628f264c1db5bef343bf31f4820d1",
+            "checksum": {
+              "type": "MD5",
+              "value": "742628f264c1db5bef343bf31f4820d1"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C14_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534839,
+            "persistentId": "doi:10.57745/2PO3CU",
+            "pidURL": "https://doi.org/10.57745/2PO3CU",
+            "filename": "C14_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8599,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f765289f-237897db5a00",
+            "rootDataFileId": -1,
+            "md5": "f8c0734ddabac0c997ae50624882f389",
+            "checksum": {
+              "type": "MD5",
+              "value": "f8c0734ddabac0c997ae50624882f389"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C14_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534745,
+            "persistentId": "doi:10.57745/J5DOQ2",
+            "pidURL": "https://doi.org/10.57745/J5DOQ2",
+            "filename": "C14_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 61227,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75af465-624eb35ecb6c",
+            "rootDataFileId": -1,
+            "md5": "e3ebfaac4a098bebb0fb4eec4ae17455",
+            "checksum": {
+              "type": "MD5",
+              "value": "e3ebfaac4a098bebb0fb4eec4ae17455"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C15_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534815,
+            "persistentId": "doi:10.57745/ZQY1QN",
+            "pidURL": "https://doi.org/10.57745/ZQY1QN",
+            "filename": "C15_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8546,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7610937-671f551f80fe",
+            "rootDataFileId": -1,
+            "md5": "e0681713f35c6cadc1714facaf13db67",
+            "checksum": {
+              "type": "MD5",
+              "value": "e0681713f35c6cadc1714facaf13db67"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C15_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534774,
+            "persistentId": "doi:10.57745/TZP3YZ",
+            "pidURL": "https://doi.org/10.57745/TZP3YZ",
+            "filename": "C15_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8621,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75e0bbc-40bfc27cba76",
+            "rootDataFileId": -1,
+            "md5": "3ac30eef7204e7239e0f1428f0d59259",
+            "checksum": {
+              "type": "MD5",
+              "value": "3ac30eef7204e7239e0f1428f0d59259"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C15_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534855,
+            "persistentId": "doi:10.57745/OTWKW7",
+            "pidURL": "https://doi.org/10.57745/OTWKW7",
+            "filename": "C15_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8657,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7652aa7-ff2b6db19a6a",
+            "rootDataFileId": -1,
+            "md5": "3782ec9e72ed656cfade06a85e691d56",
+            "checksum": {
+              "type": "MD5",
+              "value": "3782ec9e72ed656cfade06a85e691d56"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C15_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534746,
+            "persistentId": "doi:10.57745/NPZVDW",
+            "pidURL": "https://doi.org/10.57745/NPZVDW",
+            "filename": "C15_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 62345,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75af101-2f96937eca90",
+            "rootDataFileId": -1,
+            "md5": "cef0709a76e9f7065abcd5fe24db3770",
+            "checksum": {
+              "type": "MD5",
+              "value": "cef0709a76e9f7065abcd5fe24db3770"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C16_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534813,
+            "persistentId": "doi:10.57745/BHHZQP",
+            "pidURL": "https://doi.org/10.57745/BHHZQP",
+            "filename": "C16_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8552,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7610b6b-5ede982a6815",
+            "rootDataFileId": -1,
+            "md5": "f72b82b9825f0529fb7ef262a31985d4",
+            "checksum": {
+              "type": "MD5",
+              "value": "f72b82b9825f0529fb7ef262a31985d4"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C16_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534767,
+            "persistentId": "doi:10.57745/WM4ICJ",
+            "pidURL": "https://doi.org/10.57745/WM4ICJ",
+            "filename": "C16_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8618,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75e0cbe-7a396e226c16",
+            "rootDataFileId": -1,
+            "md5": "b9146f1071a1b08ea7336739391cc70e",
+            "checksum": {
+              "type": "MD5",
+              "value": "b9146f1071a1b08ea7336739391cc70e"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C16_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534848,
+            "persistentId": "doi:10.57745/GETZNW",
+            "pidURL": "https://doi.org/10.57745/GETZNW",
+            "filename": "C16_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8601,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7652d32-6b749b771a97",
+            "rootDataFileId": -1,
+            "md5": "16b34370917edae755e1f0ab2e640aa6",
+            "checksum": {
+              "type": "MD5",
+              "value": "16b34370917edae755e1f0ab2e640aa6"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C16_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534720,
+            "persistentId": "doi:10.57745/1ILMO7",
+            "pidURL": "https://doi.org/10.57745/1ILMO7",
+            "filename": "C16_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 61331,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75af2b1-458c2f927cab",
+            "rootDataFileId": -1,
+            "md5": "1e28007239deb49c7b6433de8de6c194",
+            "checksum": {
+              "type": "MD5",
+              "value": "1e28007239deb49c7b6433de8de6c194"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C17_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534814,
+            "persistentId": "doi:10.57745/RLYJ0I",
+            "pidURL": "https://doi.org/10.57745/RLYJ0I",
+            "filename": "C17_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8544,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7610a69-8f9dc3ad7085",
+            "rootDataFileId": -1,
+            "md5": "94b3e15306dd465d392fb4a6da73e125",
+            "checksum": {
+              "type": "MD5",
+              "value": "94b3e15306dd465d392fb4a6da73e125"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C17_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534773,
+            "persistentId": "doi:10.57745/O1VYHC",
+            "pidURL": "https://doi.org/10.57745/O1VYHC",
+            "filename": "C17_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8541,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75e0fef-d61c040fa8c1",
+            "rootDataFileId": -1,
+            "md5": "1138c3086de6d5dcf70434314fd0f3db",
+            "checksum": {
+              "type": "MD5",
+              "value": "1138c3086de6d5dcf70434314fd0f3db"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C17_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534849,
+            "persistentId": "doi:10.57745/GTAMNO",
+            "pidURL": "https://doi.org/10.57745/GTAMNO",
+            "filename": "C17_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8654,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f76530b8-86f8c540da2e",
+            "rootDataFileId": -1,
+            "md5": "18c612bcb95f3ff034f287be8d3b0a9d",
+            "checksum": {
+              "type": "MD5",
+              "value": "18c612bcb95f3ff034f287be8d3b0a9d"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C17_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534740,
+            "persistentId": "doi:10.57745/7NXHUJ",
+            "pidURL": "https://doi.org/10.57745/7NXHUJ",
+            "filename": "C17_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 62337,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75af96d-2eb8e16f299f",
+            "rootDataFileId": -1,
+            "md5": "9736adaf68596d108a07c8335588dc0a",
+            "checksum": {
+              "type": "MD5",
+              "value": "9736adaf68596d108a07c8335588dc0a"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C18_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534822,
+            "persistentId": "doi:10.57745/OKTNMF",
+            "pidURL": "https://doi.org/10.57745/OKTNMF",
+            "filename": "C18_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8537,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f76110ba-b028e4890d20",
+            "rootDataFileId": -1,
+            "md5": "98df6f605dbd6eee4428e63508b60a70",
+            "checksum": {
+              "type": "MD5",
+              "value": "98df6f605dbd6eee4428e63508b60a70"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C18_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534780,
+            "persistentId": "doi:10.57745/ZAXA6Y",
+            "pidURL": "https://doi.org/10.57745/ZAXA6Y",
+            "filename": "C18_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8627,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75e1214-dcd882488df2",
+            "rootDataFileId": -1,
+            "md5": "da310cb151e8f39b529d4aa9083bead0",
+            "checksum": {
+              "type": "MD5",
+              "value": "da310cb151e8f39b529d4aa9083bead0"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C18_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534856,
+            "persistentId": "doi:10.57745/DBR6IN",
+            "pidURL": "https://doi.org/10.57745/DBR6IN",
+            "filename": "C18_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8621,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f76532cf-856d9190d3bf",
+            "rootDataFileId": -1,
+            "md5": "a20c2cf72e5b8bce68584186df9f85fa",
+            "checksum": {
+              "type": "MD5",
+              "value": "a20c2cf72e5b8bce68584186df9f85fa"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C18_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534739,
+            "persistentId": "doi:10.57745/1MN0RZ",
+            "pidURL": "https://doi.org/10.57745/1MN0RZ",
+            "filename": "C18_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 61512,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75afb0d-a39cf3473f8d",
+            "rootDataFileId": -1,
+            "md5": "cc76aae1b541085e0959c7e7ff3c8457",
+            "checksum": {
+              "type": "MD5",
+              "value": "cc76aae1b541085e0959c7e7ff3c8457"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C19_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534797,
+            "persistentId": "doi:10.57745/YCDAOT",
+            "pidURL": "https://doi.org/10.57745/YCDAOT",
+            "filename": "C19_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8519,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f76111c3-4a19feba16f4",
+            "rootDataFileId": -1,
+            "md5": "3e85bd645c14d8dda658d73a3dd67476",
+            "checksum": {
+              "type": "MD5",
+              "value": "3e85bd645c14d8dda658d73a3dd67476"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C19_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534760,
+            "persistentId": "doi:10.57745/WSNSQ4",
+            "pidURL": "https://doi.org/10.57745/WSNSQ4",
+            "filename": "C19_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8606,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75e1323-fd859c24a0a7",
+            "rootDataFileId": -1,
+            "md5": "301ccadeec373eb11ccffa92c0707838",
+            "checksum": {
+              "type": "MD5",
+              "value": "301ccadeec373eb11ccffa92c0707838"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C19_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534837,
+            "persistentId": "doi:10.57745/SQESYR",
+            "pidURL": "https://doi.org/10.57745/SQESYR",
+            "filename": "C19_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8574,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f765355b-d3fc6dff9b54",
+            "rootDataFileId": -1,
+            "md5": "29667e298f7d657bd18e76f592d28fb6",
+            "checksum": {
+              "type": "MD5",
+              "value": "29667e298f7d657bd18e76f592d28fb6"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C19_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534724,
+            "persistentId": "doi:10.57745/WTGCAF",
+            "pidURL": "https://doi.org/10.57745/WTGCAF",
+            "filename": "C19_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 64275,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75b0110-e590f026c80a",
+            "rootDataFileId": -1,
+            "md5": "ca995256f3272fb5a3d8ebe106bbabc6",
+            "checksum": {
+              "type": "MD5",
+              "value": "ca995256f3272fb5a3d8ebe106bbabc6"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C1_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534806,
+            "persistentId": "doi:10.57745/ARIB3Q",
+            "pidURL": "https://doi.org/10.57745/ARIB3Q",
+            "filename": "C1_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8530,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f760e91a-2e4fe9ae7a6f",
+            "rootDataFileId": -1,
+            "md5": "cecd1296bac29c815ac691971b311dc0",
+            "checksum": {
+              "type": "MD5",
+              "value": "cecd1296bac29c815ac691971b311dc0"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C1_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534762,
+            "persistentId": "doi:10.57745/BYAXIU",
+            "pidURL": "https://doi.org/10.57745/BYAXIU",
+            "filename": "C1_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8611,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75dee57-0948d0f72c74",
+            "rootDataFileId": -1,
+            "md5": "773fa6c208b2f41f2e6ea408047ed64f",
+            "checksum": {
+              "type": "MD5",
+              "value": "773fa6c208b2f41f2e6ea408047ed64f"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C1_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534850,
+            "persistentId": "doi:10.57745/VQJT8E",
+            "pidURL": "https://doi.org/10.57745/VQJT8E",
+            "filename": "C1_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8610,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7650d1e-e76f71e181db",
+            "rootDataFileId": -1,
+            "md5": "ea8cd828e1e81bededb9c932f133a412",
+            "checksum": {
+              "type": "MD5",
+              "value": "ea8cd828e1e81bededb9c932f133a412"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C1_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534719,
+            "persistentId": "doi:10.57745/4NVWBX",
+            "pidURL": "https://doi.org/10.57745/4NVWBX",
+            "filename": "C1_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 64640,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75ac532-9f997b0cf949",
+            "rootDataFileId": -1,
+            "md5": "7b9b340665bdade3997a98be0eac03a8",
+            "checksum": {
+              "type": "MD5",
+              "value": "7b9b340665bdade3997a98be0eac03a8"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C20_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534794,
+            "persistentId": "doi:10.57745/UXGH46",
+            "pidURL": "https://doi.org/10.57745/UXGH46",
+            "filename": "C20_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8521,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f76112e9-4150a5cf6081",
+            "rootDataFileId": -1,
+            "md5": "31073246a00fe88bf7dfdca2ccc8d358",
+            "checksum": {
+              "type": "MD5",
+              "value": "31073246a00fe88bf7dfdca2ccc8d358"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C20_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534771,
+            "persistentId": "doi:10.57745/69EMIG",
+            "pidURL": "https://doi.org/10.57745/69EMIG",
+            "filename": "C20_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8615,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75e1878-ec616155996f",
+            "rootDataFileId": -1,
+            "md5": "bec82f02dd077bc4edfd608c822d19c3",
+            "checksum": {
+              "type": "MD5",
+              "value": "bec82f02dd077bc4edfd608c822d19c3"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C20_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534853,
+            "persistentId": "doi:10.57745/AQSDYX",
+            "pidURL": "https://doi.org/10.57745/AQSDYX",
+            "filename": "C20_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8626,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7653945-b925dc636bb0",
+            "rootDataFileId": -1,
+            "md5": "5335c9bc9fc59b59e783273cee845384",
+            "checksum": {
+              "type": "MD5",
+              "value": "5335c9bc9fc59b59e783273cee845384"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C20_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534725,
+            "persistentId": "doi:10.57745/0USFKQ",
+            "pidURL": "https://doi.org/10.57745/0USFKQ",
+            "filename": "C20_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 63878,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75b02ae-fdf1671cc920",
+            "rootDataFileId": -1,
+            "md5": "ee0cce5d41779da3088b0846341f67d1",
+            "checksum": {
+              "type": "MD5",
+              "value": "ee0cce5d41779da3088b0846341f67d1"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C21_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534800,
+            "persistentId": "doi:10.57745/LN2ITP",
+            "pidURL": "https://doi.org/10.57745/LN2ITP",
+            "filename": "C21_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8545,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7611959-669ccecffa1f",
+            "rootDataFileId": -1,
+            "md5": "b0b2c80f18cab48b9c6a4a608d154208",
+            "checksum": {
+              "type": "MD5",
+              "value": "b0b2c80f18cab48b9c6a4a608d154208"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C21_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534764,
+            "persistentId": "doi:10.57745/V0EXXA",
+            "pidURL": "https://doi.org/10.57745/V0EXXA",
+            "filename": "C21_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8631,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75e198c-afdddf39b4d6",
+            "rootDataFileId": -1,
+            "md5": "2b26a634c9f21dbc6a4bf95f6fbde6fa",
+            "checksum": {
+              "type": "MD5",
+              "value": "2b26a634c9f21dbc6a4bf95f6fbde6fa"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C21_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534851,
+            "persistentId": "doi:10.57745/IECMDM",
+            "pidURL": "https://doi.org/10.57745/IECMDM",
+            "filename": "C21_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8641,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7653b77-d55bd3c64f28",
+            "rootDataFileId": -1,
+            "md5": "57aa0a9344a122bcc1f0e8e8c70a036d",
+            "checksum": {
+              "type": "MD5",
+              "value": "57aa0a9344a122bcc1f0e8e8c70a036d"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C21_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534735,
+            "persistentId": "doi:10.57745/54F6YY",
+            "pidURL": "https://doi.org/10.57745/54F6YY",
+            "filename": "C21_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 63108,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75b0e64-494803e2e81c",
+            "rootDataFileId": -1,
+            "md5": "d226463b1f9cccfed1b98fb7cdfdea85",
+            "checksum": {
+              "type": "MD5",
+              "value": "d226463b1f9cccfed1b98fb7cdfdea85"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C22_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534798,
+            "persistentId": "doi:10.57745/2AKT78",
+            "pidURL": "https://doi.org/10.57745/2AKT78",
+            "filename": "C22_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8555,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f761171e-f48695433567",
+            "rootDataFileId": -1,
+            "md5": "971a1a62e70c0ce797b2162baa55acf9",
+            "checksum": {
+              "type": "MD5",
+              "value": "971a1a62e70c0ce797b2162baa55acf9"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C22_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534761,
+            "persistentId": "doi:10.57745/EIIDZC",
+            "pidURL": "https://doi.org/10.57745/EIIDZC",
+            "filename": "C22_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8632,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75e1cbd-4fbc676121a4",
+            "rootDataFileId": -1,
+            "md5": "90386bf000852801c0a93885c66f796e",
+            "checksum": {
+              "type": "MD5",
+              "value": "90386bf000852801c0a93885c66f796e"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C22_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534827,
+            "persistentId": "doi:10.57745/F9FRMX",
+            "pidURL": "https://doi.org/10.57745/F9FRMX",
+            "filename": "C22_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8643,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7653d8b-739e61846bd7",
+            "rootDataFileId": -1,
+            "md5": "1820c2aba9d174559058f15c12674cab",
+            "checksum": {
+              "type": "MD5",
+              "value": "1820c2aba9d174559058f15c12674cab"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C22_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534714,
+            "persistentId": "doi:10.57745/DSSIOL",
+            "pidURL": "https://doi.org/10.57745/DSSIOL",
+            "filename": "C22_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 63223,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75b0cc8-636934d7bd2b",
+            "rootDataFileId": -1,
+            "md5": "7c76d5a0d71e8939645b62869ac98d27",
+            "checksum": {
+              "type": "MD5",
+              "value": "7c76d5a0d71e8939645b62869ac98d27"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C23_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534791,
+            "persistentId": "doi:10.57745/JTXFND",
+            "pidURL": "https://doi.org/10.57745/JTXFND",
+            "filename": "C23_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8553,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7611831-96dfde9546e2",
+            "rootDataFileId": -1,
+            "md5": "1b3ee2ae5766de4bb118197b91d36bf2",
+            "checksum": {
+              "type": "MD5",
+              "value": "1b3ee2ae5766de4bb118197b91d36bf2"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C23_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534752,
+            "persistentId": "doi:10.57745/4KAVCC",
+            "pidURL": "https://doi.org/10.57745/4KAVCC",
+            "filename": "C23_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8623,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75e1fe8-4b8be417a686",
+            "rootDataFileId": -1,
+            "md5": "97236c2d474dc2a1d3730f795d144c7c",
+            "checksum": {
+              "type": "MD5",
+              "value": "97236c2d474dc2a1d3730f795d144c7c"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C23_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534847,
+            "persistentId": "doi:10.57745/CTRGQY",
+            "pidURL": "https://doi.org/10.57745/CTRGQY",
+            "filename": "C23_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8666,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f76540af-c933afa12af5",
+            "rootDataFileId": -1,
+            "md5": "301a56e8c6ac660b0d7856e74edc40b6",
+            "checksum": {
+              "type": "MD5",
+              "value": "301a56e8c6ac660b0d7856e74edc40b6"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C23_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534718,
+            "persistentId": "doi:10.57745/BL5ROE",
+            "pidURL": "https://doi.org/10.57745/BL5ROE",
+            "filename": "C23_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 63212,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75b0b39-65572451f713",
+            "rootDataFileId": -1,
+            "md5": "c5c38a02c3dc0ac522e1d376e8d5fa64",
+            "checksum": {
+              "type": "MD5",
+              "value": "c5c38a02c3dc0ac522e1d376e8d5fa64"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C24_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534788,
+            "persistentId": "doi:10.57745/VDN553",
+            "pidURL": "https://doi.org/10.57745/VDN553",
+            "filename": "C24_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8540,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7611c88-7c2c49e4a718",
+            "rootDataFileId": -1,
+            "md5": "26eee3017ae68e9b934180ea25d107ee",
+            "checksum": {
+              "type": "MD5",
+              "value": "26eee3017ae68e9b934180ea25d107ee"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C24_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534751,
+            "persistentId": "doi:10.57745/GCWVXN",
+            "pidURL": "https://doi.org/10.57745/GCWVXN",
+            "filename": "C24_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8612,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75e1dc4-fd9a2b48bd0d",
+            "rootDataFileId": -1,
+            "md5": "a11a41d431fc65b6d515099b0eb3aa80",
+            "checksum": {
+              "type": "MD5",
+              "value": "a11a41d431fc65b6d515099b0eb3aa80"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C24_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534824,
+            "persistentId": "doi:10.57745/JUATMF",
+            "pidURL": "https://doi.org/10.57745/JUATMF",
+            "filename": "C24_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8626,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7653fa6-ff5a14df43fc",
+            "rootDataFileId": -1,
+            "md5": "17378ec0cd42d64bd55c6d39a0766bbf",
+            "checksum": {
+              "type": "MD5",
+              "value": "17378ec0cd42d64bd55c6d39a0766bbf"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C24_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534732,
+            "persistentId": "doi:10.57745/GQRFXJ",
+            "pidURL": "https://doi.org/10.57745/GQRFXJ",
+            "filename": "C24_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 63892,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75b169c-e641b04ffb70",
+            "rootDataFileId": -1,
+            "md5": "90dfdaf124641e66263fd52c18133cc7",
+            "checksum": {
+              "type": "MD5",
+              "value": "90dfdaf124641e66263fd52c18133cc7"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C25_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534802,
+            "persistentId": "doi:10.57745/W8JGZU",
+            "pidURL": "https://doi.org/10.57745/W8JGZU",
+            "filename": "C25_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8547,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7611f96-3a71b5301a78",
+            "rootDataFileId": -1,
+            "md5": "d243d4e08d7f3917ea89a9fbf21085d7",
+            "checksum": {
+              "type": "MD5",
+              "value": "d243d4e08d7f3917ea89a9fbf21085d7"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C25_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534778,
+            "persistentId": "doi:10.57745/KMSVIP",
+            "pidURL": "https://doi.org/10.57745/KMSVIP",
+            "filename": "C25_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8629,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75e1ec6-32b6789351d0",
+            "rootDataFileId": -1,
+            "md5": "652e441e018b91f44dfd14a513b5adc8",
+            "checksum": {
+              "type": "MD5",
+              "value": "652e441e018b91f44dfd14a513b5adc8"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C25_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534825,
+            "persistentId": "doi:10.57745/CKDIIN",
+            "pidURL": "https://doi.org/10.57745/CKDIIN",
+            "filename": "C25_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8639,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f76542fd-5b68e9d13424",
+            "rootDataFileId": -1,
+            "md5": "3a41ed4ff0c0af98e2bdc3288026b644",
+            "checksum": {
+              "type": "MD5",
+              "value": "3a41ed4ff0c0af98e2bdc3288026b644"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C25_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534723,
+            "persistentId": "doi:10.57745/RANS9V",
+            "pidURL": "https://doi.org/10.57745/RANS9V",
+            "filename": "C25_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 62312,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75b135e-3b4b90b2e9db",
+            "rootDataFileId": -1,
+            "md5": "1b337bfbdf9923dd03596a650121b372",
+            "checksum": {
+              "type": "MD5",
+              "value": "1b337bfbdf9923dd03596a650121b372"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C26_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534820,
+            "persistentId": "doi:10.57745/DYG2WZ",
+            "pidURL": "https://doi.org/10.57745/DYG2WZ",
+            "filename": "C26_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8560,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7611e93-d190f3cd6815",
+            "rootDataFileId": -1,
+            "md5": "ac9d6ce2dc3efe6246ccc68b7106c83d",
+            "checksum": {
+              "type": "MD5",
+              "value": "ac9d6ce2dc3efe6246ccc68b7106c83d"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C26_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534750,
+            "persistentId": "doi:10.57745/DC3TK0",
+            "pidURL": "https://doi.org/10.57745/DC3TK0",
+            "filename": "C26_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8629,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75e2415-cb50f2a7bf54",
+            "rootDataFileId": -1,
+            "md5": "c066cc93fe453de7db70c3c07143d573",
+            "checksum": {
+              "type": "MD5",
+              "value": "c066cc93fe453de7db70c3c07143d573"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C26_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534838,
+            "persistentId": "doi:10.57745/OTVH7P",
+            "pidURL": "https://doi.org/10.57745/OTVH7P",
+            "filename": "C26_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8616,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7654751-02d064c86346",
+            "rootDataFileId": -1,
+            "md5": "df574b0cbc74e2fb1969bdd87ca482d9",
+            "checksum": {
+              "type": "MD5",
+              "value": "df574b0cbc74e2fb1969bdd87ca482d9"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C26_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534733,
+            "persistentId": "doi:10.57745/XJRBVB",
+            "pidURL": "https://doi.org/10.57745/XJRBVB",
+            "filename": "C26_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 62488,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75b14fb-ce1cd4c02f2c",
+            "rootDataFileId": -1,
+            "md5": "e7fd8d949ba7bb36d820c40eb39e79a4",
+            "checksum": {
+              "type": "MD5",
+              "value": "e7fd8d949ba7bb36d820c40eb39e79a4"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C27_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534805,
+            "persistentId": "doi:10.57745/LGBCCA",
+            "pidURL": "https://doi.org/10.57745/LGBCCA",
+            "filename": "C27_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8548,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7612099-79f1a7dfd716",
+            "rootDataFileId": -1,
+            "md5": "d75d441276097301ab6a02f16d9d91ef",
+            "checksum": {
+              "type": "MD5",
+              "value": "d75d441276097301ab6a02f16d9d91ef"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C27_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534770,
+            "persistentId": "doi:10.57745/DCV7TN",
+            "pidURL": "https://doi.org/10.57745/DCV7TN",
+            "filename": "C27_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8613,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75e2511-ff74a4b18468",
+            "rootDataFileId": -1,
+            "md5": "ecb87fa98ccdfc6bc45de03f7b85fa8c",
+            "checksum": {
+              "type": "MD5",
+              "value": "ecb87fa98ccdfc6bc45de03f7b85fa8c"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C27_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534859,
+            "persistentId": "doi:10.57745/TUTXYJ",
+            "pidURL": "https://doi.org/10.57745/TUTXYJ",
+            "filename": "C27_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8633,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f765498f-b3d9918aea4f",
+            "rootDataFileId": -1,
+            "md5": "f6654a25190ac3d02fa313f0fd8a5da4",
+            "checksum": {
+              "type": "MD5",
+              "value": "f6654a25190ac3d02fa313f0fd8a5da4"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C27_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534722,
+            "persistentId": "doi:10.57745/0OXEE5",
+            "pidURL": "https://doi.org/10.57745/0OXEE5",
+            "filename": "C27_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 62421,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75b1f83-1c633b8fb4ee",
+            "rootDataFileId": -1,
+            "md5": "9b977f631a942ff275da34dd026a1c1c",
+            "checksum": {
+              "type": "MD5",
+              "value": "9b977f631a942ff275da34dd026a1c1c"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C28_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534817,
+            "persistentId": "doi:10.57745/Y7UDIA",
+            "pidURL": "https://doi.org/10.57745/Y7UDIA",
+            "filename": "C28_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8523,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f761250c-27a30bfedfe4",
+            "rootDataFileId": -1,
+            "md5": "6e20ceb64eb55ee4bd3af2c4682f8792",
+            "checksum": {
+              "type": "MD5",
+              "value": "6e20ceb64eb55ee4bd3af2c4682f8792"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C28_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534763,
+            "persistentId": "doi:10.57745/VZ9MDD",
+            "pidURL": "https://doi.org/10.57745/VZ9MDD",
+            "filename": "C28_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8590,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75e2b0e-ed85e4fc90a0",
+            "rootDataFileId": -1,
+            "md5": "9b0cb49f2b622a9bdf325059c0e5b31d",
+            "checksum": {
+              "type": "MD5",
+              "value": "9b0cb49f2b622a9bdf325059c0e5b31d"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C28_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534857,
+            "persistentId": "doi:10.57745/UMPMBP",
+            "pidURL": "https://doi.org/10.57745/UMPMBP",
+            "filename": "C28_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8567,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7654aa5-d4b11a917116",
+            "rootDataFileId": -1,
+            "md5": "1635d8dc4814cc6b6c0370dec80bacba",
+            "checksum": {
+              "type": "MD5",
+              "value": "1635d8dc4814cc6b6c0370dec80bacba"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C28_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534749,
+            "persistentId": "doi:10.57745/4QIGBO",
+            "pidURL": "https://doi.org/10.57745/4QIGBO",
+            "filename": "C28_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 63180,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75b214f-f42004618819",
+            "rootDataFileId": -1,
+            "md5": "88b284cd4dfb7a21ecbdcdd21cb250d1",
+            "checksum": {
+              "type": "MD5",
+              "value": "88b284cd4dfb7a21ecbdcdd21cb250d1"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C29_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534792,
+            "persistentId": "doi:10.57745/BOCYN8",
+            "pidURL": "https://doi.org/10.57745/BOCYN8",
+            "filename": "C29_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8523,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7612986-a4dc08f3c046",
+            "rootDataFileId": -1,
+            "md5": "602e61d034e73b38187d45fe301bc44d",
+            "checksum": {
+              "type": "MD5",
+              "value": "602e61d034e73b38187d45fe301bc44d"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C29_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534755,
+            "persistentId": "doi:10.57745/DIB5KB",
+            "pidURL": "https://doi.org/10.57745/DIB5KB",
+            "filename": "C29_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8621,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75e289c-42380f0df5c1",
+            "rootDataFileId": -1,
+            "md5": "1b834d226d547682cb6b244fc0c9e3ae",
+            "checksum": {
+              "type": "MD5",
+              "value": "1b834d226d547682cb6b244fc0c9e3ae"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C29_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534836,
+            "persistentId": "doi:10.57745/BJPOWL",
+            "pidURL": "https://doi.org/10.57745/BJPOWL",
+            "filename": "C29_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8591,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7654e1a-ff086cba9487",
+            "rootDataFileId": -1,
+            "md5": "4112bbebdbfae0bad6e8bdc14dcbbd79",
+            "checksum": {
+              "type": "MD5",
+              "value": "4112bbebdbfae0bad6e8bdc14dcbbd79"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C29_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534734,
+            "persistentId": "doi:10.57745/9L09RB",
+            "pidURL": "https://doi.org/10.57745/9L09RB",
+            "filename": "C29_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 62801,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75b2323-6ad0d21bd58d",
+            "rootDataFileId": -1,
+            "md5": "1239e097106d2c2f82ab88e308427ba6",
+            "checksum": {
+              "type": "MD5",
+              "value": "1239e097106d2c2f82ab88e308427ba6"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C2_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534818,
+            "persistentId": "doi:10.57745/2CKUTF",
+            "pidURL": "https://doi.org/10.57745/2CKUTF",
+            "filename": "C2_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8533,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f760ea6c-43334c318855",
+            "rootDataFileId": -1,
+            "md5": "a543c561573b46252712eb4b4e7e60db",
+            "checksum": {
+              "type": "MD5",
+              "value": "a543c561573b46252712eb4b4e7e60db"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C2_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534786,
+            "persistentId": "doi:10.57745/A8JR0C",
+            "pidURL": "https://doi.org/10.57745/A8JR0C",
+            "filename": "C2_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8603,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75defd1-695a1ae59dcb",
+            "rootDataFileId": -1,
+            "md5": "7231cae13945e02a070d60c1b4db01a7",
+            "checksum": {
+              "type": "MD5",
+              "value": "7231cae13945e02a070d60c1b4db01a7"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C2_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534844,
+            "persistentId": "doi:10.57745/K2IBBU",
+            "pidURL": "https://doi.org/10.57745/K2IBBU",
+            "filename": "C2_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8623,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7650e6a-e224caad42f5",
+            "rootDataFileId": -1,
+            "md5": "cf0b4e7999f9e9d59cc25f2948765856",
+            "checksum": {
+              "type": "MD5",
+              "value": "cf0b4e7999f9e9d59cc25f2948765856"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C2_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534717,
+            "persistentId": "doi:10.57745/ZFJ76A",
+            "pidURL": "https://doi.org/10.57745/ZFJ76A",
+            "filename": "C2_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 65001,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75ac6e9-aed9ffaea86f",
+            "rootDataFileId": -1,
+            "md5": "6a70beb685a191322af2660f3e2820de",
+            "checksum": {
+              "type": "MD5",
+              "value": "6a70beb685a191322af2660f3e2820de"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C30_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534811,
+            "persistentId": "doi:10.57745/TKPWFZ",
+            "pidURL": "https://doi.org/10.57745/TKPWFZ",
+            "filename": "C30_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8524,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7612adb-06d3265aa2c3",
+            "rootDataFileId": -1,
+            "md5": "4dd29a2a27955562abfa7a8705f9c00f",
+            "checksum": {
+              "type": "MD5",
+              "value": "4dd29a2a27955562abfa7a8705f9c00f"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C30_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534757,
+            "persistentId": "doi:10.57745/CG7PBC",
+            "pidURL": "https://doi.org/10.57745/CG7PBC",
+            "filename": "C30_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8621,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75e3091-ff94a97d19da",
+            "rootDataFileId": -1,
+            "md5": "b79441f67f864e5a4c9c20025fe34c18",
+            "checksum": {
+              "type": "MD5",
+              "value": "b79441f67f864e5a4c9c20025fe34c18"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C30_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534860,
+            "persistentId": "doi:10.57745/YGXOGW",
+            "pidURL": "https://doi.org/10.57745/YGXOGW",
+            "filename": "C30_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8646,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f76552b8-61be4cf99bcb",
+            "rootDataFileId": -1,
+            "md5": "9349c2e6d13d119951280652a94f7fcd",
+            "checksum": {
+              "type": "MD5",
+              "value": "9349c2e6d13d119951280652a94f7fcd"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C30_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534742,
+            "persistentId": "doi:10.57745/TJZSAK",
+            "pidURL": "https://doi.org/10.57745/TJZSAK",
+            "filename": "C30_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 62911,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75b2697-d8712eea943f",
+            "rootDataFileId": -1,
+            "md5": "d4876ab8a3c302f44d71260a9d25b707",
+            "checksum": {
+              "type": "MD5",
+              "value": "d4876ab8a3c302f44d71260a9d25b707"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C31_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534808,
+            "persistentId": "doi:10.57745/OHKPRM",
+            "pidURL": "https://doi.org/10.57745/OHKPRM",
+            "filename": "C31_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8530,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f761285e-5189b7802958",
+            "rootDataFileId": -1,
+            "md5": "2d288e3ddb125d09bcbb26b67ca26e28",
+            "checksum": {
+              "type": "MD5",
+              "value": "2d288e3ddb125d09bcbb26b67ca26e28"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C31_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534781,
+            "persistentId": "doi:10.57745/E0X4ZO",
+            "pidURL": "https://doi.org/10.57745/E0X4ZO",
+            "filename": "C31_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8622,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75e2c0d-1ce0a202faf2",
+            "rootDataFileId": -1,
+            "md5": "dc6145e03df516fe5f15284839974edc",
+            "checksum": {
+              "type": "MD5",
+              "value": "dc6145e03df516fe5f15284839974edc"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C31_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534845,
+            "persistentId": "doi:10.57745/KD45P9",
+            "pidURL": "https://doi.org/10.57745/KD45P9",
+            "filename": "C31_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8638,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7655089-5f5fd2c5a309",
+            "rootDataFileId": -1,
+            "md5": "f81199d6eccfab25356461a76ea58ed9",
+            "checksum": {
+              "type": "MD5",
+              "value": "f81199d6eccfab25356461a76ea58ed9"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C31_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534715,
+            "persistentId": "doi:10.57745/KIJ0LZ",
+            "pidURL": "https://doi.org/10.57745/KIJ0LZ",
+            "filename": "C31_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 62288,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75b285f-023d692e9849",
+            "rootDataFileId": -1,
+            "md5": "bbf27598ed6982dd2ff1260ca92f0293",
+            "checksum": {
+              "type": "MD5",
+              "value": "bbf27598ed6982dd2ff1260ca92f0293"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C32_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534810,
+            "persistentId": "doi:10.57745/GO7TIY",
+            "pidURL": "https://doi.org/10.57745/GO7TIY",
+            "filename": "C32_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8565,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7612c22-1f4a9dd4bdfc",
+            "rootDataFileId": -1,
+            "md5": "9623d87d3f14285f44185fbc38827487",
+            "checksum": {
+              "type": "MD5",
+              "value": "9623d87d3f14285f44185fbc38827487"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C32_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534758,
+            "persistentId": "doi:10.57745/4WFOB1",
+            "pidURL": "https://doi.org/10.57745/4WFOB1",
+            "filename": "C32_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8625,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75e2f82-fa96e473aea0",
+            "rootDataFileId": -1,
+            "md5": "7d03a075ae33b86b3bf07b1c48d7eb00",
+            "checksum": {
+              "type": "MD5",
+              "value": "7d03a075ae33b86b3bf07b1c48d7eb00"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C32_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534852,
+            "persistentId": "doi:10.57745/ZHOKP0",
+            "pidURL": "https://doi.org/10.57745/ZHOKP0",
+            "filename": "C32_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8615,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f765518f-f45fd14f7d67",
+            "rootDataFileId": -1,
+            "md5": "baf3e11bbb16945af69022e27731b9cf",
+            "checksum": {
+              "type": "MD5",
+              "value": "baf3e11bbb16945af69022e27731b9cf"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C32_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534730,
+            "persistentId": "doi:10.57745/8LXTXI",
+            "pidURL": "https://doi.org/10.57745/8LXTXI",
+            "filename": "C32_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 62210,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75b3349-cc05c15027c9",
+            "rootDataFileId": -1,
+            "md5": "9fd3bfd469e49a586c6e7a8c27cd1e66",
+            "checksum": {
+              "type": "MD5",
+              "value": "9fd3bfd469e49a586c6e7a8c27cd1e66"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C33_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534799,
+            "persistentId": "doi:10.57745/L3JVZZ",
+            "pidURL": "https://doi.org/10.57745/L3JVZZ",
+            "filename": "C33_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8520,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7613377-7ad733aac280",
+            "rootDataFileId": -1,
+            "md5": "93343d3ce6846a2791199564fb2c4f7f",
+            "checksum": {
+              "type": "MD5",
+              "value": "93343d3ce6846a2791199564fb2c4f7f"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C33_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534785,
+            "persistentId": "doi:10.57745/DITZY7",
+            "pidURL": "https://doi.org/10.57745/DITZY7",
+            "filename": "C33_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8616,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75e3199-effd40061804",
+            "rootDataFileId": -1,
+            "md5": "a95e4a41cabc0c42e90fe07e5ca608c6",
+            "checksum": {
+              "type": "MD5",
+              "value": "a95e4a41cabc0c42e90fe07e5ca608c6"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C33_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534832,
+            "persistentId": "doi:10.57745/IMWMGP",
+            "pidURL": "https://doi.org/10.57745/IMWMGP",
+            "filename": "C33_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8613,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7655d82-f1f375aad321",
+            "rootDataFileId": -1,
+            "md5": "c326a495a60b9d703183cbe698bda2bf",
+            "checksum": {
+              "type": "MD5",
+              "value": "c326a495a60b9d703183cbe698bda2bf"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C33_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534726,
+            "persistentId": "doi:10.57745/PGB1IZ",
+            "pidURL": "https://doi.org/10.57745/PGB1IZ",
+            "filename": "C33_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 62284,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75b319f-3368d8741cda",
+            "rootDataFileId": -1,
+            "md5": "6b40378e688613fb6ed007842e1cf443",
+            "checksum": {
+              "type": "MD5",
+              "value": "6b40378e688613fb6ed007842e1cf443"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C34_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534809,
+            "persistentId": "doi:10.57745/SYJ39E",
+            "pidURL": "https://doi.org/10.57745/SYJ39E",
+            "filename": "C34_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8530,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7613118-78cfc067dab8",
+            "rootDataFileId": -1,
+            "md5": "92e9ab722aaa13badb9ae33f7d135603",
+            "checksum": {
+              "type": "MD5",
+              "value": "92e9ab722aaa13badb9ae33f7d135603"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C34_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534754,
+            "persistentId": "doi:10.57745/RAYP2J",
+            "pidURL": "https://doi.org/10.57745/RAYP2J",
+            "filename": "C34_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8613,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75e3a94-7d2626b139ef",
+            "rootDataFileId": -1,
+            "md5": "e91091f3615bebe25992659a69c191e0",
+            "checksum": {
+              "type": "MD5",
+              "value": "e91091f3615bebe25992659a69c191e0"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C34_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534834,
+            "persistentId": "doi:10.57745/RIKT95",
+            "pidURL": "https://doi.org/10.57745/RIKT95",
+            "filename": "C34_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8631,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7655a08-b071c40c04ed",
+            "rootDataFileId": -1,
+            "md5": "7c079bef2babba3fc606f6f2dacffbbc",
+            "checksum": {
+              "type": "MD5",
+              "value": "7c079bef2babba3fc606f6f2dacffbbc"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C34_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534728,
+            "persistentId": "doi:10.57745/XJRSS3",
+            "pidURL": "https://doi.org/10.57745/XJRSS3",
+            "filename": "C34_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 61621,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75b3a54-3c45ddc0b3e5",
+            "rootDataFileId": -1,
+            "md5": "2a641fbcb7f150937cdb8b305724e21d",
+            "checksum": {
+              "type": "MD5",
+              "value": "2a641fbcb7f150937cdb8b305724e21d"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C35_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534807,
+            "persistentId": "doi:10.57745/Z2IN9J",
+            "pidURL": "https://doi.org/10.57745/Z2IN9J",
+            "filename": "C35_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8552,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f76135a2-c428eabe6c89",
+            "rootDataFileId": -1,
+            "md5": "66f9f8e834d8ac4049a5a58f116e71aa",
+            "checksum": {
+              "type": "MD5",
+              "value": "66f9f8e834d8ac4049a5a58f116e71aa"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C35_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534769,
+            "persistentId": "doi:10.57745/AMFJNN",
+            "pidURL": "https://doi.org/10.57745/AMFJNN",
+            "filename": "C35_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8564,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75e3642-6a94c4db1b6e",
+            "rootDataFileId": -1,
+            "md5": "808fcbac38e7db4b273563b265a62ef0",
+            "checksum": {
+              "type": "MD5",
+              "value": "808fcbac38e7db4b273563b265a62ef0"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C35_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534828,
+            "persistentId": "doi:10.57745/E0ZDOG",
+            "pidURL": "https://doi.org/10.57745/E0ZDOG",
+            "filename": "C35_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8616,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7655b59-26683d711ad3",
+            "rootDataFileId": -1,
+            "md5": "d1739f71cf2ab77894336a42a55db324",
+            "checksum": {
+              "type": "MD5",
+              "value": "d1739f71cf2ab77894336a42a55db324"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C35_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534748,
+            "persistentId": "doi:10.57745/UQUES4",
+            "pidURL": "https://doi.org/10.57745/UQUES4",
+            "filename": "C35_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 61527,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75b34fa-f4c3dfe96e6a",
+            "rootDataFileId": -1,
+            "md5": "d3ca3d58d528d7362e473260902e4ab7",
+            "checksum": {
+              "type": "MD5",
+              "value": "d3ca3d58d528d7362e473260902e4ab7"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C36_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534789,
+            "persistentId": "doi:10.57745/PUCEGX",
+            "pidURL": "https://doi.org/10.57745/PUCEGX",
+            "filename": "C36_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8544,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f76136f0-d2fb4f1f37cf",
+            "rootDataFileId": -1,
+            "md5": "c025ff477ef5a376b47b4fc3c73b1b35",
+            "checksum": {
+              "type": "MD5",
+              "value": "c025ff477ef5a376b47b4fc3c73b1b35"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C36_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534779,
+            "persistentId": "doi:10.57745/HIQZ2F",
+            "pidURL": "https://doi.org/10.57745/HIQZ2F",
+            "filename": "C36_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8645,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75e3755-9a3ec1bfeee3",
+            "rootDataFileId": -1,
+            "md5": "96ece60fa47c4d8bd2c28344a285a33f",
+            "checksum": {
+              "type": "MD5",
+              "value": "96ece60fa47c4d8bd2c28344a285a33f"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C36_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534841,
+            "persistentId": "doi:10.57745/Q6GUQ0",
+            "pidURL": "https://doi.org/10.57745/Q6GUQ0",
+            "filename": "C36_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8609,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7655c65-53a2e2d8621f",
+            "rootDataFileId": -1,
+            "md5": "cf261fa26d48a4614cc639fdae7191f5",
+            "checksum": {
+              "type": "MD5",
+              "value": "cf261fa26d48a4614cc639fdae7191f5"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C36_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534737,
+            "persistentId": "doi:10.57745/54FXEM",
+            "pidURL": "https://doi.org/10.57745/54FXEM",
+            "filename": "C36_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 61759,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75b3da7-99c7c7a9fe78",
+            "rootDataFileId": -1,
+            "md5": "773abc9041a0e02ea0739554f8143df0",
+            "checksum": {
+              "type": "MD5",
+              "value": "773abc9041a0e02ea0739554f8143df0"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C3_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534812,
+            "persistentId": "doi:10.57745/AKOLZP",
+            "pidURL": "https://doi.org/10.57745/AKOLZP",
+            "filename": "C3_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8517,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f760ec83-2461308fab41",
+            "rootDataFileId": -1,
+            "md5": "89ff888672f47ecb27657ce2bbdc0b5a",
+            "checksum": {
+              "type": "MD5",
+              "value": "89ff888672f47ecb27657ce2bbdc0b5a"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C3_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534772,
+            "persistentId": "doi:10.57745/UV7LRH",
+            "pidURL": "https://doi.org/10.57745/UV7LRH",
+            "filename": "C3_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8624,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75df0ef-8be6fd3ca908",
+            "rootDataFileId": -1,
+            "md5": "e347ddc128d3156b70cb5ffa6e13ba69",
+            "checksum": {
+              "type": "MD5",
+              "value": "e347ddc128d3156b70cb5ffa6e13ba69"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C3_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534843,
+            "persistentId": "doi:10.57745/VGC6EE",
+            "pidURL": "https://doi.org/10.57745/VGC6EE",
+            "filename": "C3_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8637,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7651378-e8a7296bd74e",
+            "rootDataFileId": -1,
+            "md5": "aa392dd0ea32167b3558fc6addc69c4c",
+            "checksum": {
+              "type": "MD5",
+              "value": "aa392dd0ea32167b3558fc6addc69c4c"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C3_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534743,
+            "persistentId": "doi:10.57745/ZPLFPT",
+            "pidURL": "https://doi.org/10.57745/ZPLFPT",
+            "filename": "C3_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 64760,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75ac880-aaba0e767da2",
+            "rootDataFileId": -1,
+            "md5": "c0b413239685c2b50549ef486087451a",
+            "checksum": {
+              "type": "MD5",
+              "value": "c0b413239685c2b50549ef486087451a"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C4_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534821,
+            "persistentId": "doi:10.57745/500ZG0",
+            "pidURL": "https://doi.org/10.57745/500ZG0",
+            "filename": "C4_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8542,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f760edc5-43bb472831f9",
+            "rootDataFileId": -1,
+            "md5": "58f17375655161b51ea94f1107b180b2",
+            "checksum": {
+              "type": "MD5",
+              "value": "58f17375655161b51ea94f1107b180b2"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C4_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534777,
+            "persistentId": "doi:10.57745/31YJMF",
+            "pidURL": "https://doi.org/10.57745/31YJMF",
+            "filename": "C4_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8613,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75df68e-c9a1caa89d84",
+            "rootDataFileId": -1,
+            "md5": "3fbe858ce8e8d4d39e05e3683c32a121",
+            "checksum": {
+              "type": "MD5",
+              "value": "3fbe858ce8e8d4d39e05e3683c32a121"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C4_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534829,
+            "persistentId": "doi:10.57745/ROW9SL",
+            "pidURL": "https://doi.org/10.57745/ROW9SL",
+            "filename": "C4_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8658,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f765158c-e29ce680d6be",
+            "rootDataFileId": -1,
+            "md5": "31f82f12561fce95b837a240bdae6c2e",
+            "checksum": {
+              "type": "MD5",
+              "value": "31f82f12561fce95b837a240bdae6c2e"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C4_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534721,
+            "persistentId": "doi:10.57745/CY2RN6",
+            "pidURL": "https://doi.org/10.57745/CY2RN6",
+            "filename": "C4_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 63816,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75acd6e-82b30f66f726",
+            "rootDataFileId": -1,
+            "md5": "adee4088c48db6f6b359766a0e062683",
+            "checksum": {
+              "type": "MD5",
+              "value": "adee4088c48db6f6b359766a0e062683"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C5_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534801,
+            "persistentId": "doi:10.57745/BYZF21",
+            "pidURL": "https://doi.org/10.57745/BYZF21",
+            "filename": "C5_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8532,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f760f0fe-0693292cb821",
+            "rootDataFileId": -1,
+            "md5": "855f978873a84fc236b244444841edfe",
+            "checksum": {
+              "type": "MD5",
+              "value": "855f978873a84fc236b244444841edfe"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C5_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534768,
+            "persistentId": "doi:10.57745/GGHYDF",
+            "pidURL": "https://doi.org/10.57745/GGHYDF",
+            "filename": "C5_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8604,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75df583-7a4559a58036",
+            "rootDataFileId": -1,
+            "md5": "a8e137284eb15ed965567fd30b02c4da",
+            "checksum": {
+              "type": "MD5",
+              "value": "a8e137284eb15ed965567fd30b02c4da"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C5_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534830,
+            "persistentId": "doi:10.57745/GHKH2J",
+            "pidURL": "https://doi.org/10.57745/GHKH2J",
+            "filename": "C5_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8635,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f76517ac-04d475e35037",
+            "rootDataFileId": -1,
+            "md5": "d81b2992e7b672630cb4f02810f76434",
+            "checksum": {
+              "type": "MD5",
+              "value": "d81b2992e7b672630cb4f02810f76434"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C5_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534727,
+            "persistentId": "doi:10.57745/LAWGBN",
+            "pidURL": "https://doi.org/10.57745/LAWGBN",
+            "filename": "C5_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 62824,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75acf36-7f2a8ef4627a",
+            "rootDataFileId": -1,
+            "md5": "e192ddd77e0244b050c6b661bb411fa2",
+            "checksum": {
+              "type": "MD5",
+              "value": "e192ddd77e0244b050c6b661bb411fa2"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C6_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534787,
+            "persistentId": "doi:10.57745/XKCOOB",
+            "pidURL": "https://doi.org/10.57745/XKCOOB",
+            "filename": "C6_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8531,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f760f59c-ed3c1218d6b4",
+            "rootDataFileId": -1,
+            "md5": "060db57590306ce64f695ffd6218b918",
+            "checksum": {
+              "type": "MD5",
+              "value": "060db57590306ce64f695ffd6218b918"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C6_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534783,
+            "persistentId": "doi:10.57745/PTEEPV",
+            "pidURL": "https://doi.org/10.57745/PTEEPV",
+            "filename": "C6_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8620,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75df78f-9b2848946155",
+            "rootDataFileId": -1,
+            "md5": "a4285e6b361326ba285395ddbb55a7d1",
+            "checksum": {
+              "type": "MD5",
+              "value": "a4285e6b361326ba285395ddbb55a7d1"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C6_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534833,
+            "persistentId": "doi:10.57745/XEJLHH",
+            "pidURL": "https://doi.org/10.57745/XEJLHH",
+            "filename": "C6_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8643,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f765148e-97096a7416cb",
+            "rootDataFileId": -1,
+            "md5": "b57b9434682d90c0445a0369367a057c",
+            "checksum": {
+              "type": "MD5",
+              "value": "b57b9434682d90c0445a0369367a057c"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C6_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534731,
+            "persistentId": "doi:10.57745/LJCRLV",
+            "pidURL": "https://doi.org/10.57745/LJCRLV",
+            "filename": "C6_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 63639,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75ad9a0-858dbf96b5f3",
+            "rootDataFileId": -1,
+            "md5": "e8b6ac09e38a80c62bf87ca809b71966",
+            "checksum": {
+              "type": "MD5",
+              "value": "e8b6ac09e38a80c62bf87ca809b71966"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C7_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534795,
+            "persistentId": "doi:10.57745/6CFVBN",
+            "pidURL": "https://doi.org/10.57745/6CFVBN",
+            "filename": "C7_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8535,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f760f475-154c1692e417",
+            "rootDataFileId": -1,
+            "md5": "5e6969f8a5ceb278147db25875491a7c",
+            "checksum": {
+              "type": "MD5",
+              "value": "5e6969f8a5ceb278147db25875491a7c"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C7_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534753,
+            "persistentId": "doi:10.57745/HXBGK1",
+            "pidURL": "https://doi.org/10.57745/HXBGK1",
+            "filename": "C7_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8625,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75dfce3-376c3ea7b422",
+            "rootDataFileId": -1,
+            "md5": "94383a11aeda3f2f3c63582a8519a2dc",
+            "checksum": {
+              "type": "MD5",
+              "value": "94383a11aeda3f2f3c63582a8519a2dc"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C7_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534854,
+            "persistentId": "doi:10.57745/9VDQX4",
+            "pidURL": "https://doi.org/10.57745/9VDQX4",
+            "filename": "C7_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8637,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f76519c3-e5ed3a17f137",
+            "rootDataFileId": -1,
+            "md5": "3f4e5af4ea11da0c277437be952d11ad",
+            "checksum": {
+              "type": "MD5",
+              "value": "3f4e5af4ea11da0c277437be952d11ad"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C7_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534744,
+            "persistentId": "doi:10.57745/4U7ZRW",
+            "pidURL": "https://doi.org/10.57745/4U7ZRW",
+            "filename": "C7_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 63519,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75ad5f9-ae6b030b0e0c",
+            "rootDataFileId": -1,
+            "md5": "442e39b29480dadeb53dc92c6e1ffb69",
+            "checksum": {
+              "type": "MD5",
+              "value": "442e39b29480dadeb53dc92c6e1ffb69"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C8_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534796,
+            "persistentId": "doi:10.57745/CVM1CS",
+            "pidURL": "https://doi.org/10.57745/CVM1CS",
+            "filename": "C8_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8543,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f760fa41-21893a669fd7",
+            "rootDataFileId": -1,
+            "md5": "88b8e2e4741c7719f8ebddbdd2d4ad19",
+            "checksum": {
+              "type": "MD5",
+              "value": "88b8e2e4741c7719f8ebddbdd2d4ad19"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C8_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534765,
+            "persistentId": "doi:10.57745/6WVJNY",
+            "pidURL": "https://doi.org/10.57745/6WVJNY",
+            "filename": "C8_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8597,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75dfded-581f1aecadb7",
+            "rootDataFileId": -1,
+            "md5": "9db13d0213555455b411106925f9b744",
+            "checksum": {
+              "type": "MD5",
+              "value": "9db13d0213555455b411106925f9b744"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C8_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534858,
+            "persistentId": "doi:10.57745/N4IRZF",
+            "pidURL": "https://doi.org/10.57745/N4IRZF",
+            "filename": "C8_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8594,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7652068-31b5765b1f0f",
+            "rootDataFileId": -1,
+            "md5": "46a181344fe3efb5d991e4534f849865",
+            "checksum": {
+              "type": "MD5",
+              "value": "46a181344fe3efb5d991e4534f849865"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C8_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534736,
+            "persistentId": "doi:10.57745/8JPTDC",
+            "pidURL": "https://doi.org/10.57745/8JPTDC",
+            "filename": "C8_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 62792,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75ad7bf-23cb09dd4ef0",
+            "rootDataFileId": -1,
+            "md5": "f18592e4d7cfbe830583b7b3c278770e",
+            "checksum": {
+              "type": "MD5",
+              "value": "f18592e4d7cfbe830583b7b3c278770e"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C9_EIS_180mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_180mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534803,
+            "persistentId": "doi:10.57745/DV3MAQ",
+            "pidURL": "https://doi.org/10.57745/DV3MAQ",
+            "filename": "C9_EIS_180mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8548,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f760f92f-5eb9600eeaff",
+            "rootDataFileId": -1,
+            "md5": "4c963daf8fc8537a4b7e0ea35f704d2e",
+            "checksum": {
+              "type": "MD5",
+              "value": "4c963daf8fc8537a4b7e0ea35f704d2e"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C9_EIS_45mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_45mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534782,
+            "persistentId": "doi:10.57745/DMTIEC",
+            "pidURL": "https://doi.org/10.57745/DMTIEC",
+            "filename": "C9_EIS_45mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8637,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75dfff8-4dd30ddc54b8",
+            "rootDataFileId": -1,
+            "md5": "104cd244f3eda91452a8535c1d512385",
+            "checksum": {
+              "type": "MD5",
+              "value": "104cd244f3eda91452a8535c1d512385"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C9_EIS_900mA.txt",
+          "restricted": false,
+          "directoryLabel": "Data/EIS_900mA",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534840,
+            "persistentId": "doi:10.57745/RFMUSD",
+            "pidURL": "https://doi.org/10.57745/RFMUSD",
+            "filename": "C9_EIS_900mA.txt",
+            "contentType": "text/plain",
+            "filesize": 8644,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7651df9-4e07d940f02b",
+            "rootDataFileId": -1,
+            "md5": "fe8ed623d441c3ea44a7f90304e22bef",
+            "checksum": {
+              "type": "MD5",
+              "value": "fe8ed623d441c3ea44a7f90304e22bef"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "C9_IV.txt",
+          "restricted": false,
+          "directoryLabel": "Data/IV_curves",
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534741,
+            "persistentId": "doi:10.57745/NB78UT",
+            "pidURL": "https://doi.org/10.57745/NB78UT",
+            "filename": "C9_IV.txt",
+            "contentType": "text/plain",
+            "filesize": 62810,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f75ae09c-6b61e8dfdc29",
+            "rootDataFileId": -1,
+            "md5": "42e84ed875429ce5157b273c29407d89",
+            "checksum": {
+              "type": "MD5",
+              "value": "42e84ed875429ce5157b273c29407d89"
+            },
+            "creationDate": "2024-11-04"
+          }
+        },
+        {
+          "label": "Operating_conditions_Cell.tab",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 275249,
+          "dataFile": {
+            "id": 534861,
+            "persistentId": "doi:10.57745/SQTAE1",
+            "pidURL": "https://doi.org/10.57745/SQTAE1",
+            "filename": "Operating_conditions_Cell.tab",
+            "contentType": "text/tab-separated-values",
+            "filesize": 4674,
+            "storageIdentifier": "univ-grenoble-alpes://prod-univ-grenoble-alpes:192f7692af0-a43e97c92561",
+            "originalFileFormat": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "originalFormatLabel": "MS Excel Spreadsheet",
+            "originalFileSize": 12519,
+            "originalFileName": "Operating_conditions_Cell.xlsx",
+            "UNF": "UNF:6:s4HOTiboT3NEBxDIwYLIdw==",
+            "rootDataFileId": -1,
+            "md5": "854ca98a8ae9ca186ec26609a25981a6",
+            "checksum": {
+              "type": "MD5",
+              "value": "854ca98a8ae9ca186ec26609a25981a6"
+            },
+            "creationDate": "2024-11-04"
+          }
+        }
+      ]
+    }
+  }
+}

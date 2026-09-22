@@ -1,0 +1,10 @@
+{
+  "state": "BYTES",
+  "name": "diagnostic results.7z",
+  "bytes": 24893,
+  "sha256": "bfd94d2dadfc113f387e0d669a1cb629c4e8a86b785607301868c3a71b46040d",
+  "md5": "bd45c6cf948c386633e306b42ee23973",
+  "provider_checksum_match": true,
+  "content_type": "binary/octet-stream",
+  "final_url": "https://s3-eu-west-1.amazonaws.com/pstorage-loughborough-53465/6453063/diagnosticresults.7z?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJGXP3DOPNGAZIK6Q/20260922/eu-west-1/s3/aws4_request&X-Amz-Date=20260922T091701Z&X-Amz-Expires=10&X-Amz-SignedHeaders=host&X-Amz-Signature=c3da356a9517a61f5e16ab5bffe938832e1aa99abce7ce50fa0c43cdac088cb1"
+}

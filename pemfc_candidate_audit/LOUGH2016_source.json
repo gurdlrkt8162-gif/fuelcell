@@ -1,0 +1,259 @@
+{
+  "files": [
+    {
+      "id": 6453063,
+      "name": "diagnostic results.7z",
+      "size": 24893,
+      "is_link_only": false,
+      "download_url": "https://ndownloader.figshare.com/files/6453063",
+      "supplied_md5": "bd45c6cf948c386633e306b42ee23973",
+      "computed_md5": "bd45c6cf948c386633e306b42ee23973",
+      "mimetype": "application/x-7z-compressed"
+    },
+    {
+      "id": 6453066,
+      "name": "sensor measurement.7z",
+      "size": 1455751,
+      "is_link_only": false,
+      "download_url": "https://ndownloader.figshare.com/files/6453066",
+      "supplied_md5": "750f0526ba9a7379dc5fe8c8b7ea0ff0",
+      "computed_md5": "750f0526ba9a7379dc5fe8c8b7ea0ff0",
+      "mimetype": "application/x-7z-compressed"
+    }
+  ],
+  "folder_structure": {},
+  "authors": [
+    {
+      "id": 1255392,
+      "full_name": "Lei Mao",
+      "first_name": "Lei",
+      "last_name": "Mao",
+      "is_active": false,
+      "url_name": "Lei_Mao",
+      "orcid_id": ""
+    },
+    {
+      "id": 1250010,
+      "full_name": "Lisa Jackson",
+      "first_name": "Lisa",
+      "last_name": "Jackson",
+      "is_active": true,
+      "url_name": "Lisa_Jackson",
+      "orcid_id": ""
+    },
+    {
+      "id": 1251444,
+      "full_name": "Sarah Dunnett",
+      "first_name": "Sarah",
+      "last_name": "Dunnett",
+      "is_active": true,
+      "url_name": "Sarah_Dunnett",
+      "orcid_id": ""
+    }
+  ],
+  "custom_fields": [
+    {
+      "name": "School",
+      "value": [
+        "Aeronautical, Automotive, Chemical and Materials Engineering"
+      ],
+      "settings": {
+        "options": [
+          "Aeronautical, Automotive, Chemical and Materials Engineering",
+          "Architecture, Building and Civil Engineering",
+          "Business and Economics",
+          "Design",
+          "Loughborough University London",
+          "Mechanical, Electrical and Manufacturing Engineering",
+          "Science",
+          "Social Sciences",
+          "Sport, Exercise and Health Sciences",
+          "The Arts, English and Drama",
+          "University Academic and Administrative Support"
+        ],
+        "placeholder": "School",
+        "is_multiple": true
+      },
+      "field_type": "dropdown",
+      "order": null,
+      "is_mandatory": false
+    },
+    {
+      "name": "Department",
+      "value": "",
+      "settings": {
+        "options": [
+          "Aeronautical and Automotive Engineering",
+          "Arts",
+          "Business",
+          "Centre for Academic Practice",
+          "Chemistry",
+          "Chemical Engineering",
+          "Communication, Media, Social and Policy Studies",
+          "Computer Science",
+          "Economics",
+          "English and Drama",
+          "Geography and Environment",
+          "Information Science",
+          "IT Services",
+          "Materials",
+          "Mathematical Sciences",
+          "Mathematics Education Centre",
+          "Physics",
+          "Politics and International Studies",
+          "Professional Development",
+          "Research Office",
+          "University Library"
+        ],
+        "placeholder": "Department",
+        "is_multiple": true
+      },
+      "field_type": "dropdown",
+      "order": null,
+      "is_mandatory": false
+    },
+    {
+      "name": "Research Unit",
+      "value": "",
+      "settings": {
+        "options": [
+          "CAA Conference",
+          "Centre for Child and Family Research",
+          "Centre for Engineering and Design Education (CEDE)",
+          "Centre for Innovative and Collaborative Engineering (CICE)",
+          "Centre for Renewable Energy Systems Technology (CREST)",
+          "Centre for Research in Social Policy (CRSP)",
+          "Design Practice Research Case Studies",
+          "D&T Association Conference Series",
+          "Higher Education Academy Engineering Subject Centre",
+          "IDATER Archive",
+          "Interrogations Conference Papers",
+          "Midlands Centre for Criminology and Criminal Justice",
+          "NADE Archive",
+          "Orange Series",
+          "Socio-economic status and child/adolescent health in Johannesburg-Soweto Study",
+          "Water, Engineering and Development Centre (WEDC)",
+          "engCETL"
+        ],
+        "placeholder": "Research Unit",
+        "is_multiple": true
+      },
+      "field_type": "dropdown",
+      "order": null,
+      "is_mandatory": false
+    }
+  ],
+  "figshare_url": "https://repository.lboro.ac.uk/articles/dataset/Data_for_fault_diagnosis_of_practical_polymer_electrolyte_membrane_PEM_fuel_cell_system_with_data-driven_approaches_/4009959",
+  "download_disabled": false,
+  "description": "These data files are used in the work which has been published with title of fault diagnosis of practical polymer electrolyte membrane (PEM) fuel cell system with data-driven approaches in Fuel Cells. DOI: https://doi.org/10.1002/fuce.201600139.",
+  "funding": "Robust Lifecycle Design and Health Monitoring for Fuel-Cell Extended Performance (RESILIENCE)",
+  "funding_list": [
+    {
+      "id": 2452088,
+      "title": "Robust Lifecycle Design and Health Monitoring for Fuel-Cell Extended Performance (RESILIENCE)",
+      "grant_code": "EP/K02101X/1",
+      "funder_name": "Engineering and Physical Sciences Research Council",
+      "is_user_defined": 0,
+      "url": "https://app.dimensions.ai/details/grant/grant.3499505"
+    }
+  ],
+  "version": 1,
+  "status": "public",
+  "size": 1480644,
+  "created_date": "2016-10-12T12:28:11Z",
+  "modified_date": "2023-05-30T21:31:13Z",
+  "is_public": true,
+  "is_confidential": false,
+  "is_metadata_record": false,
+  "confidential_reason": "",
+  "metadata_reason": "",
+  "license": {
+    "value": 10,
+    "name": "CC BY-NC 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  },
+  "tags": [
+    "fuel cells",
+    "detection capability",
+    "data-based",
+    "Engineering not elsewhere classified",
+    "Non-automotive Combustion and Fuel Engineering (incl. Alternative/Renewable Fuels)"
+  ],
+  "keywords": [
+    "fuel cells",
+    "detection capability",
+    "data-based",
+    "Engineering not elsewhere classified",
+    "Non-automotive Combustion and Fuel Engineering (incl. Alternative/Renewable Fuels)"
+  ],
+  "categories": [
+    {
+      "id": 33611,
+      "title": "Other engineering not elsewhere classified",
+      "parent_id": 33599,
+      "path": "/32963/33599/33611",
+      "source_id": "409999",
+      "taxonomy_id": 102
+    },
+    {
+      "id": 33059,
+      "title": "Chemical and thermal processes in energy and combustion",
+      "parent_id": 33053,
+      "path": "/32963/33053/33059",
+      "source_id": "400402",
+      "taxonomy_id": 102
+    }
+  ],
+  "references": [
+    "https://doi.org/10.1002/fuce.201600139",
+    "https://hdl.handle.net/2134/22761"
+  ],
+  "has_linked_file": false,
+  "citation": "Mao, Lei; Jackson, Lisa; Dunnett, Sarah (2016). Data for 'fault diagnosis of practical polymer electrolyte membrane (PEM) fuel cell system with data-driven approaches'. Loughborough University. Dataset. https://doi.org/10.17028/rd.lboro.4009959.v1",
+  "related_materials": [
+    {
+      "id": 4948535,
+      "identifier": "https://doi.org/10.1002/fuce.201600139",
+      "title": "",
+      "relation": "References",
+      "identifier_type": "URL",
+      "is_linkout": false,
+      "link": "https://doi.org/10.1002/fuce.201600139"
+    },
+    {
+      "id": 4948538,
+      "identifier": "https://hdl.handle.net/2134/22761",
+      "title": "",
+      "relation": "References",
+      "identifier_type": "URL",
+      "is_linkout": false,
+      "link": "https://hdl.handle.net/2134/22761"
+    }
+  ],
+  "is_embargoed": false,
+  "embargo_date": "2017-04-12",
+  "embargo_type": "file",
+  "embargo_title": "",
+  "embargo_reason": "",
+  "embargo_options": [],
+  "id": 4009959,
+  "title": "Data for 'fault diagnosis of practical polymer electrolyte membrane (PEM) fuel cell system with data-driven approaches'",
+  "doi": "10.17028/rd.lboro.4009959.v1",
+  "handle": "",
+  "url": "https://api.figshare.com/v2/articles/4009959",
+  "published_date": "2016-10-12T12:28:11Z",
+  "thumb": "",
+  "defined_type": 3,
+  "defined_type_name": "dataset",
+  "group_id": 8,
+  "url_private_api": "https://api.figshare.com/v2/account/articles/4009959",
+  "url_public_api": "https://api.figshare.com/v2/articles/4009959",
+  "url_private_html": "https://figshare.com/account/articles/4009959",
+  "url_public_html": "https://repository.lboro.ac.uk/articles/dataset/Data_for_fault_diagnosis_of_practical_polymer_electrolyte_membrane_PEM_fuel_cell_system_with_data-driven_approaches_/4009959",
+  "timeline": {
+    "posted": "2016-10-12T12:28:11",
+    "firstOnline": "2016-10-12"
+  },
+  "resource_title": null,
+  "resource_doi": null
+}

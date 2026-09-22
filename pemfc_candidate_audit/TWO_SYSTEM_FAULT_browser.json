@@ -1,0 +1,174 @@
+{
+  "tag": "TWO_SYSTEM_FAULT",
+  "url": "https://data.mendeley.com/datasets/m9m2gmcr6k/1",
+  "network_json": [
+    {
+      "url": "https://data.mendeley.com/public-api/datasets/m9m2gmcr6k/versions",
+      "body": [
+        {
+          "version": 1,
+          "publish_date": "2021-04-26",
+          "available": true
+        }
+      ]
+    },
+    {
+      "url": "https://data.mendeley.com/public-api/datasets/m9m2gmcr6k/versions",
+      "body": [
+        {
+          "version": 1,
+          "publish_date": "2021-04-26",
+          "available": true
+        }
+      ]
+    },
+    {
+      "url": "https://data.mendeley.com/public-api/datasets/m9m2gmcr6k/folders/1",
+      "body": []
+    },
+    {
+      "url": "https://data.mendeley.com/public-api/datasets/m9m2gmcr6k/files?folder_id=root&version=1",
+      "body": [
+        {
+          "filename": "experimental data.xlsx",
+          "id": "c4352d0c-a3a8-4199-93b0-60beca58f771",
+          "content_details": {
+            "id": "84a8f72e-875e-4a46-89b5-3dc2a92a4af1",
+            "sha256_hash": "e88928c95672243e4691c435529e2d59175f5cb085c57e48455a63d2ca57c224",
+            "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "size": 1756704,
+            "created_date": "2020-03-20T05:51:55.711Z",
+            "download_url": "https://data.mendeley.com/public-files/datasets/m9m2gmcr6k/files/c4352d0c-a3a8-4199-93b0-60beca58f771/file_downloaded",
+            "view_url": "https://data.mendeley.com/public-files/datasets/m9m2gmcr6k/files/c4352d0c-a3a8-4199-93b0-60beca58f771/file_viewed",
+            "download_expiry_time": "2126-09-22T09:17:41.25947803Z"
+          },
+          "size": 1756704,
+          "last_modified_date": "2020-03-20T05:51:55.711Z",
+          "status": "COMPLETED"
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Skip to main content",
+      "url": "https://data.mendeley.com/datasets/m9m2gmcr6k/1#main"
+    },
+    {
+      "text": "",
+      "url": "https://data.mendeley.com/"
+    },
+    {
+      "text": "",
+      "url": "https://data.mendeley.com/faq"
+    },
+    {
+      "text": "FAQ",
+      "url": "https://data.mendeley.com/faq"
+    },
+    {
+      "text": "Download All 1.55 MB",
+      "url": "https://data.mendeley.com/public-api/zip/m9m2gmcr6k/download/1"
+    },
+    {
+      "text": "",
+      "url": "https://data.mendeley.com/public-files/datasets/m9m2gmcr6k/files/c4352d0c-a3a8-4199-93b0-60beca58f771/file_downloaded"
+    },
+    {
+      "text": "10.1016/j.jpowsour.2020.228894",
+      "url": "http://doi.org/10.1016/j.jpowsour.2020.228894"
+    },
+    {
+      "text": "10.1016/j.jpowsour.2020.228894",
+      "url": "http://doi.org/10.1016/j.jpowsour.2020.228894"
+    },
+    {
+      "text": "DataCite",
+      "url": "https://datacite.org/"
+    },
+    {
+      "text": "View details",
+      "url": "https://plu.mx/plum/a/?doi=10.17632/m9m2gmcr6k&theme=plum-bigben-theme"
+    },
+    {
+      "text": "A novel method for polymer electrolyte membrane fuel cell fault diagnosis using 2D data",
+      "url": "https://dx.doi.org/10.1016/j.jpowsour.2020.228894"
+    },
+    {
+      "text": "Journal of Power Sources",
+      "url": "http://www.sciencedirect.com/science/journal/0378-7753"
+    },
+    {
+      "text": "Home",
+      "url": "https://data.mendeley.com/"
+    },
+    {
+      "text": "About",
+      "url": "https://data.mendeley.com/about"
+    },
+    {
+      "text": "Accessibility Statement",
+      "url": "https://data.mendeley.com/accessibility"
+    },
+    {
+      "text": "Archive Policy",
+      "url": "https://data.mendeley.com/archive-process"
+    },
+    {
+      "text": "File Formats",
+      "url": "https://data.mendeley.com/file-formats"
+    },
+    {
+      "text": "API Docs",
+      "url": "https://data.mendeley.com/api/docs"
+    },
+    {
+      "text": "OAI",
+      "url": "https://data.mendeley.com/oai?verb=Identify"
+    },
+    {
+      "text": "Mission",
+      "url": "https://data.mendeley.com/mission"
+    },
+    {
+      "text": "Status Updates",
+      "url": "https://digitalcommons.elsevier.com/status"
+    },
+    {
+      "text": "Terms of Use",
+      "url": "https://www.mendeley.com/terms/"
+    },
+    {
+      "text": "Privacy Policy",
+      "url": "https://www.elsevier.com/legal/privacy-policy"
+    },
+    {
+      "text": "Cookie settings",
+      "url": "https://data.mendeley.com/datasets/m9m2gmcr6k/1#"
+    },
+    {
+      "text": "Cookie Policy",
+      "url": "https://www.elsevier.com/legal/cookienotice"
+    },
+    {
+      "text": "Cookie Policy",
+      "url": "https://www.elsevier.com/legal/cookienotice"
+    },
+    {
+      "text": "Google Ad-Tech Vendors",
+      "url": "https://support.google.com/admanager/answer/9012903"
+    },
+    {
+      "text": "Privacy Policy",
+      "url": "https://www.elsevier.com/legal/privacy-policy"
+    },
+    {
+      "text": "",
+      "url": "https://www.onetrust.com/products/cookie-consent/"
+    }
+  ],
+  "page_text": "Skip to main content\nSign In / Register\nData for: A novel method for polymer electrolyte membrane fuel cell fault diagnosis using 2D data\nPublished: 26 April 2021\n|\nVersion 1\n|\nDOI:\n10.17632/m9m2gmcr6k.1\nContributor:\nLei Mao\nDescription\n\nThe file includes the test data at flooding and dehydration states, from two different PEMFC systems (PEMFC 1 and PEMFC 2).\n\nDownload All 1.55 MB\nFiles\nXLSX\nexperimental data.xlsx\n1.68 MB\nCategories\nProton-Exchange Membrane Fuel Cells\nRelated Identifiers*\nThis dataset is supplement to\n10.1016/j.jpowsour.2020.228894\nThis dataset is supplement to\n10.1016/j.jpowsour.2020.228894\n\n*provided by DataCite\n\nLicence\nCC BY NC 3.0\nLearn more\nUsage\nViews:\n389\nDownloads:\n64\nView details\nLatest version\nVersion 1\nPublished:\n26 Apr 2021\nDOI:\n10.17632/m9m2gmcr6k.1\n\nCite this dataset\n\nCopy to clipboard\nAssociated article\n\nThis data is associated with the following publication:\n\nA novel method for polymer electrolyte membrane fuel cell fault diagnosis using 2D data\n\nPublished in:\n\nJournal of Power Sources\nHome\n|\nAbout\n|\nAccessibility Statement\n|\nArchive Policy\n|\nFile Formats\n|\nAPI Docs\n|\nOAI\n|\nMission\n|\nStatus Updates\nTerms of Use\n|\nPrivacy Policy\n|\nCookie Settings\nAll content on this site: Copyright © 2026 Elsevier inc, its licensors, and contributors. All rights are reserved, including those for text and data mining, AI training and similar technologies. For all open access content, the Creative Commons licensing terms apply.\nWe use cookies that are necessary to make our site work. We may also use additional cookies to analyze, improve, and personalize our content and your digital experience. You can manage your cookie preferences using theCookie settings link. For more information, see ourCookie Policy\nCookie settings\nAccept all cookies",
+  "embedded_state": [
+    "window.INITIAL_STATE = {\"archive\":{\"data\":{\"status\":\"PENDING\"},\"error\":null,\"loading\":false},\"articles\":{\"list\":[],\"loading\":true},\"citations\":{\"data\":{},\"count\":0,\"error\":false,\"loading\":true},\"configClient\":{\"environment\":\"live\",\"recaptchaV3SiteKey\":\"6LcEHc8ZAAAAAMenhT9jO_B-EJAoGq_v29B7HaCf\",\"adobeAnalytics\":{\"newPage\":{\"page\":{\"businessUnit\":\"els:rp:st\",\"language\":\"en\",\"productName\":\"md\",\"environment\":\"dev\",\"noTracking\":\"false\",\"sectionName\":\"md:data\",\"type\":\"cp-ca\"},\"content\":{\"type\":\"md:datasets\",\"format\":\"MIME-HTML\"}}},\"apiBaseUrl\":\"/api/datasets-v2\",\"publicApiBaseUrl\":\"/public-api\",\"baseUrl\":\"/datasets\",\"baseAssetsUrl\":\"/datasets\"},\"customer\":{\"customer\":null,\"institution\":null},\"dataset\":{\"snapshot\":{\"id\":\"m9m2gmcr6k\",\"version\":1,\"name\":\"Data for: A novel method for polymer electrolyte membrane fuel cell fault diagnosis using 2D data\",\"description\":\"The file includes the test data at flooding and dehydration states, from two different PEMFC systems (PEMFC 1 and PEMFC 2).\",\"doi\":\"10.17632/m9m2gmcr6k.1\",\"publish_date\":\"2021-04-26T14:19:10.905Z\",\"last_modification_date\":\"2021-04-26T14:19:10.906Z\",\"is_confidential\":false,\"customer\":{\"id\":\"7377952c-6404-4428-bbfc-77242cfc301e\",\"name\":\"Mendeley Guests\",\"chief_id\":810289,\"config\":{\"repository_id\":\"MENDELEY_DATA\",\"dataset_size_limit\":10737418240,\"doi_prefix\":\"10.17632\"},\"is_user_mendeley_admin\":false,\"customer_roles\":[],\"is_guest\":true,\"is_user_customer_moderator\":false},\"categories\":[{\"id\":\"data.elsevier.com/vocabulary/OmniScience/Concept-209895198\",\"label\":\"Proton-Exchange Membrane Fuel Cells\"}],\"licence\":{\"id\":\"2173ba9b-1e99-4d08-993d-2a7ff6a30523\",\"short_name\":\"CC BY NC 3.0\",\"full_name\":\"Attribution-NonCommercial 3.0 Unported\",\"description\":\"You are free to adapt, copy or redistribute the material, providing you attribute appropriately and do not use the material for commercial purposes.\",\"url\":\"https://creativecommons.org/licenses/by-nc/3.0\",\"category\":\"Creative\",\"customer_id\":null},\"institutions\":[],\"organisational_unit_names\":[],\"contributors\":[{\"first_name\":\"Lei\",\"last_name\":\"Mao\"}],\"related_links\":[],\"custom_metadata\":{},\"is_metadata_only\":false},\"contributors\":[],\"doi\":\"\",\"status\":200,\"loading\":false},\"environment\":\"live\",\"files\":{\"list\":[],\"currentFile\":{},\"folders\":[],\"currentFolder\":{},\"filesLoading\":true,\"foldersLoading\":true},\"fileViewer\":{\"navigationLoaded\":false,\"metadataLoaded\":false},\"hostname\":\"data.mendeley.com\",\"idToken\":null,\"orcidDomain\":\"https://orcid.org\",\"repository\":{\"repository\":null,\"loading\":true},\"s3\":\"https://static.data.mendeley.com\",\"versions\":{\"list\":[],\"loading\":true}}\n      window.initialTime = 1790068659567"
+  ]
+}

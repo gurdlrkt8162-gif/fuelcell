@@ -1,0 +1,10 @@
+{
+  "state": "BYTES",
+  "name": "sensor measurement.7z",
+  "bytes": 1455751,
+  "sha256": "1c4b72000cbfae865ebc96dfa9b10d0cf7404c36647bffafb58bf964746ddbdd",
+  "md5": "750f0526ba9a7379dc5fe8c8b7ea0ff0",
+  "provider_checksum_match": true,
+  "content_type": "binary/octet-stream",
+  "final_url": "https://s3-eu-west-1.amazonaws.com/pstorage-loughborough-53465/6453066/sensormeasurement.7z?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJGXP3DOPNGAZIK6Q/20260922/eu-west-1/s3/aws4_request&X-Amz-Date=20260922T091702Z&X-Amz-Expires=10&X-Amz-SignedHeaders=host&X-Amz-Signature=0097581fe3def3554aa65135bec60e5ac7d4b3ec29b2e2f4f1c879efebf74f01"
+}
