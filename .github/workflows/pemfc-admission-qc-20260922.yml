@@ -1,0 +1,51 @@
+name: PEMFC data admission tests 20260922
+on:
+  push:
+    branches: [research/pemfc-quality-audit-20260922]
+    paths: [scripts/pemfc_admission_qc_20260922.py, .github/workflows/pemfc-admission-qc-20260922.yml]
+permissions:
+  contents: write
+  actions: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      OPENBLAS_NUM_THREADS: 1
+      OMP_NUM_THREADS: 1
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 35711068883
+          name: PEMFC_STAGE3_CANDIDATE_NOT_APPROVED
+          path: previous_artifact
+      - run: |
+          unzip -qo previous_artifact/PEMFC_STAGE3_CANDIDATE_NOT_APPROVED.zip
+          pip install requests numpy pandas scipy openpyxl xlrd mat-io impedance
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq p7zip-full p7zip-rar
+      - name: Run source-specific scientific QC
+        run: python scripts/pemfc_admission_qc_20260922.py
+      - name: Preserve admission evidence
+        if: always()
+        run: |
+          if [ -d pemfc_final_qc ]; then
+            pip freeze > pemfc_final_qc/requirements_executed.txt
+            git config user.name 'public-data-audit'
+            git config user.email 'public-data-audit@users.noreply.github.com'
+            git add pemfc_final_qc/*.json pemfc_final_qc/requirements_executed.txt
+            git diff --cached --quiet || git commit -m 'Record source-specific quantitative data admission results'
+            git push origin HEAD:research/pemfc-quality-audit-20260922
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: PEMFC_FOCUSED_QC_EVIDENCE
+          path: PEMFC_FOCUSED_QC_EVIDENCE.zip
+          retention-days: 14
+          compression-level: 0
