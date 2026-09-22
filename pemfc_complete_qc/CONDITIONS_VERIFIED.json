@@ -1,0 +1,322 @@
+{
+  "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534861?format=original",
+  "bytes": 12519,
+  "md5": "854ca98a8ae9ca186ec26609a25981a6",
+  "provider_md5_match": true,
+  "sha256": "fbe845ad6f2624de09a5b6d14d755df7768e1b4de4020adc4881f71952ff354d",
+  "original_name": "Operating_conditions_Cell.xlsx",
+  "cells": [
+    [
+      "Name",
+      "Operating condition",
+      "I-V curve file",
+      "Impedance files",
+      "",
+      ""
+    ],
+    [
+      "",
+      "",
+      "",
+      "45mA",
+      "180mA",
+      "900mA"
+    ],
+    [
+      "Break-in",
+      "80°C, H2/Air, 95/95%HR, 2.5/2.3 BAR",
+      "break-in_IV.txt",
+      "Break-in_EIS_45mA.txt",
+      "Break-in_EIS_180mA.txt",
+      "Break-in_EIS_900mA.txt"
+    ],
+    [
+      "C1",
+      "84°C, 95%H2/N2+19%O2, 75/61%HR, 2/2 BAR",
+      "C1_IV.txt",
+      "C1_EIS_45mA.txt",
+      "C1_EIS_180mA.txt",
+      "C1_EIS_900mA.txt"
+    ],
+    [
+      "C2",
+      "79°C, 97%H2/N2+19%O2, 75/62%HR, 2/2 BAR",
+      "C2_IV.txt",
+      "C2_EIS_45mA.txt",
+      "C2_EIS_180mA.txt",
+      "C2_EIS_900mA.txt"
+    ],
+    [
+      "C3",
+      "79°C, 94%H2/N2+19%O2, 91/73%HR, 2/2 BAR",
+      "C3_IV.txt",
+      "C3_EIS_45mA.txt",
+      "C3_EIS_180mA.txt",
+      "C3_EIS_900mA.txt"
+    ],
+    [
+      "C4",
+      "82°C, 97%H2/N2+14%O2, 85/104%HR, 2/2 BAR",
+      "C4_IV.txt",
+      "C4_EIS_45mA.txt",
+      "C4_EIS_180mA.txt",
+      "C4_EIS_900mA.txt"
+    ],
+    [
+      "C5",
+      "83°C, 95%H2/N2+9%Air, 82/113%HR, 2/2 BAR",
+      "C5_IV.txt",
+      "C5_EIS_45mA.txt",
+      "C5_EIS_180mA.txt",
+      "C5_EIS_900mA.txt"
+    ],
+    [
+      "C6",
+      "82°C, 96%H2/N2+14%Air, 84/94%HR, 2/2 BAR",
+      "C6_IV.txt",
+      "C6_EIS_45mA.txt",
+      "C6_EIS_180mA.txt",
+      "C6_EIS_900mA.txt"
+    ],
+    [
+      "C7",
+      "80°C, 96%H2/N2+13%Air, 90/107%HR, 2/2 BAR",
+      "C7_IV.txt",
+      "C7_EIS_45mA.txt",
+      "C7_EIS_180mA.txt",
+      "C7_EIS_900mA.txt"
+    ],
+    [
+      "C8",
+      "83°C, 97%H2/N2+10%AIR, 71/117%HR, 2/2 BAR",
+      "C8_IV.txt",
+      "C8_EIS_45mA.txt",
+      "C8_EIS_180mA.txt",
+      "C8_EIS_900mA.txt"
+    ],
+    [
+      "C9",
+      "77°C, 97%H2/N2+9%AIR, 88/143%HR, 2/2 BAR",
+      "C9_IV.txt",
+      "C9_EIS_45mA.txt",
+      "C9_EIS_180mA.txt",
+      "C9_EIS_900mA.txt"
+    ],
+    [
+      "C10",
+      "78°C, 98%H2/N2+20%AIR, 72/66%HR, 1.5/1.5 BAR",
+      "C10_IV.txt",
+      "C10_EIS_45mA.txt",
+      "C10_EIS_180mA.txt",
+      "C10_EIS_900mA.txt"
+    ],
+    [
+      "C11",
+      "82°C, 97%H2/N2+19%AIR, 83/63%HR, 1.5/1.5 BAR",
+      "C11_IV.txt",
+      "C11_EIS_45mA.txt",
+      "C11_EIS_180mA.txt",
+      "C11_EIS_900mA.txt"
+    ],
+    [
+      "C12",
+      "78°C, 94%H2/N2+19%AIR, 100/75%HR, 1.5/1.5 BAR",
+      "C12_IV.txt",
+      "C12_EIS_45mA.txt",
+      "C12_EIS_180mA.txt",
+      "C12_EIS_900mA.txt"
+    ],
+    [
+      "C13",
+      "80°C, 98%H2/N2+14%AIR, 91/85%HR, 1.5/1.5 BAR",
+      "C13_IV.txt",
+      "C13_EIS_45mA.txt",
+      "C13_EIS_180mA.txt",
+      "C13_EIS_900mA.txt"
+    ],
+    [
+      "C14",
+      "83°C, 98%H2/N2+9%AIR, 77/112%HR, 1.5/1.5 BAR ",
+      "C14_IV.txt",
+      "C14_EIS_45mA.txt",
+      "C14_EIS_180mA.txt",
+      "C14_EIS_900mA.txt"
+    ],
+    [
+      "C15",
+      "82°C, 98%H2/N2+14%AIR, 91/102%HR, 1.5/1.5 BAR ",
+      "C15_IV.txt",
+      "C15_EIS_45mA.txt",
+      "C15_EIS_180mA.txt",
+      "C15_EIS_900mA.txt"
+    ],
+    [
+      "C16",
+      "82°C, 96%H2/N2+9%AIR, 87/103%HR, 1.5/1.5 BAR",
+      "C16_IV.txt",
+      "C16_EIS_45mA.txt",
+      "C16_EIS_180mA.txt",
+      "C16_EIS_900mA.txt"
+    ],
+    [
+      "C17",
+      "79°C, 97%H2/N2+14%AIR, 96/105%HR, 1.5/1.5 BAR",
+      "C17_IV.txt",
+      "C17_EIS_45mA.txt",
+      "C17_EIS_180mA.txt",
+      "C17_EIS_900mA.txt"
+    ],
+    [
+      "C18",
+      "77°C, 97%H2/N2+9%AIR, 95/137%HR, 1.5/1.5 BAR",
+      "C18_IV.txt",
+      "C18_EIS_45mA.txt",
+      "C18_EIS_180mA.txt",
+      "C18_EIS_900mA.txt"
+    ],
+    [
+      "C19",
+      "69°C, 100%H2/N2+20%AIR, 77/66%HR, 1.7/1.7 BAR",
+      "C19_IV.txt",
+      "C19_EIS_45mA.txt",
+      "C19_EIS_180mA.txt",
+      "C19_EIS_900mA.txt"
+    ],
+    [
+      "C20",
+      "71°C, 100%H2/N2+19%AIR, 100/74%HR, 1.7/1.7 BAR",
+      "C20_IV.txt",
+      "C20_EIS_45mA.txt",
+      "C20_EIS_180mA.txt",
+      "C20_EIS_900mA.txt"
+    ],
+    [
+      "C21",
+      "70°C, 100%H2/N2+14%AIR, 104/113%HR, 1.7/1.7 BAR",
+      "C21_IV.txt",
+      "C21_EIS_45mA.txt",
+      "C21_EIS_180mA.txt",
+      "C21_EIS_900mA.txt"
+    ],
+    [
+      "C22",
+      "70°C, 100%H2/N2+14%AIR, 104/134%HR, 1.7/1.7 BAR",
+      "C22_IV.txt",
+      "C22_EIS_45mA.txt",
+      "C22_EIS_180mA.txt",
+      "C22_EIS_900mA.txt"
+    ],
+    [
+      "C23",
+      "70°C, 100%H2/N2+14%AIR, 106/137%HR, 1.7/1.7 BAR",
+      "C23_IV.txt",
+      "C23_EIS_45mA.txt",
+      "C23_EIS_180mA.txt",
+      "C23_EIS_900mA.txt"
+    ],
+    [
+      "C24",
+      "69°C, 95%H2/N2+19%AIR, 108/79%HR, 1.7/1.7 BAR",
+      "C24_IV.txt",
+      "C24_EIS_45mA.txt",
+      "C24_EIS_180mA.txt",
+      "C24_EIS_900mA.txt"
+    ],
+    [
+      "C25",
+      "71°C, 100%H2/N2+9%AIR, 102/151%HR, 1.7/1.7 BAR",
+      "C25_IV.txt",
+      "C25_EIS_45mA.txt",
+      "C25_EIS_180mA.txt",
+      "C25_EIS_900mA.txt"
+    ],
+    [
+      "C26",
+      "71°C, 100%H2/N2+10%AIR, 101/161%HR, 1.7/1.7 BAR",
+      "C26_IV.txt",
+      "C26_EIS_45mA.txt",
+      "C26_EIS_180mA.txt",
+      "C26_EIS_900mA.txt"
+    ],
+    [
+      "C27",
+      "69°C, 100%H2/N2+9%AIR, 110/177%HR, 1.7/1.7 BAR",
+      "C27_IV.txt",
+      "C27_EIS_45mA.txt",
+      "C27_EIS_180mA.txt",
+      "C27_EIS_900mA.txt"
+    ],
+    [
+      "C28",
+      "59°C, 100%H2/N2+20%AIR, 75/68%HR, 1.1/1.1 BAR",
+      "C28_IV.txt",
+      "C28_EIS_45mA.txt",
+      "C28_EIS_180mA.txt",
+      "C28_EIS_900mA.txt"
+    ],
+    [
+      "C29",
+      "61°C, 100%H2/N2+19%AIR, 99/76%HR, 1.1/1.1 BAR",
+      "C29_IV.txt",
+      "C29_EIS_45mA.txt",
+      "C29_EIS_180mA.txt",
+      "C29_EIS_900mA.txt"
+    ],
+    [
+      "C30",
+      "59°C, 96%H2/N2+20%AIR, 106/82%HR, 1.1/1.1 BAR",
+      "C30_IV.txt",
+      "C30_EIS_45mA.txt",
+      "C30_EIS_180mA.txt",
+      "C30_EIS_900mA.txt"
+    ],
+    [
+      "C31",
+      "60°C, 100%H2/N2+15%AIR, 107/112%HR, 1.1/1.1 BAR",
+      "C31_IV.txt",
+      "C31_EIS_45mA.txt",
+      "C31_EIS_180mA.txt",
+      "C31_EIS_900mA.txt"
+    ],
+    [
+      "C32",
+      "60°C, 100%H2/N2+14%AIR, 107/137%HR, 1.1/1.1 BAR",
+      "C32_IV.txt",
+      "C32_EIS_45mA.txt",
+      "C32_EIS_180mA.txt",
+      "C32_EIS_900mA.txt"
+    ],
+    [
+      "C33",
+      "59°C, 100%H2/N2+14%AIR, 109/140%HR, 1.1/1.1 BAR",
+      "C33_IV.txt",
+      "C33_EIS_45mA.txt",
+      "C33_EIS_180mA.txt",
+      "C33_EIS_900mA.txt"
+    ],
+    [
+      "C34",
+      "60°C, 100%H2/N2+10%AIR, 104/153%HR, 1.1/1.1 BAR",
+      "C34_IV.txt",
+      "C34_EIS_45mA.txt",
+      "C34_EIS_180mA.txt",
+      "C34_EIS_900mA.txt"
+    ],
+    [
+      "C35",
+      "63°C, 100%H2/N2+10%AIR, 104/170%HR, 1.1/1.1 BAR",
+      "C35_IV.txt",
+      "C35_EIS_45mA.txt",
+      "C35_EIS_180mA.txt",
+      "C35_EIS_900mA.txt"
+    ],
+    [
+      "C36",
+      "58°C, 100%H2/N2+10%AIR, 114/185%HR, 1.1/1.1 BAR",
+      "C36_IV.txt",
+      "C36_EIS_45mA.txt",
+      "C36_EIS_180mA.txt",
+      "C36_EIS_900mA.txt"
+    ]
+  ]
+}

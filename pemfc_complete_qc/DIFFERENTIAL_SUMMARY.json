@@ -1,0 +1,17 @@
+{
+  "files": 148,
+  "eis": 109,
+  "iv": 39,
+  "rows": 117544,
+  "nonfinite": 0,
+  "provider_md5_matches": 148,
+  "locale_replacements": 117,
+  "errors": [
+    {
+      "file": "Data/EIS_45mA/C7_EIS_45mA.txt",
+      "error": "unresolved header ['Ewe/V', 'I/A', 'freq/Hz', 'Re(Z)/Ohm', '#NOM?', '|Z|/Ohm', 'Phase(Z)/deg']"
+    }
+  ],
+  "negative_real_points": 213,
+  "max_magnitude_relative_error": 1.230693001014999e-07
+}

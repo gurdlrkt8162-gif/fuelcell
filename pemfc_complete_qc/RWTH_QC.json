@@ -1,0 +1,1244 @@
+[
+  {
+    "file": "cycle_1_MPC.mat",
+    "path": "candidate_bytes/RWTH/mc46tw9t8m.zip_unpacked/Experimental dataset Two-Stage Model Predictive St/01_ExperimentalData/cycle_1_MPC.mat",
+    "bytes": 3099517,
+    "sha256": "2505b23ec40acd68dd373a46098ceb4cfba984b6abc8bae682fcf0d2afcc09fa",
+    "rows": 24412,
+    "cols": 32,
+    "channels": [
+      "t",
+      "i_dens_A_cm2",
+      "p_out_c_bar",
+      "p_out_a_bar",
+      "phi_in_c_",
+      "dotm_in_c_g_s",
+      "T_in_cool_gradC",
+      "dotm_in_cool_kg_s",
+      "phi_in_a_",
+      "dotm_in_a_g_s",
+      "p_O2_c_bar",
+      "p_N2_c_bar",
+      "p_H2O_c_bar",
+      "p_H2_a_bar",
+      "p_N2_a_bar",
+      "p_H2O_a_bar",
+      "c_H2O_CCL_mol_m3",
+      "c_H2O_ACL_mol_m3",
+      "lambda_mb_",
+      "T_mb_gradC",
+      "T_cool_gradC",
+      "p_in_c_bar",
+      "p_in_a_bar",
+      "U_st_V",
+      "T_out_cool_gradC",
+      "P_st_kW",
+      "eta_st_",
+      "St_O2_",
+      "DeltaT_cool_K",
+      "Deltap_mb_mbar",
+      "P_st_ref_kW",
+      "t_comp_s"
+    ],
+    "column_stats": [
+      {
+        "name": "t",
+        "nonfinite": 0,
+        "min": 0.0,
+        "max": 1250.0049933855835
+      },
+      {
+        "name": "i_dens_A_cm2",
+        "nonfinite": 0,
+        "min": 0.1,
+        "max": 0.9761703966492769
+      },
+      {
+        "name": "p_out_c_bar",
+        "nonfinite": 0,
+        "min": 1.2,
+        "max": 1.9189328162549764
+      },
+      {
+        "name": "p_out_a_bar",
+        "nonfinite": 0,
+        "min": 1.3263027435071528,
+        "max": 2.5
+      },
+      {
+        "name": "phi_in_c_",
+        "nonfinite": 0,
+        "min": 0.5998170518586364,
+        "max": 0.9001958334418014
+      },
+      {
+        "name": "dotm_in_c_g_s",
+        "nonfinite": 0,
+        "min": 4.0,
+        "max": 24.8772941522504
+      },
+      {
+        "name": "T_in_cool_gradC",
+        "nonfinite": 0,
+        "min": 59.93107164256005,
+        "max": 60.00908146974662
+      },
+      {
+        "name": "dotm_in_cool_kg_s",
+        "nonfinite": 0,
+        "min": 0.03882259114561335,
+        "max": 2.000212394653847
+      },
+      {
+        "name": "phi_in_a_",
+        "nonfinite": 0,
+        "min": 0.03,
+        "max": 1.035
+      },
+      {
+        "name": "dotm_in_a_g_s",
+        "nonfinite": 0,
+        "min": 0.115,
+        "max": 0.985
+      },
+      {
+        "name": "p_O2_c_bar",
+        "nonfinite": 0,
+        "min": 0.15559648525511943,
+        "max": 0.30336279257326326
+      },
+      {
+        "name": "p_N2_c_bar",
+        "nonfinite": 0,
+        "min": 0.7840433251944846,
+        "max": 1.4807231377289285
+      },
+      {
+        "name": "p_H2O_c_bar",
+        "nonfinite": 0,
+        "min": 0.1568519515339116,
+        "max": 0.3250377493555315
+      },
+      {
+        "name": "p_H2_a_bar",
+        "nonfinite": 0,
+        "min": 0.9886980722178308,
+        "max": 2.1005414686112225
+      },
+      {
+        "name": "p_N2_a_bar",
+        "nonfinite": 0,
+        "min": -3.863566172866326e-16,
+        "max": 0.015100508719338952
+      },
+      {
+        "name": "p_H2O_a_bar",
+        "nonfinite": 0,
+        "min": 0.08828620087211579,
+        "max": 0.4823791049503522
+      },
+      {
+        "name": "c_H2O_CCL_mol_m3",
+        "nonfinite": 0,
+        "min": 5.434305913563422,
+        "max": 10.714249808580224
+      },
+      {
+        "name": "c_H2O_ACL_mol_m3",
+        "nonfinite": 0,
+        "min": 3.628993197732409,
+        "max": 9.94197469891721
+      },
+      {
+        "name": "lambda_mb_",
+        "nonfinite": 0,
+        "min": 6.726031187261854,
+        "max": 18.703565289392003
+      },
+      {
+        "name": "T_mb_gradC",
+        "nonfinite": 0,
+        "min": 63.30658332035375,
+        "max": 68.85493059946549
+      },
+      {
+        "name": "T_cool_gradC",
+        "nonfinite": 0,
+        "min": 62.89549034090959,
+        "max": 65.8225142096245
+      },
+      {
+        "name": "p_in_c_bar",
+        "nonfinite": 0,
+        "min": 1.26,
+        "max": 2.3000000000000003
+      },
+      {
+        "name": "p_in_a_bar",
+        "nonfinite": 0,
+        "min": 1.42,
+        "max": 2.52
+      },
+      {
+        "name": "U_st_V",
+        "nonfinite": 0,
+        "min": 0.5700000000000001,
+        "max": 0.81
+      },
+      {
+        "name": "T_out_cool_gradC",
+        "nonfinite": 0,
+        "min": 62.75,
+        "max": 66.25
+      },
+      {
+        "name": "P_st_kW",
+        "nonfinite": 0,
+        "min": 2.4452999999999996,
+        "max": 17.477625000000003
+      },
+      {
+        "name": "eta_st_",
+        "nonfinite": 0,
+        "min": 0.4710743801652893,
+        "max": 0.6694214876033059
+      },
+      {
+        "name": "St_O2_",
+        "nonfinite": 0,
+        "min": 1.9500000000000002,
+        "max": 3.5500000000000003
+      },
+      {
+        "name": "DeltaT_cool_K",
+        "nonfinite": 0,
+        "min": 2.75,
+        "max": 6.0
+      },
+      {
+        "name": "Deltap_mb_mbar",
+        "nonfinite": 0,
+        "min": 55.91139247325559,
+        "max": 285.1573754475041
+      },
+      {
+        "name": "P_st_ref_kW",
+        "nonfinite": 0,
+        "min": 2.0,
+        "max": 17.0
+      },
+      {
+        "name": "t_comp_s",
+        "nonfinite": 0,
+        "min": 0.0062078248603364885,
+        "max": 0.0073542907244625085
+      }
+    ],
+    "nonfinite_total": 0,
+    "time": {
+      "start_s": 0.0,
+      "end_s": 1250.0049933855835,
+      "median_dt_s": 0.05000072033999459,
+      "min_dt_s": 0.04899625123152873,
+      "max_dt_s": 0.10023893542643236,
+      "duplicate_dt": 0,
+      "negative_dt": 0
+    },
+    "exact_duplicate_rows": 0,
+    "coolant_delta_max_abs_K": 0.75,
+    "P_over_jU_cm2": {
+      "median": 31444.993296010456,
+      "min": 16569.62025316455,
+      "max": 59172.5838501561
+    },
+    "stack_energy_integral_kWh": 3.2036228219330405
+  },
+  {
+    "file": "cycle_1_TSOS.mat",
+    "path": "candidate_bytes/RWTH/mc46tw9t8m.zip_unpacked/Experimental dataset Two-Stage Model Predictive St/01_ExperimentalData/cycle_1_TSOS.mat",
+    "bytes": 10018827,
+    "sha256": "af1a7d698d915261853f18fbdc79f2ad4cf4d01775cfbb7104060d7f9fd87788",
+    "rows": 96501,
+    "cols": 30,
+    "channels": [
+      "t",
+      "i_dens_A_cm2",
+      "p_out_c_bar",
+      "p_out_a_bar",
+      "phi_in_c_",
+      "dotm_in_c_g_s",
+      "T_in_cool_gradC",
+      "dotm_in_cool_kg_s",
+      "phi_in_a_",
+      "dotm_in_a_g_s",
+      "p_O2_c_bar",
+      "p_N2_c_bar",
+      "p_H2O_c_bar",
+      "p_H2_a_bar",
+      "p_N2_a_bar",
+      "p_H2O_a_bar",
+      "c_H2O_CCL_mol_m3",
+      "c_H2O_ACL_mol_m3",
+      "lambda_mb_",
+      "T_mb_gradC",
+      "T_cool_gradC",
+      "p_in_c_bar",
+      "p_in_a_bar",
+      "U_st_V",
+      "T_out_cool_gradC",
+      "P_st_kW",
+      "eta_st_",
+      "St_O2_",
+      "DeltaT_cool_K",
+      "Deltap_mb_mbar"
+    ],
+    "column_stats": [
+      {
+        "name": "t",
+        "nonfinite": 0,
+        "min": 0.0,
+        "max": 4825.0
+      },
+      {
+        "name": "i_dens_A_cm2",
+        "nonfinite": 0,
+        "min": 0.06951188811188812,
+        "max": 1.0489506993006994
+      },
+      {
+        "name": "p_out_c_bar",
+        "nonfinite": 0,
+        "min": 1.025,
+        "max": 2.3159999999999816
+      },
+      {
+        "name": "p_out_a_bar",
+        "nonfinite": 0,
+        "min": 1.13,
+        "max": 2.6919999999999957
+      },
+      {
+        "name": "phi_in_c_",
+        "nonfinite": 0,
+        "min": 0.3987,
+        "max": 1.218099999999999
+      },
+      {
+        "name": "dotm_in_c_g_s",
+        "nonfinite": 0,
+        "min": 2.31,
+        "max": 21.4
+      },
+      {
+        "name": "T_in_cool_gradC",
+        "nonfinite": 0,
+        "min": 48.14,
+        "max": 79.63
+      },
+      {
+        "name": "dotm_in_cool_kg_s",
+        "nonfinite": 0,
+        "min": 0.14446978333333335,
+        "max": 1.0202212166666027
+      },
+      {
+        "name": "phi_in_a_",
+        "nonfinite": 0,
+        "min": 0.0934,
+        "max": 0.7402
+      },
+      {
+        "name": "dotm_in_a_g_s",
+        "nonfinite": 0,
+        "min": 0.3932,
+        "max": 1.6620999999999109
+      },
+      {
+        "name": "p_O2_c_bar",
+        "nonfinite": 0,
+        "min": 0.1330821364574899,
+        "max": 0.36134609959873554
+      },
+      {
+        "name": "p_N2_c_bar",
+        "nonfinite": 0,
+        "min": 0.6720776630012018,
+        "max": 1.8008947788128338
+      },
+      {
+        "name": "p_H2O_c_bar",
+        "nonfinite": 0,
+        "min": 0.1459397551603297,
+        "max": 0.4023601505135693
+      },
+      {
+        "name": "p_H2_a_bar",
+        "nonfinite": 0,
+        "min": 0.967130763319491,
+        "max": 2.555236421651102
+      },
+      {
+        "name": "p_N2_a_bar",
+        "nonfinite": 0,
+        "min": -2.066564219439642e-16,
+        "max": 1.3185264024656542e-05
+      },
+      {
+        "name": "p_H2O_a_bar",
+        "nonfinite": 0,
+        "min": 0.1125083329293829,
+        "max": 0.35081130356864565
+      },
+      {
+        "name": "c_H2O_CCL_mol_m3",
+        "nonfinite": 0,
+        "min": 5.55934696061041,
+        "max": 15.390991946663043
+      },
+      {
+        "name": "c_H2O_ACL_mol_m3",
+        "nonfinite": 0,
+        "min": 4.287585522005708,
+        "max": 12.780324087875695
+      },
+      {
+        "name": "lambda_mb_",
+        "nonfinite": 0,
+        "min": 4.077997623684547,
+        "max": 21.178719393486
+      },
+      {
+        "name": "T_mb_gradC",
+        "nonfinite": 0,
+        "min": 55.4174650508819,
+        "max": 86.84986516279122
+      },
+      {
+        "name": "T_cool_gradC",
+        "nonfinite": 0,
+        "min": 53.9574060553947,
+        "max": 82.04993050378403
+      },
+      {
+        "name": "p_in_c_bar",
+        "nonfinite": 0,
+        "min": 1.064,
+        "max": 2.613
+      },
+      {
+        "name": "p_in_a_bar",
+        "nonfinite": 0,
+        "min": 1.246,
+        "max": 2.835
+      },
+      {
+        "name": "U_st_V",
+        "nonfinite": 0,
+        "min": 0.5163,
+        "max": 0.7945
+      },
+      {
+        "name": "T_out_cool_gradC",
+        "nonfinite": 0,
+        "min": 50.97,
+        "max": 83.48
+      },
+      {
+        "name": "P_st_kW",
+        "nonfinite": 0,
+        "min": 1.6989588528,
+        "max": 17.5816439568
+      },
+      {
+        "name": "eta_st_",
+        "nonfinite": 0,
+        "min": 0.42669421487603304,
+        "max": 0.6566115702479339
+      },
+      {
+        "name": "St_O2_",
+        "nonfinite": 0,
+        "min": 1.94925,
+        "max": 3.62158
+      },
+      {
+        "name": "DeltaT_cool_K",
+        "nonfinite": 0,
+        "min": 0.37,
+        "max": 10.24
+      },
+      {
+        "name": "Deltap_mb_mbar",
+        "nonfinite": 0,
+        "min": -3.999999999999999,
+        "max": 293.00000000000017
+      }
+    ],
+    "nonfinite_total": 0,
+    "time": {
+      "start_s": 0.0,
+      "end_s": 4825.0,
+      "median_dt_s": 0.05000000000001137,
+      "min_dt_s": 0.049999999999272404,
+      "max_dt_s": 0.0500000000001819,
+      "duplicate_dt": 0,
+      "negative_dt": 0
+    },
+    "exact_duplicate_rows": 0,
+    "coolant_delta_max_abs_K": 0.010000000000020215,
+    "P_over_jU_cm2": {
+      "median": 31460.0,
+      "min": 31459.567920081765,
+      "max": 31460.10989758032
+    },
+    "stack_energy_integral_kWh": 11.45539975808681
+  },
+  {
+    "file": "cycle_2_MPC.mat",
+    "path": "candidate_bytes/RWTH/mc46tw9t8m.zip_unpacked/Experimental dataset Two-Stage Model Predictive St/01_ExperimentalData/cycle_2_MPC.mat",
+    "bytes": 956655,
+    "sha256": "63251f1b050145771fcea69d467731d1baab8e8a83c797e83250a744223b5ae1",
+    "rows": 6523,
+    "cols": 32,
+    "channels": [
+      "t",
+      "i_dens_A_cm2",
+      "p_out_c_bar",
+      "p_out_a_bar",
+      "phi_in_c_",
+      "dotm_in_c_g_s",
+      "T_in_cool_gradC",
+      "dotm_in_cool_kg_s",
+      "phi_in_a_",
+      "dotm_in_a_g_s",
+      "p_O2_c_bar",
+      "p_N2_c_bar",
+      "p_H2O_c_bar",
+      "p_H2_a_bar",
+      "p_N2_a_bar",
+      "p_H2O_a_bar",
+      "c_H2O_CCL_mol_m3",
+      "c_H2O_ACL_mol_m3",
+      "lambda_mb_",
+      "T_mb_gradC",
+      "T_cool_gradC",
+      "p_in_c_bar",
+      "p_in_a_bar",
+      "U_st_V",
+      "T_out_cool_gradC",
+      "P_st_kW",
+      "eta_st_",
+      "St_O2_",
+      "DeltaT_cool_K",
+      "Deltap_mb_mbar",
+      "P_st_ref_kW",
+      "t_comp_s"
+    ],
+    "column_stats": [
+      {
+        "name": "t",
+        "nonfinite": 0,
+        "min": 0.0,
+        "max": 332.95227977634295
+      },
+      {
+        "name": "i_dens_A_cm2",
+        "nonfinite": 0,
+        "min": 0.09820623308334646,
+        "max": 1.0
+      },
+      {
+        "name": "p_out_c_bar",
+        "nonfinite": 0,
+        "min": 1.1971636567561894,
+        "max": 1.987918127956176
+      },
+      {
+        "name": "p_out_a_bar",
+        "nonfinite": 0,
+        "min": 1.4458150171635145,
+        "max": 2.5013945576461367
+      },
+      {
+        "name": "phi_in_c_",
+        "nonfinite": 0,
+        "min": 0.5992739591636699,
+        "max": 0.8985875516953867
+      },
+      {
+        "name": "dotm_in_c_g_s",
+        "nonfinite": 0,
+        "min": 3.9896005105755186,
+        "max": 29.110759417120686
+      },
+      {
+        "name": "T_in_cool_gradC",
+        "nonfinite": 0,
+        "min": 59.92777290729949,
+        "max": 60.06776148671567
+      },
+      {
+        "name": "dotm_in_cool_kg_s",
+        "nonfinite": 0,
+        "min": 0.0379783207748961,
+        "max": 2.0
+      },
+      {
+        "name": "phi_in_a_",
+        "nonfinite": 0,
+        "min": 0.22,
+        "max": 0.85
+      },
+      {
+        "name": "dotm_in_a_g_s",
+        "nonfinite": 0,
+        "min": 0.255,
+        "max": 0.56
+      },
+      {
+        "name": "p_O2_c_bar",
+        "nonfinite": 0,
+        "min": 0.14479337673313253,
+        "max": 0.3036162229749492
+      },
+      {
+        "name": "p_N2_c_bar",
+        "nonfinite": 0,
+        "min": 0.7610050818864604,
+        "max": 1.5370872654418293
+      },
+      {
+        "name": "p_H2O_c_bar",
+        "nonfinite": 0,
+        "min": 0.14854468636252666,
+        "max": 0.31527059026328863
+      },
+      {
+        "name": "p_H2_a_bar",
+        "nonfinite": 0,
+        "min": 0.9762313954373629,
+        "max": 2.504476723372191
+      },
+      {
+        "name": "p_N2_a_bar",
+        "nonfinite": 0,
+        "min": -1.3645470511861025e-15,
+        "max": 0.019968139001273928
+      },
+      {
+        "name": "p_H2O_a_bar",
+        "nonfinite": 0,
+        "min": 0.1466000068763218,
+        "max": 0.5744126052096111
+      },
+      {
+        "name": "c_H2O_CCL_mol_m3",
+        "nonfinite": 0,
+        "min": 5.535981634108613,
+        "max": 10.994905604304341
+      },
+      {
+        "name": "c_H2O_ACL_mol_m3",
+        "nonfinite": 0,
+        "min": 5.318114573678207,
+        "max": 10.15785610267786
+      },
+      {
+        "name": "lambda_mb_",
+        "nonfinite": 0,
+        "min": 7.988790184309699,
+        "max": 18.82185102794726
+      },
+      {
+        "name": "T_mb_gradC",
+        "nonfinite": 0,
+        "min": 63.15112080399575,
+        "max": 69.49937510237118
+      },
+      {
+        "name": "T_cool_gradC",
+        "nonfinite": 0,
+        "min": 62.50537530602128,
+        "max": 65.72405438943929
+      },
+      {
+        "name": "p_in_c_bar",
+        "nonfinite": 0,
+        "min": 1.2,
+        "max": 2.3000000000000003
+      },
+      {
+        "name": "p_in_a_bar",
+        "nonfinite": 0,
+        "min": 1.36,
+        "max": 2.56
+      },
+      {
+        "name": "U_st_V",
+        "nonfinite": 0,
+        "min": 0.51,
+        "max": 0.8300000000000001
+      },
+      {
+        "name": "T_out_cool_gradC",
+        "nonfinite": 0,
+        "min": 61.5,
+        "max": 66.75
+      },
+      {
+        "name": "P_st_kW",
+        "nonfinite": 0,
+        "min": 2.4139500000000003,
+        "max": 17.665725000000002
+      },
+      {
+        "name": "eta_st_",
+        "nonfinite": 0,
+        "min": 0.42148760330578516,
+        "max": 0.6859504132231405
+      },
+      {
+        "name": "St_O2_",
+        "nonfinite": 0,
+        "min": 1.6500000000000001,
+        "max": 5.15
+      },
+      {
+        "name": "DeltaT_cool_K",
+        "nonfinite": 0,
+        "min": 0.75,
+        "max": 6.25
+      },
+      {
+        "name": "Deltap_mb_mbar",
+        "nonfinite": 0,
+        "min": -62.622043062369556,
+        "max": 481.8594104308389
+      },
+      {
+        "name": "P_st_ref_kW",
+        "nonfinite": 0,
+        "min": 1.756698528203832,
+        "max": 19.549781249450678
+      },
+      {
+        "name": "t_comp_s",
+        "nonfinite": 0,
+        "min": 0.006139347271847319,
+        "max": 0.00887385287530373
+      }
+    ],
+    "nonfinite_total": 0,
+    "time": {
+      "start_s": 0.0,
+      "end_s": 332.95227977634295,
+      "median_dt_s": 0.050001228994915436,
+      "min_dt_s": 0.04768572424927697,
+      "max_dt_s": 0.10142710209947836,
+      "duplicate_dt": 0,
+      "negative_dt": 0
+    },
+    "exact_duplicate_rows": 0,
+    "coolant_delta_max_abs_K": 1.2578518593187127,
+    "P_over_jU_cm2": {
+      "median": 31349.999999999996,
+      "min": 16649.611901987453,
+      "max": 59361.096468336975
+    },
+    "stack_energy_integral_kWh": 0.5598392905011816
+  },
+  {
+    "file": "cycle_2_TSOS.mat",
+    "path": "candidate_bytes/RWTH/mc46tw9t8m.zip_unpacked/Experimental dataset Two-Stage Model Predictive St/01_ExperimentalData/cycle_2_TSOS.mat",
+    "bytes": 940885,
+    "sha256": "540d7780de515fa592e7f06b90a825171ab8801b513ce1453df83519cd04d06e",
+    "rows": 6641,
+    "cols": 30,
+    "channels": [
+      "t",
+      "i_dens_A_cm2",
+      "p_out_c_bar",
+      "p_out_a_bar",
+      "phi_in_c_",
+      "dotm_in_c_g_s",
+      "T_in_cool_gradC",
+      "dotm_in_cool_kg_s",
+      "phi_in_a_",
+      "dotm_in_a_g_s",
+      "p_O2_c_bar",
+      "p_N2_c_bar",
+      "p_H2O_c_bar",
+      "p_H2_a_bar",
+      "p_N2_a_bar",
+      "p_H2O_a_bar",
+      "c_H2O_CCL_mol_m3",
+      "c_H2O_ACL_mol_m3",
+      "lambda_mb_",
+      "T_mb_gradC",
+      "T_cool_gradC",
+      "p_in_c_bar",
+      "p_in_a_bar",
+      "U_st_V",
+      "T_out_cool_gradC",
+      "P_st_kW",
+      "eta_st_",
+      "St_O2_",
+      "DeltaT_cool_K",
+      "Deltap_mb_mbar"
+    ],
+    "column_stats": [
+      {
+        "name": "t",
+        "nonfinite": 0,
+        "min": 0.0,
+        "max": 332.0
+      },
+      {
+        "name": "i_dens_A_cm2",
+        "nonfinite": 0,
+        "min": 0.06960139860139859,
+        "max": 1.0489954545454545
+      },
+      {
+        "name": "p_out_c_bar",
+        "nonfinite": 0,
+        "min": 1.207,
+        "max": 2.046
+      },
+      {
+        "name": "p_out_a_bar",
+        "nonfinite": 0,
+        "min": 1.4320000000000022,
+        "max": 2.9269999999999903
+      },
+      {
+        "name": "phi_in_c_",
+        "nonfinite": 0,
+        "min": 0.49450000000000005,
+        "max": 0.8693000000000001
+      },
+      {
+        "name": "dotm_in_c_g_s",
+        "nonfinite": 0,
+        "min": 3.75,
+        "max": 32.7
+      },
+      {
+        "name": "T_in_cool_gradC",
+        "nonfinite": 0,
+        "min": 65.63,
+        "max": 73.96
+      },
+      {
+        "name": "dotm_in_cool_kg_s",
+        "nonfinite": 0,
+        "min": 0.20218898333333335,
+        "max": 1.0970083666666606
+      },
+      {
+        "name": "phi_in_a_",
+        "nonfinite": 0,
+        "min": 0.21719999999999998,
+        "max": 0.8054999999999899
+      },
+      {
+        "name": "dotm_in_a_g_s",
+        "nonfinite": 0,
+        "min": 0.40740000000000004,
+        "max": 1.1801
+      },
+      {
+        "name": "p_O2_c_bar",
+        "nonfinite": 0,
+        "min": 0.19262211330049628,
+        "max": 0.3726679880965568
+      },
+      {
+        "name": "p_N2_c_bar",
+        "nonfinite": 0,
+        "min": 0.8069059611537727,
+        "max": 1.6375642210388186
+      },
+      {
+        "name": "p_H2O_c_bar",
+        "nonfinite": 0,
+        "min": 0.1740458072031603,
+        "max": 0.3277521808639889
+      },
+      {
+        "name": "p_H2_a_bar",
+        "nonfinite": 0,
+        "min": 1.2676694709412737,
+        "max": 3.4649035150899885
+      },
+      {
+        "name": "p_N2_a_bar",
+        "nonfinite": 0,
+        "min": -7.450271450644317e-16,
+        "max": 1.3185264219422003e-05
+      },
+      {
+        "name": "p_H2O_a_bar",
+        "nonfinite": 0,
+        "min": 0.12489768966826886,
+        "max": 0.5462947769938108
+      },
+      {
+        "name": "c_H2O_CCL_mol_m3",
+        "nonfinite": 0,
+        "min": 6.161564720741954,
+        "max": 14.046377521002512
+      },
+      {
+        "name": "c_H2O_ACL_mol_m3",
+        "nonfinite": 0,
+        "min": 4.678946173259127,
+        "max": 13.345305290714293
+      },
+      {
+        "name": "lambda_mb_",
+        "nonfinite": 0,
+        "min": 4.87619552735535,
+        "max": 16.16054351130789
+      },
+      {
+        "name": "T_mb_gradC",
+        "nonfinite": 0,
+        "min": 68.81704379561245,
+        "max": 80.45837099726032
+      },
+      {
+        "name": "T_cool_gradC",
+        "nonfinite": 0,
+        "min": 68.4255565000031,
+        "max": 77.1850950568475
+      },
+      {
+        "name": "p_in_c_bar",
+        "nonfinite": 0,
+        "min": 1.363,
+        "max": 2.812999999999997
+      },
+      {
+        "name": "p_in_a_bar",
+        "nonfinite": 0,
+        "min": 1.527,
+        "max": 3.079
+      },
+      {
+        "name": "U_st_V",
+        "nonfinite": 0,
+        "min": 0.5337,
+        "max": 0.8354999999999948
+      },
+      {
+        "name": "T_out_cool_gradC",
+        "nonfinite": 0,
+        "min": 67.89,
+        "max": 77.49
+      },
+      {
+        "name": "P_st_kW",
+        "nonfinite": 0,
+        "min": 1.756545252,
+        "max": 19.5557698688
+      },
+      {
+        "name": "eta_st_",
+        "nonfinite": 0,
+        "min": 0.4410743801652892,
+        "max": 0.6904958677685907
+      },
+      {
+        "name": "St_O2_",
+        "nonfinite": 0,
+        "min": 2.06045,
+        "max": 27.60952999999911
+      },
+      {
+        "name": "DeltaT_cool_K",
+        "nonfinite": 0,
+        "min": -1.24,
+        "max": 6.36
+      },
+      {
+        "name": "Deltap_mb_mbar",
+        "nonfinite": 0,
+        "min": -37.999999999999815,
+        "max": 645.0
+      }
+    ],
+    "nonfinite_total": 0,
+    "time": {
+      "start_s": 0.0,
+      "end_s": 332.0,
+      "median_dt_s": 0.05000000000000071,
+      "min_dt_s": 0.049999999999954525,
+      "max_dt_s": 0.05000000000001137,
+      "duplicate_dt": 0,
+      "negative_dt": 0
+    },
+    "exact_duplicate_rows": 0,
+    "coolant_delta_max_abs_K": 0.010000000000020548,
+    "P_over_jU_cm2": {
+      "median": 31460.0,
+      "min": 31289.034509529276,
+      "max": 31464.437683132663
+    },
+    "stack_energy_integral_kWh": 0.5617751150412805
+  },
+  {
+    "file": "cycle_3_MPC.mat",
+    "path": "candidate_bytes/RWTH/mc46tw9t8m.zip_unpacked/Experimental dataset Two-Stage Model Predictive St/01_ExperimentalData/cycle_3_MPC.mat",
+    "bytes": 5793043,
+    "sha256": "9ea6f5fbf9112465650f249c4840435f4ec7d93a67708177cd65c668af507bd8",
+    "rows": 41062,
+    "cols": 32,
+    "channels": [
+      "t",
+      "i_dens_A_cm2",
+      "p_out_c_bar",
+      "p_out_a_bar",
+      "phi_in_c_",
+      "dotm_in_c_g_s",
+      "T_in_cool_gradC",
+      "dotm_in_cool_kg_s",
+      "phi_in_a_",
+      "dotm_in_a_g_s",
+      "p_O2_c_bar",
+      "p_N2_c_bar",
+      "p_H2O_c_bar",
+      "p_H2_a_bar",
+      "p_N2_a_bar",
+      "p_H2O_a_bar",
+      "c_H2O_CCL_mol_m3",
+      "c_H2O_ACL_mol_m3",
+      "lambda_mb_",
+      "T_mb_gradC",
+      "T_cool_gradC",
+      "p_in_c_bar",
+      "p_in_a_bar",
+      "U_st_V",
+      "T_out_cool_gradC",
+      "P_st_kW",
+      "eta_st_",
+      "St_O2_",
+      "DeltaT_cool_K",
+      "Deltap_mb_mbar",
+      "P_st_ref_kW",
+      "t_comp_s"
+    ],
+    "column_stats": [
+      {
+        "name": "t",
+        "nonfinite": 0,
+        "min": 0.0,
+        "max": 2099.9111261484923
+      },
+      {
+        "name": "i_dens_A_cm2",
+        "nonfinite": 0,
+        "min": 0.09847532949648735,
+        "max": 1.0012054977910394
+      },
+      {
+        "name": "p_out_c_bar",
+        "nonfinite": 0,
+        "min": 1.199348603058363,
+        "max": 1.9976981034275543
+      },
+      {
+        "name": "p_out_a_bar",
+        "nonfinite": 0,
+        "min": 1.394438193656673,
+        "max": 2.5018393943681176
+      },
+      {
+        "name": "phi_in_c_",
+        "nonfinite": 0,
+        "min": 0.5990245772035571,
+        "max": 0.900546267746741
+      },
+      {
+        "name": "dotm_in_c_g_s",
+        "nonfinite": 0,
+        "min": 3.9952210131016535,
+        "max": 30.291367745565235
+      },
+      {
+        "name": "T_in_cool_gradC",
+        "nonfinite": 0,
+        "min": 59.90075426091194,
+        "max": 60.08296731717137
+      },
+      {
+        "name": "dotm_in_cool_kg_s",
+        "nonfinite": 0,
+        "min": 0.035477692267069545,
+        "max": 2.0025902876283808
+      },
+      {
+        "name": "phi_in_a_",
+        "nonfinite": 0,
+        "min": 0.03,
+        "max": 0.985
+      },
+      {
+        "name": "dotm_in_a_g_s",
+        "nonfinite": 0,
+        "min": 0.23,
+        "max": 0.74
+      },
+      {
+        "name": "p_O2_c_bar",
+        "nonfinite": 0,
+        "min": 0.14492661074040897,
+        "max": 0.303668168447063
+      },
+      {
+        "name": "p_N2_c_bar",
+        "nonfinite": 0,
+        "min": 0.7576221252008208,
+        "max": 1.5407533157910123
+      },
+      {
+        "name": "p_H2O_c_bar",
+        "nonfinite": 0,
+        "min": 0.11984122876580441,
+        "max": 0.33436193145809145
+      },
+      {
+        "name": "p_H2_a_bar",
+        "nonfinite": 0,
+        "min": 0.8373315043544725,
+        "max": 2.3184017696259764
+      },
+      {
+        "name": "p_N2_a_bar",
+        "nonfinite": 0,
+        "min": -1.0129097543533955e-15,
+        "max": 0.01936486200791885
+      },
+      {
+        "name": "p_H2O_a_bar",
+        "nonfinite": 0,
+        "min": 0.06506314905246259,
+        "max": 0.7087028625600229
+      },
+      {
+        "name": "c_H2O_CCL_mol_m3",
+        "nonfinite": 0,
+        "min": 4.471095346389419,
+        "max": 11.170591758086978
+      },
+      {
+        "name": "c_H2O_ACL_mol_m3",
+        "nonfinite": 0,
+        "min": 2.5867005633876214,
+        "max": 10.345361880120432
+      },
+      {
+        "name": "lambda_mb_",
+        "nonfinite": 0,
+        "min": 3.0,
+        "max": 20.903375582261464
+      },
+      {
+        "name": "T_mb_gradC",
+        "nonfinite": 0,
+        "min": 61.65956617447108,
+        "max": 70.30230165320614
+      },
+      {
+        "name": "T_cool_gradC",
+        "nonfinite": 0,
+        "min": 61.25272815822467,
+        "max": 65.98468271121527
+      },
+      {
+        "name": "p_in_c_bar",
+        "nonfinite": 0,
+        "min": 1.2,
+        "max": 2.38
+      },
+      {
+        "name": "p_in_a_bar",
+        "nonfinite": 0,
+        "min": 1.3800000000000001,
+        "max": 2.6
+      },
+      {
+        "name": "U_st_V",
+        "nonfinite": 0,
+        "min": 0.46,
+        "max": 0.8200000000000001
+      },
+      {
+        "name": "T_out_cool_gradC",
+        "nonfinite": 0,
+        "min": 60.5,
+        "max": 67.5
+      },
+      {
+        "name": "P_st_kW",
+        "nonfinite": 0,
+        "min": 2.4452999999999996,
+        "max": 18.171999999999997
+      },
+      {
+        "name": "eta_st_",
+        "nonfinite": 0,
+        "min": 0.38016528925619836,
+        "max": 0.6776859504132232
+      },
+      {
+        "name": "St_O2_",
+        "nonfinite": 0,
+        "min": 1.75,
+        "max": 3.5500000000000003
+      },
+      {
+        "name": "DeltaT_cool_K",
+        "nonfinite": 0,
+        "min": 0.25,
+        "max": 6.75
+      },
+      {
+        "name": "Deltap_mb_mbar",
+        "nonfinite": 0,
+        "min": -100.17518555087045,
+        "max": 462.950840821305
+      },
+      {
+        "name": "P_st_ref_kW",
+        "nonfinite": 0,
+        "min": 1.5,
+        "max": 17.7254196
+      },
+      {
+        "name": "t_comp_s",
+        "nonfinite": 0,
+        "min": 0.006138819493881586,
+        "max": 0.00989850210060616
+      }
+    ],
+    "nonfinite_total": 0,
+    "time": {
+      "start_s": 0.0,
+      "end_s": 2099.9111261484923,
+      "median_dt_s": 0.050000740441646485,
+      "min_dt_s": 0.04653184721428261,
+      "max_dt_s": 0.1021969185458147,
+      "duplicate_dt": 0,
+      "negative_dt": 0
+    },
+    "exact_duplicate_rows": 0,
+    "coolant_delta_max_abs_K": 1.7500000000026148,
+    "P_over_jU_cm2": {
+      "median": 31349.999999999996,
+      "min": 20384.26876832161,
+      "max": 58983.69339993357
+    },
+    "stack_energy_integral_kWh": 5.030926705436165
+  }
+]

@@ -1,0 +1,872 @@
+{
+  "settings": {
+    "c": 0.85,
+    "max_M": 40,
+    "fit_type": "complex",
+    "add_cap": false,
+    "band": "all original frequencies",
+    "heuristic_rms_limit": 0.01,
+    "heuristic_max_limit": 0.05
+  },
+  "results": [
+    {
+      "file": "Data/EIS_180mA/Break-in_EIS_180mA.txt",
+      "M": 8,
+      "mu": 0.7948375627707298,
+      "rms_relative": 0.07936980731213197,
+      "max_relative": 0.3598692974477844,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C10_EIS_180mA.txt",
+      "M": 9,
+      "mu": 0.8154012373344716,
+      "rms_relative": 0.07096988275039752,
+      "max_relative": 0.3088703584440093,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C11_EIS_180mA.txt",
+      "M": 9,
+      "mu": 0.8176860666296647,
+      "rms_relative": 0.10102650977585471,
+      "max_relative": 0.5758882684990142,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C12_EIS_180mA.txt",
+      "M": 8,
+      "mu": 0.8470954239513255,
+      "rms_relative": 0.09807684166865241,
+      "max_relative": 0.7332785022695752,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C13_EIS_180mA.txt",
+      "M": 9,
+      "mu": 0.8137402247844063,
+      "rms_relative": 0.1105644731336807,
+      "max_relative": 0.6642772026195087,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C14_EIS_180mA.txt",
+      "M": 10,
+      "mu": 0.8271937008261544,
+      "rms_relative": 0.10964738377703906,
+      "max_relative": 0.7330593494284746,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C15_EIS_180mA.txt",
+      "M": 8,
+      "mu": 0.846700796693778,
+      "rms_relative": 0.15560666051130204,
+      "max_relative": 1.1612406764997394,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C16_EIS_180mA.txt",
+      "M": 9,
+      "mu": 0.8247865417869488,
+      "rms_relative": 0.08120660264071461,
+      "max_relative": 0.43057586453407826,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C17_EIS_180mA.txt",
+      "M": 8,
+      "mu": 0.8403612017729554,
+      "rms_relative": 0.07297341376927913,
+      "max_relative": 0.2406118777213467,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C18_EIS_180mA.txt",
+      "M": 9,
+      "mu": 0.7868502247664221,
+      "rms_relative": 0.11075769948383177,
+      "max_relative": 0.813347777412639,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C19_EIS_180mA.txt",
+      "M": 8,
+      "mu": 0.8184176759679779,
+      "rms_relative": 0.11151801443328706,
+      "max_relative": 0.6876619649176751,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C1_EIS_180mA.txt",
+      "M": 9,
+      "mu": 0.8182925423902888,
+      "rms_relative": 0.06273997002811517,
+      "max_relative": 0.19547795518082497,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C20_EIS_180mA.txt",
+      "M": 8,
+      "mu": 0.8230211330850827,
+      "rms_relative": 0.06117895257263456,
+      "max_relative": 0.1473594175450275,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C21_EIS_180mA.txt",
+      "M": 8,
+      "mu": 0.8412924392413955,
+      "rms_relative": 0.07487199244183577,
+      "max_relative": 0.2239149404917176,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C22_EIS_180mA.txt",
+      "M": 8,
+      "mu": 0.8310137952939949,
+      "rms_relative": 0.08775357072705965,
+      "max_relative": 0.2388021241593307,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C23_EIS_180mA.txt",
+      "M": 8,
+      "mu": 0.8347690091072966,
+      "rms_relative": 0.1030552071542985,
+      "max_relative": 0.6142768268716741,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C24_EIS_180mA.txt",
+      "M": 8,
+      "mu": 0.8135578908832641,
+      "rms_relative": 0.11702209787654057,
+      "max_relative": 0.7822671087544827,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C25_EIS_180mA.txt",
+      "M": 9,
+      "mu": 0.8280503860315189,
+      "rms_relative": 0.08250315577844815,
+      "max_relative": 0.3439601973406295,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C26_EIS_180mA.txt",
+      "M": 8,
+      "mu": 0.8392161098799884,
+      "rms_relative": 0.07802651901205267,
+      "max_relative": 0.28244886361003246,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C27_EIS_180mA.txt",
+      "M": 12,
+      "mu": 0.8319351189380578,
+      "rms_relative": 0.09593770531888787,
+      "max_relative": 0.5421062799548165,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C28_EIS_180mA.txt",
+      "M": 8,
+      "mu": 0.840305533826128,
+      "rms_relative": 0.1222365218019859,
+      "max_relative": 1.0996779820139357,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C29_EIS_180mA.txt",
+      "M": 9,
+      "mu": 0.8226184787827369,
+      "rms_relative": 0.11105641776140746,
+      "max_relative": 0.8386848281253817,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C2_EIS_180mA.txt",
+      "M": 9,
+      "mu": 0.8255384329181696,
+      "rms_relative": 0.056985741287900654,
+      "max_relative": 0.24417691546240197,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C30_EIS_180mA.txt",
+      "M": 8,
+      "mu": 0.8360404896938461,
+      "rms_relative": 0.16305845851725945,
+      "max_relative": 1.480313480421069,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C31_EIS_180mA.txt",
+      "M": 9,
+      "mu": 0.8114008511100375,
+      "rms_relative": 0.08261911447933538,
+      "max_relative": 0.38995141261838195,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C32_EIS_180mA.txt",
+      "M": 9,
+      "mu": 0.8021927993265505,
+      "rms_relative": 0.13128071274521566,
+      "max_relative": 0.8699318026581241,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C33_EIS_180mA.txt",
+      "M": 9,
+      "mu": 0.7963217804435412,
+      "rms_relative": 0.09687699096083824,
+      "max_relative": 0.525350244762855,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C34_EIS_180mA.txt",
+      "M": 14,
+      "mu": 0.747677425717534,
+      "rms_relative": 0.06697361041006275,
+      "max_relative": 0.22947831063819324,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C35_EIS_180mA.txt",
+      "M": 8,
+      "mu": 0.8129095525516612,
+      "rms_relative": 0.1568193725876464,
+      "max_relative": 1.1602424799636213,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C36_EIS_180mA.txt",
+      "M": 8,
+      "mu": 0.766788264534288,
+      "rms_relative": 0.17758497328798664,
+      "max_relative": 1.3342771719718927,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C3_EIS_180mA.txt",
+      "M": 8,
+      "mu": 0.842526093883968,
+      "rms_relative": 0.08892257604895062,
+      "max_relative": 0.526833451946895,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C4_EIS_180mA.txt",
+      "M": 8,
+      "mu": 0.8397138496770983,
+      "rms_relative": 0.07419703986470574,
+      "max_relative": 0.2621209229728372,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C5_EIS_180mA.txt",
+      "M": 9,
+      "mu": 0.8271383765359317,
+      "rms_relative": 0.0850764072496171,
+      "max_relative": 0.4385998915703257,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C6_EIS_180mA.txt",
+      "M": 9,
+      "mu": 0.8135836350807732,
+      "rms_relative": 0.06713123563996805,
+      "max_relative": 0.18815760271425044,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C7_EIS_180mA.txt",
+      "M": 9,
+      "mu": 0.7986956734827577,
+      "rms_relative": 0.09633080640817189,
+      "max_relative": 0.5420931481053067,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C8_EIS_180mA.txt",
+      "M": 9,
+      "mu": 0.8117711764012435,
+      "rms_relative": 0.07928727483993626,
+      "max_relative": 0.38681545139633017,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_180mA/C9_EIS_180mA.txt",
+      "M": 9,
+      "mu": 0.8159619607488546,
+      "rms_relative": 0.09475107099458506,
+      "max_relative": 0.4925791513690269,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_45mA/C10_EIS_45mA.txt",
+      "M": 14,
+      "mu": 0.8472069627902044,
+      "rms_relative": 0.14148427610628778,
+      "max_relative": 1.1410115740358096,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_45mA/C11_EIS_45mA.txt",
+      "M": 15,
+      "mu": 0.7881531130392807,
+      "rms_relative": 0.17298664433319438,
+      "max_relative": 1.0486961258121517,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_45mA/C12_EIS_45mA.txt",
+      "M": 15,
+      "mu": 0.812475377022631,
+      "rms_relative": 0.16046486293857595,
+      "max_relative": 0.8192624791926545,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_45mA/C13_EIS_45mA.txt",
+      "M": 16,
+      "mu": 0.8191041671797452,
+      "rms_relative": 0.22953962349652085,
+      "max_relative": 1.665350837642102,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_45mA/C14_EIS_45mA.txt",
+      "M": 18,
+      "mu": 0.7890388118071574,
+      "rms_relative": 0.1804765873398347,
+      "max_relative": 1.0421963504298397,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_45mA/C15_EIS_45mA.txt",
+      "M": 18,
+      "mu": 0.8476589627557671,
+      "rms_relative": 0.16181461529108523,
+      "max_relative": 0.8026933644269367,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_45mA/C16_EIS_45mA.txt",
+      "M": 14,
+      "mu": 0.8254914977758142,
+      "rms_relative": 0.16433861174028774,
+      "max_relative": 1.0138122214855045,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_45mA/C18_EIS_45mA.txt",
+      "M": 16,
+      "mu": 0.8163033369645423,
+      "rms_relative": 0.1733804602323135,
+      "max_relative": 0.9682720822749065,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_45mA/C19_EIS_45mA.txt",
+      "M": 15,
+      "mu": 0.8495166366600462,
+      "rms_relative": 0.136040396691136,
+      "max_relative": 0.7027203550279004,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_45mA/C1_EIS_45mA.txt",
+      "M": 15,
+      "mu": 0.8382324625750395,
+      "rms_relative": 0.09119859598026492,
+      "max_relative": 0.30079699357458406,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_45mA/C20_EIS_45mA.txt",
+      "M": 14,
+      "mu": 0.7422210462016201,
+      "rms_relative": 0.14343910090091666,
+      "max_relative": 0.6697649347716417,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_45mA/C21_EIS_45mA.txt",
+      "M": 16,
+      "mu": 0.7579267409710531,
+      "rms_relative": 0.14977557136555564,
+      "max_relative": 0.7178490219062122,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_45mA/C22_EIS_45mA.txt",
+      "M": 14,
+      "mu": 0.8392273120155533,
+      "rms_relative": 0.12582938302805224,
+      "max_relative": 0.4002184132625152,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_45mA/C23_EIS_45mA.txt",
+      "M": 15,
+      "mu": 0.8074956543151043,
+      "rms_relative": 0.1445407293605278,
+      "max_relative": 0.6388273432858965,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_45mA/C24_EIS_45mA.txt",
+      "M": 14,
+      "mu": 0.8116565713234036,
+      "rms_relative": 0.13009985100150062,
+      "max_relative": 0.6431258840712545,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_45mA/C25_EIS_45mA.txt",
+      "M": 16,
+      "mu": 0.8358968394535606,
+      "rms_relative": 0.1994988561759611,
+      "max_relative": 1.0568542873718554,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_45mA/C26_EIS_45mA.txt",
+      "M": 15,
+      "mu": 0.7863398274443971,
+      "rms_relative": 0.16129194141764422,
+      "max_relative": 0.7057705334730501,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_45mA/C27_EIS_45mA.txt",
+      "M": 15,
+      "mu": 0.817425818971818,
+      "rms_relative": 0.1706600228911296,
+      "max_relative": 0.984726933072683,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_45mA/C28_EIS_45mA.txt",
+      "M": 14,
+      "mu": 0.8359617665927416,
+      "rms_relative": 0.13445851572026318,
+      "max_relative": 0.7760572909474903,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_45mA/C29_EIS_45mA.txt",
+      "M": 17,
+      "mu": 0.7821326256217901,
+      "rms_relative": 0.17141202273342304,
+      "max_relative": 0.9072365133611133,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_45mA/C2_EIS_45mA.txt",
+      "M": 16,
+      "mu": 0.809180271343284,
+      "rms_relative": 0.1625047518793987,
+      "max_relative": 1.3227918586224843,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_45mA/C30_EIS_45mA.txt",
+      "M": 15,
+      "mu": 0.8002376746244839,
+      "rms_relative": 0.13464525258424148,
+      "max_relative": 0.5540183204325425,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_45mA/C31_EIS_45mA.txt",
+      "M": 14,
+      "mu": 0.8371274826630046,
+      "rms_relative": 0.16528069264456632,
+      "max_relative": 0.732230401493476,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_45mA/C32_EIS_45mA.txt",
+      "M": 13,
+      "mu": 0.8171681648916951,
+      "rms_relative": 0.2222204491251065,
+      "max_relative": 1.7391795532287935,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_45mA/C33_EIS_45mA.txt",
+      "M": 14,
+      "mu": 0.8071313122454651,
+      "rms_relative": 0.16367288406272468,
+      "max_relative": 0.7813808977293225,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_45mA/C34_EIS_45mA.txt",
+      "M": 16,
+      "mu": 0.7362601480764561,
+      "rms_relative": 0.15713515875781275,
+      "max_relative": 0.5936261897062275,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_45mA/C36_EIS_45mA.txt",
+      "M": 17,
+      "mu": 0.6852718954273533,
+      "rms_relative": 0.1528174793454087,
+      "max_relative": 0.6403077253043565,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_45mA/C3_EIS_45mA.txt",
+      "M": 16,
+      "mu": 0.8482675694992792,
+      "rms_relative": 0.11966722811662199,
+      "max_relative": 0.3605406258149144,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_45mA/C4_EIS_45mA.txt",
+      "M": 15,
+      "mu": 0.8122074327865034,
+      "rms_relative": 0.16715526762199745,
+      "max_relative": 0.924775151624743,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_45mA/C5_EIS_45mA.txt",
+      "M": 16,
+      "mu": 0.843537454262174,
+      "rms_relative": 0.14116941350231593,
+      "max_relative": 0.863812631639739,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_45mA/C6_EIS_45mA.txt",
+      "M": 15,
+      "mu": 0.8015008098062426,
+      "rms_relative": 0.1338311892897563,
+      "max_relative": 0.6877805768453236,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_45mA/C8_EIS_45mA.txt",
+      "M": 16,
+      "mu": 0.8148730975868933,
+      "rms_relative": 0.14686173361458907,
+      "max_relative": 0.8981437751368866,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_45mA/C9_EIS_45mA.txt",
+      "M": 15,
+      "mu": 0.8434597233654961,
+      "rms_relative": 0.15235726847590217,
+      "max_relative": 0.7920410866513639,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/Break-in_EIS_900mA.txt",
+      "M": 6,
+      "mu": 0.7991878637284495,
+      "rms_relative": 0.24385833363181036,
+      "max_relative": 1.2394474752442646,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C10_EIS_900mA.txt",
+      "M": 5,
+      "mu": 0.8374685526519943,
+      "rms_relative": 0.17098194837995262,
+      "max_relative": 1.0336312389688866,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C11_EIS_900mA.txt",
+      "M": 5,
+      "mu": 0.8294681386738113,
+      "rms_relative": 0.17427487116293822,
+      "max_relative": 0.7507869592651001,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C12_EIS_900mA.txt",
+      "M": 6,
+      "mu": 0.8120554585551477,
+      "rms_relative": 0.23100237026432424,
+      "max_relative": 1.0392470889815377,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C13_EIS_900mA.txt",
+      "M": 6,
+      "mu": 0.8093763216546309,
+      "rms_relative": 0.18209514154135012,
+      "max_relative": 0.9371002255446387,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C14_EIS_900mA.txt",
+      "M": 11,
+      "mu": 0.7888255202471104,
+      "rms_relative": 0.20223603446918142,
+      "max_relative": 1.2961931665788675,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C15_EIS_900mA.txt",
+      "M": 6,
+      "mu": 0.7899240498797764,
+      "rms_relative": 0.29853305073027275,
+      "max_relative": 1.913572222180306,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C16_EIS_900mA.txt",
+      "M": 6,
+      "mu": 0.8211677509412649,
+      "rms_relative": 0.23502200462951436,
+      "max_relative": 1.1913864789596054,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C17_EIS_900mA.txt",
+      "M": 6,
+      "mu": 0.7937899376837494,
+      "rms_relative": 0.20759197733089657,
+      "max_relative": 0.9026928989051723,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C18_EIS_900mA.txt",
+      "M": 6,
+      "mu": 0.7940101984584844,
+      "rms_relative": 0.2771693694077948,
+      "max_relative": 1.1928740620014073,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C19_EIS_900mA.txt",
+      "M": 5,
+      "mu": 0.8334088786094289,
+      "rms_relative": 0.1772208893276516,
+      "max_relative": 0.8013413481754985,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C1_EIS_900mA.txt",
+      "M": 5,
+      "mu": 0.8444298647179485,
+      "rms_relative": 0.14736759391305843,
+      "max_relative": 0.7167984129711426,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C20_EIS_900mA.txt",
+      "M": 6,
+      "mu": 0.8087404665506321,
+      "rms_relative": 0.20613988689450025,
+      "max_relative": 1.0403476060068342,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C21_EIS_900mA.txt",
+      "M": 6,
+      "mu": 0.8085505409938425,
+      "rms_relative": 0.2344585280491953,
+      "max_relative": 1.232861205829728,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C22_EIS_900mA.txt",
+      "M": 6,
+      "mu": 0.7940970772752775,
+      "rms_relative": 0.2347548422669368,
+      "max_relative": 1.3532731006367351,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C23_EIS_900mA.txt",
+      "M": 6,
+      "mu": 0.7834310998798866,
+      "rms_relative": 0.23400968527183738,
+      "max_relative": 1.2354342442464123,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C24_EIS_900mA.txt",
+      "M": 6,
+      "mu": 0.8052995032629778,
+      "rms_relative": 0.2103555133162767,
+      "max_relative": 1.0595349201109954,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C25_EIS_900mA.txt",
+      "M": 6,
+      "mu": 0.8188252766226629,
+      "rms_relative": 0.24849707756886485,
+      "max_relative": 1.2714149226751872,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C26_EIS_900mA.txt",
+      "M": 5,
+      "mu": 0.8070900977333155,
+      "rms_relative": 0.2585198384602401,
+      "max_relative": 1.207979870484506,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C27_EIS_900mA.txt",
+      "M": 7,
+      "mu": 0.844920327834172,
+      "rms_relative": 0.23420744320185294,
+      "max_relative": 1.1370643302529257,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C28_EIS_900mA.txt",
+      "M": 5,
+      "mu": 0.8147797674298307,
+      "rms_relative": 0.15031763837110418,
+      "max_relative": 0.6401354752108914,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C29_EIS_900mA.txt",
+      "M": 6,
+      "mu": 0.808512688111773,
+      "rms_relative": 0.16763793855332418,
+      "max_relative": 0.7396662614435492,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C2_EIS_900mA.txt",
+      "M": 6,
+      "mu": 0.8438732622920759,
+      "rms_relative": 0.1394411136238079,
+      "max_relative": 0.7523821716145417,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C30_EIS_900mA.txt",
+      "M": 6,
+      "mu": 0.8157091439530395,
+      "rms_relative": 0.18749256683666124,
+      "max_relative": 0.8915048680382892,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C31_EIS_900mA.txt",
+      "M": 6,
+      "mu": 0.8100288260757622,
+      "rms_relative": 0.24004553190914316,
+      "max_relative": 1.2901867864835637,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C32_EIS_900mA.txt",
+      "M": 6,
+      "mu": 0.8039394249750731,
+      "rms_relative": 0.2625659261000489,
+      "max_relative": 1.0484824574920868,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C33_EIS_900mA.txt",
+      "M": 6,
+      "mu": 0.778837541807329,
+      "rms_relative": 0.2636994913527941,
+      "max_relative": 1.1368764569949077,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C34_EIS_900mA.txt",
+      "M": 6,
+      "mu": 0.8359432840620493,
+      "rms_relative": 0.2512736497358432,
+      "max_relative": 1.1312189840644018,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C35_EIS_900mA.txt",
+      "M": 5,
+      "mu": 0.6552044766211059,
+      "rms_relative": 0.26467702976558194,
+      "max_relative": 1.169103327327292,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C36_EIS_900mA.txt",
+      "M": 4,
+      "mu": 0.7650529417898295,
+      "rms_relative": 0.34289480886746043,
+      "max_relative": 1.2178492641978278,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C3_EIS_900mA.txt",
+      "M": 6,
+      "mu": 0.8282090930902679,
+      "rms_relative": 0.16795840635907694,
+      "max_relative": 0.9346086760141955,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C4_EIS_900mA.txt",
+      "M": 6,
+      "mu": 0.8120645529491839,
+      "rms_relative": 0.2191675927939323,
+      "max_relative": 0.9095601430151395,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C5_EIS_900mA.txt",
+      "M": 6,
+      "mu": 0.7968606737951764,
+      "rms_relative": 0.21998974965245138,
+      "max_relative": 1.3171741575429088,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C6_EIS_900mA.txt",
+      "M": 6,
+      "mu": 0.82540092135238,
+      "rms_relative": 0.18337769797691353,
+      "max_relative": 0.98047858312548,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C7_EIS_900mA.txt",
+      "M": 6,
+      "mu": 0.8087729085899905,
+      "rms_relative": 0.23700897965166348,
+      "max_relative": 1.183445075820807,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C8_EIS_900mA.txt",
+      "M": 6,
+      "mu": 0.8154766044236992,
+      "rms_relative": 0.17064269516497096,
+      "max_relative": 0.8746465701305675,
+      "screen_pass": false
+    },
+    {
+      "file": "Data/EIS_900mA/C9_EIS_900mA.txt",
+      "M": 6,
+      "mu": 0.8117021471876484,
+      "rms_relative": 0.20820056431438708,
+      "max_relative": 0.9213281679556622,
+      "screen_pass": false
+    }
+  ],
+  "pass_count": 0,
+  "errors": 0,
+  "caveat": "Heuristic screen only, not proof of stationarity/linearity. No point deletion, no frequency-band selection."
+}

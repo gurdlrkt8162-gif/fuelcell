@@ -1,0 +1,113 @@
+{
+  "files": [
+    {
+      "file": "cycle_1_MPC.mat",
+      "rows": 24412,
+      "cols": 32,
+      "time": {
+        "start_s": 0.0,
+        "end_s": 1250.0049933855835,
+        "median_dt_s": 0.05000072033999459,
+        "min_dt_s": 0.04899625123152873,
+        "max_dt_s": 0.10023893542643236,
+        "duplicate_dt": 0,
+        "negative_dt": 0
+      },
+      "nonfinite_total": 0,
+      "P_over_jU_cm2": {
+        "median": 31444.993296010456,
+        "min": 16569.62025316455,
+        "max": 59172.5838501561
+      },
+      "error": null
+    },
+    {
+      "file": "cycle_1_TSOS.mat",
+      "rows": 96501,
+      "cols": 30,
+      "time": {
+        "start_s": 0.0,
+        "end_s": 4825.0,
+        "median_dt_s": 0.05000000000001137,
+        "min_dt_s": 0.049999999999272404,
+        "max_dt_s": 0.0500000000001819,
+        "duplicate_dt": 0,
+        "negative_dt": 0
+      },
+      "nonfinite_total": 0,
+      "P_over_jU_cm2": {
+        "median": 31460.0,
+        "min": 31459.567920081765,
+        "max": 31460.10989758032
+      },
+      "error": null
+    },
+    {
+      "file": "cycle_2_MPC.mat",
+      "rows": 6523,
+      "cols": 32,
+      "time": {
+        "start_s": 0.0,
+        "end_s": 332.95227977634295,
+        "median_dt_s": 0.050001228994915436,
+        "min_dt_s": 0.04768572424927697,
+        "max_dt_s": 0.10142710209947836,
+        "duplicate_dt": 0,
+        "negative_dt": 0
+      },
+      "nonfinite_total": 0,
+      "P_over_jU_cm2": {
+        "median": 31349.999999999996,
+        "min": 16649.611901987453,
+        "max": 59361.096468336975
+      },
+      "error": null
+    },
+    {
+      "file": "cycle_2_TSOS.mat",
+      "rows": 6641,
+      "cols": 30,
+      "time": {
+        "start_s": 0.0,
+        "end_s": 332.0,
+        "median_dt_s": 0.05000000000000071,
+        "min_dt_s": 0.049999999999954525,
+        "max_dt_s": 0.05000000000001137,
+        "duplicate_dt": 0,
+        "negative_dt": 0
+      },
+      "nonfinite_total": 0,
+      "P_over_jU_cm2": {
+        "median": 31460.0,
+        "min": 31289.034509529276,
+        "max": 31464.437683132663
+      },
+      "error": null
+    },
+    {
+      "file": "cycle_3_MPC.mat",
+      "rows": 41062,
+      "cols": 32,
+      "time": {
+        "start_s": 0.0,
+        "end_s": 2099.9111261484923,
+        "median_dt_s": 0.050000740441646485,
+        "min_dt_s": 0.04653184721428261,
+        "max_dt_s": 0.1021969185458147,
+        "duplicate_dt": 0,
+        "negative_dt": 0
+      },
+      "nonfinite_total": 0,
+      "P_over_jU_cm2": {
+        "median": 31349.999999999996,
+        "min": 20384.26876832161,
+        "max": 58983.69339993357
+      },
+      "error": null
+    }
+  ],
+  "total_rows": 175139,
+  "total_nonfinite": 0,
+  "errors": 0,
+  "mixed_signal_warning": "Record includes measurements, derived variables and model states. Internal states are not independently measured labels. U_st_V is cell-scale voltage in the author plotting code despite stack-voltage README label."
+}
