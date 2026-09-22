@@ -1,0 +1,49 @@
+name: Curated PEMFC subset delivery 20260922
+on:
+  push:
+    branches: [research/pemfc-quality-audit-20260922]
+    paths: [scripts/package_curated_pemfc_20260922.py, .github/workflows/pemfc-curated-delivery-20260922.yml]
+permissions:
+  contents: write
+  actions: read
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 35711068883
+          name: PEMFC_STAGE3_CANDIDATE_NOT_APPROVED
+          path: previous_raw
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 35713119524
+          name: PEMFC_COMPLETE_QC_EVIDENCE
+          path: previous_qc
+      - run: |
+          unzip -qo previous_raw/PEMFC_STAGE3_CANDIDATE_NOT_APPROVED.zip
+          unzip -qo previous_qc/PEMFC_COMPLETE_QC_EVIDENCE.zip
+          pip install numpy pandas scipy h5py mat-io
+      - name: Package admitted subsets with checksum and exact CSV round-trip checks
+        run: python scripts/package_curated_pemfc_20260922.py
+      - name: Preserve final delivery receipt
+        run: |
+          git config user.name 'public-data-audit'
+          git config user.email 'public-data-audit@users.noreply.github.com'
+          git add pemfc_delivery_receipt_20260922.json
+          git commit -m 'Record final limited-scope PEMFC supplement inventory and integrity'
+          git push origin HEAD:research/pemfc-quality-audit-20260922
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PEMFC_CURATED_ADDITIONS_20260922
+          path: PEMFC_CURATED_ADDITIONS_20260922/
+          retention-days: 30
+          compression-level: 6
+          if-no-files-found: error
