@@ -1,0 +1,1528 @@
+[
+  {
+    "tag": "RWTH",
+    "error": "403 Client Error: Forbidden for url: https://data.mendeley.com/public-api/zip/mc46tw9t8m/download/1"
+  },
+  {
+    "tag": "OXYGEN_PURGE",
+    "error": "403 Client Error: Forbidden for url: https://data.mendeley.com/public-api/zip/jy5vxystwd/download/2"
+  },
+  {
+    "url": "https://ndownloader.figshare.com/files/6453063",
+    "path": "candidate_bytes/LOUGH2016/diagnostic results.7z",
+    "size": 24893,
+    "sha256": "bfd94d2dadfc113f387e0d669a1cb629c4e8a86b785607301868c3a71b46040d",
+    "md5": "bd45c6cf948c386633e306b42ee23973",
+    "provider_checksum": "bd45c6cf948c386633e306b42ee23973",
+    "provider_checksum_match": true,
+    "content_type": "binary/octet-stream"
+  },
+  {
+    "url": "https://ndownloader.figshare.com/files/6453066",
+    "path": "candidate_bytes/LOUGH2016/sensor measurement.7z",
+    "size": 1455751,
+    "sha256": "1c4b72000cbfae865ebc96dfa9b10d0cf7404c36647bffafb58bf964746ddbdd",
+    "md5": "750f0526ba9a7379dc5fe8c8b7ea0ff0",
+    "provider_checksum": "750f0526ba9a7379dc5fe8c8b7ea0ff0",
+    "provider_checksum_match": true,
+    "content_type": "binary/octet-stream"
+  },
+  {
+    "url": "https://ndownloader.figshare.com/files/10147767",
+    "path": "candidate_bytes/LOUGH2018/201703021126_RATS-Single-Cell.CSV",
+    "size": 12030397,
+    "sha256": "030eff12bb4ea45af04f98a44a1413990a109753cb147051e042f836e56e53b9",
+    "md5": "3378902cfe7a16a2380f70adb9ccfd84",
+    "provider_checksum": "3378902cfe7a16a2380f70adb9ccfd84",
+    "provider_checksum_match": true,
+    "content_type": "binary/octet-stream"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534793?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/Break-in_EIS_180mA.txt",
+    "size": 8543,
+    "sha256": "5bd4c2daf3d6bc000c8ab9b174d4f9f8f22512d9b94341d6eec83097c449e5cf",
+    "md5": "0b3cee0ce82b91339e2e2f29190ecf1c",
+    "provider_checksum": "0b3cee0ce82b91339e2e2f29190ecf1c",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534784?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/Break-in_EIS_45mA.txt",
+    "size": 8699,
+    "sha256": "70444d627f39b97bb447517c40d9ae45d9863e49ee48246070ada68e4962792e",
+    "md5": "aeb3e8dfe22e9ce4382149c72ccc5744",
+    "provider_checksum": "aeb3e8dfe22e9ce4382149c72ccc5744",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534835?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/Break-in_EIS_900mA.txt",
+    "size": 8656,
+    "sha256": "c4e2eae776bf81bf2ee7f6f36032ca253d6fc0d0c03d3c79ace3c652619ea7d0",
+    "md5": "336d5bf4d7549b2ce82bb844aca8ef79",
+    "provider_checksum": "336d5bf4d7549b2ce82bb844aca8ef79",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534738?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/break-in_IV.txt",
+    "size": 71073,
+    "sha256": "49f9608583628dbb6da28458be078827165d3d198917ea9cc93d939f2fe12ca2",
+    "md5": "b4478285216b9c5f296bcb4865b5211a",
+    "provider_checksum": "b4478285216b9c5f296bcb4865b5211a",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534819?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C10_EIS_180mA.txt",
+    "size": 8494,
+    "sha256": "481c65fbcd6f31dd9ceee51d99abd6d381654fa7d20b141bca5981bcd77f82f3",
+    "md5": "3be96b99cb7356da046a2a371bf8d627",
+    "provider_checksum": "3be96b99cb7356da046a2a371bf8d627",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534756?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C10_EIS_45mA.txt",
+    "size": 8600,
+    "sha256": "ab0b6439a1c48e68fb851987edd3ce21577dbbab58acb7bc5185e9786a4ab925",
+    "md5": "3a8932f942548dc9cfe799de3b0418d9",
+    "provider_checksum": "3a8932f942548dc9cfe799de3b0418d9",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534826?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C10_EIS_900mA.txt",
+    "size": 8571,
+    "sha256": "1b220f24cea862d2dd00b3b292c2e36bb6034416c3795d5877ef827a1c3c1bf5",
+    "md5": "443117231d4c32e6182567e8f41fbd29",
+    "provider_checksum": "443117231d4c32e6182567e8f41fbd29",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534747?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C10_IV.txt",
+    "size": 63802,
+    "sha256": "7f5339f2af1188208caf21e1b8bc27e35d4532c573ecc1734bb6846066a95934",
+    "md5": "c32fb7ebb9f495844c53ee295764e7ba",
+    "provider_checksum": "c32fb7ebb9f495844c53ee295764e7ba",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534804?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C11_EIS_180mA.txt",
+    "size": 8523,
+    "sha256": "7a56df943fd84a5f5bb0eaad9cbc3b92329838a7c2ce234e9147c157f8f0fc18",
+    "md5": "8f7875f31050e182ee78c9c36f0bda24",
+    "provider_checksum": "8f7875f31050e182ee78c9c36f0bda24",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534766?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C11_EIS_45mA.txt",
+    "size": 8599,
+    "sha256": "10ca3650ad8b5c5831c003bb321e8d5753ae41c8dbd2e4fa43c198dc58bf5c50",
+    "md5": "4158bb4a44049e98602aab33413ae6da",
+    "provider_checksum": "4158bb4a44049e98602aab33413ae6da",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534842?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C11_EIS_900mA.txt",
+    "size": 8591,
+    "sha256": "a6f9c6d28a1d6ae48c34a4d4ef5c04538dd5cb5b7540dc0a2b52d30b0a11859f",
+    "md5": "973b991eafee1ee34a33b96b158a5402",
+    "provider_checksum": "973b991eafee1ee34a33b96b158a5402",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534729?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C11_IV.txt",
+    "size": 63345,
+    "sha256": "2a714aaca8c440540e63fe0820d41668fd8e5939e572578b867c6827a799cdee",
+    "md5": "ed9c59bac2aa8d08c92d0ac80513428e",
+    "provider_checksum": "ed9c59bac2aa8d08c92d0ac80513428e",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534790?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C12_EIS_180mA.txt",
+    "size": 8527,
+    "sha256": "c276ecb9ffcd493d3b0fceb5d91249f69159f4a7d40452b52f05ff525d933dba",
+    "md5": "f1e9ba7695589d95a67de565a9f2b273",
+    "provider_checksum": "f1e9ba7695589d95a67de565a9f2b273",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534759?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C12_EIS_45mA.txt",
+    "size": 8608,
+    "sha256": "8fa2f19c03c985694ae0779e29e9eb27611f010eded3fbf66e9810e6b46573a0",
+    "md5": "2716c009a7f7376ac84b9304ced83c08",
+    "provider_checksum": "2716c009a7f7376ac84b9304ced83c08",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534831?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C12_EIS_900mA.txt",
+    "size": 8631,
+    "sha256": "9491224ad4abcb1ca7a56f7f5cc7cc56358458abbf76c454babe3f9650c74aae",
+    "md5": "58635b4763b884b214dd86bd217d7e6b",
+    "provider_checksum": "58635b4763b884b214dd86bd217d7e6b",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534716?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C12_IV.txt",
+    "size": 63372,
+    "sha256": "c1effe5e46d96c2f9a1faefe6b4aa21e29a1526f574b676d42d52a2784dbc96d",
+    "md5": "51be0ca18dbe1083bd57162166990b02",
+    "provider_checksum": "51be0ca18dbe1083bd57162166990b02",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534816?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C13_EIS_180mA.txt",
+    "size": 8521,
+    "sha256": "b3aec8bdd98d41be340c2cd56ab080fca093afbd6ac95b1af0bfe0dedc132b43",
+    "md5": "dcad5eca1ad6544f323af08b79294ef5",
+    "provider_checksum": "dcad5eca1ad6544f323af08b79294ef5",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534776?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C13_EIS_45mA.txt",
+    "size": 8610,
+    "sha256": "cb47b3d484a080644039da455d1483456bc344116bc8146458e0a032960d1379",
+    "md5": "fee01dadc4f25fef08a20aa2acc26662",
+    "provider_checksum": "fee01dadc4f25fef08a20aa2acc26662",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534846?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C13_EIS_900mA.txt",
+    "size": 8601,
+    "sha256": "f34fa5312c7104842fa145251d67f104171acd18a457f8c81a7ad4e1d6d2116a",
+    "md5": "e4c916aa0ae462d152c8e7c59fdaa741",
+    "provider_checksum": "e4c916aa0ae462d152c8e7c59fdaa741",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534713?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C13_IV.txt",
+    "size": 62522,
+    "sha256": "68d2c51f25bc833a9c8f62a40b1600feac389ee8e0d9d81ee012a6f341c269b3",
+    "md5": "30f4c503e74305214aa8b8d8ccd4b306",
+    "provider_checksum": "30f4c503e74305214aa8b8d8ccd4b306",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534823?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C14_EIS_180mA.txt",
+    "size": 8519,
+    "sha256": "29005a0bb77ce82c55686775bda0c5b679c1ea2e8fa0a1bf008c27a81466b7ac",
+    "md5": "fcfaa5b536d1c542f0ed335db8de58ed",
+    "provider_checksum": "fcfaa5b536d1c542f0ed335db8de58ed",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534775?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C14_EIS_45mA.txt",
+    "size": 8635,
+    "sha256": "cc275181cffaaf266bc03e9ec478bc986783460365035eea188eea4fd8b26de8",
+    "md5": "742628f264c1db5bef343bf31f4820d1",
+    "provider_checksum": "742628f264c1db5bef343bf31f4820d1",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534839?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C14_EIS_900mA.txt",
+    "size": 8599,
+    "sha256": "15103a82ccb85d854a7761d2ab9434b630140d95d627bd43c560b3da322ffb57",
+    "md5": "f8c0734ddabac0c997ae50624882f389",
+    "provider_checksum": "f8c0734ddabac0c997ae50624882f389",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534745?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C14_IV.txt",
+    "size": 61227,
+    "sha256": "0322912808aed03fe58ca84da634b79c1a8b34390367bf75ae9b8bd63f55a997",
+    "md5": "e3ebfaac4a098bebb0fb4eec4ae17455",
+    "provider_checksum": "e3ebfaac4a098bebb0fb4eec4ae17455",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534815?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C15_EIS_180mA.txt",
+    "size": 8546,
+    "sha256": "1d4535a7c9dc8c0100a33977413ef53e739e23cf23052b03e3c4a3e9a4ebd1df",
+    "md5": "e0681713f35c6cadc1714facaf13db67",
+    "provider_checksum": "e0681713f35c6cadc1714facaf13db67",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534774?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C15_EIS_45mA.txt",
+    "size": 8621,
+    "sha256": "a4232a00d3be4bcfdf06b078572e2089f0670d68a5b6f3484a25b0b9ad05df31",
+    "md5": "3ac30eef7204e7239e0f1428f0d59259",
+    "provider_checksum": "3ac30eef7204e7239e0f1428f0d59259",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534855?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C15_EIS_900mA.txt",
+    "size": 8657,
+    "sha256": "d59b4609eb1f9fc703dc070e6680b4cac530dfc1fb3aca2ba44d03154def3f30",
+    "md5": "3782ec9e72ed656cfade06a85e691d56",
+    "provider_checksum": "3782ec9e72ed656cfade06a85e691d56",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534746?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C15_IV.txt",
+    "size": 62345,
+    "sha256": "4e64d8870176f94de0fdf0a1d50308ffc7905dba55dd882aede06fb4c67f0fb0",
+    "md5": "cef0709a76e9f7065abcd5fe24db3770",
+    "provider_checksum": "cef0709a76e9f7065abcd5fe24db3770",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534813?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C16_EIS_180mA.txt",
+    "size": 8552,
+    "sha256": "be7caaa92ffa613ead599e4216b84037ff586f111082320ad204070fef01e568",
+    "md5": "f72b82b9825f0529fb7ef262a31985d4",
+    "provider_checksum": "f72b82b9825f0529fb7ef262a31985d4",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534767?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C16_EIS_45mA.txt",
+    "size": 8618,
+    "sha256": "d41514a005f6715db5bc74f03381ecf50869aeaed9dadb285cb7125cd90e5534",
+    "md5": "b9146f1071a1b08ea7336739391cc70e",
+    "provider_checksum": "b9146f1071a1b08ea7336739391cc70e",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534848?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C16_EIS_900mA.txt",
+    "size": 8601,
+    "sha256": "53ff4ee9bb348049e4886ddd38aa8e28efb866e74fb9824fcd046cd9a290c7d1",
+    "md5": "16b34370917edae755e1f0ab2e640aa6",
+    "provider_checksum": "16b34370917edae755e1f0ab2e640aa6",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534720?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C16_IV.txt",
+    "size": 61331,
+    "sha256": "b3739244748802bf2063a12c43abdb64f86a1f8a29d38b19e761e409ef740074",
+    "md5": "1e28007239deb49c7b6433de8de6c194",
+    "provider_checksum": "1e28007239deb49c7b6433de8de6c194",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534814?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C17_EIS_180mA.txt",
+    "size": 8544,
+    "sha256": "46290c29a1f2d2a82bde3bcba534d5c8ced6672de5baab531f705eab56cc7746",
+    "md5": "94b3e15306dd465d392fb4a6da73e125",
+    "provider_checksum": "94b3e15306dd465d392fb4a6da73e125",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534773?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C17_EIS_45mA.txt",
+    "size": 8541,
+    "sha256": "ad46ed7043d7cf93cbf7396d6006d6490207eb18837c2bb0e913e863ece624b5",
+    "md5": "1138c3086de6d5dcf70434314fd0f3db",
+    "provider_checksum": "1138c3086de6d5dcf70434314fd0f3db",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534849?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C17_EIS_900mA.txt",
+    "size": 8654,
+    "sha256": "3138c9e3f977fbb9099a5e3fc559a152230e44560a55fa2a5b75f83e13d1012b",
+    "md5": "18c612bcb95f3ff034f287be8d3b0a9d",
+    "provider_checksum": "18c612bcb95f3ff034f287be8d3b0a9d",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534740?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C17_IV.txt",
+    "size": 62337,
+    "sha256": "b1866233d74ae9fe9fe2ce63b282eb377d5e9f6bb3e20394f2e366e41080be38",
+    "md5": "9736adaf68596d108a07c8335588dc0a",
+    "provider_checksum": "9736adaf68596d108a07c8335588dc0a",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534822?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C18_EIS_180mA.txt",
+    "size": 8537,
+    "sha256": "ee1c9e2cfb8c2f587537af397f642366f6a46465a192fe370996b19aaab83e82",
+    "md5": "98df6f605dbd6eee4428e63508b60a70",
+    "provider_checksum": "98df6f605dbd6eee4428e63508b60a70",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534780?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C18_EIS_45mA.txt",
+    "size": 8627,
+    "sha256": "862bad4931525353e10349c359fe54b55b73394126198c2e0f92bf786340e022",
+    "md5": "da310cb151e8f39b529d4aa9083bead0",
+    "provider_checksum": "da310cb151e8f39b529d4aa9083bead0",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534856?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C18_EIS_900mA.txt",
+    "size": 8621,
+    "sha256": "c06a1a673b84765f4ce3cfd4abb3f07a02891654a73ab57faa6079332c252e3e",
+    "md5": "a20c2cf72e5b8bce68584186df9f85fa",
+    "provider_checksum": "a20c2cf72e5b8bce68584186df9f85fa",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534739?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C18_IV.txt",
+    "size": 61512,
+    "sha256": "cf2f7232240bf08f852fc227daa13c2ec9e9ea2107dee09f1a8848a2cad20d14",
+    "md5": "cc76aae1b541085e0959c7e7ff3c8457",
+    "provider_checksum": "cc76aae1b541085e0959c7e7ff3c8457",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534797?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C19_EIS_180mA.txt",
+    "size": 8519,
+    "sha256": "11dee46c1daa8669a12381acb27146c9af218ddc05be3a262d6fa614d781820f",
+    "md5": "3e85bd645c14d8dda658d73a3dd67476",
+    "provider_checksum": "3e85bd645c14d8dda658d73a3dd67476",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534760?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C19_EIS_45mA.txt",
+    "size": 8606,
+    "sha256": "5eb32212adede4a1bc3f67c7dd6696a1ef7d93335a212c476cb09ccd7afe7346",
+    "md5": "301ccadeec373eb11ccffa92c0707838",
+    "provider_checksum": "301ccadeec373eb11ccffa92c0707838",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534837?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C19_EIS_900mA.txt",
+    "size": 8574,
+    "sha256": "7fdd8e1e6f4941f4f336455ae524f66f66dbaf20f7ceb647256bbbf7b1cebbf6",
+    "md5": "29667e298f7d657bd18e76f592d28fb6",
+    "provider_checksum": "29667e298f7d657bd18e76f592d28fb6",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534724?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C19_IV.txt",
+    "size": 64275,
+    "sha256": "0f1db0caa65661c53c098b79ffce2d58153c780c93a9a64634641f9b5c4a506a",
+    "md5": "ca995256f3272fb5a3d8ebe106bbabc6",
+    "provider_checksum": "ca995256f3272fb5a3d8ebe106bbabc6",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534806?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C1_EIS_180mA.txt",
+    "size": 8530,
+    "sha256": "bc4e9b6cbbb8985ed524b22a93ea793ebc5ebe3ff9dff7d0ca4bf1e0c204ae2e",
+    "md5": "cecd1296bac29c815ac691971b311dc0",
+    "provider_checksum": "cecd1296bac29c815ac691971b311dc0",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534762?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C1_EIS_45mA.txt",
+    "size": 8611,
+    "sha256": "c19eaf13e12eefe94440a57b4e8d8b2a543fe96eb693aa231ba507b52e56555e",
+    "md5": "773fa6c208b2f41f2e6ea408047ed64f",
+    "provider_checksum": "773fa6c208b2f41f2e6ea408047ed64f",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534850?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C1_EIS_900mA.txt",
+    "size": 8610,
+    "sha256": "049dd753d131ea7a70bf5ebfe3d8176917711831813342f0ecb62f118ab869ee",
+    "md5": "ea8cd828e1e81bededb9c932f133a412",
+    "provider_checksum": "ea8cd828e1e81bededb9c932f133a412",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534719?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C1_IV.txt",
+    "size": 64640,
+    "sha256": "d8ff417e0a8a555f89a8829048f6dc9f624e19a22bc2d215d1f2a85cf25054b9",
+    "md5": "7b9b340665bdade3997a98be0eac03a8",
+    "provider_checksum": "7b9b340665bdade3997a98be0eac03a8",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534794?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C20_EIS_180mA.txt",
+    "size": 8521,
+    "sha256": "ba3735dbf126b6b907d64c33e9fcf4d7cb68e1f332d8c4333d3a7731df6c60f3",
+    "md5": "31073246a00fe88bf7dfdca2ccc8d358",
+    "provider_checksum": "31073246a00fe88bf7dfdca2ccc8d358",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534771?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C20_EIS_45mA.txt",
+    "size": 8615,
+    "sha256": "706f441e4428b95d0221a48d59a17626f1911bfdb2915a064ae79997d1f5d765",
+    "md5": "bec82f02dd077bc4edfd608c822d19c3",
+    "provider_checksum": "bec82f02dd077bc4edfd608c822d19c3",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534853?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C20_EIS_900mA.txt",
+    "size": 8626,
+    "sha256": "fec84a225bae31872f5065a7bb2a369e59e8f95ed603b005060df7512b9ce64e",
+    "md5": "5335c9bc9fc59b59e783273cee845384",
+    "provider_checksum": "5335c9bc9fc59b59e783273cee845384",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534725?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C20_IV.txt",
+    "size": 63878,
+    "sha256": "3b2ad36bc348de35ac85f375a135a77fe1a8d24dc3925822f044e8787c3d9a23",
+    "md5": "ee0cce5d41779da3088b0846341f67d1",
+    "provider_checksum": "ee0cce5d41779da3088b0846341f67d1",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534800?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C21_EIS_180mA.txt",
+    "size": 8545,
+    "sha256": "9b87926418c21fb711575956b79259c045d825cc916ae27d69951af9ecd6ca77",
+    "md5": "b0b2c80f18cab48b9c6a4a608d154208",
+    "provider_checksum": "b0b2c80f18cab48b9c6a4a608d154208",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534764?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C21_EIS_45mA.txt",
+    "size": 8631,
+    "sha256": "f0496306380de0fcd1b219a7676d1021ebf4ec1b0b27a5cbdacc19ad45c76c58",
+    "md5": "2b26a634c9f21dbc6a4bf95f6fbde6fa",
+    "provider_checksum": "2b26a634c9f21dbc6a4bf95f6fbde6fa",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534851?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C21_EIS_900mA.txt",
+    "size": 8641,
+    "sha256": "c7498d6ca24da5f2b6cca3696b714c5e017f006e180b1f4cd6581a623a75613d",
+    "md5": "57aa0a9344a122bcc1f0e8e8c70a036d",
+    "provider_checksum": "57aa0a9344a122bcc1f0e8e8c70a036d",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534735?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C21_IV.txt",
+    "size": 63108,
+    "sha256": "fcd36cd9c776e903cffafac93dddde6d6cacdb783875c50c1cd491c31cb2d7b2",
+    "md5": "d226463b1f9cccfed1b98fb7cdfdea85",
+    "provider_checksum": "d226463b1f9cccfed1b98fb7cdfdea85",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534798?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C22_EIS_180mA.txt",
+    "size": 8555,
+    "sha256": "c9537e422a85aa5d8b5222b7dccf9f04f824454b0c34e53137c271f47e82d7aa",
+    "md5": "971a1a62e70c0ce797b2162baa55acf9",
+    "provider_checksum": "971a1a62e70c0ce797b2162baa55acf9",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534761?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C22_EIS_45mA.txt",
+    "size": 8632,
+    "sha256": "63dce904dcbe85522f3035ab9450e583cc48e77d3ef67967276c3f3d93f630b1",
+    "md5": "90386bf000852801c0a93885c66f796e",
+    "provider_checksum": "90386bf000852801c0a93885c66f796e",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534827?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C22_EIS_900mA.txt",
+    "size": 8643,
+    "sha256": "9669ccbc71f509690b5d5da1db60fd81b6ed4400b0a2f4e70521b07cc31438b4",
+    "md5": "1820c2aba9d174559058f15c12674cab",
+    "provider_checksum": "1820c2aba9d174559058f15c12674cab",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534714?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C22_IV.txt",
+    "size": 63223,
+    "sha256": "9bf483f4a3da0fdd88b6ec627734d9c8634847c47111b0d8d0b385b69729c617",
+    "md5": "7c76d5a0d71e8939645b62869ac98d27",
+    "provider_checksum": "7c76d5a0d71e8939645b62869ac98d27",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534791?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C23_EIS_180mA.txt",
+    "size": 8553,
+    "sha256": "554cb7359ee57667d14286327e90fa62c1524299ab175fec5cc769639b8b82cf",
+    "md5": "1b3ee2ae5766de4bb118197b91d36bf2",
+    "provider_checksum": "1b3ee2ae5766de4bb118197b91d36bf2",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534752?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C23_EIS_45mA.txt",
+    "size": 8623,
+    "sha256": "02ebef49026a75371794ec65778a27f8691387bec2703ecb053dd96a69c53ab0",
+    "md5": "97236c2d474dc2a1d3730f795d144c7c",
+    "provider_checksum": "97236c2d474dc2a1d3730f795d144c7c",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534847?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C23_EIS_900mA.txt",
+    "size": 8666,
+    "sha256": "13ee95abd3c85549d259fc20b45a0893f5160b24307ec7883f25a6bae282f5fe",
+    "md5": "301a56e8c6ac660b0d7856e74edc40b6",
+    "provider_checksum": "301a56e8c6ac660b0d7856e74edc40b6",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534718?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C23_IV.txt",
+    "size": 63212,
+    "sha256": "5c5863726596dbc51fba6e98d8d41830b759db8f14a1041db0b1e97db41f4981",
+    "md5": "c5c38a02c3dc0ac522e1d376e8d5fa64",
+    "provider_checksum": "c5c38a02c3dc0ac522e1d376e8d5fa64",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534788?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C24_EIS_180mA.txt",
+    "size": 8540,
+    "sha256": "c2eda80e485a3476f750e259d2cf6be9dce0c5392dc615e2c7e795f6105730d9",
+    "md5": "26eee3017ae68e9b934180ea25d107ee",
+    "provider_checksum": "26eee3017ae68e9b934180ea25d107ee",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534751?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C24_EIS_45mA.txt",
+    "size": 8612,
+    "sha256": "eefe953799a50708747a533ad6d189a7d89fd498a9bb5685c2e23b346b28a3b2",
+    "md5": "a11a41d431fc65b6d515099b0eb3aa80",
+    "provider_checksum": "a11a41d431fc65b6d515099b0eb3aa80",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534824?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C24_EIS_900mA.txt",
+    "size": 8626,
+    "sha256": "e868473608e2dc5328fad28523b38abe9a3d293c63a2f0bdd598c4592490b144",
+    "md5": "17378ec0cd42d64bd55c6d39a0766bbf",
+    "provider_checksum": "17378ec0cd42d64bd55c6d39a0766bbf",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534732?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C24_IV.txt",
+    "size": 63892,
+    "sha256": "09987dae4ab827f5199639eceb82b5d8c7ed2e04e93c13b3db770469fa063072",
+    "md5": "90dfdaf124641e66263fd52c18133cc7",
+    "provider_checksum": "90dfdaf124641e66263fd52c18133cc7",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534802?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C25_EIS_180mA.txt",
+    "size": 8547,
+    "sha256": "1246cbefb8fe9144b7620fcfcfecca79bdd89d712899fd21685a317744bd46bf",
+    "md5": "d243d4e08d7f3917ea89a9fbf21085d7",
+    "provider_checksum": "d243d4e08d7f3917ea89a9fbf21085d7",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534778?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C25_EIS_45mA.txt",
+    "size": 8629,
+    "sha256": "0b830f485d59bdf1a95ea7f73a85d09891142db18d82ddbfcc6f6bde4f83e32e",
+    "md5": "652e441e018b91f44dfd14a513b5adc8",
+    "provider_checksum": "652e441e018b91f44dfd14a513b5adc8",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534825?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C25_EIS_900mA.txt",
+    "size": 8639,
+    "sha256": "dc6e8cb78e9e057db990962302f87550f210297474ad6e49e37c4f99ccc32e1c",
+    "md5": "3a41ed4ff0c0af98e2bdc3288026b644",
+    "provider_checksum": "3a41ed4ff0c0af98e2bdc3288026b644",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534723?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C25_IV.txt",
+    "size": 62312,
+    "sha256": "80b7cd7b6ac2fe9276d7ea1c61f088bff77612929d5395c240b3091e932c82f5",
+    "md5": "1b337bfbdf9923dd03596a650121b372",
+    "provider_checksum": "1b337bfbdf9923dd03596a650121b372",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534820?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C26_EIS_180mA.txt",
+    "size": 8560,
+    "sha256": "a07ceb633256d500ee584d5e5891839c8c8c84d053a6e76d5456ef4bbc1b6cd2",
+    "md5": "ac9d6ce2dc3efe6246ccc68b7106c83d",
+    "provider_checksum": "ac9d6ce2dc3efe6246ccc68b7106c83d",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534750?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C26_EIS_45mA.txt",
+    "size": 8629,
+    "sha256": "88c092569affe97b0e407904c937d92794c50db303a2ac613b35969b0b59b293",
+    "md5": "c066cc93fe453de7db70c3c07143d573",
+    "provider_checksum": "c066cc93fe453de7db70c3c07143d573",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534838?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C26_EIS_900mA.txt",
+    "size": 8616,
+    "sha256": "2bb198dff8c9b28f9a1c859a62e1f06877752b920c065a6137e96f265dff5bf1",
+    "md5": "df574b0cbc74e2fb1969bdd87ca482d9",
+    "provider_checksum": "df574b0cbc74e2fb1969bdd87ca482d9",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534733?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C26_IV.txt",
+    "size": 62488,
+    "sha256": "eeee188a0390094a99b3bbbb5289d93299beef63d41cfd77db7fa0cd1ce9c862",
+    "md5": "e7fd8d949ba7bb36d820c40eb39e79a4",
+    "provider_checksum": "e7fd8d949ba7bb36d820c40eb39e79a4",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534805?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C27_EIS_180mA.txt",
+    "size": 8548,
+    "sha256": "547d47c0918093952863f84f79263a7b7b38d815bc0f2630e0e025196c09bf02",
+    "md5": "d75d441276097301ab6a02f16d9d91ef",
+    "provider_checksum": "d75d441276097301ab6a02f16d9d91ef",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534770?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C27_EIS_45mA.txt",
+    "size": 8613,
+    "sha256": "84466fdbd6c42c92c755dd9fbc4bd93a85113148de614cd0a88cea025b52b846",
+    "md5": "ecb87fa98ccdfc6bc45de03f7b85fa8c",
+    "provider_checksum": "ecb87fa98ccdfc6bc45de03f7b85fa8c",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534859?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C27_EIS_900mA.txt",
+    "size": 8633,
+    "sha256": "2e7e7d8103954e49b57ed3d6a72ee33489b24115b47cc5c27b433265223b2d01",
+    "md5": "f6654a25190ac3d02fa313f0fd8a5da4",
+    "provider_checksum": "f6654a25190ac3d02fa313f0fd8a5da4",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534722?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C27_IV.txt",
+    "size": 62421,
+    "sha256": "3e6014ce9d841b7a87bb8cb04b31bf8538feb89aaa146af0c07bf3ddd7347214",
+    "md5": "9b977f631a942ff275da34dd026a1c1c",
+    "provider_checksum": "9b977f631a942ff275da34dd026a1c1c",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534817?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C28_EIS_180mA.txt",
+    "size": 8523,
+    "sha256": "c77c65f523730e9107d84ab9dab1ac1025eba7fb04da57cacf7d5aa3382cd5d3",
+    "md5": "6e20ceb64eb55ee4bd3af2c4682f8792",
+    "provider_checksum": "6e20ceb64eb55ee4bd3af2c4682f8792",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534763?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C28_EIS_45mA.txt",
+    "size": 8590,
+    "sha256": "2d39516d2c070330f65688a821789a7231dc4a8ae07365551d85f276fff944e1",
+    "md5": "9b0cb49f2b622a9bdf325059c0e5b31d",
+    "provider_checksum": "9b0cb49f2b622a9bdf325059c0e5b31d",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534857?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C28_EIS_900mA.txt",
+    "size": 8567,
+    "sha256": "536bb76fbc3b4eed7dcb42ed5837cc53b0c92c5b2a789890bed4bfdfb6d8812a",
+    "md5": "1635d8dc4814cc6b6c0370dec80bacba",
+    "provider_checksum": "1635d8dc4814cc6b6c0370dec80bacba",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534749?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C28_IV.txt",
+    "size": 63180,
+    "sha256": "a0926c3b3485f4ebf1ce59a3fe0e2e942afad290835bc3c400245d0f33384b48",
+    "md5": "88b284cd4dfb7a21ecbdcdd21cb250d1",
+    "provider_checksum": "88b284cd4dfb7a21ecbdcdd21cb250d1",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534792?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C29_EIS_180mA.txt",
+    "size": 8523,
+    "sha256": "b2dbb92ff03d28ec4c556aef5fed118ffb6d2688c980a21e02c1adc3d666e47c",
+    "md5": "602e61d034e73b38187d45fe301bc44d",
+    "provider_checksum": "602e61d034e73b38187d45fe301bc44d",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534755?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C29_EIS_45mA.txt",
+    "size": 8621,
+    "sha256": "87c53a81b16a6d59b2efd24fa501f1cbd67b6372d89b6f728c6e91f0e54a5d79",
+    "md5": "1b834d226d547682cb6b244fc0c9e3ae",
+    "provider_checksum": "1b834d226d547682cb6b244fc0c9e3ae",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534836?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C29_EIS_900mA.txt",
+    "size": 8591,
+    "sha256": "e80e8f45d727964d71139388e9f91db0350c47bda04865d2279ac6bab9dded35",
+    "md5": "4112bbebdbfae0bad6e8bdc14dcbbd79",
+    "provider_checksum": "4112bbebdbfae0bad6e8bdc14dcbbd79",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534734?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C29_IV.txt",
+    "size": 62801,
+    "sha256": "1fe47ed369e828896ef673e0cc6fb75d9e4c148357283e7516720abb17e240e9",
+    "md5": "1239e097106d2c2f82ab88e308427ba6",
+    "provider_checksum": "1239e097106d2c2f82ab88e308427ba6",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534818?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C2_EIS_180mA.txt",
+    "size": 8533,
+    "sha256": "f2f3ba267557a7466bc58be3122252a65b1635549b9ed23576c7d33a358fd85e",
+    "md5": "a543c561573b46252712eb4b4e7e60db",
+    "provider_checksum": "a543c561573b46252712eb4b4e7e60db",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534786?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C2_EIS_45mA.txt",
+    "size": 8603,
+    "sha256": "7bb9aca08eda01852c5221e453d006c9c4cdf6356d277719a5e3c626cbf68251",
+    "md5": "7231cae13945e02a070d60c1b4db01a7",
+    "provider_checksum": "7231cae13945e02a070d60c1b4db01a7",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534844?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C2_EIS_900mA.txt",
+    "size": 8623,
+    "sha256": "d6086307898692e6f6fdcae4523bf4c7ce04a38edbb6b9ca850d0f2a885e454b",
+    "md5": "cf0b4e7999f9e9d59cc25f2948765856",
+    "provider_checksum": "cf0b4e7999f9e9d59cc25f2948765856",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534717?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C2_IV.txt",
+    "size": 65001,
+    "sha256": "a1ce8b45af7605aea614ce77df1d57ec8d447ee5a0de4548ed97dd0bb5d6c498",
+    "md5": "6a70beb685a191322af2660f3e2820de",
+    "provider_checksum": "6a70beb685a191322af2660f3e2820de",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534811?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C30_EIS_180mA.txt",
+    "size": 8524,
+    "sha256": "a1ae7770580fc7d82e75f26a66519ca156fc3efce39498031a283577dbcaab4e",
+    "md5": "4dd29a2a27955562abfa7a8705f9c00f",
+    "provider_checksum": "4dd29a2a27955562abfa7a8705f9c00f",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534757?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C30_EIS_45mA.txt",
+    "size": 8621,
+    "sha256": "19a026c2ba6c5cce8779ee3ea5ae60f9813cbe71b510fdb3c45d15c67748b3ae",
+    "md5": "b79441f67f864e5a4c9c20025fe34c18",
+    "provider_checksum": "b79441f67f864e5a4c9c20025fe34c18",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534860?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C30_EIS_900mA.txt",
+    "size": 8646,
+    "sha256": "2c8f6893a48d72ffba81499569e5ff1c02873936ad48634869a720cb73b6c49e",
+    "md5": "9349c2e6d13d119951280652a94f7fcd",
+    "provider_checksum": "9349c2e6d13d119951280652a94f7fcd",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534742?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C30_IV.txt",
+    "size": 62911,
+    "sha256": "9b875323f092736270892df92f8308006bcf059d66051530cc303980876ff11b",
+    "md5": "d4876ab8a3c302f44d71260a9d25b707",
+    "provider_checksum": "d4876ab8a3c302f44d71260a9d25b707",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534808?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C31_EIS_180mA.txt",
+    "size": 8530,
+    "sha256": "cf660e67008e78076dd870c9eae6b3f25bed843489f2f59bae007a935005a21c",
+    "md5": "2d288e3ddb125d09bcbb26b67ca26e28",
+    "provider_checksum": "2d288e3ddb125d09bcbb26b67ca26e28",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534781?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C31_EIS_45mA.txt",
+    "size": 8622,
+    "sha256": "fd78ecb2dd1379ad33404c1061f6e39f207df48ae8a17a5670331effc8c405ca",
+    "md5": "dc6145e03df516fe5f15284839974edc",
+    "provider_checksum": "dc6145e03df516fe5f15284839974edc",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534845?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C31_EIS_900mA.txt",
+    "size": 8638,
+    "sha256": "d419e6e571b2d675ccf1b453872be624f2eb3499210f46692a447f57d3dcab0f",
+    "md5": "f81199d6eccfab25356461a76ea58ed9",
+    "provider_checksum": "f81199d6eccfab25356461a76ea58ed9",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534715?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C31_IV.txt",
+    "size": 62288,
+    "sha256": "95e0d23ed1a42de030054fb0a1cd58c9753c023ebd3f12f1aeec79a7068ca7dc",
+    "md5": "bbf27598ed6982dd2ff1260ca92f0293",
+    "provider_checksum": "bbf27598ed6982dd2ff1260ca92f0293",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534810?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C32_EIS_180mA.txt",
+    "size": 8565,
+    "sha256": "f0bf207f353647c62e9e936ab66d76e777f24dd189688f7cd744baa292816ab0",
+    "md5": "9623d87d3f14285f44185fbc38827487",
+    "provider_checksum": "9623d87d3f14285f44185fbc38827487",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534758?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C32_EIS_45mA.txt",
+    "size": 8625,
+    "sha256": "6881cec29729a18cb0d536ea078e9bc3fb05598cd16384bf3e1c914f9810a2c3",
+    "md5": "7d03a075ae33b86b3bf07b1c48d7eb00",
+    "provider_checksum": "7d03a075ae33b86b3bf07b1c48d7eb00",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534852?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C32_EIS_900mA.txt",
+    "size": 8615,
+    "sha256": "bc0ce4062757b0855365c0f2ba2b80bc3e150cbdf39cd4b44f75794fe1e89d36",
+    "md5": "baf3e11bbb16945af69022e27731b9cf",
+    "provider_checksum": "baf3e11bbb16945af69022e27731b9cf",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534730?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C32_IV.txt",
+    "size": 62210,
+    "sha256": "9d754508b90c95e0fd5a31e3b4f388fff112ccb7251af3c8f5e734cdf650c2ef",
+    "md5": "9fd3bfd469e49a586c6e7a8c27cd1e66",
+    "provider_checksum": "9fd3bfd469e49a586c6e7a8c27cd1e66",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534799?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C33_EIS_180mA.txt",
+    "size": 8520,
+    "sha256": "c6e2d625c2fa2de0279061041deffe15b380de4f16aa9cfd875bae7b4671bda7",
+    "md5": "93343d3ce6846a2791199564fb2c4f7f",
+    "provider_checksum": "93343d3ce6846a2791199564fb2c4f7f",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534785?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C33_EIS_45mA.txt",
+    "size": 8616,
+    "sha256": "b322efe86096dde362dd024e42073b87f6573a76b54f2a8687d279062f64a143",
+    "md5": "a95e4a41cabc0c42e90fe07e5ca608c6",
+    "provider_checksum": "a95e4a41cabc0c42e90fe07e5ca608c6",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534832?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C33_EIS_900mA.txt",
+    "size": 8613,
+    "sha256": "ab7af2ad783338d2956e098f1370aca76a7a26e9f182ae7dc388e244c85bc450",
+    "md5": "c326a495a60b9d703183cbe698bda2bf",
+    "provider_checksum": "c326a495a60b9d703183cbe698bda2bf",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534726?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C33_IV.txt",
+    "size": 62284,
+    "sha256": "8eb692609a8fc895924b2fef11db8890147456e4d0af7ecd73237c1f2dc8e772",
+    "md5": "6b40378e688613fb6ed007842e1cf443",
+    "provider_checksum": "6b40378e688613fb6ed007842e1cf443",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534809?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C34_EIS_180mA.txt",
+    "size": 8530,
+    "sha256": "02547cf4d42a712f8126ba9febfe1dbc7eed3ef23f88965ab08f9e376f96dbd3",
+    "md5": "92e9ab722aaa13badb9ae33f7d135603",
+    "provider_checksum": "92e9ab722aaa13badb9ae33f7d135603",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534754?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C34_EIS_45mA.txt",
+    "size": 8613,
+    "sha256": "04e745c9ed2c623bee833ed0f6a5529286068e5b4e482c24f5292dbc5f3ecbdf",
+    "md5": "e91091f3615bebe25992659a69c191e0",
+    "provider_checksum": "e91091f3615bebe25992659a69c191e0",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534834?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C34_EIS_900mA.txt",
+    "size": 8631,
+    "sha256": "902e7a61bf5f12902f31faae50224405cea7c8b5bd4304cf46678971f039ca17",
+    "md5": "7c079bef2babba3fc606f6f2dacffbbc",
+    "provider_checksum": "7c079bef2babba3fc606f6f2dacffbbc",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534728?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C34_IV.txt",
+    "size": 61621,
+    "sha256": "837d1365d56cf9968beba6cf6081e2b45b7cc4f9c9f86a1bd66b38c433b78419",
+    "md5": "2a641fbcb7f150937cdb8b305724e21d",
+    "provider_checksum": "2a641fbcb7f150937cdb8b305724e21d",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534807?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C35_EIS_180mA.txt",
+    "size": 8552,
+    "sha256": "91093bcbc69b3bdd5161cfce1996ba2c1be19f87599762bf92575f5e03ce21d1",
+    "md5": "66f9f8e834d8ac4049a5a58f116e71aa",
+    "provider_checksum": "66f9f8e834d8ac4049a5a58f116e71aa",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534769?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C35_EIS_45mA.txt",
+    "size": 8564,
+    "sha256": "272a04a69b82a145a0bb9d6851838d82eec13d67a171d76b8c024061c4649ab1",
+    "md5": "808fcbac38e7db4b273563b265a62ef0",
+    "provider_checksum": "808fcbac38e7db4b273563b265a62ef0",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534828?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C35_EIS_900mA.txt",
+    "size": 8616,
+    "sha256": "6c20c968085882825123e20fa73f0669d41a67d05846fabeead6c9f6d2df7bcd",
+    "md5": "d1739f71cf2ab77894336a42a55db324",
+    "provider_checksum": "d1739f71cf2ab77894336a42a55db324",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534748?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C35_IV.txt",
+    "size": 61527,
+    "sha256": "3a94f0c1b94586920f0cde873b2e2bcc058c03d9cde3d91390a2eef6436ae753",
+    "md5": "d3ca3d58d528d7362e473260902e4ab7",
+    "provider_checksum": "d3ca3d58d528d7362e473260902e4ab7",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534789?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C36_EIS_180mA.txt",
+    "size": 8544,
+    "sha256": "3412bb89a172b1c78c316acd9929066f5c3b923c3620e7df9700c5fda1a7be1d",
+    "md5": "c025ff477ef5a376b47b4fc3c73b1b35",
+    "provider_checksum": "c025ff477ef5a376b47b4fc3c73b1b35",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534779?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C36_EIS_45mA.txt",
+    "size": 8645,
+    "sha256": "e0c0c47cd72a8b2ebf1b67e669eeb2b46a420ec0b0982961c8f5c4ec054b7975",
+    "md5": "96ece60fa47c4d8bd2c28344a285a33f",
+    "provider_checksum": "96ece60fa47c4d8bd2c28344a285a33f",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534841?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C36_EIS_900mA.txt",
+    "size": 8609,
+    "sha256": "189b14606527623446d7e3ab3cf3d5fdc86dcc6e411e771f59350432bae8a0fe",
+    "md5": "cf261fa26d48a4614cc639fdae7191f5",
+    "provider_checksum": "cf261fa26d48a4614cc639fdae7191f5",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534737?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C36_IV.txt",
+    "size": 61759,
+    "sha256": "7b6b2178cbfe34624f2b80140caac5649fcaceff2b0ffb6c68eb1a3f2da63379",
+    "md5": "773abc9041a0e02ea0739554f8143df0",
+    "provider_checksum": "773abc9041a0e02ea0739554f8143df0",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534812?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C3_EIS_180mA.txt",
+    "size": 8517,
+    "sha256": "3d8d98972ee8cf3be96d635c04577be6b6db60524bd2a50f2074a72279b98be6",
+    "md5": "89ff888672f47ecb27657ce2bbdc0b5a",
+    "provider_checksum": "89ff888672f47ecb27657ce2bbdc0b5a",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534772?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C3_EIS_45mA.txt",
+    "size": 8624,
+    "sha256": "bf9a13170ce10619af433951d3ac7c09d4f544c59d1f2a17ef7d6f4df9b8d565",
+    "md5": "e347ddc128d3156b70cb5ffa6e13ba69",
+    "provider_checksum": "e347ddc128d3156b70cb5ffa6e13ba69",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534843?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C3_EIS_900mA.txt",
+    "size": 8637,
+    "sha256": "719914e73d9d661d428cfaa5c3c6ee395357647afff953c4493cabaee3f60cde",
+    "md5": "aa392dd0ea32167b3558fc6addc69c4c",
+    "provider_checksum": "aa392dd0ea32167b3558fc6addc69c4c",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534743?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C3_IV.txt",
+    "size": 64760,
+    "sha256": "2e1bfd6cbb51b1ec51c5d3adbe2aecd11c35738c66fc2bca67e2e7cec11ccf88",
+    "md5": "c0b413239685c2b50549ef486087451a",
+    "provider_checksum": "c0b413239685c2b50549ef486087451a",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534821?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C4_EIS_180mA.txt",
+    "size": 8542,
+    "sha256": "b542d40757607435d074264160118acf942019d025683ce1b83ecd065206f6d5",
+    "md5": "58f17375655161b51ea94f1107b180b2",
+    "provider_checksum": "58f17375655161b51ea94f1107b180b2",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534777?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C4_EIS_45mA.txt",
+    "size": 8613,
+    "sha256": "8bca851d5af98fb7fcde20134c19147530591b04a4b659c9ffe252f147eeed19",
+    "md5": "3fbe858ce8e8d4d39e05e3683c32a121",
+    "provider_checksum": "3fbe858ce8e8d4d39e05e3683c32a121",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534829?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C4_EIS_900mA.txt",
+    "size": 8658,
+    "sha256": "fc90aaf860945b338423bb57064f9d0d5aaed65130d099bbbb1b5c842240cdf6",
+    "md5": "31f82f12561fce95b837a240bdae6c2e",
+    "provider_checksum": "31f82f12561fce95b837a240bdae6c2e",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534721?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C4_IV.txt",
+    "size": 63816,
+    "sha256": "b74716b68dc3fb37032b0315725f45c1c13441afa25ee14837d6901241c0b999",
+    "md5": "adee4088c48db6f6b359766a0e062683",
+    "provider_checksum": "adee4088c48db6f6b359766a0e062683",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534801?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C5_EIS_180mA.txt",
+    "size": 8532,
+    "sha256": "3a6e68bf693e9fe32e2fb4d1a5db8facc8898be34f1604e2ac92f67b5c6ed7d0",
+    "md5": "855f978873a84fc236b244444841edfe",
+    "provider_checksum": "855f978873a84fc236b244444841edfe",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534768?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C5_EIS_45mA.txt",
+    "size": 8604,
+    "sha256": "3b6b914dd0d4b27029b47602d2f3fd379440f7c2bdfe50c49392d9134a987900",
+    "md5": "a8e137284eb15ed965567fd30b02c4da",
+    "provider_checksum": "a8e137284eb15ed965567fd30b02c4da",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534830?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C5_EIS_900mA.txt",
+    "size": 8635,
+    "sha256": "f807196fbac22c06cd8aa3597c3a1fcf5912b0f0fee598f025b8a71898dc255d",
+    "md5": "d81b2992e7b672630cb4f02810f76434",
+    "provider_checksum": "d81b2992e7b672630cb4f02810f76434",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534727?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C5_IV.txt",
+    "size": 62824,
+    "sha256": "28bdbc371b233da50c0279cb2b81a330c57df1b35c5e973f97f7c4212634a3c5",
+    "md5": "e192ddd77e0244b050c6b661bb411fa2",
+    "provider_checksum": "e192ddd77e0244b050c6b661bb411fa2",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534787?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C6_EIS_180mA.txt",
+    "size": 8531,
+    "sha256": "353179b91cb71ae8e8a7a0086af5ed591b03fa99214b1fe41a32e3d2c31cba9f",
+    "md5": "060db57590306ce64f695ffd6218b918",
+    "provider_checksum": "060db57590306ce64f695ffd6218b918",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534783?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C6_EIS_45mA.txt",
+    "size": 8620,
+    "sha256": "bb3e80011d7634105f741e14c68dbc93bb6f64bbe1b0f4fa4a4cd9998bd24f47",
+    "md5": "a4285e6b361326ba285395ddbb55a7d1",
+    "provider_checksum": "a4285e6b361326ba285395ddbb55a7d1",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534833?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C6_EIS_900mA.txt",
+    "size": 8643,
+    "sha256": "96b310b978b08a3fd407fcf70242f901018251690353703a3788246f11211d6b",
+    "md5": "b57b9434682d90c0445a0369367a057c",
+    "provider_checksum": "b57b9434682d90c0445a0369367a057c",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534731?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C6_IV.txt",
+    "size": 63639,
+    "sha256": "5519717dd8c100c2dee16b4c633cfaee1848c305199ff33f5bcb4ac7fe79ffa2",
+    "md5": "e8b6ac09e38a80c62bf87ca809b71966",
+    "provider_checksum": "e8b6ac09e38a80c62bf87ca809b71966",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534795?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C7_EIS_180mA.txt",
+    "size": 8535,
+    "sha256": "dd4b7ae9ea3a8a8b4dfd5e60b63164d8d566e001c0ca6a6fa115f61c78eca9e1",
+    "md5": "5e6969f8a5ceb278147db25875491a7c",
+    "provider_checksum": "5e6969f8a5ceb278147db25875491a7c",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534753?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C7_EIS_45mA.txt",
+    "size": 8625,
+    "sha256": "a4022bbd5597a9c686dcc0e8e34a97893d35ef69fb509ca67c39bef0685de283",
+    "md5": "94383a11aeda3f2f3c63582a8519a2dc",
+    "provider_checksum": "94383a11aeda3f2f3c63582a8519a2dc",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534854?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C7_EIS_900mA.txt",
+    "size": 8637,
+    "sha256": "b246065bc7d868435b12942806cc0d9293aa75f361aaa727992b12e4c85afb72",
+    "md5": "3f4e5af4ea11da0c277437be952d11ad",
+    "provider_checksum": "3f4e5af4ea11da0c277437be952d11ad",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534744?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C7_IV.txt",
+    "size": 63519,
+    "sha256": "0705a1ea189d3bb9ae5773f1f53d195adc9da662cc7cfce181464f4357fa3fc0",
+    "md5": "442e39b29480dadeb53dc92c6e1ffb69",
+    "provider_checksum": "442e39b29480dadeb53dc92c6e1ffb69",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534796?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C8_EIS_180mA.txt",
+    "size": 8543,
+    "sha256": "b775b98c917106ff9b75b329ea9db990567d4f60791ad0d6301eea872caf4f2d",
+    "md5": "88b8e2e4741c7719f8ebddbdd2d4ad19",
+    "provider_checksum": "88b8e2e4741c7719f8ebddbdd2d4ad19",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534765?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C8_EIS_45mA.txt",
+    "size": 8597,
+    "sha256": "deeebc88138404010bc41ca4f16046dd3b13c2c87b9edbed9e2486c6c6127731",
+    "md5": "9db13d0213555455b411106925f9b744",
+    "provider_checksum": "9db13d0213555455b411106925f9b744",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534858?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C8_EIS_900mA.txt",
+    "size": 8594,
+    "sha256": "40e2ddf62db6843bafd1659bae347bc9f74cd7a84d67ee9a88db81f56557f2f4",
+    "md5": "46a181344fe3efb5d991e4534f849865",
+    "provider_checksum": "46a181344fe3efb5d991e4534f849865",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534736?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C8_IV.txt",
+    "size": 62792,
+    "sha256": "2bab285699712d4fa125719f2d292fb92f75ea4fee3dfd86da27bf65eb258a5d",
+    "md5": "f18592e4d7cfbe830583b7b3c278770e",
+    "provider_checksum": "f18592e4d7cfbe830583b7b3c278770e",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534803?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_180mA/C9_EIS_180mA.txt",
+    "size": 8548,
+    "sha256": "942ae7aeb5111b65591cdc90695732bb3392c69773699747fffa2cb009e67127",
+    "md5": "4c963daf8fc8537a4b7e0ea35f704d2e",
+    "provider_checksum": "4c963daf8fc8537a4b7e0ea35f704d2e",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534782?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_45mA/C9_EIS_45mA.txt",
+    "size": 8637,
+    "sha256": "805ee555e859e43f75500e8a4b7947af08803c38589776b112937924d33befaf",
+    "md5": "104cd244f3eda91452a8535c1d512385",
+    "provider_checksum": "104cd244f3eda91452a8535c1d512385",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534840?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/EIS_900mA/C9_EIS_900mA.txt",
+    "size": 8644,
+    "sha256": "c5a5334ff02552aa25b3329110e1b0312395acb5d24ff523eee591704de15707",
+    "md5": "fe8ed623d441c3ea44a7f90304e22bef",
+    "provider_checksum": "fe8ed623d441c3ea44a7f90304e22bef",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/534741?format=original",
+    "path": "candidate_bytes/DIFFERENTIAL/Data/IV_curves/C9_IV.txt",
+    "size": 62810,
+    "sha256": "fd5652c9b3fe7d3a17517f03ded71c3487637b4f86fd473aebbfeed7fce81455",
+    "md5": "42e84ed875429ce5157b273c29407d89",
+    "provider_checksum": "42e84ed875429ce5157b273c29407d89",
+    "provider_checksum_match": true,
+    "content_type": "text/plain"
+  },
+  {
+    "tag": "DIFFERENTIAL",
+    "error": "provider size mismatch"
+  },
+  {
+    "tag": "SEVILLA",
+    "error": "403 Client Error: Forbidden for url: https://www.mdpi.com/2306-5729/5/2/47"
+  }
+]
