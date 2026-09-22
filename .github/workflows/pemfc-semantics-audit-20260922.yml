@@ -1,0 +1,47 @@
+name: Public PEMFC semantics and acquisition audit 20260922
+on:
+  push:
+    branches: [research/pemfc-quality-audit-20260922]
+    paths: [scripts/pemfc_audit_semantics_20260922.py, .github/workflows/pemfc-semantics-audit-20260922.yml]
+permissions:
+  contents: write
+  actions: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 35710295067
+          name: PEMFC_CANDIDATE_RAW_NOT_APPROVED
+          path: previous_artifact
+      - run: |
+          unzip -q previous_artifact/PEMFC_CANDIDATE_RAW_NOT_APPROVED.zip
+          pip install requests numpy pandas scipy openpyxl xlrd beautifulsoup4 playwright python-docx
+          python -m playwright install --with-deps chromium
+          sudo apt-get install -y -qq p7zip-full p7zip-rar
+      - name: Inspect raw data and channel semantics
+        run: python scripts/pemfc_audit_semantics_20260922.py
+      - name: Preserve evidence in isolated branch
+        if: always()
+        run: |
+          if [ -d pemfc_semantic_audit ]; then
+            git config user.name 'public-data-audit'
+            git config user.email 'public-data-audit@users.noreply.github.com'
+            git add pemfc_semantic_audit
+            git diff --cached --quiet || git commit -m 'Record measured versus estimated variables and full parsing evidence'
+            git push origin HEAD:research/pemfc-quality-audit-20260922
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: PEMFC_STAGE3_CANDIDATE_NOT_APPROVED
+          path: PEMFC_STAGE3_CANDIDATE_NOT_APPROVED.zip
+          retention-days: 14
+          compression-level: 0
