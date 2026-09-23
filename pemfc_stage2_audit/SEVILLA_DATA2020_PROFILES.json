@@ -1,0 +1,220 @@
+[
+  {
+    "path": "pemfc_stage2_raw/SEVILLA_DATA2020/Experimental_performance_load_cycling_PEMFC.rar",
+    "bytes": 4310707,
+    "sha256": "9f6a1f978b9e39e164da67212a90c33a221c1ef35415b1f94780162306ad426d",
+    "archive_test": "PASS",
+    "members": [
+      {
+        "path": "Experimental_performance_load_cycling_PEMFC/Cell_Load_Cycling_NEDC_Data/Cell_Load_Cycling_NEDC_experiment.rar",
+        "bytes": 1278848
+      },
+      {
+        "path": "Experimental_performance_load_cycling_PEMFC/Cell_Performance_Data/Reference_Conditions_tests/Reference_Conditions_test.rar",
+        "bytes": 210628
+      },
+      {
+        "path": "Experimental_performance_load_cycling_PEMFC/Cell_Performance_Data/Cell_Temperature_tests/Temperature_70C.rar",
+        "bytes": 376685
+      },
+      {
+        "path": "Experimental_performance_load_cycling_PEMFC/Cell_Performance_Data/Cell_Temperature_tests/Temperature_85C.rar",
+        "bytes": 347417
+      },
+      {
+        "path": "Experimental_performance_load_cycling_PEMFC/Cell_Performance_Data/Cathode_stoichiometry_tests/Cathode_stoichiometry_tests.rar",
+        "bytes": 1428608
+      },
+      {
+        "path": "Experimental_performance_load_cycling_PEMFC/Cell_Performance_Data/Cell_Pressure_tests/Pressure_anode190kPa_cathode190kPa.rar",
+        "bytes": 152555
+      },
+      {
+        "path": "Experimental_performance_load_cycling_PEMFC/Cell_Performance_Data/Cell_Pressure_tests/Pressure_anode160kPa_cathode140kPa.rar",
+        "bytes": 514134
+      },
+      {
+        "path": "Experimental_performance_load_cycling_PEMFC/Cell_Performance_Data/Reference_Conditions_tests/Reference_Conditions_test.rar__unpacked/Reference_Conditions_test",
+        "bytes": 3177812
+      },
+      {
+        "path": "Experimental_performance_load_cycling_PEMFC/Cell_Performance_Data/Cell_Temperature_tests/Temperature_70C.rar__unpacked/Temperature_70C",
+        "bytes": 6140727
+      },
+      {
+        "path": "Experimental_performance_load_cycling_PEMFC/Cell_Performance_Data/Cell_Temperature_tests/Temperature_85C.rar__unpacked/Temperature_85C",
+        "bytes": 4959806
+      },
+      {
+        "path": "Experimental_performance_load_cycling_PEMFC/Cell_Performance_Data/Cathode_stoichiometry_tests/Cathode_stoichiometry_tests.rar__unpacked/Lambda_cat_3_5",
+        "bytes": 12421529
+      },
+      {
+        "path": "Experimental_performance_load_cycling_PEMFC/Cell_Performance_Data/Cathode_stoichiometry_tests/Cathode_stoichiometry_tests.rar__unpacked/Lambda_cat_1_3",
+        "bytes": 8895291
+      },
+      {
+        "path": "Experimental_performance_load_cycling_PEMFC/Cell_Performance_Data/Cathode_stoichiometry_tests/Cathode_stoichiometry_tests.rar__unpacked/Lambda_cat_1_5",
+        "bytes": 655852
+      },
+      {
+        "path": "Experimental_performance_load_cycling_PEMFC/Cell_Performance_Data/Cell_Pressure_tests/Pressure_anode160kPa_cathode140kPa.rar__unpacked/Pressure_anode160kPa_cathode140kPa",
+        "bytes": 7866099
+      },
+      {
+        "path": "Experimental_performance_load_cycling_PEMFC/Cell_Performance_Data/Cell_Pressure_tests/Pressure_anode190kPa_cathode190kPa.rar__unpacked/Pressure_anode190kPa_cathode190kPa",
+        "bytes": 2202256
+      },
+      {
+        "path": "Experimental_performance_load_cycling_PEMFC/Cell_Load_Cycling_NEDC_Data/Cell_Load_Cycling_NEDC_experiment.rar__unpacked/Cell_Load_Cycling_NEDC_experiment",
+        "bytes": 18155877
+      }
+    ]
+  },
+  {
+    "path": "pemfc_stage2_raw/SEVILLA_DATA2020/Experimental_performance_load_cycling_PEMFC.rar__unpacked/Experimental_performance_load_cycling_PEMFC/Cell_Load_Cycling_NEDC_Data/Cell_Load_Cycling_NEDC_experiment.rar",
+    "bytes": 1278848,
+    "sha256": "e8cb224b9fe678e503bae3ed6ba4f188c93168b11b207dfc993f649e5930ef1c",
+    "archive_test": "PASS",
+    "members": [
+      {
+        "path": "Cell_Load_Cycling_NEDC_experiment",
+        "bytes": 18155877
+      }
+    ]
+  },
+  {
+    "path": "pemfc_stage2_raw/SEVILLA_DATA2020/Experimental_performance_load_cycling_PEMFC.rar__unpacked/Experimental_performance_load_cycling_PEMFC/Cell_Load_Cycling_NEDC_Data/Cell_Load_Cycling_NEDC_experiment.rar__unpacked/Cell_Load_Cycling_NEDC_experiment",
+    "bytes": 18155877,
+    "sha256": "c4a33fb734d3817acf1880c5174a143fcf3925fc7238b5c2a74a4c469efcdb29",
+    "state": "binary-unparsed"
+  },
+  {
+    "path": "pemfc_stage2_raw/SEVILLA_DATA2020/Experimental_performance_load_cycling_PEMFC.rar__unpacked/Experimental_performance_load_cycling_PEMFC/Cell_Performance_Data/Cathode_stoichiometry_tests/Cathode_stoichiometry_tests.rar",
+    "bytes": 1428608,
+    "sha256": "09c567af402ef17db74a32c1bd5b6dce49f90d30a8ebca1878046ad0b30fbcb6",
+    "archive_test": "PASS",
+    "members": [
+      {
+        "path": "Lambda_cat_3_5",
+        "bytes": 12421529
+      },
+      {
+        "path": "Lambda_cat_1_3",
+        "bytes": 8895291
+      },
+      {
+        "path": "Lambda_cat_1_5",
+        "bytes": 655852
+      }
+    ]
+  },
+  {
+    "path": "pemfc_stage2_raw/SEVILLA_DATA2020/Experimental_performance_load_cycling_PEMFC.rar__unpacked/Experimental_performance_load_cycling_PEMFC/Cell_Performance_Data/Cathode_stoichiometry_tests/Cathode_stoichiometry_tests.rar__unpacked/Lambda_cat_1_3",
+    "bytes": 8895291,
+    "sha256": "c225ea51ccabc1a5ad7f72802569003a960e5b5fd84cf9d88ca8f7ac2800714c",
+    "state": "binary-unparsed"
+  },
+  {
+    "path": "pemfc_stage2_raw/SEVILLA_DATA2020/Experimental_performance_load_cycling_PEMFC.rar__unpacked/Experimental_performance_load_cycling_PEMFC/Cell_Performance_Data/Cathode_stoichiometry_tests/Cathode_stoichiometry_tests.rar__unpacked/Lambda_cat_1_5",
+    "bytes": 655852,
+    "sha256": "49aa91e2f3037b61c4f8ec4a5beb69e13ca60e6a0412d18146cfde4adb8c26d6",
+    "state": "binary-unparsed"
+  },
+  {
+    "path": "pemfc_stage2_raw/SEVILLA_DATA2020/Experimental_performance_load_cycling_PEMFC.rar__unpacked/Experimental_performance_load_cycling_PEMFC/Cell_Performance_Data/Cathode_stoichiometry_tests/Cathode_stoichiometry_tests.rar__unpacked/Lambda_cat_3_5",
+    "bytes": 12421529,
+    "sha256": "dc4b0d431243bb9bf91a6df5085b37909b2cdc40e4df0b5ea8e3de61eb0ae598",
+    "state": "binary-unparsed"
+  },
+  {
+    "path": "pemfc_stage2_raw/SEVILLA_DATA2020/Experimental_performance_load_cycling_PEMFC.rar__unpacked/Experimental_performance_load_cycling_PEMFC/Cell_Performance_Data/Cell_Pressure_tests/Pressure_anode160kPa_cathode140kPa.rar",
+    "bytes": 514134,
+    "sha256": "f89d2613512445dc6008a1f765683e94cf0a9c5916270cd6fe1843b0c0bda54e",
+    "archive_test": "PASS",
+    "members": [
+      {
+        "path": "Pressure_anode160kPa_cathode140kPa",
+        "bytes": 7866099
+      }
+    ]
+  },
+  {
+    "path": "pemfc_stage2_raw/SEVILLA_DATA2020/Experimental_performance_load_cycling_PEMFC.rar__unpacked/Experimental_performance_load_cycling_PEMFC/Cell_Performance_Data/Cell_Pressure_tests/Pressure_anode160kPa_cathode140kPa.rar__unpacked/Pressure_anode160kPa_cathode140kPa",
+    "bytes": 7866099,
+    "sha256": "ffaaf595ef1cd8c08f6d94d39491f13c9a01e80429fa47a66eaec028a24c69a3",
+    "state": "binary-unparsed"
+  },
+  {
+    "path": "pemfc_stage2_raw/SEVILLA_DATA2020/Experimental_performance_load_cycling_PEMFC.rar__unpacked/Experimental_performance_load_cycling_PEMFC/Cell_Performance_Data/Cell_Pressure_tests/Pressure_anode190kPa_cathode190kPa.rar",
+    "bytes": 152555,
+    "sha256": "bdcd5a657a613c1886d58413b4cecb3baa199786a22317303fdd768042324641",
+    "archive_test": "PASS",
+    "members": [
+      {
+        "path": "Pressure_anode190kPa_cathode190kPa",
+        "bytes": 2202256
+      }
+    ]
+  },
+  {
+    "path": "pemfc_stage2_raw/SEVILLA_DATA2020/Experimental_performance_load_cycling_PEMFC.rar__unpacked/Experimental_performance_load_cycling_PEMFC/Cell_Performance_Data/Cell_Pressure_tests/Pressure_anode190kPa_cathode190kPa.rar__unpacked/Pressure_anode190kPa_cathode190kPa",
+    "bytes": 2202256,
+    "sha256": "6db19f316f4db7d4d5f82a2a963feab1feed05e16fc51878011aa0bbe17aa6bc",
+    "state": "binary-unparsed"
+  },
+  {
+    "path": "pemfc_stage2_raw/SEVILLA_DATA2020/Experimental_performance_load_cycling_PEMFC.rar__unpacked/Experimental_performance_load_cycling_PEMFC/Cell_Performance_Data/Cell_Temperature_tests/Temperature_70C.rar",
+    "bytes": 376685,
+    "sha256": "b5f8f8a0e202590fe9eef2aefc083ea41c928cde677e917923470aec28ee81db",
+    "archive_test": "PASS",
+    "members": [
+      {
+        "path": "Temperature_70C",
+        "bytes": 6140727
+      }
+    ]
+  },
+  {
+    "path": "pemfc_stage2_raw/SEVILLA_DATA2020/Experimental_performance_load_cycling_PEMFC.rar__unpacked/Experimental_performance_load_cycling_PEMFC/Cell_Performance_Data/Cell_Temperature_tests/Temperature_70C.rar__unpacked/Temperature_70C",
+    "bytes": 6140727,
+    "sha256": "b49a424f6dfa41e537d9a8f09d2680eb374e1b81ef48dcbf85a5e60e41d3612b",
+    "state": "binary-unparsed"
+  },
+  {
+    "path": "pemfc_stage2_raw/SEVILLA_DATA2020/Experimental_performance_load_cycling_PEMFC.rar__unpacked/Experimental_performance_load_cycling_PEMFC/Cell_Performance_Data/Cell_Temperature_tests/Temperature_85C.rar",
+    "bytes": 347417,
+    "sha256": "2ebe682cf9acb160bbbff9a017ce1ea0614951d17bba57eb80f7036b32995d12",
+    "archive_test": "PASS",
+    "members": [
+      {
+        "path": "Temperature_85C",
+        "bytes": 4959806
+      }
+    ]
+  },
+  {
+    "path": "pemfc_stage2_raw/SEVILLA_DATA2020/Experimental_performance_load_cycling_PEMFC.rar__unpacked/Experimental_performance_load_cycling_PEMFC/Cell_Performance_Data/Cell_Temperature_tests/Temperature_85C.rar__unpacked/Temperature_85C",
+    "bytes": 4959806,
+    "sha256": "aade8d64575c035216ef6077ec73782b8ffa96b675234bce034a530888d2b525",
+    "state": "binary-unparsed"
+  },
+  {
+    "path": "pemfc_stage2_raw/SEVILLA_DATA2020/Experimental_performance_load_cycling_PEMFC.rar__unpacked/Experimental_performance_load_cycling_PEMFC/Cell_Performance_Data/Reference_Conditions_tests/Reference_Conditions_test.rar",
+    "bytes": 210628,
+    "sha256": "0123e71379ccd68f2c555372af81851d3db8b5bff23cab95fddd278a1e42d1b3",
+    "archive_test": "PASS",
+    "members": [
+      {
+        "path": "Reference_Conditions_test",
+        "bytes": 3177812
+      }
+    ]
+  },
+  {
+    "path": "pemfc_stage2_raw/SEVILLA_DATA2020/Experimental_performance_load_cycling_PEMFC.rar__unpacked/Experimental_performance_load_cycling_PEMFC/Cell_Performance_Data/Reference_Conditions_tests/Reference_Conditions_test.rar__unpacked/Reference_Conditions_test",
+    "bytes": 3177812,
+    "sha256": "93389fe7f40e6ad1ef4e1e5484ba673cb01eeee479806d5a19633ffd30318c30",
+    "state": "binary-unparsed"
+  }
+]
