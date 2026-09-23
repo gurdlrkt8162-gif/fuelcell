@@ -1,0 +1,80 @@
+name: Parse Mendeley PEMFC candidate archives
+on:
+  push:
+    branches: [research/pemfc-quality-audit-20260922]
+    paths: [.github/workflows/parse-mendeley-pemfc-artifacts.yml]
+permissions:
+  actions: read
+  contents: write
+jobs:
+  parse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Download RWTH candidate
+        uses: actions/download-artifact@v4
+        with: {name: PEMFC_RWTH_NOT_APPROVED, path: mendeley_raw/RWTH, run-id: '35847706470', github-token: '${{ github.token }}'}
+      - name: Download oxygen-purge candidate
+        uses: actions/download-artifact@v4
+        with: {name: PEMFC_OXYGEN_PURGE_NOT_APPROVED, path: mendeley_raw/OXYGEN_PURGE, run-id: '35847706470', github-token: '${{ github.token }}'}
+      - name: Download two-system-fault candidate
+        uses: actions/download-artifact@v4
+        with: {name: PEMFC_TWO_SYSTEM_FAULT_NOT_APPROVED, path: mendeley_raw/TWO_SYSTEM_FAULT, run-id: '35847706470', github-token: '${{ github.token }}'}
+      - name: Download sensor-fault candidate
+        uses: actions/download-artifact@v4
+        with: {name: PEMFC_SENSOR_FAULT_NOT_APPROVED, path: mendeley_raw/SENSOR_FAULT, run-id: '35847706470', github-token: '${{ github.token }}'}
+      - name: Download JRC candidate
+        uses: actions/download-artifact@v4
+        with: {name: PEMFC_JRC_ZERO_GRADIENT_NOT_APPROVED, path: mendeley_raw/JRC_ZERO_GRADIENT, run-id: '35847706470', github-token: '${{ github.token }}'}
+      - name: Download NPL CO candidate
+        uses: actions/download-artifact@v4
+        with: {name: PEMFC_NPL_CO_CONTAMINATION_NOT_APPROVED, path: mendeley_raw/NPL_CO_CONTAMINATION, run-id: '35847706470', github-token: '${{ github.token }}'}
+      - name: Install bounded parsers
+        run: |
+          pip install requests numpy pandas scipy h5py openpyxl xlrd beautifulsoup4 python-docx
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq p7zip-full p7zip-rar
+      - name: Extract, parse and profile all candidate files
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          import sys
+          sys.path.insert(0,'scripts')
+          import pemfc_stage2_admission_audit as m
+          root=Path('mendeley_raw'); audit=Path('pemfc_mendeley_parsed_audit'); audit.mkdir(exist_ok=True)
+          m.RAW=root; m.AUD=audit; m.ERRORS=[]; m.RECEIPTS=[]
+          for _ in range(5):
+              todo=[p for p in root.rglob('*') if p.is_file() and p.suffix.lower() in ('.zip','.rar','.7z') and not p.with_name(p.name+'__unpacked').exists()]
+              if not todo: break
+              for p in todo:
+                  try: m.sevenzip(p)
+                  except Exception as e: m.ERRORS.append({'path':str(p),'archive_error':repr(e)})
+          for tagdir in sorted(p for p in root.iterdir() if p.is_dir()):
+              profiles=[]
+              for p in sorted(tagdir.rglob('*')):
+                  if not p.is_file() or p.name.endswith('.part'): continue
+                  if p.suffix.lower() in ('.json','.html') and '__unpacked' not in str(p): continue
+                  profiles.append({'path':str(p),'bytes':p.stat().st_size,'sha256':m.hash_file(p),'state':'parser-size-gate'} if p.stat().st_size>180*1024*1024 else m.inspect(p))
+              m.dump(f'{tagdir.name}_PROFILES.json',profiles)
+              m.dump(f'{tagdir.name}_SUMMARY.json',{'files':len(profiles),'parse_errors':[x for x in profiles if 'error' in x], 'archive_errors':[x for x in m.ERRORS if tagdir.name in x.get('path','')], 'bytes_including_extracted':sum(int(x.get('bytes',0)) for x in profiles)})
+          m.dump('ERRORS.json',m.ERRORS)
+          m.dump('AUDIT_SUMMARY.json',{'tags':[p.name for p in root.iterdir() if p.is_dir()],'errors':m.ERRORS,'state':'PARSED_FOR_MANUAL_ADMISSION_REVIEW_NOT_APPROVED'})
+          print((audit/'AUDIT_SUMMARY.json').read_text())
+          PY
+      - name: Preserve parsed audit evidence on isolated branch
+        run: |
+          git config user.name 'pemfc-public-data-audit'
+          git config user.email 'pemfc-public-data-audit@users.noreply.github.com'
+          git add pemfc_mendeley_parsed_audit
+          git diff --cached --quiet || git commit -m 'Record parsed QC for public Mendeley PEMFC candidates'
+          git push origin HEAD:research/pemfc-quality-audit-20260922
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PEMFC_MENDELEY_PARSED_AUDIT
+          path: pemfc_mendeley_parsed_audit
+          retention-days: 14
