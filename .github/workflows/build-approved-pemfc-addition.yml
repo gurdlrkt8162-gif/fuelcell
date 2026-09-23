@@ -35,6 +35,27 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq p7zip-full p7zip-rar
+      - name: Patch stage2 artifact extraction boundary
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('scripts/build_approved_pemfc_addition.py')
+          s=p.read_text(encoding='utf-8')
+          old="""inner=find_one(stage2_extract,['PEMFC_STAGE2_CANDIDATES_NOT_APPROVED.zip'])
+          archive_test(inner)
+          stage2_inner=Path('stage2_inner')
+          if stage2_inner.exists():shutil.rmtree(stage2_inner)
+          stage2_inner.mkdir()
+          with zipfile.ZipFile(inner) as z:z.extractall(stage2_inner)
+          """
+          new="""# actions/download-artifact has already unwrapped the Actions artifact layer;
+          # stage2_outer is the scientific candidate ZIP itself.
+          stage2_inner=stage2_extract
+          """
+          if old not in s:
+              raise SystemExit('expected extraction block not found')
+          p.write_text(s.replace(old,new),encoding='utf-8')
+          PY
       - name: Build, verify and seal approved package
         run: python scripts/build_approved_pemfc_addition.py
       - name: Preserve final manifest and admission report on isolated branch
