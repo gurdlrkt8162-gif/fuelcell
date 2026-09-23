@@ -1,0 +1,59 @@
+name: Fetch Guo Joule article-plus-supplement PDF
+on:
+  push:
+    branches: [paper-pdf-fetch-20260923]
+permissions:
+  contents: read
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Download and validate official Elsevier CDN PDF
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet requests pypdf
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          import requests
+          from pypdf import PdfReader
+          out=Path('guo_joule'); out.mkdir()
+          urls=[
+            'https://ars.els-cdn.com/content/image/1-s2.0-S254243512400103X-mmc2.pdf',
+            'https://ars.els-cdn.com/content/image/1-s2.0-S254243512400103X-mmc1.pdf',
+            'https://www.cell.com/action/downloadSupplement?doi=10.1016/j.joule.2024.02.020&file=mmc2.pdf',
+          ]
+          target=out/'05_2024_Guo_Semi_supervised_few_shot_battery_lifetime_ARTICLE_PLUS_SUPPLEMENT.pdf'
+          report=[]
+          s=requests.Session(); s.headers.update({'User-Agent':'Mozilla/5.0 Chrome/131 Safari/537.36','Accept':'application/pdf,*/*;q=0.8'})
+          for u in urls:
+            try:
+              r=s.get(u,timeout=120,allow_redirects=True,headers={'Referer':'https://www.cell.com/joule/fulltext/S2542-4351(24)00103-X'})
+              rec={'url':u,'status':r.status_code,'resolved':r.url,'type':r.headers.get('content-type'),'bytes':len(r.content)}
+              pos=r.content[:8192].find(b'%PDF-')
+              if r.status_code==200 and pos>=0 and len(r.content)-pos>30000:
+                p=out/('mmc2.pdf' if 'mmc2' in u else 'mmc1.pdf')
+                p.write_bytes(r.content[pos:])
+                reader=PdfReader(str(p),strict=False); pages=len(reader.pages)
+                text=''.join((page.extract_text() or '') for page in reader.pages[:12])
+                rec.update({'pages':pages,'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'title_match':'Semi-supervised learning' in text,'has_article_text':'Experimental procedures' in text or 'Context & scale' in text})
+                if 'mmc2' in u and pages>=5 and ('Semi-supervised learning' in text or 'battery lifetime prediction' in text.lower()):
+                  p.rename(target); rec['saved_target']=True; report.append(rec); break
+              report.append(rec)
+            except Exception as e:
+              report.append({'url':u,'error':repr(e)})
+          (out/'report.json').write_text(json.dumps(report,indent=2,ensure_ascii=False),encoding='utf-8')
+          if not target.exists():
+            raise SystemExit('Article-plus-supplement PDF not retrieved')
+          print(target,target.stat().st_size)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: guo-joule-article-pdf
+          path: guo_joule/
+          if-no-files-found: error
+          retention-days: 1
+          compression-level: 0
