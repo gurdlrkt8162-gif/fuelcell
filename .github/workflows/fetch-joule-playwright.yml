@@ -1,0 +1,123 @@
+name: Fetch open-archive Joule PDF
+on:
+  push:
+    branches: [paper-pdf-fetch-20260923]
+permissions:
+  contents: read
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Install browser dependencies
+        run: |
+          python -m pip install --quiet curl_cffi playwright pypdf
+          python -m playwright install --with-deps chromium
+      - name: Fetch and validate open-archive PDF
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import asyncio, json, hashlib, re
+          from pathlib import Path
+          from pypdf import PdfReader
+          from curl_cffi import requests as crequests
+
+          out=Path('joule_open_archive'); out.mkdir()
+          target=out/'05_2024_Guo_Semi_supervised_few_shot_battery_lifetime.pdf'
+          logs=[]
+          candidates=[
+            'https://www.cell.com/joule/pdf/S2542-4351(24)00103-X.pdf',
+            'https://www.cell.com/joule/pdfExtended/S2542-4351(24)00103-X',
+            'https://www.cell.com/action/showPdf?pii=S2542-4351%2824%2900103-X',
+            'http://www.cell.com/article/S254243512400103X/pdf',
+            'https://www.cell.com/joule/fulltext/S2542-4351(24)00103-X',
+          ]
+          landing='https://www.cell.com/joule/fulltext/S2542-4351(24)00103-X'
+
+          def accept(blob, source):
+              pos=blob[:8192].find(b'%PDF-')
+              if pos < 0 or len(blob)-pos < 30000:
+                  return False
+              target.write_bytes(blob[pos:])
+              try:
+                  pages=len(PdfReader(str(target), strict=False).pages)
+                  if pages < 2: raise ValueError('too few pages')
+              except Exception as e:
+                  logs.append({'source':source,'validation_error':repr(e),'bytes':target.stat().st_size})
+                  target.unlink(missing_ok=True)
+                  return False
+              logs.append({'source':source,'saved':True,'bytes':target.stat().st_size,'pages':pages,'sha256':hashlib.sha256(target.read_bytes()).hexdigest()})
+              return True
+
+          # 1) Browser-impersonating HTTP client.
+          try:
+              s=crequests.Session(impersonate='chrome131')
+              r=s.get(landing, timeout=60, allow_redirects=True, headers={'Accept-Language':'en-US,en;q=0.9'})
+              logs.append({'phase':'landing-curl-cffi','status':r.status_code,'url':r.url,'type':r.headers.get('content-type'),'bytes':len(r.content)})
+              for u in candidates[:-1]:
+                  r=s.get(u, timeout=90, allow_redirects=True, headers={'Referer':landing,'Accept':'application/pdf,text/html;q=0.9,*/*;q=0.8'})
+                  logs.append({'phase':'curl-cffi','candidate':u,'status':r.status_code,'url':r.url,'type':r.headers.get('content-type'),'bytes':len(r.content)})
+                  if r.status_code==200 and accept(r.content, r.url):
+                      break
+          except Exception as e:
+              logs.append({'phase':'curl-cffi','error':repr(e)})
+
+          async def browser_fetch():
+              if target.exists(): return
+              from playwright.async_api import async_playwright
+              async with async_playwright() as p:
+                  browser=await p.chromium.launch(headless=True, args=['--disable-blink-features=AutomationControlled'])
+                  context=await browser.new_context(
+                      user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+                      locale='en-US', viewport={'width':1440,'height':1000}, accept_downloads=True)
+                  page=await context.new_page()
+                  responses=[]
+                  page.on('response', lambda resp: responses.append((resp.status,resp.url,resp.headers.get('content-type',''))))
+                  try:
+                      resp=await page.goto(landing, wait_until='networkidle', timeout=120000)
+                      logs.append({'phase':'playwright-landing','status':resp.status if resp else None,'url':page.url,'title':await page.title()})
+                      await page.screenshot(path=str(out/'landing.png'), full_page=True)
+                      anchors=await page.locator('a').evaluate_all("els => els.map(e => ({text:(e.innerText||'').trim(), href:e.href})).filter(x=>x.href)")
+                      (out/'anchors.json').write_text(json.dumps(anchors,indent=2),encoding='utf-8')
+                      pdf_links=[]
+                      for a in anchors:
+                          t=(a.get('text') or '').lower(); h=a.get('href') or ''
+                          if 'pdf' in t or '/pdf' in h or 'showpdf' in h.lower():
+                              pdf_links.append(h)
+                      for u in list(dict.fromkeys(pdf_links+candidates[:-1])):
+                          try:
+                              rr=await context.request.get(u, headers={'Referer':landing,'Accept':'application/pdf,text/html;q=0.9,*/*;q=0.8'}, timeout=120000)
+                              blob=await rr.body()
+                              logs.append({'phase':'playwright-request','candidate':u,'status':rr.status,'url':rr.url,'type':rr.headers.get('content-type'),'bytes':len(blob)})
+                              if rr.status==200 and accept(blob,rr.url): return
+                          except Exception as e:
+                              logs.append({'phase':'playwright-request','candidate':u,'error':repr(e)})
+                      # Try clicking visible PDF controls and capture a download.
+                      for selector in ['text=View PDF','text=PDF','a[aria-label*="PDF" i]','a[href*="pdf" i]']:
+                          try:
+                              loc=page.locator(selector).first
+                              if await loc.count():
+                                  async with page.expect_download(timeout=30000) as di:
+                                      await loc.click()
+                                  dl=await di.value
+                                  path=await dl.path()
+                                  if path and accept(Path(path).read_bytes(), dl.url): return
+                          except Exception as e:
+                              logs.append({'phase':'playwright-click','selector':selector,'error':repr(e)})
+                  finally:
+                      (out/'responses.json').write_text(json.dumps(responses,indent=2),encoding='utf-8')
+                      await browser.close()
+          asyncio.run(browser_fetch())
+          (out/'fetch_log.json').write_text(json.dumps(logs,indent=2,ensure_ascii=False),encoding='utf-8')
+          if not target.exists():
+              raise SystemExit('Open-archive PDF not retrieved')
+          print(target, target.stat().st_size)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: joule-open-archive-pdf
+          path: joule_open_archive/
+          if-no-files-found: error
+          retention-days: 1
+          compression-level: 0
