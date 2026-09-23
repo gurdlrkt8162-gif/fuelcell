@@ -1,0 +1,60 @@
+name: OA discovery for missing paper PDFs
+on:
+  push:
+    branches: [paper-pdf-fetch-20260923]
+permissions:
+  contents: read
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Query scholarly APIs
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet requests
+          python - <<'PY'
+          import json, os, urllib.parse, requests
+          from pathlib import Path
+          out=Path('oa_discovery'); out.mkdir()
+          dois=[
+            '10.1016/j.joule.2024.02.020',
+            '10.1007/s40684-021-00403-x',
+            '10.1007/s40684-021-00379-8',
+            '10.1016/j.apenergy.2025.125318',
+            '10.1016/j.apenergy.2024.124594',
+            '10.1016/j.enconman.2023.117288',
+          ]
+          headers={'User-Agent':'Mozilla/5.0 scholarly-access-check/1.0 mailto:research@example.org'}
+          report={}
+          for doi in dois:
+            key=doi.replace('/','_')
+            rec={}
+            urls={
+              'openalex':'https://api.openalex.org/works/https://doi.org/'+doi,
+              'unpaywall':'https://api.unpaywall.org/v2/'+doi+'?email=research@example.org',
+              'semantic_scholar':'https://api.semanticscholar.org/graph/v1/paper/DOI:'+urllib.parse.quote(doi,safe='')+'?fields=title,openAccessPdf,url,externalIds,isOpenAccess',
+              'crossref':'https://api.crossref.org/works/'+urllib.parse.quote(doi,safe=''),
+            }
+            for name,url in urls.items():
+              try:
+                r=requests.get(url,headers=headers,timeout=60)
+                rec[name]={'status':r.status_code,'url':url}
+                if r.ok:
+                  rec[name]['json']=r.json()
+                else:
+                  rec[name]['text']=r.text[:1000]
+              except Exception as e:
+                rec[name]={'error':repr(e),'url':url}
+            report[doi]=rec
+            (out/(key+'.json')).write_text(json.dumps(rec,indent=2,ensure_ascii=False),encoding='utf-8')
+          (out/'ALL.json').write_text(json.dumps(report,indent=2,ensure_ascii=False),encoding='utf-8')
+          print(json.dumps(report,indent=2,ensure_ascii=False)[:20000])
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: oa-discovery-results
+          path: oa_discovery/
+          retention-days: 1
+          compression-level: 0
