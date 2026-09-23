@@ -1,0 +1,145 @@
+name: Recover open Joule PDF via public archive metadata
+on:
+  push:
+    branches: [paper-pdf-fetch-20260923]
+permissions:
+  contents: read
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Query Common Crawl and extract official attachment URLs
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet requests beautifulsoup4 pypdf
+          python - <<'PY'
+          import gzip, io, json, re, hashlib, html as htmllib
+          from pathlib import Path
+          from urllib.parse import urljoin, unquote
+          import requests
+          from bs4 import BeautifulSoup
+          from pypdf import PdfReader
+
+          out=Path('cell_cc'); out.mkdir()
+          s=requests.Session(); s.headers.update({'User-Agent':'Mozilla/5.0 research-archive-retriever/1.0'})
+          target_url='www.cell.com/joule/fulltext/S2542-4351(24)00103-X'
+          title='Semi-supervised learning for explainable few-shot battery lifetime prediction'
+          report={'indexes':[],'records':[],'candidate_urls':[],'downloads':[]}
+
+          indexes=s.get('https://index.commoncrawl.org/collinfo.json',timeout=60).json()
+          report['indexes']=[x.get('id') for x in indexes[:8]]
+          records=[]
+          for idx in indexes[:8]:
+              api=idx['cdx-api']
+              params={'url':target_url,'output':'json','filter':'status:200','fl':'url,timestamp,status,mime,filename,offset,length,digest'}
+              try:
+                  r=s.get(api,params=params,timeout=60)
+                  lines=[json.loads(x) for x in r.text.splitlines() if x.strip().startswith('{')]
+                  for rec in lines:
+                      rec['index']=idx['id']; records.append(rec)
+                  if lines: break
+              except Exception as e:
+                  report.setdefault('errors',[]).append({'index':idx.get('id'),'error':repr(e)})
+          report['records']=records
+          if not records:
+              raise SystemExit('No archived Cell fulltext record found')
+
+          html_docs=[]
+          for i,rec in enumerate(records[-5:]):
+              try:
+                  start=int(rec['offset']); length=int(rec['length'])
+                  rr=s.get('https://data.commoncrawl.org/'+rec['filename'],headers={'Range':f'bytes={start}-{start+length-1}'},timeout=120)
+                  raw=rr.content
+                  try: raw=gzip.GzipFile(fileobj=io.BytesIO(raw)).read()
+                  except Exception: pass
+                  # Split WARC headers, HTTP headers, body.
+                  parts=raw.split(b'\r\n\r\n',2)
+                  body=parts[-1] if parts else raw
+                  # Some records are chunked/gzipped HTTP entities; locate HTML start robustly.
+                  for marker in (b'<!DOCTYPE html',b'<html',b'{"'):
+                      pos=body.find(marker)
+                      if pos>=0:
+                          body=body[pos:]; break
+                  text=body.decode('utf-8','replace')
+                  p=out/f'archive_{i}.html'; p.write_text(text,encoding='utf-8')
+                  html_docs.append((rec.get('url') or 'https://www.cell.com/joule/fulltext/S2542-4351(24)00103-X',text))
+              except Exception as e:
+                  report.setdefault('errors',[]).append({'record':rec,'error':repr(e)})
+
+          cand=[]
+          patterns=[r'https?://[^\"\'<> ]+',r'//[^\"\'<> ]+']
+          for base,text in html_docs:
+              decoded=htmllib.unescape(text).replace('\\/','/')
+              soup=BeautifulSoup(decoded,'html.parser')
+              for tag in soup.find_all(['a','link','meta','script']):
+                  vals=[]
+                  for attr in ('href','src','content'):
+                      v=tag.get(attr)
+                      if v: vals.append(v)
+                  for v in vals:
+                      u=urljoin('https://www.cell.com/joule/fulltext/S2542-4351(24)00103-X',v)
+                      low=u.lower()
+                      if any(k in low for k in ('attachment','mmc1','mmc2','.pdf','showpdf','pdfextended')):
+                          cand.append(u)
+              for pat in patterns:
+                  for v in re.findall(pat,decoded):
+                      u=urljoin('https://www.cell.com/joule/fulltext/S2542-4351(24)00103-X',v)
+                      low=u.lower()
+                      if any(k in low for k in ('attachment','mmc1','mmc2','.pdf','showpdf','pdfextended')):
+                          cand.append(u)
+              # Also look near the exact supplemental labels and escaped JSON fields.
+              for m in re.finditer(r'(Document S2|Article plus supplemental information|mmc2)',decoded,re.I):
+                  snippet=decoded[max(0,m.start()-1500):m.end()+1500]
+                  (out/f's2_snippet_{len(list(out.glob("s2_snippet_*.txt")))}.txt').write_text(snippet,encoding='utf-8')
+                  for v in re.findall(r'https?://[^\"\'<> ]+|/[A-Za-z0-9_./?%&=+(){}:-]+',snippet):
+                      u=urljoin('https://www.cell.com/joule/fulltext/S2542-4351(24)00103-X',v)
+                      if any(k in u.lower() for k in ('attachment','mmc2','.pdf','showpdf')): cand.append(u)
+
+          # Add known official endpoints and common attachment conventions.
+          cand += [
+              'http://www.cell.com/article/S254243512400103X/pdf',
+              'https://www.cell.com/joule/pdf/S2542-4351(24)00103-X.pdf',
+              'https://www.cell.com/action/showPdf?pii=S2542-4351%2824%2900103-X',
+          ]
+          unique=[]
+          for u in cand:
+              u=u.replace('&amp;','&')
+              if u not in unique: unique.append(u)
+          report['candidate_urls']=unique
+          (out/'candidate_urls.txt').write_text('\n'.join(unique),encoding='utf-8')
+
+          target=out/'05_2024_Guo_Semi_supervised_few_shot_battery_lifetime.pdf'
+          for u in unique:
+              try:
+                  r=s.get(u,headers={'Referer':'https://www.cell.com/joule/fulltext/S2542-4351(24)00103-X','Accept':'application/pdf,text/html;q=0.8,*/*;q=0.5'},timeout=120,allow_redirects=True)
+                  rec={'url':u,'status':r.status_code,'resolved':r.url,'type':r.headers.get('content-type'),'bytes':len(r.content)}
+                  pos=r.content[:8192].find(b'%PDF-')
+                  if r.status_code==200 and pos>=0 and len(r.content)-pos>30000:
+                      target.write_bytes(r.content[pos:])
+                      try:
+                          reader=PdfReader(str(target),strict=False); pages=len(reader.pages)
+                          text=''.join((p.extract_text() or '') for p in reader.pages[:8])
+                          rec.update({'pages':pages,'title_match':title.lower()[:40] in text.lower() or 'Semi-supervised learning' in text,'sha256':hashlib.sha256(target.read_bytes()).hexdigest()})
+                          if pages>=2 and ('Semi-supervised learning' in text or 'battery lifetime prediction' in text.lower()):
+                              rec['saved']=True; report['downloads'].append(rec); break
+                      except Exception as e:
+                          rec['parse_error']=repr(e)
+                      target.unlink(missing_ok=True)
+                  report['downloads'].append(rec)
+              except Exception as e:
+                  report['downloads'].append({'url':u,'error':repr(e)})
+
+          (out/'report.json').write_text(json.dumps(report,indent=2,ensure_ascii=False),encoding='utf-8')
+          print(json.dumps(report,indent=2,ensure_ascii=False)[:40000])
+          print('saved',target.exists(),target.stat().st_size if target.exists() else 0)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cell-commoncrawl-recovery
+          path: cell_cc/
+          if-no-files-found: error
+          retention-days: 1
+          compression-level: 0
