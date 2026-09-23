@@ -1,0 +1,179 @@
+name: Fetch missing legal paper PDFs
+
+on:
+  push:
+    branches: [paper-pdf-fetch-20260923]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fetch-missing:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Discover, download and validate legal copies
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet requests pypdf beautifulsoup4
+          mkdir -p missing_bundle/publisher_originals missing_bundle/legal_author_copies missing_bundle/logs
+          python - <<'PY'
+          from __future__ import annotations
+          import csv, hashlib, json, re, time
+          from pathlib import Path
+          from urllib.parse import quote, urljoin, urlparse
+          import requests
+          from bs4 import BeautifulSoup
+          from pypdf import PdfReader
+
+          ROOT=Path('missing_bundle'); PUB=ROOT/'publisher_originals'; ALT=ROOT/'legal_author_copies'; LOG=ROOT/'logs'
+          for d in (PUB,ALT,LOG): d.mkdir(parents=True,exist_ok=True)
+
+          papers=[
+            dict(n=1,year=2019,slug='Severson_Data_driven_prediction_battery_cycle_life',title='Data-driven prediction of battery cycle life before capacity degradation',doi='10.1038/s41560-019-0356-8',seed=[
+              ('author','https://www.osti.gov/servlets/purl/1526566'),
+              ('landing','https://escholarship.org/uc/item/9532z8t0'),
+              ('author','https://escholarship.org/content/qt9532z8t0/qt9532z8t0.pdf'),
+              ('publisher','https://www.nature.com/articles/s41560-019-0356-8.pdf')]),
+            dict(n=3,year=2020,slug='Attia_Closed_loop_fast_charging_machine_learning',title='Closed-loop optimization of fast-charging protocols for batteries with machine learning',doi='10.1038/s41586-020-1994-5',seed=[
+              ('landing','https://escholarship.org/uc/item/117547r6'),
+              ('author','https://escholarship.org/content/qt117547r6/qt117547r6.pdf'),
+              ('publisher','https://www.nature.com/articles/s41586-020-1994-5.pdf')]),
+            dict(n=5,year=2024,slug='Guo_Semi_supervised_few_shot_battery_lifetime',title='Semi-supervised learning for explainable few-shot battery lifetime prediction',doi='10.1016/j.joule.2024.02.020',seed=[
+              ('publisher','https://www.cell.com/joule/pdf/S2542-4351(24)00103-X.pdf'),
+              ('publisher','https://www.sciencedirect.com/science/article/pii/S254243512400103X/pdfft?isDTMRedir=true&download=true'),
+              ('landing','https://scholars.duke.edu/publication/1624233')]),
+            dict(n=9,year=2022,slug='Zheng_Deep_RL_EMS_fuel_cell_hybrid_buses',title='A Deep Reinforcement Learning-Based Energy Management Strategy for Fuel Cell Hybrid Buses',doi='10.1007/s40684-021-00403-x',seed=[
+              ('publisher','https://link.springer.com/content/pdf/10.1007/s40684-021-00403-x.pdf'),
+              ('landing','https://s-space.snu.ac.kr/handle/10371/186678')]),
+            dict(n=10,year=2022,slug='Li_Speedy_RL_EMS_fuel_cell_hybrid_vehicle',title='A Speedy Reinforcement Learning-Based Energy Management Strategy for Fuel Cell Hybrid Vehicles Considering Fuel Cell System Lifetime',doi='10.1007/s40684-021-00379-8',seed=[
+              ('publisher','https://link.springer.com/content/pdf/10.1007/s40684-021-00379-8.pdf'),
+              ('landing','https://snu.elsevierpure.com/en/publications/a-speedy-reinforcement-learning-based-energy-management-strategy-')]),
+            dict(n=11,year=2025,slug='Ko_PINN_long_term_PEMFC_prognostics',title='Physics-informed neural network for long-term prognostics of proton exchange membrane fuel cells',doi='10.1016/j.apenergy.2025.125318',seed=[
+              ('publisher','https://www.sciencedirect.com/science/article/pii/S0306261925000480/pdf'),
+              ('publisher','https://www.sciencedirect.com/science/article/pii/S0306261925000480/pdfft?isDTMRedir=true&download=true')]),
+            dict(n=12,year=2025,slug='Huang_transfer_RL_fuel_cell_EMS_longevity',title='Type- and task-crossing energy management for fuel cell vehicles with longevity consideration',doi='10.1016/j.apenergy.2024.124594',seed=[
+              ('publisher','https://www.sciencedirect.com/science/article/pii/S0306261924019779/pdf'),
+              ('publisher','https://www.sciencedirect.com/science/article/pii/S0306261924019779/pdfft?isDTMRedir=true&download=true'),
+              ('landing','https://portal.fis.tum.de/en/publications/type-and-task-crossing-energy-management-for-fuel-cell-vehicles-w/')]),
+            dict(n=13,year=2023,slug='Hu_DRL_EMS_fuel_economy_durability_HIL',title='Optimizing fuel economy and durability of hybrid fuel cell electric vehicles using DRL-based EMS',doi='10.1016/j.enconman.2023.117288',seed=[
+              ('publisher','https://www.sciencedirect.com/science/article/pii/S0196890423006349/pdf'),
+              ('publisher','https://www.sciencedirect.com/science/article/pii/S0196890423006349/pdfft?isDTMRedir=true&download=true')])]
+
+          S=requests.Session(); S.headers.update({'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/131 Safari/537.36','Accept':'application/pdf,text/html,application/json;q=0.9,*/*;q=0.7','Accept-Language':'en-US,en;q=0.9'})
+
+          def classify(url,version=''):
+              host=urlparse(url).netloc.lower(); v=(version or '').lower()
+              if 'published' in v or any(h in host for h in ['nature.com','cell.com','sciencedirect.com','springer.com','oup.com']): return 'publisher'
+              return 'author'
+
+          def discover(doi):
+              out=[]
+              enc=quote('https://doi.org/'+doi,safe='')
+              try:
+                  r=S.get('https://api.openalex.org/works/'+enc,timeout=35)
+                  if r.ok:
+                      j=r.json(); locs=[]
+                      for key in ['best_oa_location','primary_location']:
+                          if j.get(key): locs.append(j[key])
+                      locs += j.get('locations') or []
+                      for loc in locs:
+                          u=loc.get('pdf_url') or loc.get('landing_page_url')
+                          if u: out.append((classify(u,loc.get('version','')),u,'OpenAlex'))
+              except Exception as e: out.append(('error',repr(e),'OpenAlex'))
+              try:
+                  r=S.get('https://api.semanticscholar.org/graph/v1/paper/DOI:'+quote(doi,safe='')+'?fields=openAccessPdf,title',timeout=35)
+                  if r.ok:
+                      u=(r.json().get('openAccessPdf') or {}).get('url')
+                      if u: out.append((classify(u),u,'SemanticScholar'))
+              except Exception as e: out.append(('error',repr(e),'SemanticScholar'))
+              try:
+                  r=S.get('https://api.crossref.org/works/'+quote(doi,safe=''),timeout=35)
+                  if r.ok:
+                      for x in (r.json().get('message') or {}).get('link') or []:
+                          u=x.get('URL'); ct=(x.get('content-type') or '').lower()
+                          if u and ('pdf' in ct or 'pdf' in u.lower()): out.append(('publisher',u,'Crossref'))
+              except Exception as e: out.append(('error',repr(e),'Crossref'))
+              return out
+
+          def expand_landing(url):
+              found=[]
+              try:
+                  r=S.get(url,timeout=45,allow_redirects=True)
+                  if not r.ok: return found
+                  soup=BeautifulSoup(r.text,'html.parser')
+                  selectors=[('meta',{'name':'citation_pdf_url'},'content'),('meta',{'property':'og:pdf'},'content'),('link',{'type':'application/pdf'},'href')]
+                  for tag,attrs,key in selectors:
+                      for node in soup.find_all(tag,attrs=attrs):
+                          u=node.get(key)
+                          if u: found.append(urljoin(r.url,u))
+                  for a in soup.find_all('a',href=True):
+                      href=a['href']; text=' '.join(a.get_text(' ',strip=True).lower().split())
+                      if '.pdf' in href.lower() or 'download pdf' in text or text in {'pdf','view pdf','full text pdf'}:
+                          found.append(urljoin(r.url,href))
+                  for m in re.finditer(r'https?[^"\'<> ]+\.pdf[^"\'<> ]*',r.text): found.append(m.group(0).replace('\\/','/'))
+              except Exception: pass
+              return found
+
+          def valid_pdf(blob,path):
+              if len(blob)<20000: return None
+              pos=blob[:8192].find(b'%PDF-')
+              if pos<0: return None
+              path.write_bytes(blob[pos:])
+              try:
+                  pages=len(PdfReader(str(path),strict=False).pages)
+                  if pages<1: raise ValueError('zero pages')
+                  return pages
+              except Exception:
+                  path.unlink(missing_ok=True); return None
+
+          rows=[]
+          for p in papers:
+              cands=[(k,u,'seed') for k,u in p['seed']]
+              cands += [x for x in discover(p['doi']) if x[0]!='error']
+              expanded=[]
+              for k,u,via in cands:
+                  if k=='landing':
+                      for x in expand_landing(u): expanded.append((classify(x),x,'landing:'+u))
+                  else: expanded.append((k,u,via))
+              seen=set(); unique=[]
+              for x in expanded:
+                  if x[1] not in seen: seen.add(x[1]); unique.append(x)
+              attempts=[]; saved=None
+              name=f"{p['n']:02d}_{p['year']}_{p['slug']}.pdf"
+              for kind,url,via in unique:
+                  try:
+                      r=S.get(url,timeout=150,allow_redirects=True)
+                      tmp=ROOT/('_tmp_'+name)
+                      pages=valid_pdf(r.content,tmp) if r.status_code==200 else None
+                      attempts.append({'kind':kind,'via':via,'url':url,'resolved':r.url,'http':r.status_code,'content_type':r.headers.get('content-type',''),'bytes':len(r.content),'pages':pages})
+                      if pages:
+                          dest=(PUB if kind=='publisher' else ALT)/name; tmp.replace(dest); saved=(dest,kind,url,r.url,pages); break
+                      tmp.unlink(missing_ok=True)
+                  except Exception as e: attempts.append({'kind':kind,'via':via,'url':url,'error':repr(e)})
+                  time.sleep(.7)
+              (LOG/f"{p['n']:02d}_attempts.json").write_text(json.dumps(attempts,indent=2,ensure_ascii=False),encoding='utf-8')
+              if saved:
+                  dest,kind,url,resolved,pages=saved
+                  rows.append({'number':p['n'],'year':p['year'],'title':p['title'],'doi':p['doi'],'status':'DOWNLOADED','copy_type':'publisher_original' if kind=='publisher' else 'legal_author_copy','filename':str(dest.relative_to(ROOT)),'pages':pages,'bytes':dest.stat().st_size,'sha256':hashlib.sha256(dest.read_bytes()).hexdigest(),'source_url':url,'resolved_url':resolved})
+              else:
+                  rows.append({'number':p['n'],'year':p['year'],'title':p['title'],'doi':p['doi'],'status':'AUTHORIZED_ACCESS_OR_OPEN_COPY_REQUIRED','copy_type':'','filename':'','pages':'','bytes':'','sha256':'','source_url':'','resolved_url':''})
+
+          fields=list(rows[0])
+          with (ROOT/'MISSING_DOWNLOAD_MANIFEST.csv').open('w',newline='',encoding='utf-8-sig') as f:
+              w=csv.DictWriter(f,fieldnames=fields); w.writeheader(); w.writerows(rows)
+          (ROOT/'MISSING_DOWNLOAD_MANIFEST.json').write_text(json.dumps(rows,indent=2,ensure_ascii=False),encoding='utf-8')
+          done=[r for r in rows if r['status']=='DOWNLOADED']; missing=[r for r in rows if r['status']!='DOWNLOADED']
+          (ROOT/'README_STATUS.txt').write_text(f"Downloaded and validated additional legal copies: {len(done)} / {len(rows)}\nNo access control was bypassed.\n\nRemaining:\n"+'\n'.join(f"- {r['number']:02d}. {r['title']} | {r['doi']}" for r in missing)+'\n',encoding='utf-8')
+          print(json.dumps(rows,indent=2,ensure_ascii=False))
+          PY
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: enhanced-missing-paper-pdfs
+          path: missing_bundle/
+          if-no-files-found: error
+          retention-days: 1
+          compression-level: 0
