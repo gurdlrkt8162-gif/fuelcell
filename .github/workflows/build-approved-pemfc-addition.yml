@@ -67,8 +67,8 @@ jobs:
           git push origin HEAD:research/pemfc-quality-audit-20260922
       - uses: actions/upload-artifact@v4
         with:
-          name: PEMFC_ADDITIONAL_STRICTLY_ADMITTED_2026-09-23
-          path: PEMFC_ADDITIONAL_STRICTLY_ADMITTED_2026-09-23.zip
-          compression-level: 0
+          name: PEMFC_ADDITIONAL_STRICTLY_ADMITTED_2026-09-23_FINAL
+          path: PEMFC_ADDITIONAL_STRICTLY_ADMITTED_2026-09-23/
+          compression-level: 5
           retention-days: 90
           if-no-files-found: error
