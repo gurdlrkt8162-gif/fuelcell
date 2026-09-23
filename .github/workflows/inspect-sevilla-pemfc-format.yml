@@ -1,0 +1,58 @@
+name: Inspect Sevilla PEMFC raw-file format
+on:
+  push:
+    branches: [research/pemfc-quality-audit-20260922]
+    paths: [.github/workflows/inspect-sevilla-pemfc-format.yml]
+permissions:
+  contents: write
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download and recursively extract official supplement
+        run: |
+          set -euo pipefail
+          mkdir -p sevilla/raw sevilla/extracted
+          curl -fL --retry 5 --retry-all-errors 'https://mdpi-res.com/d_attachment/data/data-05-00047/article_deploy/data-05-00047-s001.rar' -o sevilla/raw/source.rar
+          sha256sum sevilla/raw/source.rar > sevilla/SHA256SUMS.txt
+          7z t sevilla/raw/source.rar
+          7z x -y -osevilla/extracted sevilla/raw/source.rar >/dev/null
+          find sevilla/extracted -type f -iname '*.rar' -print0 | while IFS= read -r -d '' f; do d="${f}.unpacked"; mkdir -p "$d"; 7z t "$f" >/dev/null; 7z x -y -o"$d" "$f" >/dev/null; done
+      - name: Identify data format, magic bytes and candidate import paths
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib, json, csv
+          root=Path('sevilla/extracted')
+          rows=[]
+          for p in sorted(root.rglob('*')):
+              if not p.is_file(): continue
+              b=p.read_bytes()[:4096]
+              sig=b[:32]
+              try: text=b.decode('utf-8')
+              except UnicodeDecodeError:
+                  try: text=b.decode('latin-1')
+                  except Exception: text=''
+              kind='binary'
+              if sig.startswith((b'TDSm',b'TDSh')): kind='NI_TDMS'
+              elif sig.startswith(b'MATLAB'): kind='MATLAB_v5'
+              elif sig.startswith(b'\x89HDF'): kind='HDF5/MAT_v7.3'
+              elif sig[:2]==b'PK': kind='ZIP'
+              elif b'\x00' not in b and sum(c in b'\t,;\r\n' for c in b)>10: kind='delimited_text_candidate'
+              rows.append({'path':str(p.relative_to(root)),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'kind':kind,'magic_hex':sig.hex(),'text_preview':text[:1000]})
+          Path('sevilla/FORMAT_AUDIT.json').write_text(json.dumps(rows,indent=2,ensure_ascii=False),encoding='utf-8')
+          with Path('sevilla/FORMAT_AUDIT.csv').open('w',newline='',encoding='utf-8-sig') as f:
+              w=csv.DictWriter(f,fieldnames=rows[0].keys());w.writeheader();w.writerows(rows)
+          print(json.dumps(rows,indent=2,ensure_ascii=False)[:30000])
+          PY
+      - name: Preserve format audit only
+        run: |
+          mkdir -p pemfc_stage2_audit_sevilla_format
+          cp sevilla/FORMAT_AUDIT.* sevilla/SHA256SUMS.txt pemfc_stage2_audit_sevilla_format/
+          git config user.name 'pemfc-public-data-audit'
+          git config user.email 'pemfc-public-data-audit@users.noreply.github.com'
+          git add pemfc_stage2_audit_sevilla_format
+          git diff --cached --quiet || git commit -m 'Record Sevilla PEMFC raw-file format audit'
+          git push origin HEAD:research/pemfc-quality-audit-20260922
