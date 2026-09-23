@@ -1,0 +1,12 @@
+{
+  "tags": [
+    "JRC_ZERO_GRADIENT",
+    "NPL_CO_CONTAMINATION",
+    "OXYGEN_PURGE",
+    "TWO_SYSTEM_FAULT",
+    "RWTH",
+    "SENSOR_FAULT"
+  ],
+  "errors": [],
+  "state": "PARSED_FOR_MANUAL_ADMISSION_REVIEW_NOT_APPROVED"
+}

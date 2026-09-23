@@ -1,0 +1,2602 @@
+[
+  {
+    "path": "mendeley_raw/OXYGEN_PURGE/Prediction_of_oxygen_utilization_and_purge_strateg.zip",
+    "bytes": 177269,
+    "sha256": "8d9ef72cabfe8eb7964122767cbb38a323b4fde16dfc61eef274b278608151f4",
+    "archive_test": "PASS",
+    "members": [
+      {
+        "path": "Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar",
+        "bytes": 179674
+      },
+      {
+        "path": "Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/2. Mediumloadlevel/2. Medium load level (experiments).xlsx",
+        "bytes": 17727
+      },
+      {
+        "path": "Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/2. Mediumloadlevel/ANN_mediumload.slxc",
+        "bytes": 5002
+      },
+      {
+        "path": "Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/2. Mediumloadlevel/2. Medium load level (training).xlsx",
+        "bytes": 14944
+      },
+      {
+        "path": "Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/2. Mediumloadlevel/ANN_mediumload.slx",
+        "bytes": 29447
+      },
+      {
+        "path": "Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/2. Mediumloadlevel/TrainNN.m",
+        "bytes": 996
+      },
+      {
+        "path": "Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/2. Mediumloadlevel/Input_Data_104.mat",
+        "bytes": 1199
+      },
+      {
+        "path": "Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/3. Lowloadlevel/ANN_lowload.slxc",
+        "bytes": 4995
+      },
+      {
+        "path": "Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/3. Lowloadlevel/3. Low load level (experiments).xlsx",
+        "bytes": 17316
+      },
+      {
+        "path": "Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/3. Lowloadlevel/TrainNN.m",
+        "bytes": 1035
+      },
+      {
+        "path": "Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/3. Lowloadlevel/3. Low load level (training).xlsx",
+        "bytes": 14630
+      },
+      {
+        "path": "Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/3. Lowloadlevel/ANN_lowload.slx",
+        "bytes": 29664
+      },
+      {
+        "path": "Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/3. Lowloadlevel/Input_Data_104.mat",
+        "bytes": 1246
+      },
+      {
+        "path": "Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/4.Modelevaluation/Model_evaluation.m",
+        "bytes": 1223
+      },
+      {
+        "path": "Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/1.Highloadlevel/ANN_highload.slx",
+        "bytes": 29407
+      },
+      {
+        "path": "Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/1.Highloadlevel/ANN_highload.slxc",
+        "bytes": 4997
+      },
+      {
+        "path": "Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/1.Highloadlevel/1. High load level (training).xlsx",
+        "bytes": 13396
+      },
+      {
+        "path": "Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/1.Highloadlevel/TraiNN.m",
+        "bytes": 649
+      },
+      {
+        "path": "Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/1.Highloadlevel/1. High load level (experiments).xlsx",
+        "bytes": 13460
+      },
+      {
+        "path": "Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/1.Highloadlevel/Input_Data_104.mat",
+        "bytes": 638
+      },
+      {
+        "path": "Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/2. Mediumloadlevel/slprj/sim/varcache/ANN_mediumload/checksumOfCache.mat",
+        "bytes": 392
+      },
+      {
+        "path": "Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/2. Mediumloadlevel/slprj/sim/varcache/ANN_mediumload/varInfo.mat",
+        "bytes": 664
+      },
+      {
+        "path": "Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/2. Mediumloadlevel/slprj/sim/varcache/ANN_mediumload/tmwinternal/simulink_cache.xml",
+        "bytes": 312
+      },
+      {
+        "path": "Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/3. Lowloadlevel/slprj/sim/varcache/ANN_lowload/checksumOfCache.mat",
+        "bytes": 392
+      },
+      {
+        "path": "Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/3. Lowloadlevel/slprj/sim/varcache/ANN_lowload/varInfo.mat",
+        "bytes": 664
+      },
+      {
+        "path": "Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/3. Lowloadlevel/slprj/sim/varcache/ANN_lowload/tmwinternal/simulink_cache.xml",
+        "bytes": 312
+      },
+      {
+        "path": "Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/1.Highloadlevel/slprj/sim/varcache/ANN_highload/checksumOfCache.mat",
+        "bytes": 392
+      },
+      {
+        "path": "Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/1.Highloadlevel/slprj/sim/varcache/ANN_highload/varInfo.mat",
+        "bytes": 664
+      },
+      {
+        "path": "Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/1.Highloadlevel/slprj/sim/varcache/ANN_highload/tmwinternal/simulink_cache.xml",
+        "bytes": 312
+      }
+    ]
+  },
+  {
+    "path": "mendeley_raw/OXYGEN_PURGE/Prediction_of_oxygen_utilization_and_purge_strateg.zip__unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar",
+    "bytes": 179674,
+    "sha256": "586a76e7240d35d5e1959072436e17a762f724763625bb34e76eeb0f7f1f6d42",
+    "archive_test": "PASS",
+    "members": [
+      {
+        "path": "Data_Matlabcode/2. Mediumloadlevel/2. Medium load level (experiments).xlsx",
+        "bytes": 17727
+      },
+      {
+        "path": "Data_Matlabcode/2. Mediumloadlevel/ANN_mediumload.slxc",
+        "bytes": 5002
+      },
+      {
+        "path": "Data_Matlabcode/2. Mediumloadlevel/2. Medium load level (training).xlsx",
+        "bytes": 14944
+      },
+      {
+        "path": "Data_Matlabcode/2. Mediumloadlevel/ANN_mediumload.slx",
+        "bytes": 29447
+      },
+      {
+        "path": "Data_Matlabcode/2. Mediumloadlevel/TrainNN.m",
+        "bytes": 996
+      },
+      {
+        "path": "Data_Matlabcode/2. Mediumloadlevel/Input_Data_104.mat",
+        "bytes": 1199
+      },
+      {
+        "path": "Data_Matlabcode/3. Lowloadlevel/ANN_lowload.slxc",
+        "bytes": 4995
+      },
+      {
+        "path": "Data_Matlabcode/3. Lowloadlevel/3. Low load level (experiments).xlsx",
+        "bytes": 17316
+      },
+      {
+        "path": "Data_Matlabcode/3. Lowloadlevel/TrainNN.m",
+        "bytes": 1035
+      },
+      {
+        "path": "Data_Matlabcode/3. Lowloadlevel/3. Low load level (training).xlsx",
+        "bytes": 14630
+      },
+      {
+        "path": "Data_Matlabcode/3. Lowloadlevel/ANN_lowload.slx",
+        "bytes": 29664
+      },
+      {
+        "path": "Data_Matlabcode/3. Lowloadlevel/Input_Data_104.mat",
+        "bytes": 1246
+      },
+      {
+        "path": "Data_Matlabcode/4.Modelevaluation/Model_evaluation.m",
+        "bytes": 1223
+      },
+      {
+        "path": "Data_Matlabcode/1.Highloadlevel/ANN_highload.slx",
+        "bytes": 29407
+      },
+      {
+        "path": "Data_Matlabcode/1.Highloadlevel/ANN_highload.slxc",
+        "bytes": 4997
+      },
+      {
+        "path": "Data_Matlabcode/1.Highloadlevel/1. High load level (training).xlsx",
+        "bytes": 13396
+      },
+      {
+        "path": "Data_Matlabcode/1.Highloadlevel/TraiNN.m",
+        "bytes": 649
+      },
+      {
+        "path": "Data_Matlabcode/1.Highloadlevel/1. High load level (experiments).xlsx",
+        "bytes": 13460
+      },
+      {
+        "path": "Data_Matlabcode/1.Highloadlevel/Input_Data_104.mat",
+        "bytes": 638
+      },
+      {
+        "path": "Data_Matlabcode/2. Mediumloadlevel/slprj/sim/varcache/ANN_mediumload/checksumOfCache.mat",
+        "bytes": 392
+      },
+      {
+        "path": "Data_Matlabcode/2. Mediumloadlevel/slprj/sim/varcache/ANN_mediumload/varInfo.mat",
+        "bytes": 664
+      },
+      {
+        "path": "Data_Matlabcode/2. Mediumloadlevel/slprj/sim/varcache/ANN_mediumload/tmwinternal/simulink_cache.xml",
+        "bytes": 312
+      },
+      {
+        "path": "Data_Matlabcode/3. Lowloadlevel/slprj/sim/varcache/ANN_lowload/checksumOfCache.mat",
+        "bytes": 392
+      },
+      {
+        "path": "Data_Matlabcode/3. Lowloadlevel/slprj/sim/varcache/ANN_lowload/varInfo.mat",
+        "bytes": 664
+      },
+      {
+        "path": "Data_Matlabcode/3. Lowloadlevel/slprj/sim/varcache/ANN_lowload/tmwinternal/simulink_cache.xml",
+        "bytes": 312
+      },
+      {
+        "path": "Data_Matlabcode/1.Highloadlevel/slprj/sim/varcache/ANN_highload/checksumOfCache.mat",
+        "bytes": 392
+      },
+      {
+        "path": "Data_Matlabcode/1.Highloadlevel/slprj/sim/varcache/ANN_highload/varInfo.mat",
+        "bytes": 664
+      },
+      {
+        "path": "Data_Matlabcode/1.Highloadlevel/slprj/sim/varcache/ANN_highload/tmwinternal/simulink_cache.xml",
+        "bytes": 312
+      }
+    ]
+  },
+  {
+    "path": "mendeley_raw/OXYGEN_PURGE/Prediction_of_oxygen_utilization_and_purge_strateg.zip__unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/1.Highloadlevel/1. High load level (experiments).xlsx",
+    "bytes": 13460,
+    "sha256": "ee1d8d699f0ff45e9f9bda2f4475bec623c664f5c0574e27b83a65901a0ce2ba",
+    "sheets": {
+      "Experiments_0.8 Acm^(-2)": {
+        "inferred": {
+          "rows": 72,
+          "columns": 9,
+          "headers": [
+            "Unnamed: 0",
+            "Unnamed: 1",
+            "Unnamed: 2",
+            "Purge duration \n( s )",
+            "Purge interval \n( s )",
+            "Operating Cell Temp \n(oC)",
+            "Anode Humidity Temp \n( oC)",
+            "Current \n( A )",
+            "Oxygen utilization\n( kJ/L ) "
+          ],
+          "header_mode": "parsed",
+          "duplicate_rows": 0,
+          "stats": [
+            {
+              "index": 0,
+              "name": "Unnamed: 0",
+              "numeric": 0,
+              "missing": 68,
+              "unique": 4,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "At operating current (A):",
+                "Cell activation area (cm^2):",
+                "nan",
+                "Cell current density (A/cm^2):"
+              ]
+            },
+            {
+              "index": 1,
+              "name": "Unnamed: 1",
+              "numeric": 3,
+              "missing": 69,
+              "unique": 3,
+              "min": 0.8,
+              "max": 125.0,
+              "mean": 75.26666666666667,
+              "examples": [
+                "100.0",
+                "125.0",
+                "nan",
+                "0.8"
+              ]
+            },
+            {
+              "index": 2,
+              "name": "Unnamed: 2",
+              "numeric": 0,
+              "missing": 72,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 3,
+              "name": "Purge duration \n( s )",
+              "numeric": 72,
+              "missing": 0,
+              "unique": 5,
+              "min": 0.1,
+              "max": 0.9,
+              "mean": 0.5194444444444444,
+              "examples": [
+                "0.1",
+                "0.1",
+                "0.1",
+                "0.1"
+              ]
+            },
+            {
+              "index": 4,
+              "name": "Purge interval \n( s )",
+              "numeric": 72,
+              "missing": 0,
+              "unique": 16,
+              "min": 10.0,
+              "max": 85.0,
+              "mean": 43.68055555555556,
+              "examples": [
+                "10",
+                "15",
+                "20",
+                "25"
+              ]
+            },
+            {
+              "index": 5,
+              "name": "Operating Cell Temp \n(oC)",
+              "numeric": 72,
+              "missing": 0,
+              "unique": 1,
+              "min": 65.0,
+              "max": 65.0,
+              "mean": 65.0,
+              "examples": [
+                "65",
+                "65",
+                "65",
+                "65"
+              ]
+            },
+            {
+              "index": 6,
+              "name": "Anode Humidity Temp \n( oC)",
+              "numeric": 72,
+              "missing": 0,
+              "unique": 1,
+              "min": 60.0,
+              "max": 60.0,
+              "mean": 60.0,
+              "examples": [
+                "60",
+                "60",
+                "60",
+                "60"
+              ]
+            },
+            {
+              "index": 7,
+              "name": "Current \n( A )",
+              "numeric": 72,
+              "missing": 0,
+              "unique": 1,
+              "min": 100.0,
+              "max": 100.0,
+              "mean": 100.0,
+              "examples": [
+                "100",
+                "100",
+                "100",
+                "100"
+              ]
+            },
+            {
+              "index": 8,
+              "name": "Oxygen utilization\n( kJ/L ) ",
+              "numeric": 72,
+              "missing": 0,
+              "unique": 72,
+              "min": 6.44511,
+              "max": 9.43755,
+              "mean": 8.845310416666667,
+              "examples": [
+                "8.69204",
+                "9.04187",
+                "9.27368",
+                "9.36003"
+              ]
+            }
+          ]
+        },
+        "header_none": {
+          "rows": 73,
+          "columns": 9,
+          "headers": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ],
+          "header_mode": "none",
+          "duplicate_rows": 0,
+          "stats": [
+            {
+              "index": 0,
+              "name": "0",
+              "numeric": 0,
+              "missing": 69,
+              "unique": 4,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "At operating current (A):",
+                "Cell activation area (cm^2):",
+                "nan"
+              ]
+            },
+            {
+              "index": 1,
+              "name": "1",
+              "numeric": 3,
+              "missing": 70,
+              "unique": 3,
+              "min": 0.8,
+              "max": 125.0,
+              "mean": 75.26666666666667,
+              "examples": [
+                "nan",
+                "100.0",
+                "125.0",
+                "nan"
+              ]
+            },
+            {
+              "index": 2,
+              "name": "2",
+              "numeric": 0,
+              "missing": 73,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 3,
+              "name": "3",
+              "numeric": 72,
+              "missing": 0,
+              "unique": 6,
+              "min": 0.1,
+              "max": 0.9,
+              "mean": 0.5194444444444444,
+              "examples": [
+                "Purge duration \n( s )",
+                "0.1",
+                "0.1",
+                "0.1"
+              ]
+            },
+            {
+              "index": 4,
+              "name": "4",
+              "numeric": 72,
+              "missing": 0,
+              "unique": 17,
+              "min": 10.0,
+              "max": 85.0,
+              "mean": 43.68055555555556,
+              "examples": [
+                "Purge interval \n( s )",
+                "10",
+                "15",
+                "20"
+              ]
+            },
+            {
+              "index": 5,
+              "name": "5",
+              "numeric": 72,
+              "missing": 0,
+              "unique": 2,
+              "min": 65.0,
+              "max": 65.0,
+              "mean": 65.0,
+              "examples": [
+                "Operating Cell Temp \n(oC)",
+                "65",
+                "65",
+                "65"
+              ]
+            },
+            {
+              "index": 6,
+              "name": "6",
+              "numeric": 72,
+              "missing": 0,
+              "unique": 2,
+              "min": 60.0,
+              "max": 60.0,
+              "mean": 60.0,
+              "examples": [
+                "Anode Humidity Temp \n( oC)",
+                "60",
+                "60",
+                "60"
+              ]
+            },
+            {
+              "index": 7,
+              "name": "7",
+              "numeric": 72,
+              "missing": 0,
+              "unique": 2,
+              "min": 100.0,
+              "max": 100.0,
+              "mean": 100.0,
+              "examples": [
+                "Current \n( A )",
+                "100",
+                "100",
+                "100"
+              ]
+            },
+            {
+              "index": 8,
+              "name": "8",
+              "numeric": 72,
+              "missing": 0,
+              "unique": 73,
+              "min": 6.44511,
+              "max": 9.43755,
+              "mean": 8.845310416666667,
+              "examples": [
+                "Oxygen utilization\n( kJ/L ) ",
+                "8.69204",
+                "9.04187",
+                "9.27368"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "path": "mendeley_raw/OXYGEN_PURGE/Prediction_of_oxygen_utilization_and_purge_strateg.zip__unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/1.Highloadlevel/1. High load level (training).xlsx",
+    "bytes": 13396,
+    "sha256": "9dcfb3fa65543fd52e0c8992d3bba2f4982a4fe3be066a8699e5319534ed59e8",
+    "sheets": {
+      "Training data_0.8 Acm^(-2)": {
+        "inferred": {
+          "rows": 43,
+          "columns": 9,
+          "headers": [
+            "Unnamed: 0",
+            "Unnamed: 1",
+            "Unnamed: 2",
+            "Purge duration \n( s )",
+            "Purge interval \n( s )",
+            "Operating Cell Temp \n(oC)",
+            "Anode Humidity Temp \n( oC)",
+            "Current \n( A )",
+            "Oxygen utilization\n( kJ/L ) "
+          ],
+          "header_mode": "parsed",
+          "duplicate_rows": 0,
+          "stats": [
+            {
+              "index": 0,
+              "name": "Unnamed: 0",
+              "numeric": 0,
+              "missing": 39,
+              "unique": 4,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "At operating current (A):",
+                "Cell activation area (cm^2):",
+                "nan",
+                "Cell current density (A/cm^2):"
+              ]
+            },
+            {
+              "index": 1,
+              "name": "Unnamed: 1",
+              "numeric": 3,
+              "missing": 40,
+              "unique": 3,
+              "min": 0.8,
+              "max": 125.0,
+              "mean": 75.26666666666667,
+              "examples": [
+                "100.0",
+                "125.0",
+                "nan",
+                "0.8"
+              ]
+            },
+            {
+              "index": 2,
+              "name": "Unnamed: 2",
+              "numeric": 0,
+              "missing": 43,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 3,
+              "name": "Purge duration \n( s )",
+              "numeric": 43,
+              "missing": 0,
+              "unique": 3,
+              "min": 0.1,
+              "max": 0.9,
+              "mean": 0.527906976744186,
+              "examples": [
+                "0.1",
+                "0.1",
+                "0.1",
+                "0.1"
+              ]
+            },
+            {
+              "index": 4,
+              "name": "Purge interval \n( s )",
+              "numeric": 43,
+              "missing": 0,
+              "unique": 16,
+              "min": 10.0,
+              "max": 85.0,
+              "mean": 43.604651162790695,
+              "examples": [
+                "10",
+                "15",
+                "20",
+                "25"
+              ]
+            },
+            {
+              "index": 5,
+              "name": "Operating Cell Temp \n(oC)",
+              "numeric": 43,
+              "missing": 0,
+              "unique": 1,
+              "min": 65.0,
+              "max": 65.0,
+              "mean": 65.0,
+              "examples": [
+                "65",
+                "65",
+                "65",
+                "65"
+              ]
+            },
+            {
+              "index": 6,
+              "name": "Anode Humidity Temp \n( oC)",
+              "numeric": 43,
+              "missing": 0,
+              "unique": 1,
+              "min": 60.0,
+              "max": 60.0,
+              "mean": 60.0,
+              "examples": [
+                "60",
+                "60",
+                "60",
+                "60"
+              ]
+            },
+            {
+              "index": 7,
+              "name": "Current \n( A )",
+              "numeric": 43,
+              "missing": 0,
+              "unique": 1,
+              "min": 100.0,
+              "max": 100.0,
+              "mean": 100.0,
+              "examples": [
+                "100",
+                "100",
+                "100",
+                "100"
+              ]
+            },
+            {
+              "index": 8,
+              "name": "Oxygen utilization\n( kJ/L ) ",
+              "numeric": 43,
+              "missing": 0,
+              "unique": 43,
+              "min": 6.44511,
+              "max": 9.43755,
+              "mean": 8.838088372093024,
+              "examples": [
+                "8.69204",
+                "9.04187",
+                "9.27368",
+                "9.36003"
+              ]
+            }
+          ]
+        },
+        "header_none": {
+          "rows": 44,
+          "columns": 9,
+          "headers": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ],
+          "header_mode": "none",
+          "duplicate_rows": 0,
+          "stats": [
+            {
+              "index": 0,
+              "name": "0",
+              "numeric": 0,
+              "missing": 40,
+              "unique": 4,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "At operating current (A):",
+                "Cell activation area (cm^2):",
+                "nan"
+              ]
+            },
+            {
+              "index": 1,
+              "name": "1",
+              "numeric": 3,
+              "missing": 41,
+              "unique": 3,
+              "min": 0.8,
+              "max": 125.0,
+              "mean": 75.26666666666667,
+              "examples": [
+                "nan",
+                "100.0",
+                "125.0",
+                "nan"
+              ]
+            },
+            {
+              "index": 2,
+              "name": "2",
+              "numeric": 0,
+              "missing": 44,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 3,
+              "name": "3",
+              "numeric": 43,
+              "missing": 0,
+              "unique": 4,
+              "min": 0.1,
+              "max": 0.9,
+              "mean": 0.527906976744186,
+              "examples": [
+                "Purge duration \n( s )",
+                "0.1",
+                "0.1",
+                "0.1"
+              ]
+            },
+            {
+              "index": 4,
+              "name": "4",
+              "numeric": 43,
+              "missing": 0,
+              "unique": 17,
+              "min": 10.0,
+              "max": 85.0,
+              "mean": 43.604651162790695,
+              "examples": [
+                "Purge interval \n( s )",
+                "10",
+                "15",
+                "20"
+              ]
+            },
+            {
+              "index": 5,
+              "name": "5",
+              "numeric": 43,
+              "missing": 0,
+              "unique": 2,
+              "min": 65.0,
+              "max": 65.0,
+              "mean": 65.0,
+              "examples": [
+                "Operating Cell Temp \n(oC)",
+                "65",
+                "65",
+                "65"
+              ]
+            },
+            {
+              "index": 6,
+              "name": "6",
+              "numeric": 43,
+              "missing": 0,
+              "unique": 2,
+              "min": 60.0,
+              "max": 60.0,
+              "mean": 60.0,
+              "examples": [
+                "Anode Humidity Temp \n( oC)",
+                "60",
+                "60",
+                "60"
+              ]
+            },
+            {
+              "index": 7,
+              "name": "7",
+              "numeric": 43,
+              "missing": 0,
+              "unique": 2,
+              "min": 100.0,
+              "max": 100.0,
+              "mean": 100.0,
+              "examples": [
+                "Current \n( A )",
+                "100",
+                "100",
+                "100"
+              ]
+            },
+            {
+              "index": 8,
+              "name": "8",
+              "numeric": 43,
+              "missing": 0,
+              "unique": 44,
+              "min": 6.44511,
+              "max": 9.43755,
+              "mean": 8.838088372093024,
+              "examples": [
+                "Oxygen utilization\n( kJ/L ) ",
+                "8.69204",
+                "9.04187",
+                "9.27368"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "path": "mendeley_raw/OXYGEN_PURGE/Prediction_of_oxygen_utilization_and_purge_strateg.zip__unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/1.Highloadlevel/ANN_highload.slx",
+    "bytes": 29407,
+    "sha256": "9c6052f45e63012b234a27cc51e231e0effb78b10d714bf4fec1ad14423e3b8a",
+    "state": "binary-unparsed"
+  },
+  {
+    "path": "mendeley_raw/OXYGEN_PURGE/Prediction_of_oxygen_utilization_and_purge_strateg.zip__unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/1.Highloadlevel/ANN_highload.slxc",
+    "bytes": 4997,
+    "sha256": "a3c94604ed6b753d388509d242c5c221ab6ff0768639a9e98b0473bb5638e90a",
+    "state": "binary-unparsed"
+  },
+  {
+    "path": "mendeley_raw/OXYGEN_PURGE/Prediction_of_oxygen_utilization_and_purge_strateg.zip__unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/1.Highloadlevel/Input_Data_104.mat",
+    "bytes": 638,
+    "sha256": "439f5245fa6772c3aa0387c1bd8133a00fd597e0f5183aa3f84316e04975906c",
+    "mat": {
+      "Input_Data_104": {
+        "shape": [
+          43,
+          6
+        ],
+        "dtype": "float64",
+        "finite": 258,
+        "nonfinite": 0,
+        "min": 0.1,
+        "max": 100.0
+      }
+    }
+  },
+  {
+    "path": "mendeley_raw/OXYGEN_PURGE/Prediction_of_oxygen_utilization_and_purge_strateg.zip__unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/1.Highloadlevel/TraiNN.m",
+    "bytes": 649,
+    "sha256": "fcdc2f79806ab22e2737ff1e99edf19b6336c8b2449ac143c39293615fce0ef0",
+    "line_count": 23,
+    "preview": "%Program for predicting oxygen utilization of OH-PEMFC\r\nclc\r\nclear all\r\nclose all\r\n\r\nload Input_Data_104 %Training data at purge durations: 0.1, 0.5, and 0.9 s\r\n\r\n\r\nTrain_Input   = Input_Data_104(:,1:5);%Train input\r\nTrain_Output  = Input_Data_104(:,6);%Train output\r\nX=[0\t0.1\t10\t65\t60\t100\r\n1\t0.1\t15\t65\t60\t100\r\n2\t0.1\t20\t65\t60\t100\r\n3\t0.1\t25\t65\t60\t100\r\n4\t0.1\t30\t65\t60\t100\r\n5\t0.1\t35\t65\t60\t100\r\n6\t0.1\t40\t65\t60\t100\r\n7\t0.1\t45\t65\t60\t100\r\n8\t0.1\t50\t65\t60\t100\r\n9\t0.1\t55\t65\t60\t100\r\n10\t0.1\t60\t65\t60\t100\r\n11\t0.1\t65\t65\t60\t100\r\n12\t0.1\t70\t65\t60\t100];% Input variable [Time in simulink ANN; Purge duration; Purge interval; Cell temp; Anode humidity temp; Current];\r\n"
+  },
+  {
+    "path": "mendeley_raw/OXYGEN_PURGE/Prediction_of_oxygen_utilization_and_purge_strateg.zip__unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/1.Highloadlevel/slprj/sim/varcache/ANN_highload/checksumOfCache.mat",
+    "bytes": 392,
+    "sha256": "ba9d9b854862ea73deb12bd2e88cd5b70e76eb75c9b38d90b81b97870db67cab",
+    "mat": {
+      "GlobalWorkspace": {
+        "shape": [
+          4
+        ],
+        "dtype": "uint32",
+        "finite": 4,
+        "nonfinite": 0,
+        "min": 1379954502.0,
+        "max": 3593057757.0
+      },
+      "ConfigSetRef": {
+        "shape": [
+          4
+        ],
+        "dtype": "uint32",
+        "finite": 4,
+        "nonfinite": 0,
+        "min": 78774415.0,
+        "max": 3649838548.0
+      },
+      "ModelWorkspace": {
+        "shape": [
+          4
+        ],
+        "dtype": "uint32",
+        "finite": 4,
+        "nonfinite": 0,
+        "min": 78774415.0,
+        "max": 3649838548.0
+      }
+    }
+  },
+  {
+    "path": "mendeley_raw/OXYGEN_PURGE/Prediction_of_oxygen_utilization_and_purge_strateg.zip__unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/1.Highloadlevel/slprj/sim/varcache/ANN_highload/tmwinternal/simulink_cache.xml",
+    "bytes": 312,
+    "sha256": "69138ffa77fd673ba953c9ceb42c0a03f638e1199d5b30633c4a338bd0e5835c",
+    "state": "binary-unparsed"
+  },
+  {
+    "path": "mendeley_raw/OXYGEN_PURGE/Prediction_of_oxygen_utilization_and_purge_strateg.zip__unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/1.Highloadlevel/slprj/sim/varcache/ANN_highload/varInfo.mat",
+    "bytes": 664,
+    "sha256": "5b24e37a4e4a304ca4d2a335dcb5d86023c0022a21b8f693902750d3ef09c25f",
+    "mat": {
+      "GlobalWorkspace": {
+        "shape": [
+          5
+        ],
+        "dtype": "object",
+        "first": [
+          "X",
+          "base workspace",
+          "global",
+          "00000000-0000-0000-0000-000000000000"
+        ]
+      },
+      "ConfigSetRef": {
+        "shape": [
+          0
+        ],
+        "dtype": "object",
+        "first": []
+      },
+      "ModelWorkspace": {
+        "shape": [
+          0
+        ],
+        "dtype": "object",
+        "first": []
+      }
+    }
+  },
+  {
+    "path": "mendeley_raw/OXYGEN_PURGE/Prediction_of_oxygen_utilization_and_purge_strateg.zip__unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/2. Mediumloadlevel/2. Medium load level (experiments).xlsx",
+    "bytes": 17727,
+    "sha256": "49c2855af72a4946ec94da47a79f8883f7721889dadd6827d06facc01a38c40a",
+    "sheets": {
+      "Experimental data_0.4 Acm^(-2)": {
+        "inferred": {
+          "rows": 185,
+          "columns": 9,
+          "headers": [
+            "Unnamed: 0",
+            "Unnamed: 1",
+            "Unnamed: 2",
+            "Purge duration \n( s )",
+            "Purge interval \n( s )",
+            "Operating Cell Temp \n(oC)",
+            "Anode Humidity Temp \n( oC)",
+            "Current \n( A )",
+            "Oxygen utilization\n( kJ/L ) "
+          ],
+          "header_mode": "parsed",
+          "duplicate_rows": 0,
+          "stats": [
+            {
+              "index": 0,
+              "name": "Unnamed: 0",
+              "numeric": 0,
+              "missing": 181,
+              "unique": 4,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "At operating current (A):",
+                "Cell activation area (cm^2):",
+                "nan",
+                "Cell current density (A/cm^2):"
+              ]
+            },
+            {
+              "index": 1,
+              "name": "Unnamed: 1",
+              "numeric": 3,
+              "missing": 182,
+              "unique": 3,
+              "min": 0.4,
+              "max": 125.0,
+              "mean": 58.46666666666667,
+              "examples": [
+                "50.0",
+                "125.0",
+                "nan",
+                "0.4"
+              ]
+            },
+            {
+              "index": 2,
+              "name": "Unnamed: 2",
+              "numeric": 0,
+              "missing": 185,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 3,
+              "name": "Purge duration \n( s )",
+              "numeric": 185,
+              "missing": 0,
+              "unique": 5,
+              "min": 0.1,
+              "max": 0.9,
+              "mean": 0.5270270270270272,
+              "examples": [
+                "0.1",
+                "0.1",
+                "0.1",
+                "0.1"
+              ]
+            },
+            {
+              "index": 4,
+              "name": "Purge interval \n( s )",
+              "numeric": 185,
+              "missing": 0,
+              "unique": 40,
+              "min": 10.0,
+              "max": 400.0,
+              "mean": 192.16216216216216,
+              "examples": [
+                "10",
+                "20",
+                "30",
+                "40"
+              ]
+            },
+            {
+              "index": 5,
+              "name": "Operating Cell Temp \n(oC)",
+              "numeric": 185,
+              "missing": 0,
+              "unique": 1,
+              "min": 65.0,
+              "max": 65.0,
+              "mean": 65.0,
+              "examples": [
+                "65",
+                "65",
+                "65",
+                "65"
+              ]
+            },
+            {
+              "index": 6,
+              "name": "Anode Humidity Temp \n( oC)",
+              "numeric": 185,
+              "missing": 0,
+              "unique": 1,
+              "min": 60.0,
+              "max": 60.0,
+              "mean": 60.0,
+              "examples": [
+                "60",
+                "60",
+                "60",
+                "60"
+              ]
+            },
+            {
+              "index": 7,
+              "name": "Current \n( A )",
+              "numeric": 185,
+              "missing": 0,
+              "unique": 1,
+              "min": 50.0,
+              "max": 50.0,
+              "mean": 50.0,
+              "examples": [
+                "50",
+                "50",
+                "50",
+                "50"
+              ]
+            },
+            {
+              "index": 8,
+              "name": "Oxygen utilization\n( kJ/L ) ",
+              "numeric": 185,
+              "missing": 0,
+              "unique": 185,
+              "min": 5.73934,
+              "max": 11.18018,
+              "mean": 10.562022432432432,
+              "examples": [
+                "8.76328",
+                "10.05258",
+                "10.53488",
+                "10.78287"
+              ]
+            }
+          ]
+        },
+        "header_none": {
+          "rows": 186,
+          "columns": 9,
+          "headers": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ],
+          "header_mode": "none",
+          "duplicate_rows": 0,
+          "stats": [
+            {
+              "index": 0,
+              "name": "0",
+              "numeric": 0,
+              "missing": 182,
+              "unique": 4,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "At operating current (A):",
+                "Cell activation area (cm^2):",
+                "nan"
+              ]
+            },
+            {
+              "index": 1,
+              "name": "1",
+              "numeric": 3,
+              "missing": 183,
+              "unique": 3,
+              "min": 0.4,
+              "max": 125.0,
+              "mean": 58.46666666666667,
+              "examples": [
+                "nan",
+                "50.0",
+                "125.0",
+                "nan"
+              ]
+            },
+            {
+              "index": 2,
+              "name": "2",
+              "numeric": 0,
+              "missing": 186,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 3,
+              "name": "3",
+              "numeric": 185,
+              "missing": 0,
+              "unique": 6,
+              "min": 0.1,
+              "max": 0.9,
+              "mean": 0.5270270270270272,
+              "examples": [
+                "Purge duration \n( s )",
+                "0.1",
+                "0.1",
+                "0.1"
+              ]
+            },
+            {
+              "index": 4,
+              "name": "4",
+              "numeric": 185,
+              "missing": 0,
+              "unique": 41,
+              "min": 10.0,
+              "max": 400.0,
+              "mean": 192.16216216216216,
+              "examples": [
+                "Purge interval \n( s )",
+                "10",
+                "20",
+                "30"
+              ]
+            },
+            {
+              "index": 5,
+              "name": "5",
+              "numeric": 185,
+              "missing": 0,
+              "unique": 2,
+              "min": 65.0,
+              "max": 65.0,
+              "mean": 65.0,
+              "examples": [
+                "Operating Cell Temp \n(oC)",
+                "65",
+                "65",
+                "65"
+              ]
+            },
+            {
+              "index": 6,
+              "name": "6",
+              "numeric": 185,
+              "missing": 0,
+              "unique": 2,
+              "min": 60.0,
+              "max": 60.0,
+              "mean": 60.0,
+              "examples": [
+                "Anode Humidity Temp \n( oC)",
+                "60",
+                "60",
+                "60"
+              ]
+            },
+            {
+              "index": 7,
+              "name": "7",
+              "numeric": 185,
+              "missing": 0,
+              "unique": 2,
+              "min": 50.0,
+              "max": 50.0,
+              "mean": 50.0,
+              "examples": [
+                "Current \n( A )",
+                "50",
+                "50",
+                "50"
+              ]
+            },
+            {
+              "index": 8,
+              "name": "8",
+              "numeric": 185,
+              "missing": 0,
+              "unique": 186,
+              "min": 5.73934,
+              "max": 11.18018,
+              "mean": 10.562022432432432,
+              "examples": [
+                "Oxygen utilization\n( kJ/L ) ",
+                "8.76328",
+                "10.05258",
+                "10.53488"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "path": "mendeley_raw/OXYGEN_PURGE/Prediction_of_oxygen_utilization_and_purge_strateg.zip__unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/2. Mediumloadlevel/2. Medium load level (training).xlsx",
+    "bytes": 14944,
+    "sha256": "845e4742a1cabbefe5da32cea1ba41aa5e61bfd58702a3637cd77dbcd8e630d4",
+    "sheets": {
+      "Training data_0.4 Acm^(-2)": {
+        "inferred": {
+          "rows": 110,
+          "columns": 9,
+          "headers": [
+            "Unnamed: 0",
+            "Unnamed: 1",
+            "Unnamed: 2",
+            "Purge duration \n( s )",
+            "Purge interval \n( s )",
+            "Operating Cell Temp \n(oC)",
+            "Anode Humidity Temp \n( oC)",
+            "Current \n( A )",
+            "Oxygen utilization\n( kJ/L ) "
+          ],
+          "header_mode": "parsed",
+          "duplicate_rows": 0,
+          "stats": [
+            {
+              "index": 0,
+              "name": "Unnamed: 0",
+              "numeric": 0,
+              "missing": 106,
+              "unique": 4,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "At operating current (A):",
+                "Cell activation area (cm^2):",
+                "nan",
+                "Cell current density (A/cm^2):"
+              ]
+            },
+            {
+              "index": 1,
+              "name": "Unnamed: 1",
+              "numeric": 3,
+              "missing": 107,
+              "unique": 3,
+              "min": 0.4,
+              "max": 125.0,
+              "mean": 58.46666666666667,
+              "examples": [
+                "50.0",
+                "125.0",
+                "nan",
+                "0.4"
+              ]
+            },
+            {
+              "index": 2,
+              "name": "Unnamed: 2",
+              "numeric": 0,
+              "missing": 110,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 3,
+              "name": "Purge duration \n( s )",
+              "numeric": 110,
+              "missing": 0,
+              "unique": 3,
+              "min": 0.1,
+              "max": 0.9,
+              "mean": 0.5363636363636364,
+              "examples": [
+                "0.1",
+                "0.1",
+                "0.1",
+                "0.1"
+              ]
+            },
+            {
+              "index": 4,
+              "name": "Purge interval \n( s )",
+              "numeric": 110,
+              "missing": 0,
+              "unique": 40,
+              "min": 10.0,
+              "max": 400.0,
+              "mean": 191.36363636363637,
+              "examples": [
+                "10",
+                "20",
+                "30",
+                "40"
+              ]
+            },
+            {
+              "index": 5,
+              "name": "Operating Cell Temp \n(oC)",
+              "numeric": 110,
+              "missing": 0,
+              "unique": 1,
+              "min": 65.0,
+              "max": 65.0,
+              "mean": 65.0,
+              "examples": [
+                "65",
+                "65",
+                "65",
+                "65"
+              ]
+            },
+            {
+              "index": 6,
+              "name": "Anode Humidity Temp \n( oC)",
+              "numeric": 110,
+              "missing": 0,
+              "unique": 1,
+              "min": 60.0,
+              "max": 60.0,
+              "mean": 60.0,
+              "examples": [
+                "60",
+                "60",
+                "60",
+                "60"
+              ]
+            },
+            {
+              "index": 7,
+              "name": "Current \n( A )",
+              "numeric": 110,
+              "missing": 0,
+              "unique": 1,
+              "min": 50.0,
+              "max": 50.0,
+              "mean": 50.0,
+              "examples": [
+                "50",
+                "50",
+                "50",
+                "50"
+              ]
+            },
+            {
+              "index": 8,
+              "name": "Oxygen utilization\n( kJ/L ) ",
+              "numeric": 110,
+              "missing": 0,
+              "unique": 110,
+              "min": 5.73934,
+              "max": 11.18018,
+              "mean": 10.582614181818181,
+              "examples": [
+                "8.76328",
+                "10.05258",
+                "10.53488",
+                "10.78287"
+              ]
+            }
+          ]
+        },
+        "header_none": {
+          "rows": 111,
+          "columns": 9,
+          "headers": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ],
+          "header_mode": "none",
+          "duplicate_rows": 0,
+          "stats": [
+            {
+              "index": 0,
+              "name": "0",
+              "numeric": 0,
+              "missing": 107,
+              "unique": 4,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "At operating current (A):",
+                "Cell activation area (cm^2):",
+                "nan"
+              ]
+            },
+            {
+              "index": 1,
+              "name": "1",
+              "numeric": 3,
+              "missing": 108,
+              "unique": 3,
+              "min": 0.4,
+              "max": 125.0,
+              "mean": 58.46666666666667,
+              "examples": [
+                "nan",
+                "50.0",
+                "125.0",
+                "nan"
+              ]
+            },
+            {
+              "index": 2,
+              "name": "2",
+              "numeric": 0,
+              "missing": 111,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 3,
+              "name": "3",
+              "numeric": 110,
+              "missing": 0,
+              "unique": 4,
+              "min": 0.1,
+              "max": 0.9,
+              "mean": 0.5363636363636364,
+              "examples": [
+                "Purge duration \n( s )",
+                "0.1",
+                "0.1",
+                "0.1"
+              ]
+            },
+            {
+              "index": 4,
+              "name": "4",
+              "numeric": 110,
+              "missing": 0,
+              "unique": 41,
+              "min": 10.0,
+              "max": 400.0,
+              "mean": 191.36363636363637,
+              "examples": [
+                "Purge interval \n( s )",
+                "10",
+                "20",
+                "30"
+              ]
+            },
+            {
+              "index": 5,
+              "name": "5",
+              "numeric": 110,
+              "missing": 0,
+              "unique": 2,
+              "min": 65.0,
+              "max": 65.0,
+              "mean": 65.0,
+              "examples": [
+                "Operating Cell Temp \n(oC)",
+                "65",
+                "65",
+                "65"
+              ]
+            },
+            {
+              "index": 6,
+              "name": "6",
+              "numeric": 110,
+              "missing": 0,
+              "unique": 2,
+              "min": 60.0,
+              "max": 60.0,
+              "mean": 60.0,
+              "examples": [
+                "Anode Humidity Temp \n( oC)",
+                "60",
+                "60",
+                "60"
+              ]
+            },
+            {
+              "index": 7,
+              "name": "7",
+              "numeric": 110,
+              "missing": 0,
+              "unique": 2,
+              "min": 50.0,
+              "max": 50.0,
+              "mean": 50.0,
+              "examples": [
+                "Current \n( A )",
+                "50",
+                "50",
+                "50"
+              ]
+            },
+            {
+              "index": 8,
+              "name": "8",
+              "numeric": 110,
+              "missing": 0,
+              "unique": 111,
+              "min": 5.73934,
+              "max": 11.18018,
+              "mean": 10.582614181818181,
+              "examples": [
+                "Oxygen utilization\n( kJ/L ) ",
+                "8.76328",
+                "10.05258",
+                "10.53488"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "path": "mendeley_raw/OXYGEN_PURGE/Prediction_of_oxygen_utilization_and_purge_strateg.zip__unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/2. Mediumloadlevel/ANN_mediumload.slx",
+    "bytes": 29447,
+    "sha256": "858a9723d5b8f2901ea0d672388096e46be999ed72aa31b97a4bc18f3469816b",
+    "state": "binary-unparsed"
+  },
+  {
+    "path": "mendeley_raw/OXYGEN_PURGE/Prediction_of_oxygen_utilization_and_purge_strateg.zip__unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/2. Mediumloadlevel/ANN_mediumload.slxc",
+    "bytes": 5002,
+    "sha256": "ec717e9d4b51589a6e829b88af54eb3635b16410a5ca3c4b761aabcb4ff771d9",
+    "state": "binary-unparsed"
+  },
+  {
+    "path": "mendeley_raw/OXYGEN_PURGE/Prediction_of_oxygen_utilization_and_purge_strateg.zip__unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/2. Mediumloadlevel/Input_Data_104.mat",
+    "bytes": 1199,
+    "sha256": "97180fe893043248370aa45473ac55173146265a88415c1a08f82996b8b87217",
+    "mat": {
+      "Input_Data_104": {
+        "shape": [
+          110,
+          6
+        ],
+        "dtype": "float64",
+        "finite": 660,
+        "nonfinite": 0,
+        "min": 0.1,
+        "max": 400.0
+      }
+    }
+  },
+  {
+    "path": "mendeley_raw/OXYGEN_PURGE/Prediction_of_oxygen_utilization_and_purge_strateg.zip__unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/2. Mediumloadlevel/TrainNN.m",
+    "bytes": 996,
+    "sha256": "2a22f5f86d4157b9219e1396ac0d012f16f76176e5f1e8cbb5f1254f2e465e5a",
+    "line_count": 40,
+    "preview": "%Program for predicting oxygen utilization of OH-PEMFC\r\nclc\r\nclear all\r\nclose all\r\n\r\nload Input_Data_104 %Training data at purge durations: 0.1, 0.5, and 0.9 s\r\n\r\n\r\nTrain_Input   = Input_Data_104(:,1:5);%Train input\r\nTrain_Output  = Input_Data_104(:,6);%Train ouput\r\nX=[0\t0.1\t10\t65\t60\t50\r\n1\t0.1\t20\t65\t60\t50\r\n2\t0.1\t30\t65\t60\t50\r\n3\t0.1\t40\t65\t60\t50\r\n4\t0.1\t50\t65\t60\t50\r\n5\t0.1\t60\t65\t60\t50\r\n6\t0.1\t70\t65\t60\t50\r\n7\t0.1\t80\t65\t60\t50\r\n8\t0.1\t90\t65\t60\t50\r\n9\t0.1\t100\t65\t60\t50\r\n10\t0.1\t110\t65\t60\t50\r\n11\t0.1\t120\t65\t60\t50\r\n12\t0.1\t130\t65\t60\t50\r\n13\t0.1\t140\t65\t60\t50\r\n14\t0.1\t150\t65\t60\t50\r\n15\t0.1\t160\t65\t60\t50\r\n16\t0.1\t170\t65\t60\t50\r\n17\t0.1\t180\t65\t60\t50\r\n18\t0.1\t190\t65\t60\t50\r\n19\t0.1\t200\t65\t60\t50\r\n20\t0.1\t210\t65\t60\t50\r\n21\t0.1\t220\t65\t60\t50\r\n22\t0.1\t230\t65\t60\t50\r\n23\t0.1\t240\t65\t60\t50\r\n24\t0.1\t250\t65\t60\t50\r\n25\t0.1\t260\t65\t60\t50\r\n26\t0.1\t270\t65\t60\t50\r\n27\t0.1\t280\t65\t60\t50\r\n28\t0.1\t290\t65\t60\t50\r\n29\t0.1\t300\t65\t60\t50];% Input variable [Time in simulink ANN; Purge duration; Purge interval; Cell temp; Anode humidity temp; Current];\r\n"
+  },
+  {
+    "path": "mendeley_raw/OXYGEN_PURGE/Prediction_of_oxygen_utilization_and_purge_strateg.zip__unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/2. Mediumloadlevel/slprj/sim/varcache/ANN_mediumload/checksumOfCache.mat",
+    "bytes": 392,
+    "sha256": "76fe3871f397d1522a9518af72b4464f836770ad7fedef5ae2135d5ade365320",
+    "mat": {
+      "GlobalWorkspace": {
+        "shape": [
+          4
+        ],
+        "dtype": "uint32",
+        "finite": 4,
+        "nonfinite": 0,
+        "min": 1379954502.0,
+        "max": 3593057757.0
+      },
+      "ConfigSetRef": {
+        "shape": [
+          4
+        ],
+        "dtype": "uint32",
+        "finite": 4,
+        "nonfinite": 0,
+        "min": 78774415.0,
+        "max": 3649838548.0
+      },
+      "ModelWorkspace": {
+        "shape": [
+          4
+        ],
+        "dtype": "uint32",
+        "finite": 4,
+        "nonfinite": 0,
+        "min": 78774415.0,
+        "max": 3649838548.0
+      }
+    }
+  },
+  {
+    "path": "mendeley_raw/OXYGEN_PURGE/Prediction_of_oxygen_utilization_and_purge_strateg.zip__unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/2. Mediumloadlevel/slprj/sim/varcache/ANN_mediumload/tmwinternal/simulink_cache.xml",
+    "bytes": 312,
+    "sha256": "d9f584807029b44451caf284d53a65e593b47aa0f3fc20b21712442e72078e2c",
+    "state": "binary-unparsed"
+  },
+  {
+    "path": "mendeley_raw/OXYGEN_PURGE/Prediction_of_oxygen_utilization_and_purge_strateg.zip__unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/2. Mediumloadlevel/slprj/sim/varcache/ANN_mediumload/varInfo.mat",
+    "bytes": 664,
+    "sha256": "99383d9f8013f06839cd2b99808a1cdc283af522dcde3fa6861c1e1850fa8418",
+    "mat": {
+      "GlobalWorkspace": {
+        "shape": [
+          5
+        ],
+        "dtype": "object",
+        "first": [
+          "X",
+          "base workspace",
+          "global",
+          "00000000-0000-0000-0000-000000000000"
+        ]
+      },
+      "ConfigSetRef": {
+        "shape": [
+          0
+        ],
+        "dtype": "object",
+        "first": []
+      },
+      "ModelWorkspace": {
+        "shape": [
+          0
+        ],
+        "dtype": "object",
+        "first": []
+      }
+    }
+  },
+  {
+    "path": "mendeley_raw/OXYGEN_PURGE/Prediction_of_oxygen_utilization_and_purge_strateg.zip__unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/3. Lowloadlevel/3. Low load level (experiments).xlsx",
+    "bytes": 17316,
+    "sha256": "b6c0ecc209cd24c5f47cabd822adfc69b96cc0bc12fae859142d3d5f3e764c62",
+    "sheets": {
+      "Experiment data_0.1 Acm^(-2)": {
+        "inferred": {
+          "rows": 182,
+          "columns": 9,
+          "headers": [
+            "Unnamed: 0",
+            "Unnamed: 1",
+            "Unnamed: 2",
+            "Purge duration \n( s )",
+            "Purge interval \n( s )",
+            "Operating Cell Temp \n(oC)",
+            "Anode Humidity Temp \n( oC)",
+            "Current \n( A )",
+            "Oxygen utilization\n( kJ/L ) "
+          ],
+          "header_mode": "parsed",
+          "duplicate_rows": 0,
+          "stats": [
+            {
+              "index": 0,
+              "name": "Unnamed: 0",
+              "numeric": 0,
+              "missing": 178,
+              "unique": 4,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "At operating current (A)",
+                "Cell activation area (cm^2)",
+                "nan",
+                "Cell current density (A/cm^2)"
+              ]
+            },
+            {
+              "index": 1,
+              "name": "Unnamed: 1",
+              "numeric": 3,
+              "missing": 179,
+              "unique": 3,
+              "min": 0.1,
+              "max": 125.0,
+              "mean": 45.86666666666667,
+              "examples": [
+                "12.5",
+                "125.0",
+                "nan",
+                "0.1"
+              ]
+            },
+            {
+              "index": 2,
+              "name": "Unnamed: 2",
+              "numeric": 0,
+              "missing": 182,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 3,
+              "name": "Purge duration \n( s )",
+              "numeric": 182,
+              "missing": 0,
+              "unique": 5,
+              "min": 0.1,
+              "max": 0.9,
+              "mean": 0.540659340659341,
+              "examples": [
+                "0.1",
+                "0.1",
+                "0.1",
+                "0.1"
+              ]
+            },
+            {
+              "index": 4,
+              "name": "Purge interval \n( s )",
+              "numeric": 182,
+              "missing": 0,
+              "unique": 43,
+              "min": 10.0,
+              "max": 750.0,
+              "mean": 283.0769230769231,
+              "examples": [
+                "10",
+                "20",
+                "30",
+                "40"
+              ]
+            },
+            {
+              "index": 5,
+              "name": "Operating Cell Temp \n(oC)",
+              "numeric": 182,
+              "missing": 0,
+              "unique": 1,
+              "min": 65.0,
+              "max": 65.0,
+              "mean": 65.0,
+              "examples": [
+                "65",
+                "65",
+                "65",
+                "65"
+              ]
+            },
+            {
+              "index": 6,
+              "name": "Anode Humidity Temp \n( oC)",
+              "numeric": 182,
+              "missing": 0,
+              "unique": 1,
+              "min": 60.0,
+              "max": 60.0,
+              "mean": 60.0,
+              "examples": [
+                "60",
+                "60",
+                "60",
+                "60"
+              ]
+            },
+            {
+              "index": 7,
+              "name": "Current \n( A )",
+              "numeric": 182,
+              "missing": 0,
+              "unique": 1,
+              "min": 12.5,
+              "max": 12.5,
+              "mean": 12.5,
+              "examples": [
+                "12.5",
+                "12.5",
+                "12.5",
+                "12.5"
+              ]
+            },
+            {
+              "index": 8,
+              "name": "Oxygen utilization\n( kJ/L ) ",
+              "numeric": 182,
+              "missing": 0,
+              "unique": 182,
+              "min": 1.69466,
+              "max": 13.01511,
+              "mean": 10.010746318681319,
+              "examples": [
+                "5.83279",
+                "7.88347",
+                "9.13429",
+                "9.88056"
+              ]
+            }
+          ]
+        },
+        "header_none": {
+          "rows": 183,
+          "columns": 9,
+          "headers": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ],
+          "header_mode": "none",
+          "duplicate_rows": 0,
+          "stats": [
+            {
+              "index": 0,
+              "name": "0",
+              "numeric": 0,
+              "missing": 179,
+              "unique": 4,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "At operating current (A)",
+                "Cell activation area (cm^2)",
+                "nan"
+              ]
+            },
+            {
+              "index": 1,
+              "name": "1",
+              "numeric": 3,
+              "missing": 180,
+              "unique": 3,
+              "min": 0.1,
+              "max": 125.0,
+              "mean": 45.86666666666667,
+              "examples": [
+                "nan",
+                "12.5",
+                "125.0",
+                "nan"
+              ]
+            },
+            {
+              "index": 2,
+              "name": "2",
+              "numeric": 0,
+              "missing": 183,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 3,
+              "name": "3",
+              "numeric": 182,
+              "missing": 0,
+              "unique": 6,
+              "min": 0.1,
+              "max": 0.9,
+              "mean": 0.540659340659341,
+              "examples": [
+                "Purge duration \n( s )",
+                "0.1",
+                "0.1",
+                "0.1"
+              ]
+            },
+            {
+              "index": 4,
+              "name": "4",
+              "numeric": 182,
+              "missing": 0,
+              "unique": 44,
+              "min": 10.0,
+              "max": 750.0,
+              "mean": 283.0769230769231,
+              "examples": [
+                "Purge interval \n( s )",
+                "10",
+                "20",
+                "30"
+              ]
+            },
+            {
+              "index": 5,
+              "name": "5",
+              "numeric": 182,
+              "missing": 0,
+              "unique": 2,
+              "min": 65.0,
+              "max": 65.0,
+              "mean": 65.0,
+              "examples": [
+                "Operating Cell Temp \n(oC)",
+                "65",
+                "65",
+                "65"
+              ]
+            },
+            {
+              "index": 6,
+              "name": "6",
+              "numeric": 182,
+              "missing": 0,
+              "unique": 2,
+              "min": 60.0,
+              "max": 60.0,
+              "mean": 60.0,
+              "examples": [
+                "Anode Humidity Temp \n( oC)",
+                "60",
+                "60",
+                "60"
+              ]
+            },
+            {
+              "index": 7,
+              "name": "7",
+              "numeric": 182,
+              "missing": 0,
+              "unique": 2,
+              "min": 12.5,
+              "max": 12.5,
+              "mean": 12.5,
+              "examples": [
+                "Current \n( A )",
+                "12.5",
+                "12.5",
+                "12.5"
+              ]
+            },
+            {
+              "index": 8,
+              "name": "8",
+              "numeric": 182,
+              "missing": 0,
+              "unique": 183,
+              "min": 1.69466,
+              "max": 13.01511,
+              "mean": 10.010746318681319,
+              "examples": [
+                "Oxygen utilization\n( kJ/L ) ",
+                "5.83279",
+                "7.88347",
+                "9.13429"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "path": "mendeley_raw/OXYGEN_PURGE/Prediction_of_oxygen_utilization_and_purge_strateg.zip__unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/3. Lowloadlevel/3. Low load level (training).xlsx",
+    "bytes": 14630,
+    "sha256": "31209184067be0ab1ead26dd891adcba6c6d4bc9d9dcdb462b70e36c198c6622",
+    "sheets": {
+      "Training data_0.1 Acm^(-2)": {
+        "inferred": {
+          "rows": 109,
+          "columns": 9,
+          "headers": [
+            "Unnamed: 0",
+            "Unnamed: 1",
+            "Unnamed: 2",
+            "Purge duration \n( s )",
+            "Purge interval \n( s )",
+            "Operating Cell Temp \n(oC)",
+            "Anode Humidity Temp \n( oC)",
+            "Current \n( A )",
+            "Oxygen utilization\n( kJ/L ) "
+          ],
+          "header_mode": "parsed",
+          "duplicate_rows": 0,
+          "stats": [
+            {
+              "index": 0,
+              "name": "Unnamed: 0",
+              "numeric": 0,
+              "missing": 105,
+              "unique": 4,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "At operating current (A)",
+                "Cell activation area (cm^2)",
+                "nan",
+                "Cell current density (A/cm^2)"
+              ]
+            },
+            {
+              "index": 1,
+              "name": "Unnamed: 1",
+              "numeric": 3,
+              "missing": 106,
+              "unique": 3,
+              "min": 0.1,
+              "max": 125.0,
+              "mean": 45.86666666666667,
+              "examples": [
+                "12.5",
+                "125.0",
+                "nan",
+                "0.1"
+              ]
+            },
+            {
+              "index": 2,
+              "name": "Unnamed: 2",
+              "numeric": 0,
+              "missing": 109,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 3,
+              "name": "Purge duration \n( s )",
+              "numeric": 109,
+              "missing": 0,
+              "unique": 3,
+              "min": 0.1,
+              "max": 0.9,
+              "mean": 0.5513761467889908,
+              "examples": [
+                "0.1",
+                "0.1",
+                "0.1",
+                "0.1"
+              ]
+            },
+            {
+              "index": 4,
+              "name": "Purge interval \n( s )",
+              "numeric": 109,
+              "missing": 0,
+              "unique": 43,
+              "min": 10.0,
+              "max": 750.0,
+              "mean": 283.8532110091743,
+              "examples": [
+                "10",
+                "20",
+                "30",
+                "40"
+              ]
+            },
+            {
+              "index": 5,
+              "name": "Operating Cell Temp \n(oC)",
+              "numeric": 109,
+              "missing": 0,
+              "unique": 1,
+              "min": 65.0,
+              "max": 65.0,
+              "mean": 65.0,
+              "examples": [
+                "65",
+                "65",
+                "65",
+                "65"
+              ]
+            },
+            {
+              "index": 6,
+              "name": "Anode Humidity Temp \n( oC)",
+              "numeric": 109,
+              "missing": 0,
+              "unique": 1,
+              "min": 60.0,
+              "max": 60.0,
+              "mean": 60.0,
+              "examples": [
+                "60",
+                "60",
+                "60",
+                "60"
+              ]
+            },
+            {
+              "index": 7,
+              "name": "Current \n( A )",
+              "numeric": 109,
+              "missing": 0,
+              "unique": 1,
+              "min": 12.5,
+              "max": 12.5,
+              "mean": 12.5,
+              "examples": [
+                "12.5",
+                "12.5",
+                "12.5",
+                "12.5"
+              ]
+            },
+            {
+              "index": 8,
+              "name": "Oxygen utilization\n( kJ/L ) ",
+              "numeric": 109,
+              "missing": 0,
+              "unique": 109,
+              "min": 1.69466,
+              "max": 13.01511,
+              "mean": 10.038702293577982,
+              "examples": [
+                "5.83279",
+                "7.88347",
+                "9.13429",
+                "9.88056"
+              ]
+            }
+          ]
+        },
+        "header_none": {
+          "rows": 110,
+          "columns": 9,
+          "headers": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ],
+          "header_mode": "none",
+          "duplicate_rows": 0,
+          "stats": [
+            {
+              "index": 0,
+              "name": "0",
+              "numeric": 0,
+              "missing": 106,
+              "unique": 4,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "At operating current (A)",
+                "Cell activation area (cm^2)",
+                "nan"
+              ]
+            },
+            {
+              "index": 1,
+              "name": "1",
+              "numeric": 3,
+              "missing": 107,
+              "unique": 3,
+              "min": 0.1,
+              "max": 125.0,
+              "mean": 45.86666666666667,
+              "examples": [
+                "nan",
+                "12.5",
+                "125.0",
+                "nan"
+              ]
+            },
+            {
+              "index": 2,
+              "name": "2",
+              "numeric": 0,
+              "missing": 110,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 3,
+              "name": "3",
+              "numeric": 109,
+              "missing": 0,
+              "unique": 4,
+              "min": 0.1,
+              "max": 0.9,
+              "mean": 0.5513761467889908,
+              "examples": [
+                "Purge duration \n( s )",
+                "0.1",
+                "0.1",
+                "0.1"
+              ]
+            },
+            {
+              "index": 4,
+              "name": "4",
+              "numeric": 109,
+              "missing": 0,
+              "unique": 44,
+              "min": 10.0,
+              "max": 750.0,
+              "mean": 283.8532110091743,
+              "examples": [
+                "Purge interval \n( s )",
+                "10",
+                "20",
+                "30"
+              ]
+            },
+            {
+              "index": 5,
+              "name": "5",
+              "numeric": 109,
+              "missing": 0,
+              "unique": 2,
+              "min": 65.0,
+              "max": 65.0,
+              "mean": 65.0,
+              "examples": [
+                "Operating Cell Temp \n(oC)",
+                "65",
+                "65",
+                "65"
+              ]
+            },
+            {
+              "index": 6,
+              "name": "6",
+              "numeric": 109,
+              "missing": 0,
+              "unique": 2,
+              "min": 60.0,
+              "max": 60.0,
+              "mean": 60.0,
+              "examples": [
+                "Anode Humidity Temp \n( oC)",
+                "60",
+                "60",
+                "60"
+              ]
+            },
+            {
+              "index": 7,
+              "name": "7",
+              "numeric": 109,
+              "missing": 0,
+              "unique": 2,
+              "min": 12.5,
+              "max": 12.5,
+              "mean": 12.5,
+              "examples": [
+                "Current \n( A )",
+                "12.5",
+                "12.5",
+                "12.5"
+              ]
+            },
+            {
+              "index": 8,
+              "name": "8",
+              "numeric": 109,
+              "missing": 0,
+              "unique": 110,
+              "min": 1.69466,
+              "max": 13.01511,
+              "mean": 10.038702293577982,
+              "examples": [
+                "Oxygen utilization\n( kJ/L ) ",
+                "5.83279",
+                "7.88347",
+                "9.13429"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "path": "mendeley_raw/OXYGEN_PURGE/Prediction_of_oxygen_utilization_and_purge_strateg.zip__unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/3. Lowloadlevel/ANN_lowload.slx",
+    "bytes": 29664,
+    "sha256": "4d68863145a8120e511d37ee36ac9e7b4e74244219a9c9f357b58e08e6e572c8",
+    "state": "binary-unparsed"
+  },
+  {
+    "path": "mendeley_raw/OXYGEN_PURGE/Prediction_of_oxygen_utilization_and_purge_strateg.zip__unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/3. Lowloadlevel/ANN_lowload.slxc",
+    "bytes": 4995,
+    "sha256": "19436edd750f196bb9f480925ab5c2ccf4ed60e1aea08077cf2bdebdd77960f1",
+    "state": "binary-unparsed"
+  },
+  {
+    "path": "mendeley_raw/OXYGEN_PURGE/Prediction_of_oxygen_utilization_and_purge_strateg.zip__unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/3. Lowloadlevel/Input_Data_104.mat",
+    "bytes": 1246,
+    "sha256": "3a10ac4b73cf995818e812b4c401902bb19115f5785baa3c08d782bab8740e6e",
+    "mat": {
+      "Input_Data_104": {
+        "shape": [
+          109,
+          6
+        ],
+        "dtype": "float64",
+        "finite": 654,
+        "nonfinite": 0,
+        "min": 0.1,
+        "max": 750.0
+      }
+    }
+  },
+  {
+    "path": "mendeley_raw/OXYGEN_PURGE/Prediction_of_oxygen_utilization_and_purge_strateg.zip__unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/3. Lowloadlevel/TrainNN.m",
+    "bytes": 1035,
+    "sha256": "52654adbb5f43bdf51209e105e9c8180aedd3703c392b09f1e2aa5e51747fa4b",
+    "line_count": 40,
+    "preview": "\r\n%Program for predicting oxygen utilization of OH-PEMFC\r\nclc\r\nclear all\r\nclose all\r\n\r\nload Input_Data_104 %Training data at purge durations: 0.1, 0.5, and 0.9 s\r\n\r\n\r\nTrain_Input   = Input_Data_104(:,1:5);%Train input\r\nTrain_Output  = Input_Data_104(:,6);%Train ouput\r\nX=[0\t0.1\t10\t65\t60\t12.5\r\n1\t0.1\t20\t65\t60\t12.5\r\n2\t0.1\t30\t65\t60\t12.5\r\n3\t0.1\t40\t65\t60\t12.5\r\n4\t0.1\t50\t65\t60\t12.5\r\n5\t0.1\t60\t65\t60\t12.5\r\n6\t0.1\t70\t65\t60\t12.5\r\n7\t0.1\t80\t65\t60\t12.5\r\n8\t0.1\t90\t65\t60\t12.5\r\n9\t0.1\t100\t65\t60\t12.5\r\n10\t0.1\t110\t65\t60\t12.5\r\n11\t0.1\t120\t65\t60\t12.5\r\n12\t0.1\t130\t65\t60\t12.5\r\n13\t0.1\t150\t65\t60\t12.5\r\n14\t0.1\t170\t65\t60\t12.5\r\n15\t0.1\t190\t65\t60\t12.5\r\n16\t0.1\t210\t65\t60\t12.5\r\n17\t0.1\t230\t65\t60\t12.5\r\n18\t0.1\t250\t65\t60\t12.5\r\n19\t0.1\t280\t65\t60\t12.5\r\n20\t0.1\t300\t65\t60\t12.5\r\n21\t0.1\t330\t65\t60\t12.5\r\n22\t0.1\t350\t65\t60\t12.5\r\n23\t0.1\t370\t65\t60\t12.5\r\n24\t0.1\t390\t65\t60\t12.5\r\n25\t0.1\t410\t65\t60\t12.5\r\n26\t0.1\t430\t65\t60\t12.5\r\n27\t0.1\t450\t65\t60\t12.5\r\n28\t0.1\t470\t65\t60\t12.5];% Input variable [Time in simulink ANN; Purge duration; Purge interval; Cell temp; Anode humidity temp; Current];\r\n"
+  },
+  {
+    "path": "mendeley_raw/OXYGEN_PURGE/Prediction_of_oxygen_utilization_and_purge_strateg.zip__unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/3. Lowloadlevel/slprj/sim/varcache/ANN_lowload/checksumOfCache.mat",
+    "bytes": 392,
+    "sha256": "4d3005437abdabfaf64915d0d83cc1790f16db1615009902d6998b83a28337d6",
+    "mat": {
+      "GlobalWorkspace": {
+        "shape": [
+          4
+        ],
+        "dtype": "uint32",
+        "finite": 4,
+        "nonfinite": 0,
+        "min": 1379954502.0,
+        "max": 3593057757.0
+      },
+      "ConfigSetRef": {
+        "shape": [
+          4
+        ],
+        "dtype": "uint32",
+        "finite": 4,
+        "nonfinite": 0,
+        "min": 78774415.0,
+        "max": 3649838548.0
+      },
+      "ModelWorkspace": {
+        "shape": [
+          4
+        ],
+        "dtype": "uint32",
+        "finite": 4,
+        "nonfinite": 0,
+        "min": 78774415.0,
+        "max": 3649838548.0
+      }
+    }
+  },
+  {
+    "path": "mendeley_raw/OXYGEN_PURGE/Prediction_of_oxygen_utilization_and_purge_strateg.zip__unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/3. Lowloadlevel/slprj/sim/varcache/ANN_lowload/tmwinternal/simulink_cache.xml",
+    "bytes": 312,
+    "sha256": "47e3b088190aabdb27c10e5f8e2053d481e081b4c611624b4a14381745b0f680",
+    "state": "binary-unparsed"
+  },
+  {
+    "path": "mendeley_raw/OXYGEN_PURGE/Prediction_of_oxygen_utilization_and_purge_strateg.zip__unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/3. Lowloadlevel/slprj/sim/varcache/ANN_lowload/varInfo.mat",
+    "bytes": 664,
+    "sha256": "146ae7c593a7b673ccf76451f2a358e1ef38f0730142eaaf74f1dcbd22f823a6",
+    "mat": {
+      "GlobalWorkspace": {
+        "shape": [
+          5
+        ],
+        "dtype": "object",
+        "first": [
+          "X",
+          "base workspace",
+          "global",
+          "00000000-0000-0000-0000-000000000000"
+        ]
+      },
+      "ConfigSetRef": {
+        "shape": [
+          0
+        ],
+        "dtype": "object",
+        "first": []
+      },
+      "ModelWorkspace": {
+        "shape": [
+          0
+        ],
+        "dtype": "object",
+        "first": []
+      }
+    }
+  },
+  {
+    "path": "mendeley_raw/OXYGEN_PURGE/Prediction_of_oxygen_utilization_and_purge_strateg.zip__unpacked/Prediction of oxygen utilization and purge strateg/Data_Matlabcode.rar__unpacked/Data_Matlabcode/4.Modelevaluation/Model_evaluation.m",
+    "bytes": 1223,
+    "sha256": "78df206ebef178d5f956f14d1c0883afe5115e4a3e4fd0a4e39a5bf3f3e3da7e",
+    "line_count": 55,
+    "preview": "%Program for evaluating the ANN model\r\nclc\r\nclear all\r\n\r\n%At high load level, at purge duration 100 ms\r\n%(Experimental values)\r\nExperimentalValues = [8.69204\r\n9.04187\r\n9.27368\r\n9.36003\r\n9.40222\r\n9.43755\r\n9.42333\r\n9.39739\r\n9.36341\r\n9.27603\r\n9.2017\r\n9.12072\r\n8.93889];\r\n% Predicted values (ANN)\r\nPredictedValues = [8.693236187\r\n9.060482208\r\n9.266255444\r\n9.370970567\r\n9.417999257\r\n9.432184123\r\n9.424182281\r\n9.395789659\r\n9.347402478\r\n9.285033971\r\n9.211360164\r\n9.105657363\r\n8.948789433];\r\n% Calculate evaluation metrics\r\nMAE = mean(abs(ExperimentalValues - PredictedValues));\r\nRMSE = sqrt(mean((ExperimentalValues - PredictedValues).^2));\r\nSS_total = sum((ExperimentalValues - mean(ExperimentalValues)).^2);\r\nSS_residual = sum((ExperimentalValues - PredictedValues).^2);\r\nR_squared = 1 - SS_residual / SS_total;\r\n% Calculate MAPE\r\nMAPE = mean(abs((ExperimentalValues - PredictedValues) ./ ExperimentalValues)) \r\n\r\n%Parity plot\r\nfigure (1)\r\nscatter(ExperimentalValues, PredictedValues);\r\nxlabel('Experimental value / kJ/L');\r\nylabel('Predicted value / kJ/L');\r\ntitle('Parity Plot');\r\ngrid on\r\n\r\n% Print evaluation metrics\r\nfprintf('MAE: %.4f\\n', MAE);\r\nfprintf('RMSE: %.4f\\n', RMSE);\r\nfprintf('R-squared: %.4f\\n', R_squared);\r\n\r\n"
+  }
+]

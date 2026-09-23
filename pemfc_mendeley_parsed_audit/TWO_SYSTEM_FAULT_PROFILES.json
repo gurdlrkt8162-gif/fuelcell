@@ -1,0 +1,975 @@
+[
+  {
+    "path": "mendeley_raw/TWO_SYSTEM_FAULT/Data_for_A_novel_method_for_polymer_electrolyte_membrane_fuel_cell_fault_diagnosis_using_2D_data.zip",
+    "bytes": 1620626,
+    "sha256": "cf00c5293d8f93e83b26f6a95e7b9e107a8e5b388c5c7f840453eb663d15ac72",
+    "archive_test": "PASS",
+    "members": [
+      {
+        "path": "Data for A novel method for polymer electrolyte membrane fuel cell fault diagnosis using 2D data/experimental data.xlsx",
+        "bytes": 1756704
+      }
+    ]
+  },
+  {
+    "path": "mendeley_raw/TWO_SYSTEM_FAULT/Data_for_A_novel_method_for_polymer_electrolyte_membrane_fuel_cell_fault_diagnosis_using_2D_data.zip__unpacked/Data for A novel method for polymer electrolyte membrane fuel cell fault diagnosis using 2D data/experimental data.xlsx",
+    "bytes": 1756704,
+    "sha256": "e88928c95672243e4691c435529e2d59175f5cb085c57e48455a63d2ca57c224",
+    "sheets": {
+      "Sheet1": {
+        "inferred": {
+          "rows": 31002,
+          "columns": 27,
+          "headers": [
+            "PEMFC1_Dehydration",
+            "Unnamed: 1",
+            "Unnamed: 2",
+            "PEMFC1_Flooding(1)",
+            "Unnamed: 4",
+            "Unnamed: 5",
+            "PEMFC1_Flooding(2)",
+            "Unnamed: 7",
+            "Unnamed: 8",
+            "PEMFC2_Flooding(1)",
+            "Unnamed: 10",
+            "Unnamed: 11",
+            "PEMFC2_Flooding(2)",
+            "Unnamed: 13",
+            "Unnamed: 14",
+            "PEMFC2_Flooding(3)",
+            "Unnamed: 16",
+            "Unnamed: 17",
+            "PEMFC2_Dehydration(1)",
+            "Unnamed: 19",
+            "Unnamed: 20",
+            "PEMFC2_Dehydration(2)",
+            "Unnamed: 22",
+            "Unnamed: 23",
+            "PEMFC2_Dehydration(3)",
+            "Unnamed: 25",
+            "Unnamed: 26"
+          ],
+          "header_mode": "parsed",
+          "duplicate_rows": 0,
+          "stats": [
+            {
+              "index": 0,
+              "name": "PEMFC1_Dehydration",
+              "numeric": 3600,
+              "missing": 27401,
+              "unique": 3601,
+              "min": 2744.26,
+              "max": 3772.637,
+              "mean": 3258.528222777778,
+              "examples": [
+                "t/s",
+                "2744.26",
+                "2744.588",
+                "2744.892"
+              ],
+              "diff": {
+                "negative": 0,
+                "zero": 0,
+                "median": 0.262000000000171,
+                "min": 0.25,
+                "max": 0.8450000000002547
+              }
+            },
+            {
+              "index": 1,
+              "name": "Unnamed: 1",
+              "numeric": 3600,
+              "missing": 27401,
+              "unique": 93,
+              "min": 0.52,
+              "max": 0.611,
+              "mean": 0.5746925,
+              "examples": [
+                "U/V",
+                "0.611",
+                "0.611",
+                "0.61"
+              ]
+            },
+            {
+              "index": 2,
+              "name": "Unnamed: 2",
+              "numeric": 3600,
+              "missing": 27401,
+              "unique": 398,
+              "min": 46.23,
+              "max": 46.714,
+              "mean": 46.46810222222222,
+              "examples": [
+                "T/°C",
+                "46.294",
+                "46.301",
+                "46.301"
+              ]
+            },
+            {
+              "index": 3,
+              "name": "PEMFC1_Flooding(1)",
+              "numeric": 3600,
+              "missing": 27401,
+              "unique": 3601,
+              "min": 6657.598,
+              "max": 7685.903,
+              "mean": 7171.77186361111,
+              "examples": [
+                "t/s",
+                "6657.598",
+                "6657.882",
+                "6658.167"
+              ]
+            },
+            {
+              "index": 4,
+              "name": "Unnamed: 4",
+              "numeric": 3600,
+              "missing": 27401,
+              "unique": 107,
+              "min": 0.565,
+              "max": 0.675,
+              "mean": 0.6123299999999999,
+              "examples": [
+                "U/V",
+                "0.675",
+                "0.675",
+                "0.675"
+              ]
+            },
+            {
+              "index": 5,
+              "name": "Unnamed: 5",
+              "numeric": 3600,
+              "missing": 27401,
+              "unique": 1714,
+              "min": 23.175,
+              "max": 41.036,
+              "mean": 29.199249722222223,
+              "examples": [
+                "T/°C",
+                "41.036",
+                "41.017",
+                "41.017"
+              ]
+            },
+            {
+              "index": 6,
+              "name": "PEMFC1_Flooding(2)",
+              "numeric": 3600,
+              "missing": 27401,
+              "unique": 3601,
+              "min": 1894.647,
+              "max": 2922.941,
+              "mean": 2408.822213611111,
+              "examples": [
+                "t/s",
+                "1894.647",
+                "1894.929",
+                "1895.221"
+              ]
+            },
+            {
+              "index": 7,
+              "name": "Unnamed: 7",
+              "numeric": 3600,
+              "missing": 27401,
+              "unique": 81,
+              "min": 0.54,
+              "max": 0.622,
+              "mean": 0.5739663888888888,
+              "examples": [
+                "U/V",
+                "0.622",
+                "0.622",
+                "0.622"
+              ]
+            },
+            {
+              "index": 8,
+              "name": "Unnamed: 8",
+              "numeric": 3600,
+              "missing": 27401,
+              "unique": 1660,
+              "min": 20.984,
+              "max": 31.559,
+              "mean": 25.002588055555556,
+              "examples": [
+                "T/°C",
+                "31.559",
+                "31.528",
+                "31.528"
+              ]
+            },
+            {
+              "index": 9,
+              "name": "PEMFC2_Flooding(1)",
+              "numeric": 0,
+              "missing": 30400,
+              "unique": 602,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "t/s",
+                "2019-10-14 13:09:00.234000",
+                "2019-10-14 13:09:00.334000",
+                "2019-10-14 13:09:00.434000"
+              ]
+            },
+            {
+              "index": 10,
+              "name": "Unnamed: 10",
+              "numeric": 601,
+              "missing": 30400,
+              "unique": 12,
+              "min": 0.62,
+              "max": 0.72,
+              "mean": 0.646089850249584,
+              "examples": [
+                "U/V",
+                "0.72",
+                "0.72",
+                "0.72"
+              ]
+            },
+            {
+              "index": 11,
+              "name": "Unnamed: 11",
+              "numeric": 601,
+              "missing": 30400,
+              "unique": 4,
+              "min": 36.9,
+              "max": 37.1,
+              "mean": 37.029284525790345,
+              "examples": [
+                "T/°C",
+                "36.9",
+                "36.9",
+                "36.9"
+              ]
+            },
+            {
+              "index": 12,
+              "name": "PEMFC2_Flooding(2)",
+              "numeric": 0,
+              "missing": 30400,
+              "unique": 602,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "t/s",
+                "2019-10-14 12:32:55.836000",
+                "2019-10-14 12:32:55.936000",
+                "2019-10-14 12:32:56.036000"
+              ]
+            },
+            {
+              "index": 13,
+              "name": "Unnamed: 13",
+              "numeric": 601,
+              "missing": 30400,
+              "unique": 2,
+              "min": 15.002,
+              "max": 15.002,
+              "mean": 15.002000000000002,
+              "examples": [
+                "U/V",
+                "15.002",
+                "15.002",
+                "15.002"
+              ]
+            },
+            {
+              "index": 14,
+              "name": "Unnamed: 14",
+              "numeric": 601,
+              "missing": 30400,
+              "unique": 6,
+              "min": 35.3,
+              "max": 35.7,
+              "mean": 35.482029950083195,
+              "examples": [
+                "T/°C",
+                "35.6",
+                "35.6",
+                "35.6"
+              ]
+            },
+            {
+              "index": 15,
+              "name": "PEMFC2_Flooding(3)",
+              "numeric": 0,
+              "missing": 30400,
+              "unique": 602,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "t/s",
+                "2019-10-14 12:58:01.735000",
+                "2019-10-14 12:58:01.835000",
+                "2019-10-14 12:58:01.935000"
+              ]
+            },
+            {
+              "index": 16,
+              "name": "Unnamed: 16",
+              "numeric": 601,
+              "missing": 30400,
+              "unique": 12,
+              "min": 0.61,
+              "max": 0.71,
+              "mean": 0.636955074875208,
+              "examples": [
+                "U/V",
+                "0.7",
+                "0.71",
+                "0.71"
+              ]
+            },
+            {
+              "index": 17,
+              "name": "Unnamed: 17",
+              "numeric": 601,
+              "missing": 30400,
+              "unique": 4,
+              "min": 34.8,
+              "max": 35.0,
+              "mean": 34.89933444259567,
+              "examples": [
+                "T/°C",
+                "34.8",
+                "34.8",
+                "34.8"
+              ]
+            },
+            {
+              "index": 18,
+              "name": "PEMFC2_Dehydration(1)",
+              "numeric": 0,
+              "missing": 0,
+              "unique": 31002,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "t/s",
+                "2019-11-30 12:22:01.032000",
+                "2019-11-30 12:22:01.282000",
+                "2019-11-30 12:22:01.532000"
+              ]
+            },
+            {
+              "index": 19,
+              "name": "Unnamed: 19",
+              "numeric": 31001,
+              "missing": 0,
+              "unique": 21,
+              "min": 0.5,
+              "max": 0.69,
+              "mean": 0.5504564368891326,
+              "examples": [
+                "U/V",
+                "0.68",
+                "0.69",
+                "0.68"
+              ]
+            },
+            {
+              "index": 20,
+              "name": "Unnamed: 20",
+              "numeric": 31001,
+              "missing": 0,
+              "unique": 10,
+              "min": 49.4,
+              "max": 50.2,
+              "mean": 49.974413728589404,
+              "examples": [
+                "T/°C",
+                "50.2",
+                "50.2",
+                "50.2"
+              ]
+            },
+            {
+              "index": 21,
+              "name": "PEMFC2_Dehydration(2)",
+              "numeric": 0,
+              "missing": 13000,
+              "unique": 18002,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "t/s",
+                "2019-11-26 19:54:50.380000",
+                "2019-11-26 19:54:50.630000",
+                "2019-11-26 19:54:50.880000"
+              ]
+            },
+            {
+              "index": 22,
+              "name": "Unnamed: 22",
+              "numeric": 18001,
+              "missing": 13000,
+              "unique": 15,
+              "min": 0.54,
+              "max": 0.67,
+              "mean": 0.591047719571135,
+              "examples": [
+                "U/V",
+                "0.67",
+                "0.67",
+                "0.67"
+              ]
+            },
+            {
+              "index": 23,
+              "name": "Unnamed: 23",
+              "numeric": 18001,
+              "missing": 13000,
+              "unique": 25,
+              "min": 49.6,
+              "max": 51.9,
+              "mean": 50.0937614576968,
+              "examples": [
+                "T/°C",
+                "51.9",
+                "51.9",
+                "51.9"
+              ]
+            },
+            {
+              "index": 24,
+              "name": "PEMFC2_Dehydration(3)",
+              "numeric": 0,
+              "missing": 6000,
+              "unique": 25002,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "t/s",
+                "2019-11-27 16:57:21.176000",
+                "2019-11-27 16:57:21.426000",
+                "2019-11-27 16:57:21.676000"
+              ]
+            },
+            {
+              "index": 25,
+              "name": "Unnamed: 25",
+              "numeric": 25001,
+              "missing": 6000,
+              "unique": 17,
+              "min": 0.54,
+              "max": 0.69,
+              "mean": 0.5989804407823688,
+              "examples": [
+                "U/V",
+                "0.69",
+                "0.69",
+                "0.69"
+              ]
+            },
+            {
+              "index": 26,
+              "name": "Unnamed: 26",
+              "numeric": 25001,
+              "missing": 6000,
+              "unique": 16,
+              "min": 49.4,
+              "max": 50.8,
+              "mean": 49.97791288348466,
+              "examples": [
+                "T/°C",
+                "50.8",
+                "50.8",
+                "50.8"
+              ]
+            }
+          ]
+        },
+        "header_none": {
+          "rows": 31003,
+          "columns": 27,
+          "headers": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26"
+          ],
+          "header_mode": "none",
+          "duplicate_rows": 0,
+          "stats": [
+            {
+              "index": 0,
+              "name": "0",
+              "numeric": 3600,
+              "missing": 27401,
+              "unique": 3602,
+              "min": 2744.26,
+              "max": 3772.637,
+              "mean": 3258.528222777778,
+              "examples": [
+                "PEMFC1_Dehydration",
+                "t/s",
+                "2744.26",
+                "2744.588"
+              ],
+              "diff": {
+                "negative": 0,
+                "zero": 0,
+                "median": 0.262000000000171,
+                "min": 0.25,
+                "max": 0.8450000000002547
+              }
+            },
+            {
+              "index": 1,
+              "name": "1",
+              "numeric": 3600,
+              "missing": 27402,
+              "unique": 93,
+              "min": 0.52,
+              "max": 0.611,
+              "mean": 0.5746925,
+              "examples": [
+                "nan",
+                "U/V",
+                "0.611",
+                "0.611"
+              ]
+            },
+            {
+              "index": 2,
+              "name": "2",
+              "numeric": 3600,
+              "missing": 27402,
+              "unique": 398,
+              "min": 46.23,
+              "max": 46.714,
+              "mean": 46.46810222222222,
+              "examples": [
+                "nan",
+                "T/°C",
+                "46.294",
+                "46.301"
+              ]
+            },
+            {
+              "index": 3,
+              "name": "3",
+              "numeric": 3600,
+              "missing": 27401,
+              "unique": 3602,
+              "min": 6657.598,
+              "max": 7685.903,
+              "mean": 7171.77186361111,
+              "examples": [
+                "PEMFC1_Flooding(1)",
+                "t/s",
+                "6657.598",
+                "6657.882"
+              ]
+            },
+            {
+              "index": 4,
+              "name": "4",
+              "numeric": 3600,
+              "missing": 27402,
+              "unique": 107,
+              "min": 0.565,
+              "max": 0.675,
+              "mean": 0.6123299999999999,
+              "examples": [
+                "nan",
+                "U/V",
+                "0.675",
+                "0.675"
+              ]
+            },
+            {
+              "index": 5,
+              "name": "5",
+              "numeric": 3600,
+              "missing": 27402,
+              "unique": 1714,
+              "min": 23.175,
+              "max": 41.036,
+              "mean": 29.199249722222223,
+              "examples": [
+                "nan",
+                "T/°C",
+                "41.036",
+                "41.017"
+              ]
+            },
+            {
+              "index": 6,
+              "name": "6",
+              "numeric": 3600,
+              "missing": 27401,
+              "unique": 3602,
+              "min": 1894.647,
+              "max": 2922.941,
+              "mean": 2408.822213611111,
+              "examples": [
+                "PEMFC1_Flooding(2)",
+                "t/s",
+                "1894.647",
+                "1894.929"
+              ]
+            },
+            {
+              "index": 7,
+              "name": "7",
+              "numeric": 3600,
+              "missing": 27402,
+              "unique": 81,
+              "min": 0.54,
+              "max": 0.622,
+              "mean": 0.5739663888888888,
+              "examples": [
+                "nan",
+                "U/V",
+                "0.622",
+                "0.622"
+              ]
+            },
+            {
+              "index": 8,
+              "name": "8",
+              "numeric": 3600,
+              "missing": 27402,
+              "unique": 1660,
+              "min": 20.984,
+              "max": 31.559,
+              "mean": 25.002588055555556,
+              "examples": [
+                "nan",
+                "T/°C",
+                "31.559",
+                "31.528"
+              ]
+            },
+            {
+              "index": 9,
+              "name": "9",
+              "numeric": 0,
+              "missing": 30400,
+              "unique": 603,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "PEMFC2_Flooding(1)",
+                "t/s",
+                "2019-10-14 13:09:00.234000",
+                "2019-10-14 13:09:00.334000"
+              ]
+            },
+            {
+              "index": 10,
+              "name": "10",
+              "numeric": 601,
+              "missing": 30401,
+              "unique": 12,
+              "min": 0.62,
+              "max": 0.72,
+              "mean": 0.646089850249584,
+              "examples": [
+                "nan",
+                "U/V",
+                "0.72",
+                "0.72"
+              ]
+            },
+            {
+              "index": 11,
+              "name": "11",
+              "numeric": 601,
+              "missing": 30401,
+              "unique": 4,
+              "min": 36.9,
+              "max": 37.1,
+              "mean": 37.029284525790345,
+              "examples": [
+                "nan",
+                "T/°C",
+                "36.9",
+                "36.9"
+              ]
+            },
+            {
+              "index": 12,
+              "name": "12",
+              "numeric": 0,
+              "missing": 30400,
+              "unique": 603,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "PEMFC2_Flooding(2)",
+                "t/s",
+                "2019-10-14 12:32:55.836000",
+                "2019-10-14 12:32:55.936000"
+              ]
+            },
+            {
+              "index": 13,
+              "name": "13",
+              "numeric": 601,
+              "missing": 30401,
+              "unique": 2,
+              "min": 15.002,
+              "max": 15.002,
+              "mean": 15.002000000000002,
+              "examples": [
+                "nan",
+                "U/V",
+                "15.002",
+                "15.002"
+              ]
+            },
+            {
+              "index": 14,
+              "name": "14",
+              "numeric": 601,
+              "missing": 30401,
+              "unique": 6,
+              "min": 35.3,
+              "max": 35.7,
+              "mean": 35.482029950083195,
+              "examples": [
+                "nan",
+                "T/°C",
+                "35.6",
+                "35.6"
+              ]
+            },
+            {
+              "index": 15,
+              "name": "15",
+              "numeric": 0,
+              "missing": 30400,
+              "unique": 603,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "PEMFC2_Flooding(3)",
+                "t/s",
+                "2019-10-14 12:58:01.735000",
+                "2019-10-14 12:58:01.835000"
+              ]
+            },
+            {
+              "index": 16,
+              "name": "16",
+              "numeric": 601,
+              "missing": 30401,
+              "unique": 12,
+              "min": 0.61,
+              "max": 0.71,
+              "mean": 0.636955074875208,
+              "examples": [
+                "nan",
+                "U/V",
+                "0.7",
+                "0.71"
+              ]
+            },
+            {
+              "index": 17,
+              "name": "17",
+              "numeric": 601,
+              "missing": 30401,
+              "unique": 4,
+              "min": 34.8,
+              "max": 35.0,
+              "mean": 34.89933444259567,
+              "examples": [
+                "nan",
+                "T/°C",
+                "34.8",
+                "34.8"
+              ]
+            },
+            {
+              "index": 18,
+              "name": "18",
+              "numeric": 0,
+              "missing": 0,
+              "unique": 31003,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "PEMFC2_Dehydration(1)",
+                "t/s",
+                "2019-11-30 12:22:01.032000",
+                "2019-11-30 12:22:01.282000"
+              ]
+            },
+            {
+              "index": 19,
+              "name": "19",
+              "numeric": 31001,
+              "missing": 1,
+              "unique": 21,
+              "min": 0.5,
+              "max": 0.69,
+              "mean": 0.5504564368891326,
+              "examples": [
+                "nan",
+                "U/V",
+                "0.68",
+                "0.69"
+              ]
+            },
+            {
+              "index": 20,
+              "name": "20",
+              "numeric": 31001,
+              "missing": 1,
+              "unique": 10,
+              "min": 49.4,
+              "max": 50.2,
+              "mean": 49.974413728589404,
+              "examples": [
+                "nan",
+                "T/°C",
+                "50.2",
+                "50.2"
+              ]
+            },
+            {
+              "index": 21,
+              "name": "21",
+              "numeric": 0,
+              "missing": 13000,
+              "unique": 18003,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "PEMFC2_Dehydration(2)",
+                "t/s",
+                "2019-11-26 19:54:50.380000",
+                "2019-11-26 19:54:50.630000"
+              ]
+            },
+            {
+              "index": 22,
+              "name": "22",
+              "numeric": 18001,
+              "missing": 13001,
+              "unique": 15,
+              "min": 0.54,
+              "max": 0.67,
+              "mean": 0.591047719571135,
+              "examples": [
+                "nan",
+                "U/V",
+                "0.67",
+                "0.67"
+              ]
+            },
+            {
+              "index": 23,
+              "name": "23",
+              "numeric": 18001,
+              "missing": 13001,
+              "unique": 25,
+              "min": 49.6,
+              "max": 51.9,
+              "mean": 50.0937614576968,
+              "examples": [
+                "nan",
+                "T/°C",
+                "51.9",
+                "51.9"
+              ]
+            },
+            {
+              "index": 24,
+              "name": "24",
+              "numeric": 0,
+              "missing": 6000,
+              "unique": 25003,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "PEMFC2_Dehydration(3)",
+                "t/s",
+                "2019-11-27 16:57:21.176000",
+                "2019-11-27 16:57:21.426000"
+              ]
+            },
+            {
+              "index": 25,
+              "name": "25",
+              "numeric": 25001,
+              "missing": 6001,
+              "unique": 17,
+              "min": 0.54,
+              "max": 0.69,
+              "mean": 0.5989804407823688,
+              "examples": [
+                "nan",
+                "U/V",
+                "0.69",
+                "0.69"
+              ]
+            },
+            {
+              "index": 26,
+              "name": "26",
+              "numeric": 25001,
+              "missing": 6001,
+              "unique": 16,
+              "min": 49.4,
+              "max": 50.8,
+              "mean": 49.97791288348466,
+              "examples": [
+                "nan",
+                "T/°C",
+                "50.8",
+                "50.8"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+]

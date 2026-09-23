@@ -1,0 +1,6300 @@
+[
+  {
+    "path": "mendeley_raw/JRC_ZERO_GRADIENT/n5csdjfg3c-2.zip",
+    "bytes": 6318551,
+    "sha256": "77ac1d1524f2055a7830a13298208f78901639f36449c3521a23386e06eae821",
+    "archive_test": "PASS",
+    "members": [
+      {
+        "path": "ZEROCELL_IV_EIS.xlsx",
+        "bytes": 5662634
+      },
+      {
+        "path": "S-S_HW_IV_EIS.xlsx",
+        "bytes": 900510
+      }
+    ]
+  },
+  {
+    "path": "mendeley_raw/JRC_ZERO_GRADIENT/n5csdjfg3c-2.zip__unpacked/S-S_HW_IV_EIS.xlsx",
+    "bytes": 900510,
+    "sha256": "5c255a237cb803e87bf029be261ef4774cf4e346bda0594b29aa798ae585c00e",
+    "sheets": {
+      "data": {
+        "inferred": {
+          "rows": 8033,
+          "columns": 57,
+          "headers": [
+            "Unnamed: 0",
+            "Unnamed: 1",
+            "Unnamed: 2",
+            "Unnamed: 3",
+            "Unnamed: 4",
+            "Unnamed: 5",
+            "Unnamed: 6",
+            "Unnamed: 7",
+            "Unnamed: 8",
+            "Unnamed: 9",
+            "Unnamed: 10",
+            "Unnamed: 11",
+            "Unnamed: 12",
+            "Unnamed: 13",
+            "Unnamed: 14",
+            "Unnamed: 15",
+            "Unnamed: 16",
+            "Unnamed: 17",
+            "Unnamed: 18",
+            "Unnamed: 19",
+            "Unnamed: 20",
+            "Unnamed: 21",
+            "Unnamed: 22",
+            "Unnamed: 23",
+            "Unnamed: 24",
+            "Unnamed: 25",
+            "Unnamed: 26",
+            "Unnamed: 27",
+            "Unnamed: 28",
+            "Unnamed: 29",
+            "Unnamed: 30",
+            "Unnamed: 31",
+            "Unnamed: 32",
+            "Unnamed: 33",
+            "Unnamed: 34",
+            "Unnamed: 35",
+            "Unnamed: 36",
+            "Unnamed: 37",
+            "Unnamed: 38",
+            "Unnamed: 39",
+            "Unnamed: 40",
+            "Unnamed: 41",
+            "Unnamed: 42",
+            "Unnamed: 43",
+            "Unnamed: 44",
+            "Unnamed: 45",
+            "Unnamed: 46",
+            "Unnamed: 47",
+            "Unnamed: 48",
+            "Unnamed: 49",
+            "Unnamed: 50",
+            "Unnamed: 51",
+            "Unnamed: 52",
+            "Unnamed: 53",
+            "Unnamed: 54",
+            "Unnamed: 55",
+            "Unnamed: 56"
+          ],
+          "header_mode": "parsed",
+          "duplicate_rows": 45,
+          "stats": [
+            {
+              "index": 0,
+              "name": "Unnamed: 0",
+              "numeric": 8017,
+              "missing": 13,
+              "unique": 396,
+              "min": 0.0,
+              "max": 2600.0,
+              "mean": 1137.8005072407386,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ],
+              "diff": {
+                "negative": 16,
+                "zero": 7607,
+                "median": 0.0,
+                "min": -200.0,
+                "max": 50.0
+              }
+            },
+            {
+              "index": 1,
+              "name": "Unnamed: 1",
+              "numeric": 8017,
+              "missing": 13,
+              "unique": 858,
+              "min": 1.72,
+              "max": 2604.800049,
+              "mean": 1140.4075072392416,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 2,
+              "name": "Unnamed: 2",
+              "numeric": 8017,
+              "missing": 13,
+              "unique": 2162,
+              "min": 0.22821500000000003,
+              "max": 0.993414,
+              "mean": 0.6320095997289916,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 3,
+              "name": "Unnamed: 3",
+              "numeric": 33,
+              "missing": 7998,
+              "unique": 35,
+              "min": 2.549333333333333,
+              "max": 2603.0586344333333,
+              "mean": 1037.1258573151517,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 4,
+              "name": "Unnamed: 4",
+              "numeric": 33,
+              "missing": 7999,
+              "unique": 34,
+              "min": 0.2432884333333333,
+              "max": 0.988046466666667,
+              "mean": 0.6585003656565658,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 5,
+              "name": "Unnamed: 5",
+              "numeric": 33,
+              "missing": 7999,
+              "unique": 34,
+              "min": 0.4135140821603304,
+              "max": 7.462585180566554,
+              "mean": 1.9202187737973675,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 6,
+              "name": "Unnamed: 6",
+              "numeric": 0,
+              "missing": 8033,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 7,
+              "name": "Unnamed: 7",
+              "numeric": 8017,
+              "missing": 13,
+              "unique": 4355,
+              "min": 1.7747190000000046,
+              "max": 17.150893999999994,
+              "mean": 8.112390497567674,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 8,
+              "name": "Unnamed: 8",
+              "numeric": 33,
+              "missing": 7999,
+              "unique": 34,
+              "min": 2.4818236666666706,
+              "max": 15.39639093333334,
+              "mean": 7.545133840404047,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 9,
+              "name": "Unnamed: 9",
+              "numeric": 33,
+              "missing": 7999,
+              "unique": 34,
+              "min": 0.10006777511144836,
+              "max": 0.4376307835297607,
+              "mean": 0.16417696935650536,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 10,
+              "name": "Unnamed: 10",
+              "numeric": 8017,
+              "missing": 14,
+              "unique": 4066,
+              "min": 1.2891090000000247,
+              "max": 77.11806499999999,
+              "mean": 23.13660200236165,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 11,
+              "name": "Unnamed: 11",
+              "numeric": 33,
+              "missing": 7999,
+              "unique": 34,
+              "min": 1.6978986000000011,
+              "max": 72.55642593333336,
+              "mean": 20.981242837979796,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 12,
+              "name": "Unnamed: 12",
+              "numeric": 33,
+              "missing": 7999,
+              "unique": 34,
+              "min": 0.04763567774538219,
+              "max": 0.9086847158690488,
+              "mean": 0.228166198107997,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 13,
+              "name": "Unnamed: 13",
+              "numeric": 0,
+              "missing": 8033,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 14,
+              "name": "Unnamed: 14",
+              "numeric": 0,
+              "missing": 8033,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 15,
+              "name": "Unnamed: 15",
+              "numeric": 0,
+              "missing": 8033,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 16,
+              "name": "Unnamed: 16",
+              "numeric": 0,
+              "missing": 8033,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 17,
+              "name": "Unnamed: 17",
+              "numeric": 0,
+              "missing": 8033,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 18,
+              "name": "Unnamed: 18",
+              "numeric": 0,
+              "missing": 8033,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 19,
+              "name": "Unnamed: 19",
+              "numeric": 0,
+              "missing": 8033,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 20,
+              "name": "Unnamed: 20",
+              "numeric": 0,
+              "missing": 8033,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 21,
+              "name": "Unnamed: 21",
+              "numeric": 0,
+              "missing": 8033,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 22,
+              "name": "Unnamed: 22",
+              "numeric": 0,
+              "missing": 8033,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 23,
+              "name": "Unnamed: 23",
+              "numeric": 0,
+              "missing": 8033,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 24,
+              "name": "Unnamed: 24",
+              "numeric": 0,
+              "missing": 8033,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 25,
+              "name": "Unnamed: 25",
+              "numeric": 0,
+              "missing": 8033,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 26,
+              "name": "Unnamed: 26",
+              "numeric": 0,
+              "missing": 8033,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 27,
+              "name": "Unnamed: 27",
+              "numeric": 0,
+              "missing": 8033,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 28,
+              "name": "Unnamed: 28",
+              "numeric": 0,
+              "missing": 8033,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 29,
+              "name": "Unnamed: 29",
+              "numeric": 0,
+              "missing": 8033,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 30,
+              "name": "Unnamed: 30",
+              "numeric": 0,
+              "missing": 8033,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 31,
+              "name": "Unnamed: 31",
+              "numeric": 0,
+              "missing": 8033,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 32,
+              "name": "Unnamed: 32",
+              "numeric": 0,
+              "missing": 8033,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 33,
+              "name": "Unnamed: 33",
+              "numeric": 0,
+              "missing": 8033,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 34,
+              "name": "Unnamed: 34",
+              "numeric": 0,
+              "missing": 8033,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 35,
+              "name": "Unnamed: 35",
+              "numeric": 0,
+              "missing": 8033,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 36,
+              "name": "Unnamed: 36",
+              "numeric": 0,
+              "missing": 8033,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 37,
+              "name": "Unnamed: 37",
+              "numeric": 33,
+              "missing": 8000,
+              "unique": 17,
+              "min": 0.0,
+              "max": 2600.0,
+              "mean": 1034.5454545454545,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "0.0"
+              ]
+            },
+            {
+              "index": 38,
+              "name": "Unnamed: 38",
+              "numeric": 33,
+              "missing": 7999,
+              "unique": 34,
+              "min": 2.549333333333333,
+              "max": 2603.0586344333333,
+              "mean": 1037.1258573151517,
+              "examples": [
+                "nan",
+                "nan",
+                "Current density",
+                "2.549333333333333"
+              ]
+            },
+            {
+              "index": 39,
+              "name": "Unnamed: 39",
+              "numeric": 33,
+              "missing": 7999,
+              "unique": 34,
+              "min": 0.2432884333333333,
+              "max": 0.988046466666667,
+              "mean": 0.6585003656565658,
+              "examples": [
+                "nan",
+                "nan",
+                "Voltage",
+                "0.9805417666666668"
+              ]
+            },
+            {
+              "index": 40,
+              "name": "Unnamed: 40",
+              "numeric": 31,
+              "missing": 8001,
+              "unique": 32,
+              "min": -4.201296098990338,
+              "max": -0.15330787187246367,
+              "mean": -0.5610720742066442,
+              "examples": [
+                "nan",
+                "nan",
+                "IV slope",
+                "nan"
+              ]
+            },
+            {
+              "index": 41,
+              "name": "Unnamed: 41",
+              "numeric": 33,
+              "missing": 7999,
+              "unique": 34,
+              "min": 0.4135140821603304,
+              "max": 7.462585180566554,
+              "mean": 1.9202187737973675,
+              "examples": [
+                "nan",
+                "nan",
+                "Standard deviation of voltage",
+                "0.5811039934405844"
+              ]
+            },
+            {
+              "index": 42,
+              "name": "Unnamed: 42",
+              "numeric": 33,
+              "missing": 7999,
+              "unique": 34,
+              "min": 2.4818236666666706,
+              "max": 15.39639093333334,
+              "mean": 7.545133840404047,
+              "examples": [
+                "nan",
+                "nan",
+                "Anode pressure drop",
+                "2.6368149999999995"
+              ]
+            },
+            {
+              "index": 43,
+              "name": "Unnamed: 43",
+              "numeric": 33,
+              "missing": 7999,
+              "unique": 34,
+              "min": 0.10006777511144836,
+              "max": 0.4376307835297607,
+              "mean": 0.16417696935650536,
+              "examples": [
+                "nan",
+                "nan",
+                "Standard deviation of anode pressure drop",
+                "0.4376307835297607"
+              ]
+            },
+            {
+              "index": 44,
+              "name": "Unnamed: 44",
+              "numeric": 33,
+              "missing": 7999,
+              "unique": 34,
+              "min": 1.6978986000000011,
+              "max": 72.55642593333336,
+              "mean": 20.981242837979796,
+              "examples": [
+                "nan",
+                "nan",
+                "Cathode pressure drop",
+                "2.4096936999999943"
+              ]
+            },
+            {
+              "index": 45,
+              "name": "Unnamed: 45",
+              "numeric": 33,
+              "missing": 7999,
+              "unique": 34,
+              "min": 0.04763567774538219,
+              "max": 0.9086847158690488,
+              "mean": 0.228166198107997,
+              "examples": [
+                "nan",
+                "nan",
+                "Standard deviation of cathode pressure drop",
+                "0.39068313670391475"
+              ]
+            },
+            {
+              "index": 46,
+              "name": "Unnamed: 46",
+              "numeric": 0,
+              "missing": 8033,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 47,
+              "name": "Unnamed: 47",
+              "numeric": 0,
+              "missing": 8033,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 48,
+              "name": "Unnamed: 48",
+              "numeric": 33,
+              "missing": 8000,
+              "unique": 17,
+              "min": 0.0,
+              "max": 2600.0,
+              "mean": 1034.5454545454545,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "0.0"
+              ]
+            },
+            {
+              "index": 49,
+              "name": "Unnamed: 49",
+              "numeric": 33,
+              "missing": 7999,
+              "unique": 34,
+              "min": 2.549333333333333,
+              "max": 2603.0586344333333,
+              "mean": 1037.1258573151517,
+              "examples": [
+                "nan",
+                "nan",
+                "Current density",
+                "2.549333333333333"
+              ]
+            },
+            {
+              "index": 50,
+              "name": "Unnamed: 50",
+              "numeric": 33,
+              "missing": 7999,
+              "unique": 34,
+              "min": 0.2432884333333333,
+              "max": 0.988046466666667,
+              "mean": 0.6585003656565658,
+              "examples": [
+                "nan",
+                "nan",
+                "Voltage",
+                "0.9805417666666668"
+              ]
+            },
+            {
+              "index": 51,
+              "name": "Unnamed: 51",
+              "numeric": 33,
+              "missing": 7999,
+              "unique": 33,
+              "min": -4.201296098990338,
+              "max": 0.0,
+              "mean": -0.5270677060729081,
+              "examples": [
+                "nan",
+                "nan",
+                "IV slope",
+                "0"
+              ]
+            },
+            {
+              "index": 52,
+              "name": "Unnamed: 52",
+              "numeric": 33,
+              "missing": 7999,
+              "unique": 34,
+              "min": 0.4135140821603304,
+              "max": 7.462585180566554,
+              "mean": 1.9202187737973675,
+              "examples": [
+                "nan",
+                "nan",
+                "Standard deviation of voltage",
+                "0.5811039934405844"
+              ]
+            },
+            {
+              "index": 53,
+              "name": "Unnamed: 53",
+              "numeric": 33,
+              "missing": 7999,
+              "unique": 34,
+              "min": 2.4818236666666706,
+              "max": 15.39639093333334,
+              "mean": 7.545133840404047,
+              "examples": [
+                "nan",
+                "nan",
+                "Anode pressure drop",
+                "2.6368149999999995"
+              ]
+            },
+            {
+              "index": 54,
+              "name": "Unnamed: 54",
+              "numeric": 33,
+              "missing": 7999,
+              "unique": 34,
+              "min": 0.10006777511144836,
+              "max": 0.4376307835297607,
+              "mean": 0.16417696935650536,
+              "examples": [
+                "nan",
+                "nan",
+                "Standard deviation of anode pressure drop",
+                "0.4376307835297607"
+              ]
+            },
+            {
+              "index": 55,
+              "name": "Unnamed: 55",
+              "numeric": 33,
+              "missing": 7999,
+              "unique": 34,
+              "min": 1.6978986000000011,
+              "max": 72.55642593333336,
+              "mean": 20.981242837979796,
+              "examples": [
+                "nan",
+                "nan",
+                "Cathode pressure drop",
+                "2.4096936999999943"
+              ]
+            },
+            {
+              "index": 56,
+              "name": "Unnamed: 56",
+              "numeric": 33,
+              "missing": 7999,
+              "unique": 34,
+              "min": 0.04763567774538219,
+              "max": 0.9086847158690488,
+              "mean": 0.228166198107997,
+              "examples": [
+                "nan",
+                "nan",
+                "Standard deviation of cathode pressure drop",
+                "0.39068313670391475"
+              ]
+            }
+          ]
+        },
+        "header_none": {
+          "rows": 8034,
+          "columns": 57,
+          "headers": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "50",
+            "51",
+            "52",
+            "53",
+            "54",
+            "55",
+            "56"
+          ],
+          "header_mode": "none",
+          "duplicate_rows": 46,
+          "stats": [
+            {
+              "index": 0,
+              "name": "0",
+              "numeric": 8017,
+              "missing": 14,
+              "unique": 396,
+              "min": 0.0,
+              "max": 2600.0,
+              "mean": 1137.8005072407386,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ],
+              "diff": {
+                "negative": 16,
+                "zero": 7607,
+                "median": 0.0,
+                "min": -200.0,
+                "max": 50.0
+              }
+            },
+            {
+              "index": 1,
+              "name": "1",
+              "numeric": 8017,
+              "missing": 14,
+              "unique": 858,
+              "min": 1.72,
+              "max": 2604.800049,
+              "mean": 1140.4075072392416,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 2,
+              "name": "2",
+              "numeric": 8017,
+              "missing": 14,
+              "unique": 2162,
+              "min": 0.22821500000000003,
+              "max": 0.993414,
+              "mean": 0.6320095997289916,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 3,
+              "name": "3",
+              "numeric": 33,
+              "missing": 7999,
+              "unique": 35,
+              "min": 2.549333333333333,
+              "max": 2603.0586344333333,
+              "mean": 1037.1258573151517,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 4,
+              "name": "4",
+              "numeric": 33,
+              "missing": 8000,
+              "unique": 34,
+              "min": 0.2432884333333333,
+              "max": 0.988046466666667,
+              "mean": 0.6585003656565658,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 5,
+              "name": "5",
+              "numeric": 33,
+              "missing": 8000,
+              "unique": 34,
+              "min": 0.4135140821603304,
+              "max": 7.462585180566554,
+              "mean": 1.9202187737973675,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 6,
+              "name": "6",
+              "numeric": 0,
+              "missing": 8034,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 7,
+              "name": "7",
+              "numeric": 8017,
+              "missing": 14,
+              "unique": 4355,
+              "min": 1.7747190000000046,
+              "max": 17.150893999999994,
+              "mean": 8.112390497567674,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 8,
+              "name": "8",
+              "numeric": 33,
+              "missing": 8000,
+              "unique": 34,
+              "min": 2.4818236666666706,
+              "max": 15.39639093333334,
+              "mean": 7.545133840404047,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 9,
+              "name": "9",
+              "numeric": 33,
+              "missing": 8000,
+              "unique": 34,
+              "min": 0.10006777511144836,
+              "max": 0.4376307835297607,
+              "mean": 0.16417696935650536,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 10,
+              "name": "10",
+              "numeric": 8017,
+              "missing": 15,
+              "unique": 4066,
+              "min": 1.2891090000000247,
+              "max": 77.11806499999999,
+              "mean": 23.13660200236165,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 11,
+              "name": "11",
+              "numeric": 33,
+              "missing": 8000,
+              "unique": 34,
+              "min": 1.6978986000000011,
+              "max": 72.55642593333336,
+              "mean": 20.981242837979796,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 12,
+              "name": "12",
+              "numeric": 33,
+              "missing": 8000,
+              "unique": 34,
+              "min": 0.04763567774538219,
+              "max": 0.9086847158690488,
+              "mean": 0.228166198107997,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 13,
+              "name": "13",
+              "numeric": 0,
+              "missing": 8034,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 14,
+              "name": "14",
+              "numeric": 0,
+              "missing": 8034,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 15,
+              "name": "15",
+              "numeric": 0,
+              "missing": 8034,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 16,
+              "name": "16",
+              "numeric": 0,
+              "missing": 8034,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 17,
+              "name": "17",
+              "numeric": 0,
+              "missing": 8034,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 18,
+              "name": "18",
+              "numeric": 0,
+              "missing": 8034,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 19,
+              "name": "19",
+              "numeric": 0,
+              "missing": 8034,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 20,
+              "name": "20",
+              "numeric": 0,
+              "missing": 8034,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 21,
+              "name": "21",
+              "numeric": 0,
+              "missing": 8034,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 22,
+              "name": "22",
+              "numeric": 0,
+              "missing": 8034,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 23,
+              "name": "23",
+              "numeric": 0,
+              "missing": 8034,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 24,
+              "name": "24",
+              "numeric": 0,
+              "missing": 8034,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 25,
+              "name": "25",
+              "numeric": 0,
+              "missing": 8034,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 26,
+              "name": "26",
+              "numeric": 0,
+              "missing": 8034,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 27,
+              "name": "27",
+              "numeric": 0,
+              "missing": 8034,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 28,
+              "name": "28",
+              "numeric": 0,
+              "missing": 8034,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 29,
+              "name": "29",
+              "numeric": 0,
+              "missing": 8034,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 30,
+              "name": "30",
+              "numeric": 0,
+              "missing": 8034,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 31,
+              "name": "31",
+              "numeric": 0,
+              "missing": 8034,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 32,
+              "name": "32",
+              "numeric": 0,
+              "missing": 8034,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 33,
+              "name": "33",
+              "numeric": 0,
+              "missing": 8034,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 34,
+              "name": "34",
+              "numeric": 0,
+              "missing": 8034,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 35,
+              "name": "35",
+              "numeric": 0,
+              "missing": 8034,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 36,
+              "name": "36",
+              "numeric": 0,
+              "missing": 8034,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 37,
+              "name": "37",
+              "numeric": 33,
+              "missing": 8001,
+              "unique": 17,
+              "min": 0.0,
+              "max": 2600.0,
+              "mean": 1034.5454545454545,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 38,
+              "name": "38",
+              "numeric": 33,
+              "missing": 8000,
+              "unique": 34,
+              "min": 2.549333333333333,
+              "max": 2603.0586344333333,
+              "mean": 1037.1258573151517,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "Current density"
+              ]
+            },
+            {
+              "index": 39,
+              "name": "39",
+              "numeric": 33,
+              "missing": 8000,
+              "unique": 34,
+              "min": 0.2432884333333333,
+              "max": 0.988046466666667,
+              "mean": 0.6585003656565658,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "Voltage"
+              ]
+            },
+            {
+              "index": 40,
+              "name": "40",
+              "numeric": 31,
+              "missing": 8002,
+              "unique": 32,
+              "min": -4.201296098990338,
+              "max": -0.15330787187246367,
+              "mean": -0.5610720742066442,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "IV slope"
+              ]
+            },
+            {
+              "index": 41,
+              "name": "41",
+              "numeric": 33,
+              "missing": 8000,
+              "unique": 34,
+              "min": 0.4135140821603304,
+              "max": 7.462585180566554,
+              "mean": 1.9202187737973675,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "Standard deviation of voltage"
+              ]
+            },
+            {
+              "index": 42,
+              "name": "42",
+              "numeric": 33,
+              "missing": 8000,
+              "unique": 34,
+              "min": 2.4818236666666706,
+              "max": 15.39639093333334,
+              "mean": 7.545133840404047,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "Anode pressure drop"
+              ]
+            },
+            {
+              "index": 43,
+              "name": "43",
+              "numeric": 33,
+              "missing": 8000,
+              "unique": 34,
+              "min": 0.10006777511144836,
+              "max": 0.4376307835297607,
+              "mean": 0.16417696935650536,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "Standard deviation of anode pressure drop"
+              ]
+            },
+            {
+              "index": 44,
+              "name": "44",
+              "numeric": 33,
+              "missing": 8000,
+              "unique": 34,
+              "min": 1.6978986000000011,
+              "max": 72.55642593333336,
+              "mean": 20.981242837979796,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "Cathode pressure drop"
+              ]
+            },
+            {
+              "index": 45,
+              "name": "45",
+              "numeric": 33,
+              "missing": 8000,
+              "unique": 34,
+              "min": 0.04763567774538219,
+              "max": 0.9086847158690488,
+              "mean": 0.228166198107997,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "Standard deviation of cathode pressure drop"
+              ]
+            },
+            {
+              "index": 46,
+              "name": "46",
+              "numeric": 0,
+              "missing": 8034,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 47,
+              "name": "47",
+              "numeric": 0,
+              "missing": 8034,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 48,
+              "name": "48",
+              "numeric": 33,
+              "missing": 8001,
+              "unique": 17,
+              "min": 0.0,
+              "max": 2600.0,
+              "mean": 1034.5454545454545,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 49,
+              "name": "49",
+              "numeric": 33,
+              "missing": 8000,
+              "unique": 34,
+              "min": 2.549333333333333,
+              "max": 2603.0586344333333,
+              "mean": 1037.1258573151517,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "Current density"
+              ]
+            },
+            {
+              "index": 50,
+              "name": "50",
+              "numeric": 33,
+              "missing": 8000,
+              "unique": 34,
+              "min": 0.2432884333333333,
+              "max": 0.988046466666667,
+              "mean": 0.6585003656565658,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "Voltage"
+              ]
+            },
+            {
+              "index": 51,
+              "name": "51",
+              "numeric": 33,
+              "missing": 8000,
+              "unique": 33,
+              "min": -4.201296098990338,
+              "max": 0.0,
+              "mean": -0.5270677060729081,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "IV slope"
+              ]
+            },
+            {
+              "index": 52,
+              "name": "52",
+              "numeric": 33,
+              "missing": 8000,
+              "unique": 34,
+              "min": 0.4135140821603304,
+              "max": 7.462585180566554,
+              "mean": 1.9202187737973675,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "Standard deviation of voltage"
+              ]
+            },
+            {
+              "index": 53,
+              "name": "53",
+              "numeric": 33,
+              "missing": 8000,
+              "unique": 34,
+              "min": 2.4818236666666706,
+              "max": 15.39639093333334,
+              "mean": 7.545133840404047,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "Anode pressure drop"
+              ]
+            },
+            {
+              "index": 54,
+              "name": "54",
+              "numeric": 33,
+              "missing": 8000,
+              "unique": 34,
+              "min": 0.10006777511144836,
+              "max": 0.4376307835297607,
+              "mean": 0.16417696935650536,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "Standard deviation of anode pressure drop"
+              ]
+            },
+            {
+              "index": 55,
+              "name": "55",
+              "numeric": 33,
+              "missing": 8000,
+              "unique": 34,
+              "min": 1.6978986000000011,
+              "max": 72.55642593333336,
+              "mean": 20.981242837979796,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "Cathode pressure drop"
+              ]
+            },
+            {
+              "index": 56,
+              "name": "56",
+              "numeric": 33,
+              "missing": 8000,
+              "unique": 34,
+              "min": 0.04763567774538219,
+              "max": 0.9086847158690488,
+              "mean": 0.228166198107997,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "Standard deviation of cathode pressure drop"
+              ]
+            }
+          ]
+        }
+      },
+      "magnifications": {
+        "inferred": {
+          "rows": 606,
+          "columns": 9,
+          "headers": [
+            "Unnamed: 0",
+            "Unnamed: 1",
+            "Unnamed: 2",
+            "Unnamed: 3",
+            "Unnamed: 4",
+            "Unnamed: 5",
+            "Unnamed: 6",
+            "Unnamed: 7",
+            "Unnamed: 8"
+          ],
+          "header_mode": "parsed",
+          "duplicate_rows": 3,
+          "stats": [
+            {
+              "index": 0,
+              "name": "Unnamed: 0",
+              "numeric": 599,
+              "missing": 7,
+              "unique": 599,
+              "min": 0.0,
+              "max": 598.0,
+              "mean": 299.0,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ],
+              "diff": {
+                "negative": 0,
+                "zero": 0,
+                "median": 1.0,
+                "min": 1.0,
+                "max": 1.0
+              }
+            },
+            {
+              "index": 1,
+              "name": "Unnamed: 1",
+              "numeric": 599,
+              "missing": 5,
+              "unique": 173,
+              "min": 801.640015,
+              "max": 1403.560059,
+              "mean": 1093.411952672788,
+              "examples": [
+                "nan",
+                "start",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 2,
+              "name": "Unnamed: 2",
+              "numeric": 600,
+              "missing": 4,
+              "unique": 190,
+              "min": 0.576373,
+              "max": 1705.0,
+              "mean": 3.4737732650000006,
+              "examples": [
+                "nan",
+                "1705",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 3,
+              "name": "Unnamed: 3",
+              "numeric": 0,
+              "missing": 606,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 4,
+              "name": "Unnamed: 4",
+              "numeric": 599,
+              "missing": 5,
+              "unique": 157,
+              "min": 1801.680054,
+              "max": 2404.280029,
+              "mean": 2095.5196671585977,
+              "examples": [
+                "nan",
+                "start",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 5,
+              "name": "Unnamed: 5",
+              "numeric": 600,
+              "missing": 4,
+              "unique": 276,
+              "min": 0.346429,
+              "max": 3050.0,
+              "mean": 5.507988991666666,
+              "examples": [
+                "nan",
+                "3050",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 6,
+              "name": "Unnamed: 6",
+              "numeric": 0,
+              "missing": 606,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 7,
+              "name": "Unnamed: 7",
+              "numeric": 599,
+              "missing": 5,
+              "unique": 97,
+              "min": 2202.199951,
+              "max": 2604.800049,
+              "mean": 2493.3691177846413,
+              "examples": [
+                "nan",
+                "start",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 8,
+              "name": "Unnamed: 8",
+              "numeric": 600,
+              "missing": 4,
+              "unique": 343,
+              "min": 0.22821500000000003,
+              "max": 3809.0,
+              "mean": 6.647854561666666,
+              "examples": [
+                "nan",
+                "3809",
+                "nan",
+                "nan"
+              ]
+            }
+          ]
+        },
+        "header_none": {
+          "rows": 607,
+          "columns": 9,
+          "headers": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ],
+          "header_mode": "none",
+          "duplicate_rows": 4,
+          "stats": [
+            {
+              "index": 0,
+              "name": "0",
+              "numeric": 599,
+              "missing": 8,
+              "unique": 599,
+              "min": 0.0,
+              "max": 598.0,
+              "mean": 299.0,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ],
+              "diff": {
+                "negative": 0,
+                "zero": 0,
+                "median": 1.0,
+                "min": 1.0,
+                "max": 1.0
+              }
+            },
+            {
+              "index": 1,
+              "name": "1",
+              "numeric": 599,
+              "missing": 6,
+              "unique": 173,
+              "min": 801.640015,
+              "max": 1403.560059,
+              "mean": 1093.411952672788,
+              "examples": [
+                "nan",
+                "nan",
+                "start",
+                "nan"
+              ]
+            },
+            {
+              "index": 2,
+              "name": "2",
+              "numeric": 600,
+              "missing": 5,
+              "unique": 190,
+              "min": 0.576373,
+              "max": 1705.0,
+              "mean": 3.4737732650000006,
+              "examples": [
+                "nan",
+                "nan",
+                "1705",
+                "nan"
+              ]
+            },
+            {
+              "index": 3,
+              "name": "3",
+              "numeric": 0,
+              "missing": 607,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 4,
+              "name": "4",
+              "numeric": 599,
+              "missing": 6,
+              "unique": 157,
+              "min": 1801.680054,
+              "max": 2404.280029,
+              "mean": 2095.5196671585977,
+              "examples": [
+                "nan",
+                "nan",
+                "start",
+                "nan"
+              ]
+            },
+            {
+              "index": 5,
+              "name": "5",
+              "numeric": 600,
+              "missing": 5,
+              "unique": 276,
+              "min": 0.346429,
+              "max": 3050.0,
+              "mean": 5.507988991666666,
+              "examples": [
+                "nan",
+                "nan",
+                "3050",
+                "nan"
+              ]
+            },
+            {
+              "index": 6,
+              "name": "6",
+              "numeric": 0,
+              "missing": 607,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 7,
+              "name": "7",
+              "numeric": 599,
+              "missing": 6,
+              "unique": 97,
+              "min": 2202.199951,
+              "max": 2604.800049,
+              "mean": 2493.3691177846413,
+              "examples": [
+                "nan",
+                "nan",
+                "start",
+                "nan"
+              ]
+            },
+            {
+              "index": 8,
+              "name": "8",
+              "numeric": 600,
+              "missing": 5,
+              "unique": 343,
+              "min": 0.22821500000000003,
+              "max": 3809.0,
+              "mean": 6.647854561666666,
+              "examples": [
+                "nan",
+                "nan",
+                "3809",
+                "nan"
+              ]
+            }
+          ]
+        }
+      },
+      "EIS_data": {
+        "inferred": {
+          "rows": 203,
+          "columns": 20,
+          "headers": [
+            "0.5",
+            " A cm-2",
+            "Unnamed: 2",
+            "Unnamed: 3",
+            "Unnamed: 4",
+            "Unnamed: 5",
+            "Unnamed: 6",
+            "Unnamed: 7",
+            "Unnamed: 8",
+            "Unnamed: 9",
+            "Unnamed: 10",
+            "Unnamed: 11",
+            "0.5 A cm-2",
+            "25",
+            "Unnamed: 14",
+            "Unnamed: 15",
+            "Unnamed: 16",
+            "Unnamed: 17",
+            "K-K",
+            "K-K.1"
+          ],
+          "header_mode": "parsed",
+          "duplicate_rows": 14,
+          "stats": [
+            {
+              "index": 0,
+              "name": "0.5",
+              "numeric": 3,
+              "missing": 200,
+              "unique": 3,
+              "min": 1.0,
+              "max": 2.0,
+              "mean": 1.5,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ],
+              "diff": {
+                "negative": 0,
+                "zero": 0,
+                "median": 0.5,
+                "min": 0.5,
+                "max": 0.5
+              }
+            },
+            {
+              "index": 1,
+              "name": " A cm-2",
+              "numeric": 180,
+              "missing": 12,
+              "unique": 48,
+              "min": 0.0,
+              "max": 44.0,
+              "mean": 22.0,
+              "examples": [
+                "Pt",
+                "#",
+                "0",
+                "1"
+              ]
+            },
+            {
+              "index": 2,
+              "name": "Unnamed: 2",
+              "numeric": 180,
+              "missing": 15,
+              "unique": 169,
+              "min": 0.0,
+              "max": 73.3992,
+              "mean": 36.429433777777774,
+              "examples": [
+                "Time",
+                "s",
+                "0",
+                "2.79716"
+              ]
+            },
+            {
+              "index": 3,
+              "name": "Unnamed: 3",
+              "numeric": 180,
+              "missing": 15,
+              "unique": 47,
+              "min": 1.201923,
+              "max": 30046.875,
+              "mean": 3244.1308863555555,
+              "examples": [
+                "Freq",
+                "Hz",
+                "30046.875",
+                "23859.375"
+              ]
+            },
+            {
+              "index": 4,
+              "name": "Unnamed: 4",
+              "numeric": 180,
+              "missing": 15,
+              "unique": 177,
+              "min": 0.002221,
+              "max": 0.018846,
+              "mean": 0.005046783333333334,
+              "examples": [
+                "Zreal",
+                "ohm",
+                "0.003714",
+                "0.003449"
+              ]
+            },
+            {
+              "index": 5,
+              "name": "Unnamed: 5",
+              "numeric": 180,
+              "missing": 15,
+              "unique": 181,
+              "min": -0.006923,
+              "max": 0.009503,
+              "mean": -0.0005771000000000001,
+              "examples": [
+                "Zimag",
+                "ohm",
+                "0.009503",
+                "0.007742"
+              ]
+            },
+            {
+              "index": 6,
+              "name": "Unnamed: 6",
+              "numeric": 180,
+              "missing": 15,
+              "unique": 3,
+              "min": 1.0,
+              "max": 1.0,
+              "mean": 1.0,
+              "examples": [
+                "Zsig",
+                "V",
+                "1",
+                "1"
+              ]
+            },
+            {
+              "index": 7,
+              "name": "Unnamed: 7",
+              "numeric": 180,
+              "missing": 15,
+              "unique": 182,
+              "min": 0.00226,
+              "max": 0.01923,
+              "mean": 0.005971383333333333,
+              "examples": [
+                "Zmod",
+                "ohm",
+                "0.010203",
+                "0.008475"
+              ]
+            },
+            {
+              "index": 8,
+              "name": "Unnamed: 8",
+              "numeric": 180,
+              "missing": 15,
+              "unique": 182,
+              "min": -40.309944,
+              "max": 69.485153,
+              "mean": -0.6425457833333336,
+              "examples": [
+                "Zphz",
+                "°",
+                "68.652657",
+                "65.990799"
+              ]
+            },
+            {
+              "index": 9,
+              "name": "Unnamed: 9",
+              "numeric": 180,
+              "missing": 15,
+              "unique": 169,
+              "min": -0.005525,
+              "max": 0.001449,
+              "mean": -0.0008715555555555553,
+              "examples": [
+                "Idc",
+                "A",
+                "-0.000576",
+                "-0.000308"
+              ]
+            },
+            {
+              "index": 10,
+              "name": "Unnamed: 10",
+              "numeric": 180,
+              "missing": 15,
+              "unique": 171,
+              "min": 0.447807,
+              "max": 0.740955,
+              "mean": 0.6013815944444444,
+              "examples": [
+                "Vdc",
+                "V",
+                "0.740246",
+                "0.740268"
+              ]
+            },
+            {
+              "index": 11,
+              "name": "Unnamed: 11",
+              "numeric": 180,
+              "missing": 15,
+              "unique": 3,
+              "min": 0.0,
+              "max": 0.0,
+              "mean": 0.0,
+              "examples": [
+                "IERange",
+                "#",
+                "0",
+                "0"
+              ]
+            },
+            {
+              "index": 12,
+              "name": "0.5 A cm-2",
+              "numeric": 182,
+              "missing": 18,
+              "unique": 179,
+              "min": 0.0,
+              "max": 0.47115000000000007,
+              "mean": 0.1247831043956044,
+              "examples": [
+                "nan",
+                "nan",
+                "0.09285",
+                "0.086225"
+              ]
+            },
+            {
+              "index": 13,
+              "name": "25",
+              "numeric": 182,
+              "missing": 21,
+              "unique": 180,
+              "min": -0.173075,
+              "max": 0.23757499999999998,
+              "mean": -0.014268956043956041,
+              "examples": [
+                "nan",
+                "nan",
+                "0.23757499999999998",
+                "0.19355"
+              ]
+            },
+            {
+              "index": 14,
+              "name": "Unnamed: 14",
+              "numeric": 0,
+              "missing": 203,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 15,
+              "name": "Unnamed: 15",
+              "numeric": 195,
+              "missing": 6,
+              "unique": 178,
+              "min": 0.0,
+              "max": 0.47115000000000007,
+              "mean": 0.11646423076923075,
+              "examples": [
+                "Re",
+                "ohm cm2",
+                "0.09285",
+                "0.086225"
+              ]
+            },
+            {
+              "index": 16,
+              "name": "Unnamed: 16",
+              "numeric": 195,
+              "missing": 6,
+              "unique": 182,
+              "min": -0.173075,
+              "max": 0.23757499999999998,
+              "mean": -0.01331769230769231,
+              "examples": [
+                "Im",
+                "ohm cm2",
+                "0.23757499999999998",
+                "0.19355"
+              ]
+            },
+            {
+              "index": 17,
+              "name": "Unnamed: 17",
+              "numeric": 195,
+              "missing": 6,
+              "unique": 183,
+              "min": 0.0,
+              "max": 0.48075,
+              "mean": 0.13780115384615385,
+              "examples": [
+                "Magnitude",
+                "ohm cm2",
+                "0.255075",
+                "0.211875"
+              ]
+            },
+            {
+              "index": 18,
+              "name": "K-K",
+              "numeric": 180,
+              "missing": 21,
+              "unique": 182,
+              "min": -0.006541,
+              "max": 0.007958,
+              "mean": -2.063041111111089e-06,
+              "examples": [
+                "Magnitude",
+                "%",
+                "-8.941e-05",
+                "0.0005009"
+              ]
+            },
+            {
+              "index": 19,
+              "name": "K-K.1",
+              "numeric": 180,
+              "missing": 21,
+              "unique": 181,
+              "min": -0.004927,
+              "max": 0.01182,
+              "mean": 7.346216666666668e-06,
+              "examples": [
+                "Phase",
+                "%",
+                "0.0003266",
+                "-0.0001541"
+              ]
+            }
+          ]
+        },
+        "header_none": {
+          "rows": 204,
+          "columns": 20,
+          "headers": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19"
+          ],
+          "header_mode": "none",
+          "duplicate_rows": 14,
+          "stats": [
+            {
+              "index": 0,
+              "name": "0",
+              "numeric": 4,
+              "missing": 200,
+              "unique": 4,
+              "min": 0.5,
+              "max": 2.0,
+              "mean": 1.25,
+              "examples": [
+                "0.5",
+                "nan",
+                "nan",
+                "nan"
+              ],
+              "diff": {
+                "negative": 0,
+                "zero": 0,
+                "median": 0.5,
+                "min": 0.5,
+                "max": 0.5
+              }
+            },
+            {
+              "index": 1,
+              "name": "1",
+              "numeric": 180,
+              "missing": 12,
+              "unique": 48,
+              "min": 0.0,
+              "max": 44.0,
+              "mean": 22.0,
+              "examples": [
+                " A cm-2",
+                "Pt",
+                "#",
+                "0"
+              ]
+            },
+            {
+              "index": 2,
+              "name": "2",
+              "numeric": 180,
+              "missing": 16,
+              "unique": 169,
+              "min": 0.0,
+              "max": 73.3992,
+              "mean": 36.429433777777774,
+              "examples": [
+                "nan",
+                "Time",
+                "s",
+                "0"
+              ]
+            },
+            {
+              "index": 3,
+              "name": "3",
+              "numeric": 180,
+              "missing": 16,
+              "unique": 47,
+              "min": 1.201923,
+              "max": 30046.875,
+              "mean": 3244.1308863555555,
+              "examples": [
+                "nan",
+                "Freq",
+                "Hz",
+                "30046.875"
+              ]
+            },
+            {
+              "index": 4,
+              "name": "4",
+              "numeric": 180,
+              "missing": 16,
+              "unique": 177,
+              "min": 0.002221,
+              "max": 0.018846,
+              "mean": 0.005046783333333334,
+              "examples": [
+                "nan",
+                "Zreal",
+                "ohm",
+                "0.003714"
+              ]
+            },
+            {
+              "index": 5,
+              "name": "5",
+              "numeric": 180,
+              "missing": 16,
+              "unique": 181,
+              "min": -0.006923,
+              "max": 0.009503,
+              "mean": -0.0005771000000000001,
+              "examples": [
+                "nan",
+                "Zimag",
+                "ohm",
+                "0.009503"
+              ]
+            },
+            {
+              "index": 6,
+              "name": "6",
+              "numeric": 180,
+              "missing": 16,
+              "unique": 3,
+              "min": 1.0,
+              "max": 1.0,
+              "mean": 1.0,
+              "examples": [
+                "nan",
+                "Zsig",
+                "V",
+                "1"
+              ]
+            },
+            {
+              "index": 7,
+              "name": "7",
+              "numeric": 180,
+              "missing": 16,
+              "unique": 182,
+              "min": 0.00226,
+              "max": 0.01923,
+              "mean": 0.005971383333333333,
+              "examples": [
+                "nan",
+                "Zmod",
+                "ohm",
+                "0.010203"
+              ]
+            },
+            {
+              "index": 8,
+              "name": "8",
+              "numeric": 180,
+              "missing": 16,
+              "unique": 182,
+              "min": -40.309944,
+              "max": 69.485153,
+              "mean": -0.6425457833333336,
+              "examples": [
+                "nan",
+                "Zphz",
+                "°",
+                "68.652657"
+              ]
+            },
+            {
+              "index": 9,
+              "name": "9",
+              "numeric": 180,
+              "missing": 16,
+              "unique": 169,
+              "min": -0.005525,
+              "max": 0.001449,
+              "mean": -0.0008715555555555553,
+              "examples": [
+                "nan",
+                "Idc",
+                "A",
+                "-0.000576"
+              ]
+            },
+            {
+              "index": 10,
+              "name": "10",
+              "numeric": 180,
+              "missing": 16,
+              "unique": 171,
+              "min": 0.447807,
+              "max": 0.740955,
+              "mean": 0.6013815944444444,
+              "examples": [
+                "nan",
+                "Vdc",
+                "V",
+                "0.740246"
+              ]
+            },
+            {
+              "index": 11,
+              "name": "11",
+              "numeric": 180,
+              "missing": 16,
+              "unique": 3,
+              "min": 0.0,
+              "max": 0.0,
+              "mean": 0.0,
+              "examples": [
+                "nan",
+                "IERange",
+                "#",
+                "0"
+              ]
+            },
+            {
+              "index": 12,
+              "name": "12",
+              "numeric": 182,
+              "missing": 18,
+              "unique": 180,
+              "min": 0.0,
+              "max": 0.47115000000000007,
+              "mean": 0.1247831043956044,
+              "examples": [
+                "0.5 A cm-2",
+                "nan",
+                "nan",
+                "0.09285"
+              ]
+            },
+            {
+              "index": 13,
+              "name": "13",
+              "numeric": 183,
+              "missing": 21,
+              "unique": 181,
+              "min": -0.173075,
+              "max": 25.0,
+              "mean": 0.1224210382513661,
+              "examples": [
+                "25.0",
+                "nan",
+                "nan",
+                "0.23757499999999998"
+              ]
+            },
+            {
+              "index": 14,
+              "name": "14",
+              "numeric": 0,
+              "missing": 204,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 15,
+              "name": "15",
+              "numeric": 195,
+              "missing": 7,
+              "unique": 178,
+              "min": 0.0,
+              "max": 0.47115000000000007,
+              "mean": 0.11646423076923075,
+              "examples": [
+                "nan",
+                "Re",
+                "ohm cm2",
+                "0.09285"
+              ]
+            },
+            {
+              "index": 16,
+              "name": "16",
+              "numeric": 195,
+              "missing": 7,
+              "unique": 182,
+              "min": -0.173075,
+              "max": 0.23757499999999998,
+              "mean": -0.01331769230769231,
+              "examples": [
+                "nan",
+                "Im",
+                "ohm cm2",
+                "0.23757499999999998"
+              ]
+            },
+            {
+              "index": 17,
+              "name": "17",
+              "numeric": 195,
+              "missing": 7,
+              "unique": 183,
+              "min": 0.0,
+              "max": 0.48075,
+              "mean": 0.13780115384615385,
+              "examples": [
+                "nan",
+                "Magnitude",
+                "ohm cm2",
+                "0.255075"
+              ]
+            },
+            {
+              "index": 18,
+              "name": "18",
+              "numeric": 180,
+              "missing": 21,
+              "unique": 183,
+              "min": -0.006541,
+              "max": 0.007958,
+              "mean": -2.063041111111089e-06,
+              "examples": [
+                "K-K",
+                "Magnitude",
+                "%",
+                "-8.941e-05"
+              ]
+            },
+            {
+              "index": 19,
+              "name": "19",
+              "numeric": 180,
+              "missing": 21,
+              "unique": 182,
+              "min": -0.004927,
+              "max": 0.01182,
+              "mean": 7.346216666666668e-06,
+              "examples": [
+                "K-K",
+                "Phase",
+                "%",
+                "0.0003266"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "path": "mendeley_raw/JRC_ZERO_GRADIENT/n5csdjfg3c-2.zip__unpacked/ZEROCELL_IV_EIS.xlsx",
+    "bytes": 5662634,
+    "sha256": "0836aa748e36d6cf1cfcae032703b064ae1ea77efa9c1277d18892f4cdcaf6a0",
+    "sheets": {
+      "data": {
+        "inferred": {
+          "rows": 14227,
+          "columns": 53,
+          "headers": [
+            "Unnamed: 0",
+            "Unnamed: 1",
+            "Unnamed: 2",
+            "Unnamed: 3",
+            "Unnamed: 4",
+            "Unnamed: 5",
+            "Unnamed: 6",
+            "Unnamed: 7",
+            "Unnamed: 8",
+            "Unnamed: 9",
+            "Unnamed: 10",
+            "Unnamed: 11",
+            "Unnamed: 12",
+            "Unnamed: 13",
+            "Unnamed: 14",
+            "Unnamed: 15",
+            "Unnamed: 16",
+            "Unnamed: 17",
+            "Unnamed: 18",
+            "Unnamed: 19",
+            "Unnamed: 20",
+            "Unnamed: 21",
+            "Unnamed: 22",
+            "Unnamed: 23",
+            "Unnamed: 24",
+            "Unnamed: 25",
+            "Unnamed: 26",
+            "Unnamed: 27",
+            "Unnamed: 28",
+            "Unnamed: 29",
+            "Unnamed: 30",
+            "Unnamed: 31",
+            "Unnamed: 32",
+            "Unnamed: 33",
+            "Unnamed: 34",
+            "Unnamed: 35",
+            "Unnamed: 36",
+            "Current density set",
+            "Current density",
+            "Voltage",
+            "IV slope",
+            "st dev",
+            "Cathode pressure drop",
+            "cathode pressure deviation",
+            "Anode pressure drop",
+            "anode pressure deviation",
+            "0",
+            "Average temperature in the anode compartment",
+            "Temperature variation in the anode compartment",
+            "0.1",
+            "Average temperature in the cathode compartment",
+            "Temperature variation in the cathode compartment",
+            "0.2"
+          ],
+          "header_mode": "parsed",
+          "duplicate_rows": 0,
+          "stats": [
+            {
+              "index": 0,
+              "name": "Unnamed: 0",
+              "numeric": 61,
+              "missing": 14165,
+              "unique": 32,
+              "min": 0.0,
+              "max": 5080.0,
+              "mean": 2224.9180327868853,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ],
+              "diff": {
+                "negative": 30,
+                "zero": 0,
+                "median": 0.0,
+                "min": -200.0,
+                "max": 200.0
+              }
+            },
+            {
+              "index": 1,
+              "name": "Unnamed: 1",
+              "numeric": 14217,
+              "missing": 6,
+              "unique": 2420,
+              "min": 0.0,
+              "max": 5083.1,
+              "mean": 2282.2006752479424,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 2,
+              "name": "Unnamed: 2",
+              "numeric": 14217,
+              "missing": 6,
+              "unique": 2765,
+              "min": 0.2002909947828867,
+              "max": 1.0223417380070998,
+              "mean": 0.6297403712274791,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 3,
+              "name": "Unnamed: 3",
+              "numeric": 61,
+              "missing": 14164,
+              "unique": 63,
+              "min": 0.08,
+              "max": 5076.426666666667,
+              "mean": 2224.1812568306013,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 4,
+              "name": "Unnamed: 4",
+              "numeric": 61,
+              "missing": 14165,
+              "unique": 62,
+              "min": 0.23099999999999993,
+              "max": 1.0220000000000005,
+              "mean": 0.6377876789276601,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 5,
+              "name": "Unnamed: 5",
+              "numeric": 61,
+              "missing": 14165,
+              "unique": 62,
+              "min": 0.10771794769037304,
+              "max": 1.5130286624295415,
+              "mean": 0.43650732164149764,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 6,
+              "name": "Unnamed: 6",
+              "numeric": 0,
+              "missing": 14227,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 7,
+              "name": "Unnamed: 7",
+              "numeric": 14217,
+              "missing": 8,
+              "unique": 721,
+              "min": -0.002594999999999459,
+              "max": 10.023471,
+              "mean": 3.4525525374903294,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 8,
+              "name": "Unnamed: 8",
+              "numeric": 62,
+              "missing": 14163,
+              "unique": 64,
+              "min": 0.2202834193548399,
+              "max": 9.535554838709682,
+              "mean": 3.376860200572321,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 9,
+              "name": "Unnamed: 9",
+              "numeric": 62,
+              "missing": 14163,
+              "unique": 64,
+              "min": 0.043220206106094096,
+              "max": 0.16116054145356312,
+              "mean": 0.08303481329571201,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 10,
+              "name": "Unnamed: 10",
+              "numeric": 14217,
+              "missing": 8,
+              "unique": 5079,
+              "min": 0.11843500000000518,
+              "max": 7.39124623171613,
+              "mean": 3.041237598170493,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 11,
+              "name": "Unnamed: 11",
+              "numeric": 62,
+              "missing": 14163,
+              "unique": 64,
+              "min": 0.25981070967742287,
+              "max": 7.138070303690322,
+              "mean": 2.9882528894814686,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 12,
+              "name": "Unnamed: 12",
+              "numeric": 62,
+              "missing": 14163,
+              "unique": 64,
+              "min": 0.031503736829723086,
+              "max": 0.14327446363837484,
+              "mean": 0.08893185095359432,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 13,
+              "name": "Unnamed: 13",
+              "numeric": 0,
+              "missing": 14227,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 14,
+              "name": "Unnamed: 14",
+              "numeric": 0,
+              "missing": 14227,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 15,
+              "name": "Unnamed: 15",
+              "numeric": 14217,
+              "missing": 7,
+              "unique": 6037,
+              "min": 78.59894801856,
+              "max": 80.49153803744,
+              "mean": 79.8346654979769,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 16,
+              "name": "Unnamed: 16",
+              "numeric": 14217,
+              "missing": 6,
+              "unique": 5845,
+              "min": 79.803804,
+              "max": 81.44954559968001,
+              "mean": 80.33317419320174,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 17,
+              "name": "Unnamed: 17",
+              "numeric": 14217,
+              "missing": 7,
+              "unique": 5653,
+              "min": 79.52561742752,
+              "max": 80.91991377248,
+              "mean": 80.2813408997377,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 18,
+              "name": "Unnamed: 18",
+              "numeric": 14186,
+              "missing": 41,
+              "unique": 13837,
+              "min": 79.61272506319601,
+              "max": 80.83622674170802,
+              "mean": 80.28155024950843,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 19,
+              "name": "Unnamed: 19",
+              "numeric": 14186,
+              "missing": 41,
+              "unique": 13814,
+              "min": 79.80709875775999,
+              "max": 81.35389447473065,
+              "mean": 80.33383792641861,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 20,
+              "name": "Unnamed: 20",
+              "numeric": 14186,
+              "missing": 41,
+              "unique": 13880,
+              "min": 78.71980121387203,
+              "max": 80.39112113677864,
+              "mean": 79.83415676388758,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 21,
+              "name": "Unnamed: 21",
+              "numeric": 14186,
+              "missing": 40,
+              "unique": 14097,
+              "min": 79.44550016953913,
+              "max": 80.70884451974887,
+              "mean": 80.14984831327153,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 22,
+              "name": "Unnamed: 22",
+              "numeric": 14186,
+              "missing": 40,
+              "unique": 14061,
+              "min": 0.013241242999995961,
+              "max": 0.674336185981339,
+              "mean": 0.2778041201459799,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 23,
+              "name": "Unnamed: 23",
+              "numeric": 0,
+              "missing": 14227,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 24,
+              "name": "Unnamed: 24",
+              "numeric": 0,
+              "missing": 14227,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 25,
+              "name": "Unnamed: 25",
+              "numeric": 14217,
+              "missing": 7,
+              "unique": 5820,
+              "min": 78.52356755327999,
+              "max": 80.39004395491999,
+              "mean": 79.69534536271705,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 26,
+              "name": "Unnamed: 26",
+              "numeric": 14217,
+              "missing": 6,
+              "unique": 5958,
+              "min": 79.704477,
+              "max": 81.48597837100002,
+              "mean": 80.40146211782915,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 27,
+              "name": "Unnamed: 27",
+              "numeric": 14217,
+              "missing": 7,
+              "unique": 5717,
+              "min": 79.82586706240001,
+              "max": 81.3322291564,
+              "mean": 80.38457867730702,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 28,
+              "name": "Unnamed: 28",
+              "numeric": 14186,
+              "missing": 41,
+              "unique": 13835,
+              "min": 78.60079963831863,
+              "max": 80.29748782516535,
+              "mean": 79.69470753500431,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 29,
+              "name": "Unnamed: 29",
+              "numeric": 14186,
+              "missing": 41,
+              "unique": 13897,
+              "min": 79.74065356118003,
+              "max": 81.45791337306,
+              "mean": 80.40240001412865,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 30,
+              "name": "Unnamed: 30",
+              "numeric": 14186,
+              "missing": 41,
+              "unique": 13846,
+              "min": 79.89333295088667,
+              "max": 81.23763670443331,
+              "mean": 80.3852931404776,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 31,
+              "name": "Unnamed: 31",
+              "numeric": 14186,
+              "missing": 40,
+              "unique": 14067,
+              "min": 79.56066449205265,
+              "max": 80.92059016596998,
+              "mean": 80.16080022987019,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 32,
+              "name": "Unnamed: 32",
+              "numeric": 14186,
+              "missing": 40,
+              "unique": 14072,
+              "min": 0.0009142325416604535,
+              "max": 0.8384074450139991,
+              "mean": 0.38277527173444986,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 33,
+              "name": "Unnamed: 33",
+              "numeric": 0,
+              "missing": 14227,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 34,
+              "name": "Unnamed: 34",
+              "numeric": 0,
+              "missing": 14227,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 35,
+              "name": "Unnamed: 35",
+              "numeric": 0,
+              "missing": 14227,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 36,
+              "name": "Unnamed: 36",
+              "numeric": 0,
+              "missing": 14227,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 37,
+              "name": "Current density set",
+              "numeric": 61,
+              "missing": 14166,
+              "unique": 31,
+              "min": 0.0,
+              "max": 5080.0,
+              "mean": 2224.9180327868853,
+              "examples": [
+                "0.0",
+                "20.0",
+                "50.0",
+                "100.0"
+              ]
+            },
+            {
+              "index": 38,
+              "name": "Current density",
+              "numeric": 61,
+              "missing": 14166,
+              "unique": 61,
+              "min": 0.08,
+              "max": 5076.426666666667,
+              "mean": 2224.1812568306013,
+              "examples": [
+                "0.15",
+                "17.79333333333333",
+                "48.26666666666666",
+                "97.99000000000004"
+              ]
+            },
+            {
+              "index": 39,
+              "name": "Voltage",
+              "numeric": 61,
+              "missing": 14166,
+              "unique": 61,
+              "min": 0.23099999999999993,
+              "max": 1.0220000000000005,
+              "mean": 0.6377876789276601,
+              "examples": [
+                "1.003",
+                "0.8989999999999998",
+                "0.8729999999999998",
+                "0.8500000000000001"
+              ]
+            },
+            {
+              "index": 40,
+              "name": "IV slope",
+              "numeric": 59,
+              "missing": 14168,
+              "unique": 59,
+              "min": -6.352537199542189,
+              "max": -0.06090958310774079,
+              "mean": -0.3716217518405613,
+              "examples": [
+                "nan",
+                "-5.894577744190446",
+                "-0.8532049879676229",
+                "-0.46255949587718037"
+              ]
+            },
+            {
+              "index": 41,
+              "name": "st dev",
+              "numeric": 61,
+              "missing": 14166,
+              "unique": 61,
+              "min": 0.10771794769037304,
+              "max": 1.5130286624295415,
+              "mean": 0.43650732164149764,
+              "examples": [
+                "0.10771794769037304",
+                "0.2299258131874505",
+                "0.1812504593987537",
+                "0.25411421105097676"
+              ]
+            },
+            {
+              "index": 42,
+              "name": "Cathode pressure drop",
+              "numeric": 61,
+              "missing": 14166,
+              "unique": 61,
+              "min": 0.2202834193548399,
+              "max": 9.535554838709682,
+              "mean": 3.3649669846642,
+              "examples": [
+                "0.26908417741934443",
+                "0.34553608064517094",
+                "0.33190480645162135",
+                "0.30745587096775157"
+              ]
+            },
+            {
+              "index": 43,
+              "name": "cathode pressure deviation",
+              "numeric": 61,
+              "missing": 14166,
+              "unique": 61,
+              "min": 0.043220206106094096,
+              "max": 0.16116054145356312,
+              "mean": 0.08284088438118474,
+              "examples": [
+                "0.047267300084478034",
+                "0.047407325761442465",
+                "0.050959549568370274",
+                "0.06299900126086201"
+              ]
+            },
+            {
+              "index": 44,
+              "name": "Anode pressure drop",
+              "numeric": 61,
+              "missing": 14166,
+              "unique": 61,
+              "min": 0.25981070967742287,
+              "max": 7.138070303690322,
+              "mean": 2.9713489034826988,
+              "examples": [
+                "0.5121120161290387",
+                "0.3276226451612893",
+                "0.3848366129032276",
+                "0.3630604193548407"
+              ]
+            },
+            {
+              "index": 45,
+              "name": "anode pressure deviation",
+              "numeric": 61,
+              "missing": 14166,
+              "unique": 61,
+              "min": 0.031503736829723086,
+              "max": 0.14327446363837484,
+              "mean": 0.08850832151191501,
+              "examples": [
+                "0.05917130604151027",
+                "0.042782786782804685",
+                "0.11327634514250919",
+                "0.0957599222663184"
+              ]
+            },
+            {
+              "index": 46,
+              "name": "0",
+              "numeric": 0,
+              "missing": 14227,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 47,
+              "name": "Average temperature in the anode compartment",
+              "numeric": 61,
+              "missing": 14166,
+              "unique": 61,
+              "min": 79.45108010083645,
+              "max": 80.60720279112313,
+              "mean": 80.1372697812792,
+              "examples": [
+                "79.90315570426888",
+                "80.15402149329866",
+                "80.36112302672",
+                "80.33999542279689"
+              ]
+            },
+            {
+              "index": 48,
+              "name": "Temperature variation in the anode compartment",
+              "numeric": 61,
+              "missing": 14166,
+              "unique": 61,
+              "min": 0.03216347671732933,
+              "max": 0.6636031875760011,
+              "mean": 0.2678827905231685,
+              "examples": [
+                "0.07343043694999807",
+                "0.03821221045467382",
+                "0.09554238413333849",
+                "0.04463311486998833"
+              ]
+            },
+            {
+              "index": 49,
+              "name": "0.1",
+              "numeric": 0,
+              "missing": 14227,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 50,
+              "name": "Average temperature in the cathode compartment",
+              "numeric": 61,
+              "missing": 14166,
+              "unique": 61,
+              "min": 79.56507468032844,
+              "max": 80.84353649565178,
+              "mean": 80.14689001701993,
+              "examples": [
+                "79.82645243073222",
+                "80.11296740280845",
+                "80.31302130499557",
+                "80.31159979929933"
+              ]
+            },
+            {
+              "index": 51,
+              "name": "Temperature variation in the cathode compartment",
+              "numeric": 61,
+              "missing": 14166,
+              "unique": 61,
+              "min": 0.014651536474666216,
+              "max": 0.8186200598773397,
+              "mean": 0.3730074083117829,
+              "examples": [
+                "0.1078805613249969",
+                "0.10972077339666697",
+                "0.09859332746664506",
+                "0.09702476824498518"
+              ]
+            },
+            {
+              "index": 52,
+              "name": "0.2",
+              "numeric": 0,
+              "missing": 14227,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            }
+          ]
+        },
+        "header_none": {
+          "rows": 14228,
+          "columns": 53,
+          "headers": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "50",
+            "51",
+            "52"
+          ],
+          "header_mode": "none",
+          "duplicate_rows": 0,
+          "stats": [
+            {
+              "index": 0,
+              "name": "0",
+              "numeric": 61,
+              "missing": 14166,
+              "unique": 32,
+              "min": 0.0,
+              "max": 5080.0,
+              "mean": 2224.9180327868853,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ],
+              "diff": {
+                "negative": 30,
+                "zero": 0,
+                "median": 0.0,
+                "min": -200.0,
+                "max": 200.0
+              }
+            },
+            {
+              "index": 1,
+              "name": "1",
+              "numeric": 14217,
+              "missing": 7,
+              "unique": 2420,
+              "min": 0.0,
+              "max": 5083.1,
+              "mean": 2282.2006752479424,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 2,
+              "name": "2",
+              "numeric": 14217,
+              "missing": 7,
+              "unique": 2765,
+              "min": 0.2002909947828867,
+              "max": 1.0223417380070998,
+              "mean": 0.6297403712274791,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 3,
+              "name": "3",
+              "numeric": 61,
+              "missing": 14165,
+              "unique": 63,
+              "min": 0.08,
+              "max": 5076.426666666667,
+              "mean": 2224.1812568306013,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 4,
+              "name": "4",
+              "numeric": 61,
+              "missing": 14166,
+              "unique": 62,
+              "min": 0.23099999999999993,
+              "max": 1.0220000000000005,
+              "mean": 0.6377876789276601,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 5,
+              "name": "5",
+              "numeric": 61,
+              "missing": 14166,
+              "unique": 62,
+              "min": 0.10771794769037304,
+              "max": 1.5130286624295415,
+              "mean": 0.43650732164149764,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 6,
+              "name": "6",
+              "numeric": 0,
+              "missing": 14228,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 7,
+              "name": "7",
+              "numeric": 14217,
+              "missing": 9,
+              "unique": 721,
+              "min": -0.002594999999999459,
+              "max": 10.023471,
+              "mean": 3.4525525374903294,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 8,
+              "name": "8",
+              "numeric": 62,
+              "missing": 14164,
+              "unique": 64,
+              "min": 0.2202834193548399,
+              "max": 9.535554838709682,
+              "mean": 3.376860200572321,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 9,
+              "name": "9",
+              "numeric": 62,
+              "missing": 14164,
+              "unique": 64,
+              "min": 0.043220206106094096,
+              "max": 0.16116054145356312,
+              "mean": 0.08303481329571201,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 10,
+              "name": "10",
+              "numeric": 14217,
+              "missing": 9,
+              "unique": 5079,
+              "min": 0.11843500000000518,
+              "max": 7.39124623171613,
+              "mean": 3.041237598170493,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 11,
+              "name": "11",
+              "numeric": 62,
+              "missing": 14164,
+              "unique": 64,
+              "min": 0.25981070967742287,
+              "max": 7.138070303690322,
+              "mean": 2.9882528894814686,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 12,
+              "name": "12",
+              "numeric": 62,
+              "missing": 14164,
+              "unique": 64,
+              "min": 0.031503736829723086,
+              "max": 0.14327446363837484,
+              "mean": 0.08893185095359432,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 13,
+              "name": "13",
+              "numeric": 0,
+              "missing": 14228,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 14,
+              "name": "14",
+              "numeric": 0,
+              "missing": 14228,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 15,
+              "name": "15",
+              "numeric": 14217,
+              "missing": 8,
+              "unique": 6037,
+              "min": 78.59894801856,
+              "max": 80.49153803744,
+              "mean": 79.8346654979769,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 16,
+              "name": "16",
+              "numeric": 14217,
+              "missing": 7,
+              "unique": 5845,
+              "min": 79.803804,
+              "max": 81.44954559968001,
+              "mean": 80.33317419320174,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 17,
+              "name": "17",
+              "numeric": 14217,
+              "missing": 8,
+              "unique": 5653,
+              "min": 79.52561742752,
+              "max": 80.91991377248,
+              "mean": 80.2813408997377,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 18,
+              "name": "18",
+              "numeric": 14186,
+              "missing": 42,
+              "unique": 13837,
+              "min": 79.61272506319601,
+              "max": 80.83622674170802,
+              "mean": 80.28155024950843,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 19,
+              "name": "19",
+              "numeric": 14186,
+              "missing": 42,
+              "unique": 13814,
+              "min": 79.80709875775999,
+              "max": 81.35389447473065,
+              "mean": 80.33383792641861,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 20,
+              "name": "20",
+              "numeric": 14186,
+              "missing": 42,
+              "unique": 13880,
+              "min": 78.71980121387203,
+              "max": 80.39112113677864,
+              "mean": 79.83415676388758,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 21,
+              "name": "21",
+              "numeric": 14186,
+              "missing": 41,
+              "unique": 14097,
+              "min": 79.44550016953913,
+              "max": 80.70884451974887,
+              "mean": 80.14984831327153,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 22,
+              "name": "22",
+              "numeric": 14186,
+              "missing": 41,
+              "unique": 14061,
+              "min": 0.013241242999995961,
+              "max": 0.674336185981339,
+              "mean": 0.2778041201459799,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 23,
+              "name": "23",
+              "numeric": 0,
+              "missing": 14228,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 24,
+              "name": "24",
+              "numeric": 0,
+              "missing": 14228,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 25,
+              "name": "25",
+              "numeric": 14217,
+              "missing": 8,
+              "unique": 5820,
+              "min": 78.52356755327999,
+              "max": 80.39004395491999,
+              "mean": 79.69534536271705,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 26,
+              "name": "26",
+              "numeric": 14217,
+              "missing": 7,
+              "unique": 5958,
+              "min": 79.704477,
+              "max": 81.48597837100002,
+              "mean": 80.40146211782915,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 27,
+              "name": "27",
+              "numeric": 14217,
+              "missing": 8,
+              "unique": 5717,
+              "min": 79.82586706240001,
+              "max": 81.3322291564,
+              "mean": 80.38457867730702,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 28,
+              "name": "28",
+              "numeric": 14186,
+              "missing": 42,
+              "unique": 13835,
+              "min": 78.60079963831863,
+              "max": 80.29748782516535,
+              "mean": 79.69470753500431,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 29,
+              "name": "29",
+              "numeric": 14186,
+              "missing": 42,
+              "unique": 13897,
+              "min": 79.74065356118003,
+              "max": 81.45791337306,
+              "mean": 80.40240001412865,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 30,
+              "name": "30",
+              "numeric": 14186,
+              "missing": 42,
+              "unique": 13846,
+              "min": 79.89333295088667,
+              "max": 81.23763670443331,
+              "mean": 80.3852931404776,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 31,
+              "name": "31",
+              "numeric": 14186,
+              "missing": 41,
+              "unique": 14067,
+              "min": 79.56066449205265,
+              "max": 80.92059016596998,
+              "mean": 80.16080022987019,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 32,
+              "name": "32",
+              "numeric": 14186,
+              "missing": 41,
+              "unique": 14072,
+              "min": 0.0009142325416604535,
+              "max": 0.8384074450139991,
+              "mean": 0.38277527173444986,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 33,
+              "name": "33",
+              "numeric": 0,
+              "missing": 14228,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 34,
+              "name": "34",
+              "numeric": 0,
+              "missing": 14228,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 35,
+              "name": "35",
+              "numeric": 0,
+              "missing": 14228,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 36,
+              "name": "36",
+              "numeric": 0,
+              "missing": 14228,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 37,
+              "name": "37",
+              "numeric": 61,
+              "missing": 14166,
+              "unique": 32,
+              "min": 0.0,
+              "max": 5080.0,
+              "mean": 2224.9180327868853,
+              "examples": [
+                "Current density set",
+                "0",
+                "20",
+                "50"
+              ]
+            },
+            {
+              "index": 38,
+              "name": "38",
+              "numeric": 61,
+              "missing": 14166,
+              "unique": 62,
+              "min": 0.08,
+              "max": 5076.426666666667,
+              "mean": 2224.1812568306013,
+              "examples": [
+                "Current density",
+                "0.15",
+                "17.79333333333333",
+                "48.26666666666666"
+              ]
+            },
+            {
+              "index": 39,
+              "name": "39",
+              "numeric": 61,
+              "missing": 14166,
+              "unique": 62,
+              "min": 0.23099999999999993,
+              "max": 1.0220000000000005,
+              "mean": 0.6377876789276601,
+              "examples": [
+                "Voltage",
+                "1.003",
+                "0.8989999999999998",
+                "0.8729999999999998"
+              ]
+            },
+            {
+              "index": 40,
+              "name": "40",
+              "numeric": 59,
+              "missing": 14168,
+              "unique": 60,
+              "min": -6.352537199542189,
+              "max": -0.06090958310774079,
+              "mean": -0.3716217518405613,
+              "examples": [
+                "IV slope",
+                "nan",
+                "-5.894577744190446",
+                "-0.8532049879676229"
+              ]
+            },
+            {
+              "index": 41,
+              "name": "41",
+              "numeric": 61,
+              "missing": 14166,
+              "unique": 62,
+              "min": 0.10771794769037304,
+              "max": 1.5130286624295415,
+              "mean": 0.43650732164149764,
+              "examples": [
+                "st dev",
+                "0.10771794769037304",
+                "0.2299258131874505",
+                "0.1812504593987537"
+              ]
+            },
+            {
+              "index": 42,
+              "name": "42",
+              "numeric": 61,
+              "missing": 14166,
+              "unique": 62,
+              "min": 0.2202834193548399,
+              "max": 9.535554838709682,
+              "mean": 3.3649669846642,
+              "examples": [
+                "Cathode pressure drop",
+                "0.26908417741934443",
+                "0.34553608064517094",
+                "0.33190480645162135"
+              ]
+            },
+            {
+              "index": 43,
+              "name": "43",
+              "numeric": 61,
+              "missing": 14166,
+              "unique": 62,
+              "min": 0.043220206106094096,
+              "max": 0.16116054145356312,
+              "mean": 0.08284088438118474,
+              "examples": [
+                "cathode pressure deviation",
+                "0.047267300084478034",
+                "0.047407325761442465",
+                "0.050959549568370274"
+              ]
+            },
+            {
+              "index": 44,
+              "name": "44",
+              "numeric": 61,
+              "missing": 14166,
+              "unique": 62,
+              "min": 0.25981070967742287,
+              "max": 7.138070303690322,
+              "mean": 2.9713489034826988,
+              "examples": [
+                "Anode pressure drop",
+                "0.5121120161290387",
+                "0.3276226451612893",
+                "0.3848366129032276"
+              ]
+            },
+            {
+              "index": 45,
+              "name": "45",
+              "numeric": 61,
+              "missing": 14166,
+              "unique": 62,
+              "min": 0.031503736829723086,
+              "max": 0.14327446363837484,
+              "mean": 0.08850832151191501,
+              "examples": [
+                "anode pressure deviation",
+                "0.05917130604151027",
+                "0.042782786782804685",
+                "0.11327634514250919"
+              ]
+            },
+            {
+              "index": 46,
+              "name": "46",
+              "numeric": 1,
+              "missing": 14227,
+              "unique": 1,
+              "min": 0.0,
+              "max": 0.0,
+              "mean": 0.0,
+              "examples": [
+                "0.0",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 47,
+              "name": "47",
+              "numeric": 61,
+              "missing": 14166,
+              "unique": 62,
+              "min": 79.45108010083645,
+              "max": 80.60720279112313,
+              "mean": 80.1372697812792,
+              "examples": [
+                "Average temperature in the anode compartment",
+                "79.90315570426888",
+                "80.15402149329866",
+                "80.36112302672"
+              ]
+            },
+            {
+              "index": 48,
+              "name": "48",
+              "numeric": 61,
+              "missing": 14166,
+              "unique": 62,
+              "min": 0.03216347671732933,
+              "max": 0.6636031875760011,
+              "mean": 0.2678827905231685,
+              "examples": [
+                "Temperature variation in the anode compartment",
+                "0.07343043694999807",
+                "0.03821221045467382",
+                "0.09554238413333849"
+              ]
+            },
+            {
+              "index": 49,
+              "name": "49",
+              "numeric": 1,
+              "missing": 14227,
+              "unique": 1,
+              "min": 0.0,
+              "max": 0.0,
+              "mean": 0.0,
+              "examples": [
+                "0.0",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 50,
+              "name": "50",
+              "numeric": 61,
+              "missing": 14166,
+              "unique": 62,
+              "min": 79.56507468032844,
+              "max": 80.84353649565178,
+              "mean": 80.14689001701993,
+              "examples": [
+                "Average temperature in the cathode compartment",
+                "79.82645243073222",
+                "80.11296740280845",
+                "80.31302130499557"
+              ]
+            },
+            {
+              "index": 51,
+              "name": "51",
+              "numeric": 61,
+              "missing": 14166,
+              "unique": 62,
+              "min": 0.014651536474666216,
+              "max": 0.8186200598773397,
+              "mean": 0.3730074083117829,
+              "examples": [
+                "Temperature variation in the cathode compartment",
+                "0.1078805613249969",
+                "0.10972077339666697",
+                "0.09859332746664506"
+              ]
+            },
+            {
+              "index": 52,
+              "name": "52",
+              "numeric": 1,
+              "missing": 14227,
+              "unique": 1,
+              "min": 0.0,
+              "max": 0.0,
+              "mean": 0.0,
+              "examples": [
+                "0.0",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            }
+          ]
+        }
+      },
+      "votage_magnification": {
+        "inferred": {
+          "rows": 308,
+          "columns": 18,
+          "headers": [
+            "Unnamed: 0",
+            "Unnamed: 1",
+            "Unnamed: 2",
+            "Unnamed: 3",
+            "Unnamed: 4",
+            "Unnamed: 5",
+            "Unnamed: 6",
+            "Unnamed: 7",
+            "Unnamed: 8",
+            "Unnamed: 9",
+            "Unnamed: 10",
+            "Unnamed: 11",
+            "Unnamed: 12",
+            "Unnamed: 13",
+            "Unnamed: 14",
+            "Unnamed: 15",
+            "Unnamed: 16",
+            "Unnamed: 17"
+          ],
+          "header_mode": "parsed",
+          "duplicate_rows": 2,
+          "stats": [
+            {
+              "index": 0,
+              "name": "Unnamed: 0",
+              "numeric": 301,
+              "missing": 7,
+              "unique": 301,
+              "min": 0.0,
+              "max": 300.0,
+              "mean": 150.0,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ],
+              "diff": {
+                "negative": 0,
+                "zero": 0,
+                "median": 1.0,
+                "min": 1.0,
+                "max": 1.0
+              }
+            },
+            {
+              "index": 1,
+              "name": "Unnamed: 1",
+              "numeric": 301,
+              "missing": 5,
+              "unique": 119,
+              "min": 794.0,
+              "max": 1122.5,
+              "mean": 979.2614617940197,
+              "examples": [
+                "nan",
+                "start",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 2,
+              "name": "Unnamed: 2",
+              "numeric": 302,
+              "missing": 5,
+              "unique": 73,
+              "min": 0.7141211521650868,
+              "max": 1930.0,
+              "mean": 7.117417474233254,
+              "examples": [
+                "nan",
+                "1930",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 3,
+              "name": "Unnamed: 3",
+              "numeric": 0,
+              "missing": 308,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 4,
+              "name": "Unnamed: 4",
+              "numeric": 301,
+              "missing": 5,
+              "unique": 126,
+              "min": 1791.7,
+              "max": 2101.8,
+              "mean": 1979.655813953488,
+              "examples": [
+                "nan",
+                "start",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 5,
+              "name": "Unnamed: 5",
+              "numeric": 302,
+              "missing": 4,
+              "unique": 76,
+              "min": 0.6343892364175889,
+              "max": 3236.0,
+              "mean": 11.367214472051097,
+              "examples": [
+                "nan",
+                "3236",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 6,
+              "name": "Unnamed: 6",
+              "numeric": 0,
+              "missing": 308,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 7,
+              "name": "Unnamed: 7",
+              "numeric": 301,
+              "missing": 5,
+              "unique": 121,
+              "min": 2394.9,
+              "max": 2704.1,
+              "mean": 2579.8073089700997,
+              "examples": [
+                "nan",
+                "start",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 8,
+              "name": "Unnamed: 8",
+              "numeric": 302,
+              "missing": 4,
+              "unique": 80,
+              "min": 0.5924716181860441,
+              "max": 4020.0,
+              "mean": 13.91840556186707,
+              "examples": [
+                "nan",
+                "4020",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 9,
+              "name": "Unnamed: 9",
+              "numeric": 0,
+              "missing": 308,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 10,
+              "name": "Unnamed: 10",
+              "numeric": 301,
+              "missing": 5,
+              "unique": 122,
+              "min": 2793.3,
+              "max": 3105.6,
+              "mean": 2979.756810631229,
+              "examples": [
+                "nan",
+                "start",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 11,
+              "name": "Unnamed: 11",
+              "numeric": 302,
+              "missing": 4,
+              "unique": 87,
+              "min": 0.5620987107256729,
+              "max": 4542.0,
+              "mean": 15.620315470098172,
+              "examples": [
+                "nan",
+                "4542",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 12,
+              "name": "Unnamed: 12",
+              "numeric": 0,
+              "missing": 308,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 13,
+              "name": "Unnamed: 13",
+              "numeric": 301,
+              "missing": 5,
+              "unique": 124,
+              "min": 3792.1,
+              "max": 4102.6,
+              "mean": 3978.9777408637874,
+              "examples": [
+                "nan",
+                "start",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 14,
+              "name": "Unnamed: 14",
+              "numeric": 302,
+              "missing": 4,
+              "unique": 88,
+              "min": 0.4069730391495272,
+              "max": 5848.0,
+              "mean": 19.82730550129207,
+              "examples": [
+                "nan",
+                "5848",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 15,
+              "name": "Unnamed: 15",
+              "numeric": 0,
+              "missing": 308,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 16,
+              "name": "Unnamed: 16",
+              "numeric": 301,
+              "missing": 5,
+              "unique": 116,
+              "min": 4795.8,
+              "max": 5081.6,
+              "mean": 4980.955813953488,
+              "examples": [
+                "nan",
+                "start",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 17,
+              "name": "Unnamed: 17",
+              "numeric": 302,
+              "missing": 4,
+              "unique": 123,
+              "min": 0.2002909947828867,
+              "max": 7156.0,
+              "mean": 23.954020590811336,
+              "examples": [
+                "nan",
+                "7156",
+                "nan",
+                "nan"
+              ]
+            }
+          ]
+        },
+        "header_none": {
+          "rows": 309,
+          "columns": 18,
+          "headers": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17"
+          ],
+          "header_mode": "none",
+          "duplicate_rows": 3,
+          "stats": [
+            {
+              "index": 0,
+              "name": "0",
+              "numeric": 301,
+              "missing": 8,
+              "unique": 301,
+              "min": 0.0,
+              "max": 300.0,
+              "mean": 150.0,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ],
+              "diff": {
+                "negative": 0,
+                "zero": 0,
+                "median": 1.0,
+                "min": 1.0,
+                "max": 1.0
+              }
+            },
+            {
+              "index": 1,
+              "name": "1",
+              "numeric": 301,
+              "missing": 6,
+              "unique": 119,
+              "min": 794.0,
+              "max": 1122.5,
+              "mean": 979.2614617940197,
+              "examples": [
+                "nan",
+                "nan",
+                "start",
+                "nan"
+              ]
+            },
+            {
+              "index": 2,
+              "name": "2",
+              "numeric": 302,
+              "missing": 6,
+              "unique": 73,
+              "min": 0.7141211521650868,
+              "max": 1930.0,
+              "mean": 7.117417474233254,
+              "examples": [
+                "nan",
+                "nan",
+                "1930",
+                "nan"
+              ]
+            },
+            {
+              "index": 3,
+              "name": "3",
+              "numeric": 0,
+              "missing": 309,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 4,
+              "name": "4",
+              "numeric": 301,
+              "missing": 6,
+              "unique": 126,
+              "min": 1791.7,
+              "max": 2101.8,
+              "mean": 1979.655813953488,
+              "examples": [
+                "nan",
+                "nan",
+                "start",
+                "nan"
+              ]
+            },
+            {
+              "index": 5,
+              "name": "5",
+              "numeric": 302,
+              "missing": 5,
+              "unique": 76,
+              "min": 0.6343892364175889,
+              "max": 3236.0,
+              "mean": 11.367214472051097,
+              "examples": [
+                "nan",
+                "nan",
+                "3236",
+                "nan"
+              ]
+            },
+            {
+              "index": 6,
+              "name": "6",
+              "numeric": 0,
+              "missing": 309,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 7,
+              "name": "7",
+              "numeric": 301,
+              "missing": 6,
+              "unique": 121,
+              "min": 2394.9,
+              "max": 2704.1,
+              "mean": 2579.8073089700997,
+              "examples": [
+                "nan",
+                "nan",
+                "start",
+                "nan"
+              ]
+            },
+            {
+              "index": 8,
+              "name": "8",
+              "numeric": 302,
+              "missing": 5,
+              "unique": 80,
+              "min": 0.5924716181860441,
+              "max": 4020.0,
+              "mean": 13.91840556186707,
+              "examples": [
+                "nan",
+                "nan",
+                "4020",
+                "nan"
+              ]
+            },
+            {
+              "index": 9,
+              "name": "9",
+              "numeric": 0,
+              "missing": 309,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 10,
+              "name": "10",
+              "numeric": 301,
+              "missing": 6,
+              "unique": 122,
+              "min": 2793.3,
+              "max": 3105.6,
+              "mean": 2979.756810631229,
+              "examples": [
+                "nan",
+                "nan",
+                "start",
+                "nan"
+              ]
+            },
+            {
+              "index": 11,
+              "name": "11",
+              "numeric": 302,
+              "missing": 5,
+              "unique": 87,
+              "min": 0.5620987107256729,
+              "max": 4542.0,
+              "mean": 15.620315470098172,
+              "examples": [
+                "nan",
+                "nan",
+                "4542",
+                "nan"
+              ]
+            },
+            {
+              "index": 12,
+              "name": "12",
+              "numeric": 0,
+              "missing": 309,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 13,
+              "name": "13",
+              "numeric": 301,
+              "missing": 6,
+              "unique": 124,
+              "min": 3792.1,
+              "max": 4102.6,
+              "mean": 3978.9777408637874,
+              "examples": [
+                "nan",
+                "nan",
+                "start",
+                "nan"
+              ]
+            },
+            {
+              "index": 14,
+              "name": "14",
+              "numeric": 302,
+              "missing": 5,
+              "unique": 88,
+              "min": 0.4069730391495272,
+              "max": 5848.0,
+              "mean": 19.82730550129207,
+              "examples": [
+                "nan",
+                "nan",
+                "5848",
+                "nan"
+              ]
+            },
+            {
+              "index": 15,
+              "name": "15",
+              "numeric": 0,
+              "missing": 309,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 16,
+              "name": "16",
+              "numeric": 301,
+              "missing": 6,
+              "unique": 116,
+              "min": 4795.8,
+              "max": 5081.6,
+              "mean": 4980.955813953488,
+              "examples": [
+                "nan",
+                "nan",
+                "start",
+                "nan"
+              ]
+            },
+            {
+              "index": 17,
+              "name": "17",
+              "numeric": 302,
+              "missing": 5,
+              "unique": 123,
+              "min": 0.2002909947828867,
+              "max": 7156.0,
+              "mean": 23.954020590811336,
+              "examples": [
+                "nan",
+                "nan",
+                "7156",
+                "nan"
+              ]
+            }
+          ]
+        }
+      },
+      "EIS_data": {
+        "inferred": {
+          "rows": 220,
+          "columns": 21,
+          "headers": [
+            "0.5",
+            " A cm-2",
+            "Unnamed: 2",
+            "Unnamed: 3",
+            "Unnamed: 4",
+            "Unnamed: 5",
+            "Unnamed: 6",
+            "Unnamed: 7",
+            "Unnamed: 8",
+            "Unnamed: 9",
+            "Unnamed: 10",
+            "Unnamed: 11",
+            "Unnamed: 12",
+            "Unnamed: 13",
+            "Unnamed: 14",
+            "0.5 A cm-2",
+            "10",
+            "Unnamed: 17",
+            "0.5 A cm-2 JRC",
+            "Unnamed: 19",
+            "Unnamed: 20"
+          ],
+          "header_mode": "parsed",
+          "duplicate_rows": 26,
+          "stats": [
+            {
+              "index": 0,
+              "name": "0.5",
+              "numeric": 6,
+              "missing": 214,
+              "unique": 6,
+              "min": 1.0,
+              "max": 3.5,
+              "mean": 2.25,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ],
+              "diff": {
+                "negative": 0,
+                "zero": 0,
+                "median": 0.5,
+                "min": 0.5,
+                "max": 0.5
+              }
+            },
+            {
+              "index": 1,
+              "name": " A cm-2",
+              "numeric": 182,
+              "missing": 18,
+              "unique": 29,
+              "min": 0.0,
+              "max": 25.0,
+              "mean": 12.5,
+              "examples": [
+                "Pt",
+                "#",
+                "0",
+                "1"
+              ]
+            },
+            {
+              "index": 2,
+              "name": "Unnamed: 2",
+              "numeric": 182,
+              "missing": 24,
+              "unique": 168,
+              "min": 1.758101,
+              "max": 67.237846,
+              "mean": 10.469587846153846,
+              "examples": [
+                "Time",
+                "s",
+                "5.468313",
+                "5.219299"
+              ]
+            },
+            {
+              "index": 3,
+              "name": "Unnamed: 3",
+              "numeric": 182,
+              "missing": 24,
+              "unique": 28,
+              "min": 0.675822,
+              "max": 10078.125,
+              "mean": 1207.412147,
+              "examples": [
+                "Freq",
+                "Hz",
+                "10078.125",
+                "6755.514648"
+              ]
+            },
+            {
+              "index": 4,
+              "name": "Unnamed: 4",
+              "numeric": 182,
+              "missing": 24,
+              "unique": 182,
+              "min": 0.003359,
+              "max": 0.017817,
+              "mean": 0.00795247802197802,
+              "examples": [
+                "Zreal",
+                "ohm",
+                "0.003421",
+                "0.00347"
+              ]
+            },
+            {
+              "index": 5,
+              "name": "Unnamed: 5",
+              "numeric": 182,
+              "missing": 24,
+              "unique": 181,
+              "min": -0.005875,
+              "max": 0.000683,
+              "mean": -0.0014445109890109888,
+              "examples": [
+                "Zimag",
+                "ohm",
+                "0.000683",
+                "0.000332"
+              ]
+            },
+            {
+              "index": 6,
+              "name": "Unnamed: 6",
+              "numeric": 182,
+              "missing": 24,
+              "unique": 3,
+              "min": 1.0,
+              "max": 1.0,
+              "mean": 1.0,
+              "examples": [
+                "Zsig",
+                "V",
+                "1",
+                "1"
+              ]
+            },
+            {
+              "index": 7,
+              "name": "Unnamed: 7",
+              "numeric": 182,
+              "missing": 24,
+              "unique": 182,
+              "min": 0.003405,
+              "max": 0.017819,
+              "mean": 0.008201752747252747,
+              "examples": [
+                "Zmod",
+                "ohm",
+                "0.003489",
+                "0.003486"
+              ]
+            },
+            {
+              "index": 8,
+              "name": "Unnamed: 8",
+              "numeric": 182,
+              "missing": 24,
+              "unique": 184,
+              "min": -32.269367,
+              "max": 11.45406,
+              "mean": -10.32979460989011,
+              "examples": [
+                "Zphz",
+                "°",
+                "11.284577",
+                "5.457432"
+              ]
+            },
+            {
+              "index": 9,
+              "name": "Unnamed: 9",
+              "numeric": 182,
+              "missing": 24,
+              "unique": 163,
+              "min": -0.001476,
+              "max": 0.001826,
+              "mean": 0.0002672197802197802,
+              "examples": [
+                "Idc",
+                "A",
+                "0.000201",
+                "-0.000208"
+              ]
+            },
+            {
+              "index": 10,
+              "name": "Unnamed: 10",
+              "numeric": 182,
+              "missing": 24,
+              "unique": 178,
+              "min": 0.526841,
+              "max": 0.785155,
+              "mean": 0.6582730274725276,
+              "examples": [
+                "Vdc",
+                "V",
+                "0.785155",
+                "0.785115"
+              ]
+            },
+            {
+              "index": 11,
+              "name": "Unnamed: 11",
+              "numeric": 182,
+              "missing": 24,
+              "unique": 3,
+              "min": 12.0,
+              "max": 12.0,
+              "mean": 12.0,
+              "examples": [
+                "IERange",
+                "#",
+                "12",
+                "12"
+              ]
+            },
+            {
+              "index": 12,
+              "name": "Unnamed: 12",
+              "numeric": 0,
+              "missing": 220,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 13,
+              "name": "Unnamed: 13",
+              "numeric": 0,
+              "missing": 220,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 14,
+              "name": "Unnamed: 14",
+              "numeric": 0,
+              "missing": 220,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 15,
+              "name": "0.5 A cm-2",
+              "numeric": 182,
+              "missing": 32,
+              "unique": 186,
+              "min": 0.03359,
+              "max": 0.17817,
+              "mean": 0.07952478021978021,
+              "examples": [
+                "nan",
+                "nan",
+                "0.03421",
+                "0.0347"
+              ]
+            },
+            {
+              "index": 16,
+              "name": "10",
+              "numeric": 188,
+              "missing": 32,
+              "unique": 180,
+              "min": -0.05875,
+              "max": 10.0,
+              "mean": 0.30516484042553194,
+              "examples": [
+                "nan",
+                "nan",
+                "0.00683",
+                "0.00332"
+              ]
+            },
+            {
+              "index": 17,
+              "name": "Unnamed: 17",
+              "numeric": 212,
+              "missing": 7,
+              "unique": 184,
+              "min": 0.0,
+              "max": 0.17819015489077952,
+              "mean": 0.0704112618150166,
+              "examples": [
+                "Magnitude",
+                "nan",
+                "0.03488514010291487",
+                "0.03485846238720234"
+              ]
+            },
+            {
+              "index": 18,
+              "name": "0.5 A cm-2 JRC",
+              "numeric": 182,
+              "missing": 35,
+              "unique": 185,
+              "min": -0.01246,
+              "max": 0.007561,
+              "mean": 0.00015958614835164832,
+              "examples": [
+                "nan",
+                "KK [EIS_0.5Acm-2.DTA]",
+                "-0.0005943",
+                "0.0035"
+              ]
+            },
+            {
+              "index": 19,
+              "name": "Unnamed: 19",
+              "numeric": 182,
+              "missing": 36,
+              "unique": 184,
+              "min": -0.004533,
+              "max": 0.01565,
+              "mean": 0.00046080771978021973,
+              "examples": [
+                "Phase",
+                "nan",
+                "0.0002858",
+                "4.694e-05"
+              ]
+            },
+            {
+              "index": 20,
+              "name": "Unnamed: 20",
+              "numeric": 0,
+              "missing": 219,
+              "unique": 1,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "KK [EIS_0.5Acm-2.DTA]",
+                "nan",
+                "nan"
+              ]
+            }
+          ]
+        },
+        "header_none": {
+          "rows": 221,
+          "columns": 21,
+          "headers": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20"
+          ],
+          "header_mode": "none",
+          "duplicate_rows": 26,
+          "stats": [
+            {
+              "index": 0,
+              "name": "0",
+              "numeric": 7,
+              "missing": 214,
+              "unique": 7,
+              "min": 0.5,
+              "max": 3.5,
+              "mean": 2.0,
+              "examples": [
+                "0.5",
+                "nan",
+                "nan",
+                "nan"
+              ],
+              "diff": {
+                "negative": 0,
+                "zero": 0,
+                "median": 0.5,
+                "min": 0.5,
+                "max": 0.5
+              }
+            },
+            {
+              "index": 1,
+              "name": "1",
+              "numeric": 182,
+              "missing": 18,
+              "unique": 29,
+              "min": 0.0,
+              "max": 25.0,
+              "mean": 12.5,
+              "examples": [
+                " A cm-2",
+                "Pt",
+                "#",
+                "0"
+              ]
+            },
+            {
+              "index": 2,
+              "name": "2",
+              "numeric": 182,
+              "missing": 25,
+              "unique": 168,
+              "min": 1.758101,
+              "max": 67.237846,
+              "mean": 10.469587846153846,
+              "examples": [
+                "nan",
+                "Time",
+                "s",
+                "5.468313"
+              ]
+            },
+            {
+              "index": 3,
+              "name": "3",
+              "numeric": 182,
+              "missing": 25,
+              "unique": 28,
+              "min": 0.675822,
+              "max": 10078.125,
+              "mean": 1207.412147,
+              "examples": [
+                "nan",
+                "Freq",
+                "Hz",
+                "10078.125"
+              ]
+            },
+            {
+              "index": 4,
+              "name": "4",
+              "numeric": 182,
+              "missing": 25,
+              "unique": 182,
+              "min": 0.003359,
+              "max": 0.017817,
+              "mean": 0.00795247802197802,
+              "examples": [
+                "nan",
+                "Zreal",
+                "ohm",
+                "0.003421"
+              ]
+            },
+            {
+              "index": 5,
+              "name": "5",
+              "numeric": 182,
+              "missing": 25,
+              "unique": 181,
+              "min": -0.005875,
+              "max": 0.000683,
+              "mean": -0.0014445109890109888,
+              "examples": [
+                "nan",
+                "Zimag",
+                "ohm",
+                "0.000683"
+              ]
+            },
+            {
+              "index": 6,
+              "name": "6",
+              "numeric": 182,
+              "missing": 25,
+              "unique": 3,
+              "min": 1.0,
+              "max": 1.0,
+              "mean": 1.0,
+              "examples": [
+                "nan",
+                "Zsig",
+                "V",
+                "1"
+              ]
+            },
+            {
+              "index": 7,
+              "name": "7",
+              "numeric": 182,
+              "missing": 25,
+              "unique": 182,
+              "min": 0.003405,
+              "max": 0.017819,
+              "mean": 0.008201752747252747,
+              "examples": [
+                "nan",
+                "Zmod",
+                "ohm",
+                "0.003489"
+              ]
+            },
+            {
+              "index": 8,
+              "name": "8",
+              "numeric": 182,
+              "missing": 25,
+              "unique": 184,
+              "min": -32.269367,
+              "max": 11.45406,
+              "mean": -10.32979460989011,
+              "examples": [
+                "nan",
+                "Zphz",
+                "°",
+                "11.284577"
+              ]
+            },
+            {
+              "index": 9,
+              "name": "9",
+              "numeric": 182,
+              "missing": 25,
+              "unique": 163,
+              "min": -0.001476,
+              "max": 0.001826,
+              "mean": 0.0002672197802197802,
+              "examples": [
+                "nan",
+                "Idc",
+                "A",
+                "0.000201"
+              ]
+            },
+            {
+              "index": 10,
+              "name": "10",
+              "numeric": 182,
+              "missing": 25,
+              "unique": 178,
+              "min": 0.526841,
+              "max": 0.785155,
+              "mean": 0.6582730274725276,
+              "examples": [
+                "nan",
+                "Vdc",
+                "V",
+                "0.785155"
+              ]
+            },
+            {
+              "index": 11,
+              "name": "11",
+              "numeric": 182,
+              "missing": 25,
+              "unique": 3,
+              "min": 12.0,
+              "max": 12.0,
+              "mean": 12.0,
+              "examples": [
+                "nan",
+                "IERange",
+                "#",
+                "12"
+              ]
+            },
+            {
+              "index": 12,
+              "name": "12",
+              "numeric": 0,
+              "missing": 221,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 13,
+              "name": "13",
+              "numeric": 0,
+              "missing": 221,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 14,
+              "name": "14",
+              "numeric": 0,
+              "missing": 221,
+              "unique": 0,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            },
+            {
+              "index": 15,
+              "name": "15",
+              "numeric": 182,
+              "missing": 32,
+              "unique": 187,
+              "min": 0.03359,
+              "max": 0.17817,
+              "mean": 0.07952478021978021,
+              "examples": [
+                "0.5 A cm-2",
+                "nan",
+                "nan",
+                "0.03421"
+              ]
+            },
+            {
+              "index": 16,
+              "name": "16",
+              "numeric": 189,
+              "missing": 32,
+              "unique": 180,
+              "min": -0.05875,
+              "max": 10.0,
+              "mean": 0.3564602645502645,
+              "examples": [
+                "10.0",
+                "nan",
+                "nan",
+                "0.00683"
+              ]
+            },
+            {
+              "index": 17,
+              "name": "17",
+              "numeric": 212,
+              "missing": 8,
+              "unique": 184,
+              "min": 0.0,
+              "max": 0.17819015489077952,
+              "mean": 0.0704112618150166,
+              "examples": [
+                "nan",
+                "Magnitude",
+                "nan",
+                "0.03488514010291487"
+              ]
+            },
+            {
+              "index": 18,
+              "name": "18",
+              "numeric": 182,
+              "missing": 35,
+              "unique": 186,
+              "min": -0.01246,
+              "max": 0.007561,
+              "mean": 0.00015958614835164832,
+              "examples": [
+                "0.5 A cm-2 JRC",
+                "nan",
+                "KK [EIS_0.5Acm-2.DTA]",
+                "-0.0005943"
+              ]
+            },
+            {
+              "index": 19,
+              "name": "19",
+              "numeric": 182,
+              "missing": 37,
+              "unique": 184,
+              "min": -0.004533,
+              "max": 0.01565,
+              "mean": 0.00046080771978021973,
+              "examples": [
+                "nan",
+                "Phase",
+                "nan",
+                "0.0002858"
+              ]
+            },
+            {
+              "index": 20,
+              "name": "20",
+              "numeric": 0,
+              "missing": 220,
+              "unique": 1,
+              "min": null,
+              "max": null,
+              "mean": null,
+              "examples": [
+                "nan",
+                "nan",
+                "KK [EIS_0.5Acm-2.DTA]",
+                "nan"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+]
