@@ -1,0 +1,60 @@
+name: Fetch Speedy RL using legitimate SharedIt token
+on:
+  push:
+    branches: [paper-pdf-fetch-20260923]
+permissions:
+  contents: read
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Download and validate SharedIt-authorized PDF
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet requests pypdf curl_cffi
+          python - <<'PY'
+          import json, hashlib
+          from pathlib import Path
+          import requests
+          from curl_cffi import requests as crequests
+          from pypdf import PdfReader
+          out=Path('speedy_token'); out.mkdir()
+          token='NJedQlYqlPCNeLL7SzXuk_e4RwlQNchNByi7wbcMAY6ZP0z5LPUbWWVQUWStWHim8TcTCRqMrNWNXNq8MCwX4zzfv8_oE6NjSixC6jatqz1FYn3zHr1Og2GDehnAxxpyui-slfLRMxKYpnvcLlT8QJE1m7RZc47ilwvz0ACQg4Q%3D'
+          urls=[
+            f'https://link.springer.com/content/pdf/10.1007/s40684-021-00379-8.pdf?pdf=button&sharing_token={token}',
+            f'https://link.springer.com/content/pdf/10.1007/s40684-021-00379-8.pdf?sharing_token={token}',
+            f'https://link.springer.com/epdf/10.1007/s40684-021-00379-8?sharing_token={token}',
+            'https://rdcu.be/dLduV',
+          ]
+          target=out/'10_2022_Li_Speedy_RL_Fuel_Cell_Hybrid_Vehicle_SHARED_IT.pdf'; report=[]
+          sessions=[('requests',requests.Session()),('chrome',crequests.Session(impersonate='chrome131'))]
+          for sn,s in sessions:
+            for u in urls:
+              try:
+                r=s.get(u,headers={'User-Agent':'Mozilla/5.0 Chrome/131 Safari/537.36','Referer':'https://rdcu.be/dLduV','Accept':'application/pdf,text/html;q=0.9,*/*;q=0.8'},timeout=90,allow_redirects=True)
+                rec={'session':sn,'url':u,'status':r.status_code,'resolved':str(r.url),'type':r.headers.get('content-type'),'bytes':len(r.content)}
+                pos=r.content[:8192].find(b'%PDF-')
+                if r.status_code==200 and pos>=0 and len(r.content)-pos>30000:
+                  target.write_bytes(r.content[pos:])
+                  rd=PdfReader(str(target),strict=False); pages=len(rd.pages); text=''.join((p.extract_text() or '') for p in rd.pages[:5])
+                  rec.update({'pages':pages,'title_match':'Speedy Reinforcement' in text or 'Fuel Cell Hybrid Vehicles' in text,'sha256':hashlib.sha256(target.read_bytes()).hexdigest()})
+                  if pages>=5 and rec['title_match']:
+                    rec['saved']=True; report.append(rec); break
+                  target.unlink(missing_ok=True)
+                report.append(rec)
+              except Exception as e: report.append({'session':sn,'url':u,'error':repr(e)})
+            if target.exists(): break
+          (out/'report.json').write_text(json.dumps(report,indent=2,ensure_ascii=False),encoding='utf-8')
+          if not target.exists(): raise SystemExit('SharedIt PDF not retrieved')
+          print(target,target.stat().st_size)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: speedy-rl-share-token-pdf
+          path: speedy_token/
+          if-no-files-found: error
+          retention-days: 1
+          compression-level: 0
