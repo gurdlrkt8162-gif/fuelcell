@@ -1,0 +1,95 @@
+name: Fetch paper PDFs
+on:
+  push:
+    branches: [paper-pdf-fetch-20260923]
+permissions:
+  contents: read
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Download and validate
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet requests pypdf
+          python - <<'PY'
+          import csv, hashlib, json, re, time
+          from pathlib import Path
+          import requests
+          from pypdf import PdfReader
+
+          root=Path('paper_bundle'); pub=root/'publisher_originals'; alt=root/'legal_author_copies'; logs=root/'logs'
+          for d in (pub,alt,logs): d.mkdir(parents=True,exist_ok=True)
+          papers=[
+          (1,2019,'Severson_Data_driven_prediction_battery_cycle_life','Data-driven prediction of battery cycle life before capacity degradation','10.1038/s41560-019-0356-8',[
+          ('publisher','https://www.nature.com/articles/s41560-019-0356-8.pdf'),('author','https://escholarship.org/content/qt9532z8t0/qt9532z8t0.pdf')]),
+          (2,2025,'Geslin_Dynamic_cycling_enhances_battery_lifetime','Dynamic cycling enhances battery lifetime','10.1038/s41560-024-01675-8',[
+          ('publisher','https://www.nature.com/articles/s41560-024-01675-8.pdf')]),
+          (3,2020,'Attia_Closed_loop_fast_charging_machine_learning','Closed-loop optimization of fast-charging protocols for batteries with machine learning','10.1038/s41586-020-1994-5',[
+          ('publisher','https://www.nature.com/articles/s41586-020-1994-5.pdf'),('author','https://escholarship.org/content/qt117547r6/qt117547r6.pdf')]),
+          (4,2026,'Zhang_Discovery_Learning_battery_cycle_life','Discovery Learning predicts battery cycle life from minimal experiments','10.1038/s41586-025-09951-7',[
+          ('publisher','https://www.nature.com/articles/s41586-025-09951-7.pdf'),('preprint','https://arxiv.org/pdf/2508.06985')]),
+          (5,2024,'Guo_Semi_supervised_few_shot_battery_lifetime','Semi-supervised learning for explainable few-shot battery lifetime prediction','10.1016/j.joule.2024.02.020',[
+          ('publisher','https://www.cell.com/joule/pdf/S2542-4351(24)00103-X.pdf'),('publisher','https://www.sciencedirect.com/science/article/pii/S254243512400103X/pdfft?isDTMRedir=true&download=true')]),
+          (6,2025,'Zhang_BatLiNet_inter_cell_deep_learning','Battery lifetime prediction across diverse ageing conditions with inter-cell deep learning','10.1038/s42256-024-00972-x',[
+          ('publisher','https://www.nature.com/articles/s42256-024-00972-x.pdf')]),
+          (7,2020,'Zhang_EIS_machine_learning_battery_degradation','Identifying degradation patterns of lithium ion batteries from impedance spectroscopy using machine learning','10.1038/s41467-020-15235-7',[
+          ('publisher','https://www.nature.com/articles/s41467-020-15235-7.pdf')]),
+          (8,2023,'Lu_Deep_learning_battery_SOH_domain_adaptation','Deep learning to estimate lithium-ion battery state of health without additional degradation experiments','10.1038/s41467-023-38458-w',[
+          ('publisher','https://www.nature.com/articles/s41467-023-38458-w.pdf')]),
+          (9,2022,'Zheng_Deep_RL_EMS_fuel_cell_hybrid_buses','A Deep Reinforcement Learning-Based Energy Management Strategy for Fuel Cell Hybrid Buses','10.1007/s40684-021-00403-x',[
+          ('publisher','https://link.springer.com/content/pdf/10.1007/s40684-021-00403-x.pdf')]),
+          (10,2022,'Li_Speedy_RL_EMS_fuel_cell_hybrid_vehicle','A Speedy Reinforcement Learning-Based Energy Management Strategy for Fuel Cell Hybrid Vehicles Considering Fuel Cell System Lifetime','10.1007/s40684-021-00379-8',[
+          ('publisher','https://link.springer.com/content/pdf/10.1007/s40684-021-00379-8.pdf')]),
+          (11,2025,'Ko_PINN_long_term_PEMFC_prognostics','Physics-informed neural network for long-term prognostics of proton exchange membrane fuel cells','10.1016/j.apenergy.2025.125318',[
+          ('publisher','https://www.sciencedirect.com/science/article/pii/S0306261925000480/pdfft?isDTMRedir=true&download=true'),('publisher','https://www.sciencedirect.com/science/article/pii/S0306261925000480/pdf')]),
+          (12,2025,'Huang_transfer_RL_fuel_cell_EMS_longevity','Type- and task-crossing energy management for fuel cell vehicles with longevity consideration','10.1016/j.apenergy.2024.124594',[]),
+          (13,2023,'Hu_DRL_EMS_fuel_economy_durability_HIL','Optimizing fuel economy and durability of hybrid fuel cell electric vehicles using DRL-based EMS','10.1016/j.enconman.2023.117288',[
+          ('publisher','https://www.sciencedirect.com/science/article/pii/S0196890423006349/pdfft?isDTMRedir=true&download=true'),('publisher','https://www.sciencedirect.com/science/article/pii/S0196890423006349/pdf')])]
+
+          s=requests.Session(); s.headers.update({'User-Agent':'Mozilla/5.0 Chrome/131 Safari/537.36','Accept':'application/pdf,text/html;q=0.8,*/*;q=0.5','Referer':'https://doi.org/'})
+          rows=[]
+          for n,year,slug,title,doi,cands in papers:
+              name=re.sub(r'[^A-Za-z0-9_.-]+','_',f'{n:02d}_{year}_{slug}')+'.pdf'; attempts=[]; saved=None
+              for kind,url in cands:
+                  try:
+                      r=s.get(url,timeout=120,allow_redirects=True)
+                      note=f'HTTP {r.status_code} {r.headers.get("content-type","")} bytes={len(r.content)}'
+                      if r.status_code==200 and len(r.content)>20000 and b'%PDF-' in r.content[:4096]:
+                          blob=r.content[r.content[:4096].find(b'%PDF-'):]
+                          p=(pub if kind=='publisher' else alt)/name; p.write_bytes(blob)
+                          try:
+                              pages=len(PdfReader(str(p),strict=False).pages)
+                              if pages<1: raise ValueError('zero pages')
+                          except Exception as e:
+                              p.unlink(missing_ok=True); note += f' parser={e}'; attempts.append({'url':url,'note':note}); continue
+                          saved=(p,kind,url,r.url,pages); break
+                      attempts.append({'url':url,'note':note,'resolved':r.url})
+                  except Exception as e: attempts.append({'url':url,'note':repr(e)})
+                  time.sleep(.5)
+              (logs/f'{n:02d}_attempts.json').write_text(json.dumps(attempts,indent=2),encoding='utf-8')
+              if saved:
+                  p,kind,url,resolved,pages=saved
+                  rows.append({'number':n,'year':year,'title':title,'doi':doi,'status':'DOWNLOADED','copy_type':'publisher_original' if kind=='publisher' else kind,'filename':str(p.relative_to(root)),'pages':pages,'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'source_url':url,'resolved_url':resolved})
+              else:
+                  rows.append({'number':n,'year':year,'title':title,'doi':doi,'status':'ACCESS_OR_OPEN_COPY_REQUIRED','copy_type':'','filename':'','pages':'','bytes':'','sha256':'','source_url':'','resolved_url':''})
+          fields=list(rows[0]);
+          with (root/'DOWNLOAD_MANIFEST.csv').open('w',newline='',encoding='utf-8-sig') as f:
+              w=csv.DictWriter(f,fieldnames=fields);w.writeheader();w.writerows(rows)
+          (root/'DOWNLOAD_MANIFEST.json').write_text(json.dumps(rows,indent=2,ensure_ascii=False),encoding='utf-8')
+          missing=[r for r in rows if r['status']!='DOWNLOADED']; done=[r for r in rows if r['status']=='DOWNLOADED']
+          text=[f'Downloaded and validated: {len(done)} / {len(rows)}','', 'No paywall or access control was bypassed.','', 'Still requiring authorized access or another legal open copy:']+[f"- {r['number']:02d}. {r['title']} | {r['doi']}" for r in missing]
+          (root/'README_STATUS.txt').write_text('\n'.join(text)+'\n',encoding='utf-8')
+          if not done: raise SystemExit('No valid PDFs downloaded')
+          print('\n'.join(f"{r['number']:02d} {r['status']} {r['filename']}" for r in rows))
+          PY
+          find paper_bundle -type f -printf '%s %p\n' | sort -n
+      - uses: actions/upload-artifact@v4
+        with:
+          name: verified-paper-pdfs
+          path: paper_bundle/
+          if-no-files-found: error
+          retention-days: 1
+          compression-level: 0
