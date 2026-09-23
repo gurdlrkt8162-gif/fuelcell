@@ -1,0 +1,66 @@
+name: Probe Joule original PDF
+
+on:
+  push:
+    branches: [paper-pdf-fetch-20260923]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Probe official PDF endpoints
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet requests pypdf
+          mkdir -p out/logs
+          python - <<'PY'
+          import json, hashlib
+          from pathlib import Path
+          import requests
+          from pypdf import PdfReader
+          urls = [
+            'https://www.cell.com/action/showPdf?pii=S2542-4351%2824%2900103-X',
+            'https://www.cell.com/action/showPdf?pii=S2542-4351(24)00103-X',
+            'https://www.cell.com/joule/pdfExtended/S2542-4351(24)00103-X',
+            'https://www.cell.com/joule/fulltext/S2542-4351(24)00103-X',
+            'https://www.cell.com/joule/pdf/S2542-4351(24)00103-X',
+            'https://www.sciencedirect.com/science/article/pii/S254243512400103X/pdfft?download=true',
+            'https://api.elsevier.com/content/article/pii/S254243512400103X?httpAccept=application/pdf',
+          ]
+          headers = {
+            'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/131 Safari/537.36',
+            'Accept':'application/pdf,text/html;q=0.9,*/*;q=0.8',
+            'Referer':'https://www.cell.com/joule/fulltext/S2542-4351(24)00103-X',
+            'Accept-Language':'en-US,en;q=0.9',
+          }
+          s=requests.Session(); s.headers.update(headers)
+          log=[]; saved=False
+          for i,u in enumerate(urls):
+            try:
+              r=s.get(u,timeout=90,allow_redirects=True)
+              row={'url':u,'status':r.status_code,'resolved':r.url,'ctype':r.headers.get('content-type',''),'bytes':len(r.content),'head':r.content[:16].hex()}
+              pos=r.content[:8192].find(b'%PDF-')
+              if r.status_code==200 and pos>=0 and len(r.content)>20000:
+                p=Path('out/05_2024_Guo_Semi_supervised_few_shot_battery_lifetime_PUBLISHER_ORIGINAL.pdf')
+                p.write_bytes(r.content[pos:])
+                pages=len(PdfReader(str(p),strict=False).pages)
+                row['pages']=pages; row['sha256']=hashlib.sha256(p.read_bytes()).hexdigest(); saved=True; log.append(row); break
+              log.append(row)
+            except Exception as e: log.append({'url':u,'error':repr(e)})
+          Path('out/logs/probe.json').write_text(json.dumps(log,indent=2),encoding='utf-8')
+          Path('out/STATUS.txt').write_text('SUCCESS\n' if saved else 'NO_PDF_OBTAINED\n',encoding='utf-8')
+          print(json.dumps(log,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: joule-pdf-probe
+          path: out/
+          if-no-files-found: error
+          retention-days: 1
+          compression-level: 0
