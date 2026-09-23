@@ -1,0 +1,41 @@
+name: PEMFC public Mendeley candidate download
+on:
+  push:
+    branches: [research/pemfc-quality-audit-20260922]
+    paths: [.github/workflows/pemfc-mendeley-browser-download.yml]
+permissions:
+  contents: read
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {tag: RWTH, id: mc46tw9t8m, version: '1'}
+          - {tag: OXYGEN_PURGE, id: jy5vxystwd, version: '2'}
+          - {tag: TWO_SYSTEM_FAULT, id: m9m2gmcr6k, version: '1'}
+          - {tag: SENSOR_FAULT, id: 4sfyzcc39j, version: '1'}
+          - {tag: JRC_ZERO_GRADIENT, id: n5csdjfg3c, version: '2'}
+          - {tag: NPL_CO_CONTAMINATION, id: sp4pc8w9xh, version: '1'}
+          - {tag: AC_RESPONSE, id: pn95bsbhv9, version: '1'}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install browser downloader
+        run: |
+          pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Download official public dataset archive
+        run: python scripts/mendeley_download.py '${{ matrix.id }}' '${{ matrix.version }}' --out 'public_mendeley/${{ matrix.tag }}' --timeout-ms 300000
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: PEMFC_${{ matrix.tag }}_NOT_APPROVED
+          path: public_mendeley/${{ matrix.tag }}
+          retention-days: 14
+          compression-level: 0
+          if-no-files-found: error
