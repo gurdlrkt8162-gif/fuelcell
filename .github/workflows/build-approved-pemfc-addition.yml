@@ -1,0 +1,53 @@
+name: Build strictly admitted additional PEMFC package
+on:
+  push:
+    branches: [research/pemfc-quality-audit-20260922]
+    paths:
+      - scripts/build_approved_pemfc_addition.py
+      - .github/workflows/build-approved-pemfc-addition.yml
+permissions:
+  actions: read
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download RWTH source artifact
+        uses: actions/download-artifact@v4
+        with: {name: PEMFC_RWTH_NOT_APPROVED, path: source_artifacts/RWTH, run-id: '35847706470', github-token: '${{ github.token }}'}
+      - name: Download JRC source artifact
+        uses: actions/download-artifact@v4
+        with: {name: PEMFC_JRC_ZERO_GRADIENT_NOT_APPROVED, path: source_artifacts/JRC, run-id: '35847706470', github-token: '${{ github.token }}'}
+      - name: Download oxygen-purge source artifact
+        uses: actions/download-artifact@v4
+        with: {name: PEMFC_OXYGEN_PURGE_NOT_APPROVED, path: source_artifacts/OXYGEN_PURGE, run-id: '35847706470', github-token: '${{ github.token }}'}
+      - name: Download NPL contamination source artifact
+        uses: actions/download-artifact@v4
+        with: {name: PEMFC_NPL_CO_CONTAMINATION_NOT_APPROVED, path: source_artifacts/NPL, run-id: '35847706470', github-token: '${{ github.token }}'}
+      - name: Download stage2 direct-source artifact
+        uses: actions/download-artifact@v4
+        with: {name: PEMFC_STAGE2_CANDIDATES_NOT_APPROVED, path: source_artifacts/STAGE2, run-id: '35847352580', github-token: '${{ github.token }}'}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install archive verifier
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq p7zip-full p7zip-rar
+      - name: Build, verify and seal approved package
+        run: python scripts/build_approved_pemfc_addition.py
+      - name: Preserve final manifest and admission report on isolated branch
+        run: |
+          git config user.name 'pemfc-public-data-audit'
+          git config user.email 'pemfc-public-data-audit@users.noreply.github.com'
+          git add pemfc_final_addition_audit
+          git diff --cached --quiet || git commit -m 'Record final strict-admission PEMFC addition receipt'
+          git push origin HEAD:research/pemfc-quality-audit-20260922
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PEMFC_ADDITIONAL_STRICTLY_ADMITTED_2026-09-23
+          path: PEMFC_ADDITIONAL_STRICTLY_ADMITTED_2026-09-23.zip
+          compression-level: 0
+          retention-days: 90
+          if-no-files-found: error
