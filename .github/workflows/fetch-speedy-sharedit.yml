@@ -1,0 +1,109 @@
+name: Fetch Speedy RL SharedIt PDF
+on:
+  push:
+    branches: [paper-pdf-fetch-20260923]
+permissions:
+  contents: read
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Install browser
+        run: |
+          python -m pip install --quiet playwright pypdf curl_cffi
+          python -m playwright install --with-deps chromium
+      - name: Capture legitimate SharedIt full text
+        shell: bash
+        run: |
+          set -u
+          python - <<'PY'
+          import asyncio, json, hashlib
+          from pathlib import Path
+          from pypdf import PdfReader
+
+          out=Path('speedy_sharedit'); out.mkdir(exist_ok=True)
+          target=out/'10_2022_Li_Speedy_RL_Fuel_Cell_Hybrid_Vehicle_SHARED_IT.pdf'
+          start='https://rdcu.be/dLduV'
+          exact='A Speedy Reinforcement Learning-Based Energy Management Strategy for Fuel Cell Hybrid Vehicles Considering Fuel Cell System Lifetime'
+          logs=[]
+
+          def validate(path,source,kind):
+              try:
+                  data=path.read_bytes(); pos=data[:8192].find(b'%PDF-')
+                  if pos<0: raise ValueError('missing PDF header')
+                  if pos: path.write_bytes(data[pos:]); data=path.read_bytes()
+                  reader=PdfReader(str(path),strict=False); pages=len(reader.pages)
+                  text=''.join((p.extract_text() or '') for p in reader.pages[:5])
+                  if pages<2 or len(data)<30000 or ('Speedy Reinforcement' not in text and 'Fuel Cell Hybrid Vehicles' not in text):
+                      raise ValueError(f'validation pages={pages} bytes={len(data)} text={len(text)}')
+                  logs.append({'saved':True,'source':source,'kind':kind,'pages':pages,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest()})
+                  return True
+              except Exception as e:
+                  logs.append({'validation_error':repr(e),'source':source}); path.unlink(missing_ok=True); return False
+
+          async def main():
+              from playwright.async_api import async_playwright, TimeoutError as PlaywrightTimeoutError
+              async with async_playwright() as p:
+                  browser=await p.chromium.launch(headless=True,args=['--no-sandbox','--disable-blink-features=AutomationControlled'])
+                  context=await browser.new_context(
+                      user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+                      viewport={'width':1440,'height':1000},locale='en-US',accept_downloads=True)
+                  page=await context.new_page(); responses=[]
+                  page.on('response',lambda r: responses.append((r.status,r.url,r.headers.get('content-type',''))))
+                  try:
+                      try:
+                          resp=await page.goto(start,wait_until='domcontentloaded',timeout=90000)
+                          logs.append({'phase':'goto','status':resp.status if resp else None,'resolved':page.url})
+                      except PlaywrightTimeoutError as e:
+                          logs.append({'phase':'goto-timeout','error':repr(e),'resolved':page.url})
+                      await page.wait_for_timeout(12000)
+                      title=await page.title(); body=await page.locator('body').inner_text(timeout=30000)
+                      html=await page.content(); (out/'page.html').write_text(html,encoding='utf-8'); (out/'page_text.txt').write_text(body,encoding='utf-8')
+                      await page.screenshot(path=str(out/'page.png'),full_page=True)
+                      anchors=await page.locator('a').evaluate_all("els => els.map(e=>({text:(e.innerText||'').trim(),href:e.href})).filter(x=>x.href)")
+                      (out/'anchors.json').write_text(json.dumps(anchors,indent=2),encoding='utf-8')
+                      logs.append({'phase':'content','title':title,'resolved':page.url,'body_chars':len(body),'has_exact':exact in body,'has_intro':'Introduction' in body,'has_refs':'References' in body})
+
+                      # Try any PDF/EPDF links exposed by SharedIt.
+                      links=[]
+                      for a in anchors:
+                          s=((a.get('text') or '')+' '+(a.get('href') or '')).lower()
+                          if any(k in s for k in ['pdf','epdf','download']): links.append(a.get('href'))
+                      links += [page.url]
+                      for u in list(dict.fromkeys(x for x in links if x)):
+                          try:
+                              rr=await context.request.get(u,headers={'Referer':page.url,'Accept':'application/pdf,text/html;q=0.9,*/*;q=0.8'},timeout=90000)
+                              blob=await rr.body(); pos=blob[:8192].find(b'%PDF-')
+                              logs.append({'phase':'link','candidate':u,'status':rr.status,'resolved':rr.url,'type':rr.headers.get('content-type'),'bytes':len(blob)})
+                              if rr.status==200 and pos>=0:
+                                  target.write_bytes(blob[pos:])
+                                  if validate(target,rr.url,'sharedit_binary_pdf'): return
+                          except Exception as e:
+                              logs.append({'phase':'link','candidate':u,'error':repr(e)})
+
+                      # Legitimate public SharedIt full-text page: print it to PDF if complete article text is visible.
+                      complete=(exact in body and len(body)>25000 and ('Introduction' in body or 'Abstract' in body) and 'References' in body)
+                      if complete:
+                          await page.emulate_media(media='screen')
+                          await page.pdf(path=str(target),format='A4',print_background=True,margin={'top':'12mm','right':'10mm','bottom':'12mm','left':'10mm'})
+                          validate(target,page.url,'sharedit_fulltext_page_print_pdf')
+                  finally:
+                      (out/'responses.json').write_text(json.dumps(responses,indent=2),encoding='utf-8')
+                      await browser.close()
+
+          try: asyncio.run(main())
+          except Exception as e: logs.append({'fatal':repr(e)})
+          (out/'log.json').write_text(json.dumps(logs,indent=2,ensure_ascii=False),encoding='utf-8')
+          print('saved',target.exists(),target.stat().st_size if target.exists() else 0)
+          PY
+      - name: Require PDF
+        run: test -s speedy_sharedit/10_2022_Li_Speedy_RL_Fuel_Cell_Hybrid_Vehicle_SHARED_IT.pdf
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: speedy-rl-sharedit-pdf
+          path: speedy_sharedit/
+          if-no-files-found: error
+          retention-days: 1
+          compression-level: 0
