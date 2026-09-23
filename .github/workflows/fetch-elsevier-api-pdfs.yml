@@ -1,0 +1,66 @@
+name: Fetch Elsevier API paper PDFs
+on:
+  push:
+    branches: [paper-pdf-fetch-20260923]
+permissions:
+  contents: read
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Probe Elsevier article API and validate PDFs
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet requests pypdf
+          python - <<'PY'
+          import json, hashlib
+          from pathlib import Path
+          import requests
+          from pypdf import PdfReader
+          out=Path('elsevier_api'); out.mkdir()
+          papers={
+            '05_2024_Guo_Semi_supervised_few_shot_battery_lifetime':'S254243512400103X',
+            '11_2025_Ko_PINN_PEMFC_prognostics':'S0306261925000480',
+            '12_2025_Huang_transfer_RL_fuel_cell_EMS':'S0306261924019779',
+            '13_2023_Hu_DRL_EMS_durability_HIL':'S0196890423006349',
+          }
+          s=requests.Session(); s.headers.update({'User-Agent':'Mozilla/5.0 research-client/1.0','Accept-Language':'en-US,en;q=0.9'})
+          report={}
+          for name,pii in papers.items():
+            logs=[]; saved=False
+            urls=[]
+            for base in [f'https://api.elsevier.com/content/article/pii/{pii}',f'https://api.elsevier.com/content/article/PII:{pii}']:
+              urls += [
+                (base+'?httpAccept=application/pdf','application/pdf'),
+                (base+'?view=FULL&httpAccept=application/pdf','application/pdf'),
+                (base+'?httpAccept=text/xml','text/xml'),
+                (base+'?view=FULL&httpAccept=text/xml','text/xml'),
+              ]
+            for url,accept in urls:
+              try:
+                r=s.get(url,headers={'Accept':accept,'X-ELS-ResourceVersion':'1'},timeout=90,allow_redirects=True)
+                rec={'url':url,'status':r.status_code,'resolved':r.url,'type':r.headers.get('content-type'),'bytes':len(r.content),'head':r.content[:100].decode('utf-8','replace')}
+                logs.append(rec)
+                pos=r.content[:8192].find(b'%PDF-')
+                if r.status_code==200 and pos>=0 and len(r.content)-pos>30000:
+                  p=out/(name+'.pdf'); p.write_bytes(r.content[pos:])
+                  pages=len(PdfReader(str(p),strict=False).pages)
+                  if pages>=2:
+                    rec.update({'saved':True,'pages':pages,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}); saved=True; break
+                  p.unlink(missing_ok=True)
+                elif r.status_code==200 and ('xml' in (r.headers.get('content-type') or '').lower() or r.content.lstrip().startswith(b'<?xml')):
+                  (out/(name+'.xml')).write_bytes(r.content)
+              except Exception as e:
+                logs.append({'url':url,'error':repr(e)})
+            report[name]={'pii':pii,'saved_pdf':saved,'attempts':logs}
+          (out/'report.json').write_text(json.dumps(report,indent=2,ensure_ascii=False),encoding='utf-8')
+          print(json.dumps(report,indent=2,ensure_ascii=False)[:30000])
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: elsevier-api-paper-pdfs
+          path: elsevier_api/
+          retention-days: 1
+          compression-level: 0
