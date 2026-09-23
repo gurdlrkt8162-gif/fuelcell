@@ -1,0 +1,15 @@
+{
+  "workflow_run_id": 35849764936,
+  "artifact_id": 10745076525,
+  "artifact_name": "PEMFC_ADDITIONAL_STRICTLY_ADMITTED_2026-09-23_FINAL",
+  "artifact_zip_file_name": "PEMFC_ADDITIONAL_STRICTLY_ADMITTED_2026-09-23_FINAL.zip",
+  "artifact_size_bytes": 42106106,
+  "artifact_sha256": "74cf493a4588dc7f6520ed592e4a1bfeeb64755a8ec9805e8233705721f7fa45",
+  "artifact_created_at": "2026-09-23T10:36:51Z",
+  "artifact_expires_at": "2026-12-22T10:36:26Z",
+  "workflow_conclusion": "success",
+  "drive_file_id": "1Bw_-WFaTjuzsyYccryC2_Qp-icqLboXa",
+  "drive_parent_folder_id": "1zL07AdjArqx0SZnm12j3ljcA4cFkFA2m",
+  "drive_upload_status": "success",
+  "note": "The final GitHub artifact directly contains the admitted package directory; it is not the earlier nested-wrapper artifact. The source package builder separately recorded 6 datasets, 189 manifest entries, and a successful internal ZIP integrity test."
+}
