@@ -1,0 +1,56 @@
+name: Final corrected OA status check 20260927
+on:
+  push:
+    branches: [paper-pdf-fast-20260927]
+    paths: ['.github/workflows/unpaywall-final-check-20260927.yml']
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Query corrected OA APIs
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, requests
+          from pathlib import Path
+          out=Path('oa_final');out.mkdir()
+          dois=[
+            '10.1007/s40684-021-00403-x',
+            '10.1007/s40684-021-00379-8',
+            '10.1016/j.apenergy.2025.125318',
+            '10.1016/j.apenergy.2024.124594',
+            '10.1016/j.enconman.2023.117288',
+          ]
+          report={}
+          for doi in dois:
+            item={}
+            for name,url,params in [
+              ('unpaywall',f'https://api.unpaywall.org/v2/{doi}',{'email':'openaccess.audit@proton.me'}),
+              ('openalex','https://api.openalex.org/works',{'filter':f'doi:{doi}','per-page':1}),
+              ('crossref',f'https://api.crossref.org/works/{doi}',None),
+            ]:
+              try:
+                r=requests.get(url,params=params,timeout=45,headers={'User-Agent':'OA audit/1.0 mailto:openaccess.audit@proton.me'})
+                rec={'status':r.status_code,'url':r.url,'bytes':len(r.content)}
+                try: rec['json']=r.json()
+                except Exception: rec['text']=r.text[:1000]
+                item[name]=rec
+              except Exception as e:item[name]={'error':repr(e)}
+            report[doi]=item
+          (out/'oa_status.json').write_text(json.dumps(report,indent=2,ensure_ascii=False),encoding='utf-8')
+          for doi,item in report.items():
+            u=item.get('unpaywall',{}).get('json') or {}
+            o=((item.get('openalex',{}).get('json') or {}).get('results') or [{}])[0]
+            print('\n',doi)
+            print('unpaywall',{'is_oa':u.get('is_oa'),'oa_status':u.get('oa_status'),'best_oa_location':u.get('best_oa_location'),'oa_locations':u.get('oa_locations')})
+            print('openalex',{'is_oa':(o.get('open_access') or {}).get('is_oa'),'oa_status':(o.get('open_access') or {}).get('oa_status'),'best_oa_location':o.get('best_oa_location')})
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: final-oa-status-20260927
+          path: oa_final/
+          retention-days: 3
