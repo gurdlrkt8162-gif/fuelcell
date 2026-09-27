@@ -1,0 +1,190 @@
+name: Fast remaining paper PDF scan 20260927
+
+on:
+  push:
+    branches: [paper-pdf-fast-20260927]
+    paths: ['.github/workflows/fast-remaining-pdf-scan-20260927.yml']
+
+permissions:
+  contents: read
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Install dependencies
+        run: python -m pip install --quiet requests pypdf rapidfuzz beautifulsoup4 lxml
+      - name: Scan public repositories and validate exact PDFs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          set -u
+          python - <<'PY'
+          import concurrent.futures as cf, csv, hashlib, json, os, re, unicodedata
+          from pathlib import Path
+          from urllib.parse import quote, urljoin, urlparse
+          import requests
+          from bs4 import BeautifulSoup
+          from pypdf import PdfReader
+          from rapidfuzz.fuzz import token_set_ratio
+
+          OUT=Path('fast_pdf_scan'); PDFs=OUT/'validated_pdfs'; OUT.mkdir(); PDFs.mkdir()
+          papers=[
+            dict(n=9,slug='09_2022_Zheng_Deep_RL_Fuel_Cell_Hybrid_Buses',title='A Deep Reinforcement Learning-Based Energy Management Strategy for Fuel Cell Hybrid Buses',doi='10.1007/s40684-021-00403-x',pii='',pages=[
+              'https://snu.elsevierpure.com/en/publications/a-deep-reinforcement-learning-based-energy-management-strategy-fo/',
+              'https://s-space.snu.ac.kr/handle/10371/186678',
+              'https://academic.oup.com/ijpem-gt/article-abstract/9/3/885/8735517'],direct=[]),
+            dict(n=10,slug='10_2022_Li_Speedy_RL_Fuel_Cell_Hybrid_Vehicle',title='A Speedy Reinforcement Learning-Based Energy Management Strategy for Fuel Cell Hybrid Vehicles Considering Fuel Cell System Lifetime',doi='10.1007/s40684-021-00379-8',pii='',pages=[
+              'https://snu.elsevierpure.com/en/publications/a-speedy-reinforcement-learning-based-energy-management-strategy-/',
+              'https://academic.oup.com/ijpem-gt/article-abstract/9/3/859/8735512'],direct=[]),
+            dict(n=11,slug='11_2025_Ko_PINN_PEMFC_prognostics',title='Physics-informed neural network for long-term prognostics of proton exchange membrane fuel cells',doi='10.1016/j.apenergy.2025.125318',pii='S0306261925000480',pages=[
+              'https://hanyang.scholarworks.kr/item/65889f07-6190-44a0-87f8-be614a892fbf',
+              'https://www.sciencedirect.com/science/article/pii/S0306261925000480'],direct=[]),
+            dict(n=12,slug='12_2025_Huang_Transfer_RL_Fuel_Cell_EMS',title='Type- and task-crossing energy management for fuel cell vehicles with longevity consideration: A heterogeneous deep transfer reinforcement learning framework',doi='10.1016/j.apenergy.2024.124594',pii='S0306261924019779',pages=[
+              'https://portal.fis.tum.de/en/publications/type-and-task-crossing-energy-management-for-fuel-cell-vehicles-w/',
+              'https://mediatum.ub.tum.de/1755873',
+              'https://www.sciencedirect.com/science/article/pii/S0306261924019779'],direct=[
+              'https://mediatum.ub.tum.de/doc/1755873/1755873.pdf','https://mediatum.ub.tum.de/1755873.pdf']),
+            dict(n=13,slug='13_2023_Hu_DRL_EMS_durability_HIL',title='Optimizing fuel economy and durability of hybrid fuel cell electric vehicles using deep reinforcement learning-based energy management systems',doi='10.1016/j.enconman.2023.117288',pii='S0196890423006349',pages=[
+              'https://www.sciencedirect.com/science/article/pii/S0196890423006349'],direct=[]),
+          ]
+          bad=('sci-hub','libgen','z-library','annas-archive','pdfcoffee','researchgate.net','academia.edu','scribd.com')
+          H={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/131 Safari/537.36','Accept-Language':'en-US,en;q=0.9'}
+          s=requests.Session(); s.headers.update(H)
+          def norm(x):
+            x=unicodedata.normalize('NFKD',x or '').encode('ascii','ignore').decode().lower()
+            return re.sub(r'\s+',' ',re.sub(r'[^a-z0-9]+',' ',x)).strip()
+          def urls(obj,out=None):
+            out=[] if out is None else out
+            if isinstance(obj,dict):
+              for k,v in obj.items():
+                if isinstance(v,str) and v.startswith(('http://','https://')) and ('.pdf' in v.lower() or any(z in str(k).lower() for z in ('url','pdf','file','download','location','link','uri'))): out.append(v)
+                urls(v,out)
+            elif isinstance(obj,list):
+              for v in obj: urls(v,out)
+            return out
+          def add(C,u,src):
+            if not u:return
+            u=str(u).strip().replace('&amp;','&').replace('\\/','/')
+            if u.startswith('//'):u='https:'+u
+            if not u.startswith(('http://','https://')) or any(x in u.lower() for x in bad):return
+            C.setdefault(u,[]).append(src)
+          def jget(u,params=None):
+            try:
+              r=s.get(u,params=params,timeout=18,allow_redirects=True)
+              return r.json() if r.status_code==200 else None,dict(status=r.status_code,url=r.url,bytes=len(r.content))
+            except Exception as e:return None,dict(error=repr(e),url=u)
+          def discover(p):
+            C={}; D={}; doi=p['doi']; title=p['title']; qdoi=quote(doi,safe='')
+            for u in p['direct']:add(C,u,'curated')
+            add(C,'https://doi.org/'+doi,'doi')
+            if doi.startswith('10.1007/'):
+              add(C,f'https://link.springer.com/content/pdf/{doi}.pdf','springer')
+              add(C,f'https://link.springer.com/content/pdf/{qdoi}.pdf','springer encoded')
+            if p['pii']:
+              pii=p['pii']
+              for u in [f'https://www.sciencedirect.com/science/article/pii/{pii}/pdfft?isDTMRedir=true&download=true',f'https://www.sciencedirect.com/science/article/pii/{pii}/pdf',f'https://ars.els-cdn.com/content/image/1-s2.0-{pii}-main.pdf',f'https://api.elsevier.com/content/article/pii/{pii}?httpAccept=application/pdf']:
+                add(C,u,'elsevier direct')
+            api=[]
+            api.append(('openalex',f'https://api.openalex.org/works',{'filter':f'doi:{doi}','per-page':10}))
+            api.append(('unpaywall',f'https://api.unpaywall.org/v2/{qdoi}',{'email':'oa-check@example.com'}))
+            api.append(('semanticscholar',f'https://api.semanticscholar.org/graph/v1/paper/DOI:{qdoi}',{'fields':'title,openAccessPdf,url,externalIds,isOpenAccess'}))
+            api.append(('crossref',f'https://api.crossref.org/works/{qdoi}',None))
+            api.append(('dissemin',f'https://dissem.in/api/{qdoi}',None))
+            api.append(('zenodo',f'https://zenodo.org/api/records',{'q':f'doi:"{doi}" OR title:"{title}"','size':20}))
+            api.append(('hal',f'https://api.archives-ouvertes.fr/search/',{'q':f'doiId_s:"{doi}" OR title_t:"{title}"','fl':'title_s,doiId_s,fileMain_s,uri_s,linkExtUrl_s','rows':20,'wt':'json'}))
+            def one(x):
+              n,u,pa=x; return n,*jget(u,pa)
+            with cf.ThreadPoolExecutor(max_workers=8) as ex:
+              for name,data,meta in ex.map(one,api):
+                D[name]=meta
+                if data:
+                  for u in urls(data):add(C,u,name)
+            # Repository/OAI endpoints.
+            extras=[]
+            if p['n']==9: extras += ['https://s-space.snu.ac.kr/oai/request?verb=GetRecord&metadataPrefix=oai_dc&identifier=oai:s-space.snu.ac.kr:10371/186678','https://s-space.snu.ac.kr/oai/request?verb=ListRecords&metadataPrefix=oai_dc&set=com_10371_186678']
+            if p['n']==12: extras += ['https://mediatum.ub.tum.de/oai/oai?verb=GetRecord&metadataPrefix=oai_dc&identifier=oai:mediatum.ub.tum.de:1755873','https://mediatum.ub.tum.de/node?id=1755873']
+            for page in p['pages']+extras:
+              try:
+                r=s.get(page,timeout=22,allow_redirects=True)
+                D.setdefault('pages',[]).append(dict(request=page,status=r.status_code,url=r.url,bytes=len(r.content),type=r.headers.get('content-type')))
+                if r.content[:16384].find(b'%PDF-')>=0:add(C,r.url,'page direct pdf')
+                text=r.text.replace('\\/','/') if len(r.content)<10_000_000 else ''
+                soup=BeautifulSoup(text,'lxml')
+                for tag in soup.find_all(['a','link','meta','iframe']):
+                  for a in ('href','src','content'):
+                    v=tag.get(a)
+                    if v:
+                      u=urljoin(r.url,v)
+                      if any(k in u.lower() for k in ('.pdf','/pdf','pdfft','download','attachment','bitstream','fulltext','document')):add(C,u,'page mined')
+                for u in re.findall(r'https?://[^\"\'<>\s]+',text):
+                  if any(k in u.lower() for k in ('.pdf','/pdf','download','attachment','bitstream','fulltext')):add(C,u,'embedded')
+              except Exception as e:D.setdefault('pages',[]).append(dict(request=page,error=repr(e)))
+            # GitHub public code search can reveal author-repository links, not pirate hosts.
+            try:
+              gh=requests.get('https://api.github.com/search/code',params={'q':f'"{doi}"'},headers={**H,'Authorization':'Bearer '+os.environ.get('GITHUB_TOKEN','')},timeout=18)
+              D['github']=dict(status=gh.status_code,bytes=len(gh.content))
+              if gh.status_code==200:
+                for item in gh.json().get('items',[]):add(C,item.get('html_url'),'github mention')
+            except Exception as e:D['github']=dict(error=repr(e))
+            return C,D
+          def pdfdata(b):
+            i=b[:16384].find(b'%PDF-'); return b[i:] if i>=0 and len(b)-i>50000 else None
+          def validate(p,b,path,url):
+            try:
+              path.write_bytes(b); rd=PdfReader(str(path),strict=False); n=len(rd.pages)
+              text='\n'.join((rd.pages[i].extract_text() or '') for i in range(min(n,12)))
+              nt=norm(text); score=token_set_ratio(norm(p['title']),nt[:50000]); dt=norm(p['doi']); doi=dt in nt
+              toks=[x for x in norm(p['title']).split() if len(x)>3]; ratio=sum(x in nt for x in toks)/max(1,len(toks))
+              ok=n>=5 and (doi or score>=88 or ratio>=.78)
+              rec=dict(pages=n,bytes=len(b),title_score=score,title_token_ratio=round(ratio,3),doi_hit=doi,sha256=hashlib.sha256(b).hexdigest(),url=url,accepted=ok)
+              if not ok:path.unlink(missing_ok=True)
+              return rec
+            except Exception as e:path.unlink(missing_ok=True);return dict(accepted=False,error=repr(e),url=url,bytes=len(b))
+          def fetchone(args):
+            p,u,src=args
+            try:
+              r=requests.get(u,headers={**H,'Accept':'application/pdf,text/html;q=0.9,*/*;q=0.8','Referer':'https://doi.org/'+p['doi']},timeout=22,allow_redirects=True)
+              rec=dict(request=u,sources=src,status=r.status_code,url=r.url,type=r.headers.get('content-type'),bytes=len(r.content))
+              b=pdfdata(r.content)
+              if b:
+                tmp=OUT/(p['slug']+'_'+hashlib.sha1(u.encode()).hexdigest()[:10]+'.pdf')
+                rec['validation']=validate(p,b,tmp,r.url)
+                if rec['validation'].get('accepted'):return rec,tmp
+              return rec,None
+            except Exception as e:return dict(request=u,sources=src,error=repr(e)),None
+          final=[]; diagnostics={}
+          for p in papers:
+            C,D=discover(p); candidates=list(C.items())
+            candidates.sort(key=lambda x:(0 if any(k in x[0].lower() for k in ('.pdf','pdfft','download','bitstream')) else 1,0 if any(k in urlparse(x[0]).netloc.lower() for k in ('.edu','.ac.','repository','zenodo','hal.science','mediatum','springer','sciencedirect','elsevier')) else 1,len(x[0])))
+            attempts=[]; winner=None
+            with cf.ThreadPoolExecutor(max_workers=12) as ex:
+              futures=[ex.submit(fetchone,(p,u,src)) for u,src in candidates[:90]]
+              for fut in cf.as_completed(futures):
+                rec,tmp=fut.result(); attempts.append(rec)
+                if tmp and winner is None:
+                  finalpath=PDFs/(p['slug']+'.pdf'); tmp.replace(finalpath); winner={**rec['validation'],'path':str(finalpath),'sources':rec['sources']}
+            for f in OUT.glob(p['slug']+'_*.pdf'):f.unlink(missing_ok=True)
+            entry=dict(id=p['n'],title=p['title'],doi=p['doi'],status='VALIDATED_PDF_ACQUIRED' if winner else 'NO_VALIDATED_OPEN_PDF_FOUND',winner=winner,candidate_count=len(candidates),attempt_count=len(attempts))
+            final.append(entry); diagnostics[p['slug']]=dict(paper=p,discovery=D,candidates=[dict(url=u,sources=src) for u,src in candidates],attempts=attempts,result=winner)
+            (OUT/(p['slug']+'.json')).write_text(json.dumps(diagnostics[p['slug']],indent=2,ensure_ascii=False),encoding='utf-8')
+            print(json.dumps(entry,ensure_ascii=False),flush=True)
+          (OUT/'FINAL_REPORT.json').write_text(json.dumps(final,indent=2,ensure_ascii=False),encoding='utf-8')
+          with (OUT/'FINAL_REPORT.csv').open('w',newline='',encoding='utf-8-sig') as f:
+            w=csv.writer(f);w.writerow(['id','title','doi','status','pages','bytes','sha256','url'])
+            for x in final:
+              v=x['winner'] or {};w.writerow([x['id'],x['title'],x['doi'],x['status'],v.get('pages'),v.get('bytes'),v.get('sha256'),v.get('url')])
+          lines=[f'신규 검증 PDF: {sum(x["winner"] is not None for x in final)} / 5','']+[f'[{x["id"]}] {x["status"]} | {x["doi"]} | {x["title"]}' for x in final]
+          (OUT/'STATUS_KO.txt').write_text('\n'.join(lines),encoding='utf-8')
+          PY
+      - name: Upload scan artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: fast-remaining-pdf-scan-20260927
+          path: fast_pdf_scan/
+          if-no-files-found: error
+          retention-days: 3
+          compression-level: 0
