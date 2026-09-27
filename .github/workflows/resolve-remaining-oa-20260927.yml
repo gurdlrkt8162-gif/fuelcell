@@ -1,0 +1,639 @@
+name: Resolve remaining five OA paper PDFs
+
+on:
+  push:
+    branches: [paper-pdf-fetch-20260923]
+    paths:
+      - '.github/workflows/resolve-remaining-oa-20260927.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  resolve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Install resolver dependencies
+        run: |
+          python -m pip install --quiet requests curl_cffi pypdf beautifulsoup4 lxml rapidfuzz playwright
+          python -m playwright install --with-deps chromium
+
+      - name: Discover, download, and validate exact papers
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -u
+          python - <<'PY'
+          import asyncio
+          import csv
+          import hashlib
+          import json
+          import os
+          import re
+          import sys
+          import time
+          import unicodedata
+          from pathlib import Path
+          from urllib.parse import quote, urljoin, urlparse, unquote
+
+          import requests
+          from bs4 import BeautifulSoup
+          from curl_cffi import requests as crequests
+          from pypdf import PdfReader
+          from rapidfuzz.fuzz import token_set_ratio
+
+          ROOT = Path('remaining_five_resolution')
+          PDF_DIR = ROOT / 'validated_pdfs'
+          DIAG_DIR = ROOT / 'diagnostics'
+          PDF_DIR.mkdir(parents=True, exist_ok=True)
+          DIAG_DIR.mkdir(parents=True, exist_ok=True)
+
+          PAPERS = [
+              {
+                  'id': 9,
+                  'slug': '09_2022_Zheng_Deep_RL_Fuel_Cell_Hybrid_Buses',
+                  'title': 'A Deep Reinforcement Learning-Based Energy Management Strategy for Fuel Cell Hybrid Buses',
+                  'doi': '10.1007/s40684-021-00403-x',
+                  'pii': None,
+                  'pages_expected': 13,
+                  'source_pages': [
+                      'https://snu.elsevierpure.com/en/publications/a-deep-reinforcement-learning-based-energy-management-strategy-fo/',
+                      'https://s-space.snu.ac.kr/handle/10371/186678',
+                      'https://academic.oup.com/ijpem-gt/article-abstract/9/3/885/8735517',
+                  ],
+                  'direct_candidates': [
+                      'https://link.springer.com/content/pdf/10.1007/s40684-021-00403-x.pdf',
+                      'https://link.springer.com/content/pdf/10.1007%2Fs40684-021-00403-x.pdf',
+                  ],
+              },
+              {
+                  'id': 10,
+                  'slug': '10_2022_Li_Speedy_RL_Fuel_Cell_Hybrid_Vehicle',
+                  'title': 'A Speedy Reinforcement Learning-Based Energy Management Strategy for Fuel Cell Hybrid Vehicles Considering Fuel Cell System Lifetime',
+                  'doi': '10.1007/s40684-021-00379-8',
+                  'pii': None,
+                  'pages_expected': 14,
+                  'source_pages': [
+                      'https://snu.elsevierpure.com/en/publications/a-speedy-reinforcement-learning-based-energy-management-strategy-/',
+                      'https://academic.oup.com/ijpem-gt/article-abstract/9/3/859/8735512',
+                      'https://rdcu.be/dLduV',
+                  ],
+                  'direct_candidates': [
+                      'https://link.springer.com/content/pdf/10.1007/s40684-021-00379-8.pdf',
+                      'https://link.springer.com/content/pdf/10.1007%2Fs40684-021-00379-8.pdf',
+                  ],
+              },
+              {
+                  'id': 11,
+                  'slug': '11_2025_Ko_PINN_PEMFC_prognostics',
+                  'title': 'Physics-informed neural network for long-term prognostics of proton exchange membrane fuel cells',
+                  'doi': '10.1016/j.apenergy.2025.125318',
+                  'pii': 'S0306261925000480',
+                  'pages_expected': None,
+                  'source_pages': [
+                      'https://www.sciencedirect.com/science/article/pii/S0306261925000480',
+                      'https://hanyang.scholarworks.kr/item/65889f07-6190-44a0-87f8-be614a892fbf',
+                  ],
+                  'direct_candidates': [],
+              },
+              {
+                  'id': 12,
+                  'slug': '12_2025_Huang_Transfer_RL_Fuel_Cell_EMS',
+                  'title': 'Type- and task-crossing energy management for fuel cell vehicles with longevity consideration: A heterogeneous deep transfer reinforcement learning framework',
+                  'doi': '10.1016/j.apenergy.2024.124594',
+                  'pii': 'S0306261924019779',
+                  'pages_expected': None,
+                  'source_pages': [
+                      'https://www.sciencedirect.com/science/article/pii/S0306261924019779',
+                      'https://portal.fis.tum.de/en/publications/type-and-task-crossing-energy-management-for-fuel-cell-vehicles-w/',
+                      'https://mediatum.ub.tum.de/1755873',
+                  ],
+                  'direct_candidates': [
+                      'https://mediatum.ub.tum.de/doc/1755873/1755873.pdf',
+                      'https://mediatum.ub.tum.de/1755873.pdf',
+                  ],
+              },
+              {
+                  'id': 13,
+                  'slug': '13_2023_Hu_DRL_EMS_durability_HIL',
+                  'title': 'Optimizing fuel economy and durability of hybrid fuel cell electric vehicles using deep reinforcement learning-based energy management systems',
+                  'doi': '10.1016/j.enconman.2023.117288',
+                  'pii': 'S0196890423006349',
+                  'pages_expected': None,
+                  'source_pages': [
+                      'https://www.sciencedirect.com/science/article/pii/S0196890423006349',
+                  ],
+                  'direct_candidates': [],
+              },
+          ]
+
+          BLOCKED_HOST_PARTS = (
+              'sci-hub', 'libgen', 'z-library', 'annas-archive', 'pdfcoffee',
+              'academia.edu', 'researchgate.net', 'scribd.com', 'docer.com',
+          )
+          TRUSTED_PDF_HOST_PARTS = (
+              '.edu', '.ac.', '.edu.', '.gov',
+              'zenodo.org', 'hal.science', 'archives-ouvertes.fr', 'osf.io',
+              'arxiv.org', 'mediatum.ub.tum.de', 's-space.snu.ac.kr',
+              'scholarworks', 'repository', 'eprints', 'dspace',
+              'link.springer.com', 'academic.oup.com', 'sciencedirect.com',
+              'elsevier.com', 'els-cdn.com', 'sciencedirectassets.com',
+          )
+
+          def normalise_text(value: str) -> str:
+              value = unicodedata.normalize('NFKD', value or '')
+              value = value.encode('ascii', 'ignore').decode('ascii')
+              value = value.lower().replace('–', '-').replace('—', '-')
+              value = re.sub(r'[^a-z0-9]+', ' ', value)
+              return re.sub(r'\s+', ' ', value).strip()
+
+          def significant_tokens(value: str):
+              stop = {'a','an','the','for','of','and','with','based','using','to','in','on','system','systems','strategy'}
+              return [w for w in normalise_text(value).split() if len(w) > 2 and w not in stop]
+
+          def recursively_collect_urls(obj, found=None):
+              if found is None:
+                  found = []
+              if isinstance(obj, dict):
+                  for k, v in obj.items():
+                      key = str(k).lower()
+                      if isinstance(v, str) and v.startswith(('http://', 'https://')):
+                          if any(t in key for t in ('url','pdf','download','file','landing','location','uri','link')) or '.pdf' in v.lower():
+                              found.append(v)
+                      recursively_collect_urls(v, found)
+              elif isinstance(obj, list):
+                  for v in obj:
+                      recursively_collect_urls(v, found)
+              return found
+
+          def is_blocked(url):
+              low = (url or '').lower()
+              return any(x in low for x in BLOCKED_HOST_PARTS)
+
+          def is_plausibly_trusted(url):
+              host = urlparse(url).netloc.lower()
+              return any(x in host for x in TRUSTED_PDF_HOST_PARTS)
+
+          def clean_url(url):
+              if not url:
+                  return None
+              url = str(url).strip().replace('&amp;', '&').replace('\\/', '/')
+              if url.startswith('//'):
+                  url = 'https:' + url
+              if not url.startswith(('http://','https://')):
+                  return None
+              return url
+
+          browser_headers = {
+              'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+              'Accept-Language': 'en-US,en;q=0.9',
+          }
+          standard = requests.Session()
+          standard.headers.update(browser_headers)
+          chrome = crequests.Session(impersonate='chrome131')
+
+          def get_json(url, params=None, timeout=50):
+              try:
+                  r = standard.get(url, params=params, timeout=timeout, allow_redirects=True)
+                  if r.status_code == 200:
+                      return r.json(), {'status': r.status_code, 'resolved': r.url, 'bytes': len(r.content)}
+                  return None, {'status': r.status_code, 'resolved': r.url, 'bytes': len(r.content), 'head': r.text[:300]}
+              except Exception as exc:
+                  return None, {'error': repr(exc), 'url': url}
+
+          def add_candidate(paper, store, url, source, note=None):
+              url = clean_url(url)
+              if not url or is_blocked(url):
+                  return
+              key = url.split('#')[0]
+              if key in store:
+                  store[key]['sources'].append(source)
+                  return
+              store[key] = {'url': url, 'sources': [source], 'note': note}
+
+          def discover_api_candidates(paper, candidates, discovery):
+              doi = paper['doi']
+              title = paper['title']
+
+              # OpenAlex exact DOI and title search.
+              data, meta = get_json('https://api.openalex.org/works', {'filter': f'doi:{doi}', 'per-page': 10})
+              discovery['openalex_doi'] = meta
+              if data:
+                  for item in data.get('results', []):
+                      for url in recursively_collect_urls(item):
+                          add_candidate(paper, candidates, url, 'OpenAlex DOI')
+              data, meta = get_json('https://api.openalex.org/works', {'search': title, 'per-page': 10})
+              discovery['openalex_title'] = meta
+              if data:
+                  for item in data.get('results', []):
+                      ititle = item.get('title') or item.get('display_name') or ''
+                      if token_set_ratio(normalise_text(title), normalise_text(ititle)) >= 92:
+                          for url in recursively_collect_urls(item):
+                              add_candidate(paper, candidates, url, 'OpenAlex title')
+
+              # Unpaywall.
+              data, meta = get_json(f'https://api.unpaywall.org/v2/{quote(doi, safe="")}', {'email': 'open-access-check@example.com'})
+              discovery['unpaywall'] = meta
+              if data:
+                  for url in recursively_collect_urls(data):
+                      add_candidate(paper, candidates, url, 'Unpaywall')
+
+              # Semantic Scholar exact DOI and title search.
+              fields = 'title,openAccessPdf,url,externalIds,isOpenAccess,authors,venue,year'
+              data, meta = get_json(f'https://api.semanticscholar.org/graph/v1/paper/DOI:{quote(doi, safe="")}', {'fields': fields})
+              discovery['semantic_scholar_doi'] = meta
+              if data:
+                  for url in recursively_collect_urls(data):
+                      add_candidate(paper, candidates, url, 'Semantic Scholar DOI')
+              data, meta = get_json('https://api.semanticscholar.org/graph/v1/paper/search', {'query': title, 'limit': 10, 'fields': fields})
+              discovery['semantic_scholar_title'] = meta
+              if data:
+                  for item in data.get('data', []):
+                      if token_set_ratio(normalise_text(title), normalise_text(item.get('title',''))) >= 92:
+                          for url in recursively_collect_urls(item):
+                              add_candidate(paper, candidates, url, 'Semantic Scholar title')
+
+              # Crossref links and resource URLs.
+              data, meta = get_json(f'https://api.crossref.org/works/{quote(doi, safe="")}', timeout=60)
+              discovery['crossref'] = meta
+              if data:
+                  message = data.get('message', {})
+                  for link in message.get('link', []) or []:
+                      add_candidate(paper, candidates, link.get('URL'), 'Crossref link', link.get('content-type'))
+                  add_candidate(paper, candidates, message.get('URL'), 'Crossref DOI landing')
+                  for url in recursively_collect_urls(message.get('resource', {})):
+                      add_candidate(paper, candidates, url, 'Crossref resource')
+
+              # Dissemin open-repository aggregator.
+              for endpoint in [f'https://dissem.in/api/{quote(doi, safe="")}', f'https://dissem.in/api/search/?query={quote(title)}']:
+                  data, meta = get_json(endpoint, timeout=60)
+                  discovery.setdefault('dissemin', []).append(meta)
+                  if data:
+                      for url in recursively_collect_urls(data):
+                          add_candidate(paper, candidates, url, 'Dissemin')
+
+              # HAL repository, exact DOI and exact-title fallback.
+              queries = [f'doiId_s:"{doi}"', f'title_t:"{title}"']
+              for q in queries:
+                  data, meta = get_json('https://api.archives-ouvertes.fr/search/', {'q': q, 'fl': 'title_s,doiId_s,fileMain_s,uri_s,linkExtUrl_s', 'rows': 20, 'wt': 'json'})
+                  discovery.setdefault('hal', []).append(meta)
+                  if data:
+                      for doc in data.get('response', {}).get('docs', []):
+                          dt = ' '.join(doc.get('title_s') or []) if isinstance(doc.get('title_s'), list) else str(doc.get('title_s') or '')
+                          if not dt or token_set_ratio(normalise_text(title), normalise_text(dt)) >= 85:
+                              for url in recursively_collect_urls(doc):
+                                  add_candidate(paper, candidates, url, 'HAL')
+
+              # Zenodo DOI and exact-title search.
+              for q in [f'doi:"{doi}"', f'title:"{title}"']:
+                  data, meta = get_json('https://zenodo.org/api/records', {'q': q, 'size': 25})
+                  discovery.setdefault('zenodo', []).append(meta)
+                  if data:
+                      for hit in data.get('hits', {}).get('hits', []):
+                          ht = hit.get('metadata', {}).get('title', '')
+                          if doi.lower() in json.dumps(hit).lower() or token_set_ratio(normalise_text(title), normalise_text(ht)) >= 90:
+                              for f in hit.get('files', []) or []:
+                                  add_candidate(paper, candidates, f.get('links', {}).get('content') or f.get('links', {}).get('self'), 'Zenodo file')
+                              for url in recursively_collect_urls(hit.get('links', {})):
+                                  add_candidate(paper, candidates, url, 'Zenodo links')
+
+              # OpenAIRE discovery. It often returns repository locations missed by the other APIs.
+              for params in [{'doi': doi, 'format': 'json'}, {'title': title, 'format': 'json'}]:
+                  data, meta = get_json('https://api.openaire.eu/search/publications', params, timeout=90)
+                  discovery.setdefault('openaire', []).append(meta)
+                  if data:
+                      for url in recursively_collect_urls(data):
+                          add_candidate(paper, candidates, url, 'OpenAIRE')
+
+              # Bielefeld BASE search API (SRU). Preserve diagnostics and mine URL-looking fields.
+              try:
+                  q = f'dcdoi = "{doi}" OR dctitle = "{title}"'
+                  r = standard.get('https://api.base-search.net/cgi-bin/BaseHttpSearchInterface.fcgi', params={'func':'PerformSearch','query':q,'format':'json','hits':'50'}, timeout=90)
+                  discovery['base'] = {'status': r.status_code, 'resolved': r.url, 'bytes': len(r.content)}
+                  if r.status_code == 200:
+                      try:
+                          obj = r.json()
+                          for url in recursively_collect_urls(obj):
+                              add_candidate(paper, candidates, url, 'BASE')
+                      except Exception:
+                          for url in re.findall(r'https?://[^\s\"<>]+', r.text):
+                              add_candidate(paper, candidates, url, 'BASE text')
+              except Exception as exc:
+                  discovery['base'] = {'error': repr(exc)}
+
+          def mine_source_page(paper, candidates, discovery, page_url, source_label='source page'):
+              try:
+                  r = chrome.get(page_url, timeout=75, allow_redirects=True, headers={**browser_headers, 'Accept': 'text/html,application/xhtml+xml,application/pdf;q=0.9,*/*;q=0.8'})
+                  content = r.content
+                  rec = {'requested': page_url, 'status': r.status_code, 'resolved': str(r.url), 'type': r.headers.get('content-type'), 'bytes': len(content)}
+                  discovery.setdefault('source_pages', []).append(rec)
+                  pos = content[:8192].find(b'%PDF-')
+                  if pos >= 0:
+                      tmp = DIAG_DIR / f'{paper["slug"]}_source_direct.pdf'
+                      tmp.write_bytes(content[pos:])
+                      add_candidate(paper, candidates, str(r.url), source_label + ' direct PDF')
+                      return
+                  text = content.decode('utf-8', 'replace')
+                  (DIAG_DIR / f'{paper["slug"]}_{len(discovery.get("source_pages", [])):02d}.html').write_text(text, encoding='utf-8')
+                  decoded = text.replace('\\/', '/')
+                  soup = BeautifulSoup(decoded, 'lxml')
+                  for tag in soup.find_all(['a','link','meta','iframe','script']):
+                      for attr in ('href','src','content'):
+                          val = tag.get(attr)
+                          if not val:
+                              continue
+                          url = urljoin(str(r.url), val)
+                          low = url.lower()
+                          if any(k in low for k in ('.pdf','/pdf','pdfft','download','attachment','bitstream','fulltext','document')):
+                              add_candidate(paper, candidates, url, source_label + ' HTML link')
+                  for url in re.findall(r'https?://[^\"\'<>\s]+', decoded):
+                      low = url.lower()
+                      if any(k in low for k in ('.pdf','/pdf','pdfft','download','attachment','bitstream','fulltext','document','rdcu.be','mediatum')):
+                          add_candidate(paper, candidates, url, source_label + ' embedded URL')
+                  # Citation meta tags are particularly reliable.
+                  for meta_name in ('citation_pdf_url','eprints.document_url','dc.identifier','dc.relation'):
+                      for node in soup.select(f'meta[name="{meta_name}"]'):
+                          add_candidate(paper, candidates, urljoin(str(r.url), node.get('content','')), source_label + f' meta {meta_name}')
+              except Exception as exc:
+                  discovery.setdefault('source_pages', []).append({'requested': page_url, 'error': repr(exc)})
+
+          def add_publisher_candidates(paper, candidates):
+              doi = paper['doi']
+              for url in paper.get('direct_candidates', []):
+                  add_candidate(paper, candidates, url, 'curated direct candidate')
+              add_candidate(paper, candidates, f'https://doi.org/{doi}', 'DOI landing')
+              if doi.startswith('10.1007/'):
+                  add_candidate(paper, candidates, f'https://link.springer.com/content/pdf/{doi}.pdf', 'Springer direct PDF')
+                  add_candidate(paper, candidates, f'https://link.springer.com/content/pdf/{quote(doi, safe="")}.pdf', 'Springer encoded PDF')
+              pii = paper.get('pii')
+              if pii:
+                  urls = [
+                      f'https://www.sciencedirect.com/science/article/pii/{pii}/pdfft?isDTMRedir=true&download=true',
+                      f'https://www.sciencedirect.com/science/article/pii/{pii}/pdfft',
+                      f'https://www.sciencedirect.com/science/article/pii/{pii}/pdf',
+                      f'https://ars.els-cdn.com/content/image/1-s2.0-{pii}-main.pdf',
+                      f'https://api.elsevier.com/content/article/pii/{pii}?httpAccept=application/pdf',
+                  ]
+                  for url in urls:
+                      add_candidate(paper, candidates, url, 'Elsevier direct candidate')
+
+          def extract_pdf_bytes(content):
+              pos = content[:16384].find(b'%PDF-')
+              if pos < 0:
+                  return None
+              data = content[pos:]
+              if len(data) < 50000:
+                  return None
+              return data
+
+          def validate_pdf_bytes(paper, data, source_url, out_path):
+              result = {'source_url': source_url, 'bytes': len(data)}
+              try:
+                  out_path.write_bytes(data)
+                  reader = PdfReader(str(out_path), strict=False)
+                  pages = len(reader.pages)
+                  sample_pages = min(pages, 12)
+                  text = '\n'.join((reader.pages[i].extract_text() or '') for i in range(sample_pages))
+                  norm_text = normalise_text(text)
+                  norm_title = normalise_text(paper['title'])
+                  title_score = token_set_ratio(norm_title, norm_text[:40000])
+                  expected_tokens = significant_tokens(paper['title'])
+                  hit_tokens = sum(1 for t in expected_tokens if t in norm_text)
+                  token_ratio = hit_tokens / max(1, len(expected_tokens))
+                  doi_compact = normalise_text(paper['doi'])
+                  doi_hit = doi_compact in norm_text
+                  strong_phrase = ' '.join(normalise_text(paper['title']).split()[:6]) in norm_text
+                  result.update({
+                      'pages': pages,
+                      'sample_text_chars': len(text),
+                      'title_score': title_score,
+                      'title_token_ratio': round(token_ratio, 3),
+                      'doi_hit': doi_hit,
+                      'strong_phrase_hit': strong_phrase,
+                      'sha256': hashlib.sha256(data).hexdigest(),
+                  })
+                  accepted = pages >= 5 and (
+                      doi_hit or strong_phrase or title_score >= 88 or token_ratio >= 0.78
+                  )
+                  # Protect against saving a supplement-only or unrelated document.
+                  if accepted and pages <= 4:
+                      accepted = False
+                  if accepted:
+                      result['accepted'] = True
+                      return result
+                  result['accepted'] = False
+                  out_path.unlink(missing_ok=True)
+                  return result
+              except Exception as exc:
+                  result['accepted'] = False
+                  result['error'] = repr(exc)
+                  out_path.unlink(missing_ok=True)
+                  return result
+
+          def try_candidate(paper, candidate, attempts):
+              url = candidate['url']
+              if is_blocked(url):
+                  return None
+              headers = {
+                  **browser_headers,
+                  'Accept': 'application/pdf,text/html;q=0.9,*/*;q=0.8',
+                  'Referer': f'https://doi.org/{paper["doi"]}',
+              }
+              for session_name, session in [('chrome', chrome), ('requests', standard)]:
+                  try:
+                      r = session.get(url, headers=headers, timeout=120, allow_redirects=True)
+                      content = r.content
+                      rec = {
+                          'requested': url,
+                          'sources': candidate.get('sources'),
+                          'session': session_name,
+                          'status': r.status_code,
+                          'resolved': str(r.url),
+                          'content_type': r.headers.get('content-type'),
+                          'bytes': len(content),
+                      }
+                      data = extract_pdf_bytes(content)
+                      if data:
+                          tmp = DIAG_DIR / f'{paper["slug"]}_{len(attempts):04d}.pdf'
+                          validation = validate_pdf_bytes(paper, data, str(r.url), tmp)
+                          rec['validation'] = validation
+                          attempts.append(rec)
+                          if validation.get('accepted'):
+                              final_path = PDF_DIR / f'{paper["slug"]}.pdf'
+                              if final_path.exists():
+                                  final_path.unlink()
+                              tmp.rename(final_path)
+                              return {'path': str(final_path), **validation, 'retrieval_sources': candidate.get('sources'), 'resolved_url': str(r.url)}
+                      else:
+                          # Mine non-blocked landing pages for secondary PDF links.
+                          ctype = (r.headers.get('content-type') or '').lower()
+                          if 'html' in ctype and len(content) < 8_000_000:
+                              text = content.decode('utf-8', 'replace').replace('\\/', '/')
+                              soup = BeautifulSoup(text, 'lxml')
+                              secondary = []
+                              for tag in soup.find_all(['a','link','meta','iframe']):
+                                  for attr in ('href','src','content'):
+                                      val = tag.get(attr)
+                                      if val:
+                                          u = urljoin(str(r.url), val)
+                                          if any(k in u.lower() for k in ('.pdf','/pdf','pdfft','download','attachment','bitstream')):
+                                              secondary.append(u)
+                              rec['secondary_pdf_links'] = list(dict.fromkeys(secondary))[:100]
+                      attempts.append(rec)
+                      # Do not repeat a definitive ordinary HTTP response with another session unless blocked/empty.
+                      if r.status_code == 200 and len(content) > 1000:
+                          break
+                  except Exception as exc:
+                      attempts.append({'requested': url, 'sources': candidate.get('sources'), 'session': session_name, 'error': repr(exc)})
+              return None
+
+          async def try_public_fulltext_print(paper, pages, attempts):
+              # Only print a webpage when it explicitly presents a complete, publicly accessible article.
+              from playwright.async_api import async_playwright
+              async with async_playwright() as p:
+                  browser = await p.chromium.launch(headless=True, args=['--no-sandbox','--disable-blink-features=AutomationControlled'])
+                  context = await browser.new_context(user_agent=browser_headers['User-Agent'], locale='en-US', viewport={'width': 1440, 'height': 1000})
+                  try:
+                      for page_url in pages:
+                          page = await context.new_page()
+                          try:
+                              resp = await page.goto(page_url, wait_until='domcontentloaded', timeout=100000)
+                              await page.wait_for_timeout(9000)
+                              body = await page.locator('body').inner_text(timeout=30000)
+                              title_present = token_set_ratio(normalise_text(paper['title']), normalise_text(body[:12000])) >= 90
+                              lower = body.lower()
+                              complete_markers = all(x in lower for x in ('introduction','conclusion','references'))
+                              public_marker = any(x in lower for x in ('open access','open archive','creative commons','publicly available full text'))
+                              paywall_marker = any(x in lower for x in ('purchase pdf','rent this article','access through your organization','you do not currently have access'))
+                              rec = {
+                                  'web_print_url': page_url,
+                                  'status': resp.status if resp else None,
+                                  'resolved': page.url,
+                                  'body_chars': len(body),
+                                  'title_present': title_present,
+                                  'complete_markers': complete_markers,
+                                  'public_marker': public_marker,
+                                  'paywall_marker': paywall_marker,
+                              }
+                              attempts.append(rec)
+                              if title_present and complete_markers and public_marker and not paywall_marker and len(body) > 30000:
+                                  tmp = DIAG_DIR / f'{paper["slug"]}_public_fulltext_print.pdf'
+                                  await page.pdf(path=str(tmp), format='A4', print_background=True, margin={'top':'12mm','right':'10mm','bottom':'12mm','left':'10mm'})
+                                  data = tmp.read_bytes()
+                                  validation = validate_pdf_bytes(paper, data, page.url, tmp)
+                                  rec['validation'] = validation
+                                  if validation.get('accepted'):
+                                      final_path = PDF_DIR / f'{paper["slug"]}_PUBLIC_FULLTEXT_WEB_PRINT.pdf'
+                                      tmp.rename(final_path)
+                                      return {'path': str(final_path), **validation, 'retrieval_sources': ['public full-text web page'], 'resolved_url': page.url}
+                          except Exception as exc:
+                              attempts.append({'web_print_url': page_url, 'error': repr(exc)})
+                          finally:
+                              await page.close()
+                  finally:
+                      await browser.close()
+              return None
+
+          final_report = []
+          all_diagnostics = {}
+
+          for paper in PAPERS:
+              print(f'\n=== Resolving {paper["id"]}: {paper["title"]} ===', flush=True)
+              candidates = {}
+              discovery = {}
+              attempts = []
+              add_publisher_candidates(paper, candidates)
+              discover_api_candidates(paper, candidates, discovery)
+              for page_url in paper.get('source_pages', []):
+                  mine_source_page(paper, candidates, discovery, page_url, 'institution/publisher page')
+
+              # Mine DOI landing page as well.
+              mine_source_page(paper, candidates, discovery, f'https://doi.org/{paper["doi"]}', 'DOI resolved page')
+
+              # Prefer trusted and explicitly PDF-looking candidates.
+              candidate_list = list(candidates.values())
+              def priority(c):
+                  u = c['url'].lower()
+                  return (
+                      0 if is_plausibly_trusted(u) else 1,
+                      0 if any(k in u for k in ('.pdf','pdfft','content/pdf','bitstream','download')) else 1,
+                      len(u),
+                  )
+              candidate_list.sort(key=priority)
+
+              result = None
+              for cand in candidate_list[:220]:
+                  result = try_candidate(paper, cand, attempts)
+                  if result:
+                      break
+
+              if not result:
+                  try:
+                      result = asyncio.run(try_public_fulltext_print(paper, paper.get('source_pages', []) + [f'https://doi.org/{paper["doi"]}'], attempts))
+                  except Exception as exc:
+                      attempts.append({'web_print_fatal': repr(exc)})
+
+              status = 'VALIDATED_PDF_ACQUIRED' if result else 'NO_VALIDATED_OPEN_PDF_FOUND'
+              entry = {
+                  'id': paper['id'],
+                  'title': paper['title'],
+                  'doi': paper['doi'],
+                  'pii': paper.get('pii'),
+                  'status': status,
+                  'validated_pdf': result,
+                  'candidate_count': len(candidate_list),
+                  'attempt_count': len(attempts),
+              }
+              final_report.append(entry)
+              all_diagnostics[paper['slug']] = {
+                  'paper': paper,
+                  'discovery': discovery,
+                  'candidates': candidate_list,
+                  'attempts': attempts,
+                  'result': result,
+              }
+              (DIAG_DIR / f'{paper["slug"]}.json').write_text(json.dumps(all_diagnostics[paper['slug']], indent=2, ensure_ascii=False), encoding='utf-8')
+              print(json.dumps(entry, ensure_ascii=False), flush=True)
+
+          (ROOT / 'FINAL_REPORT.json').write_text(json.dumps(final_report, indent=2, ensure_ascii=False), encoding='utf-8')
+          with (ROOT / 'FINAL_REPORT.csv').open('w', newline='', encoding='utf-8-sig') as f:
+              writer = csv.DictWriter(f, fieldnames=['id','title','doi','pii','status','candidate_count','attempt_count','pdf_path','pages','bytes','sha256','resolved_url'])
+              writer.writeheader()
+              for e in final_report:
+                  v = e.get('validated_pdf') or {}
+                  writer.writerow({
+                      'id': e['id'], 'title': e['title'], 'doi': e['doi'], 'pii': e.get('pii'),
+                      'status': e['status'], 'candidate_count': e['candidate_count'], 'attempt_count': e['attempt_count'],
+                      'pdf_path': v.get('path'), 'pages': v.get('pages'), 'bytes': v.get('bytes'),
+                      'sha256': v.get('sha256'), 'resolved_url': v.get('resolved_url'),
+                  })
+
+          acquired = [e for e in final_report if e['status'] == 'VALIDATED_PDF_ACQUIRED']
+          status_lines = [
+              '남은 5편 공개 원문 재수색 및 자동 검증 결과',
+              f'검증 PDF 신규 확보: {len(acquired)} / 5',
+              '',
+          ]
+          for e in final_report:
+              v = e.get('validated_pdf') or {}
+              status_lines.append(f"[{e['id']}] {e['status']} | {e['title']} | DOI {e['doi']} | pages={v.get('pages','-')} | sha256={v.get('sha256','-')}")
+          status_lines += [
+              '',
+              '검증 기준: PDF 매직헤더, 최소 5페이지, 제목 토큰/DOI 일치, SHA-256 산출.',
+              '불법 복제 사이트·파일공유 사이트는 후보에서 제외함.',
+          ]
+          (ROOT / 'STATUS_KO.txt').write_text('\n'.join(status_lines), encoding='utf-8')
+          print('\n'.join(status_lines))
+          PY
+
+      - name: Upload resolver results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: remaining-five-oa-resolution-20260927
+          path: remaining_five_resolution/
+          if-no-files-found: error
+          retention-days: 3
+          compression-level: 0
