@@ -21,9 +21,9 @@ jobs:
         with:
           ref: hydrogen-guide-full-20260928
           fetch-depth: 0
-      - name: Cache signed base PDF immediately
+      - name: Cache base PDF immediately
         run: |
-          BASE_URL=$(python3 -c "import json; print(json.load(open('input_urls.json'))['base_pdf_url'])")
+          BASE_URL=$(python3 -c "import json; d=json.load(open('input_urls.json')); print(''.join(d['base_pdf_url_parts']))")
           curl -L --fail --retry 3 --retry-delay 2 "$BASE_URL" -o cached_base.pdf
           test -s cached_base.pdf
       - uses: actions/setup-python@v5
