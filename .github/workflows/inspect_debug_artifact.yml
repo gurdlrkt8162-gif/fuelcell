@@ -20,14 +20,20 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           repository: gurdlrkt8162-gif/fuelcell
           run-id: 36370803839
-      - name: Extract media candidates
+      - name: Extract exact media and API candidates
         run: |
+          ROOT=debug_artifact/work/browser/electro_260907
           find debug_artifact -maxdepth 6 -type f -printf '%p\t%s\n' | sort > debug_files.txt
-          grep -RhoE 'https?[^"<>[:space:]]+' debug_artifact | sed 's/\\u0026/\&/g;s#\\/#/#g' | sort -u > debug_urls_all.txt || true
+          cp "$ROOT/media_urls.txt" debug_exact_media_urls.txt || true
+          cp "$ROOT/storage.json" debug_storage.json || true
+          cp "$ROOT/body.txt" debug_body.txt || true
+          grep -RhoE 'https?[^"<>[:space:]]+' "$ROOT" | sed 's/\\u0026/\&/g;s#\\/#/#g' | sort -u > debug_urls_all.txt || true
           grep -Ei 'cloudflare|r2|storage|audio|video|mp4|m3u8|download|original|upload|media' debug_urls_all.txt > debug_media_candidates.txt || true
-          grep -RniE 'original(File)?Url|fileUrl|mediaUrl|audioUrl|videoUrl|downloadUrl|storageUrl|objectKey|transcript|subtitle' debug_artifact > debug_keys.txt || true
+          grep -RhoE 'https://[^"<>[:space:]]*(cloudflarestorage|r2)[^"<>[:space:]]*' "$ROOT" | sed 's/\\u0026/\&/g;s#\\/#/#g' | sort -u > debug_r2_urls.txt || true
+          grep -RniE 'original(File)?Url|fileUrl|mediaUrl|audioUrl|videoUrl|downloadUrl|storageUrl|objectKey|signedUrl|fileKey|transcript|subtitle' "$ROOT" > debug_keys.txt || true
+          grep -Rni -C 2 -E 'cloudflarestorage|r2\.cloud|audio/f47bde5b|4a2a26e5-5a63' "$ROOT" > debug_r2_context.txt || true
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -f debug_files.txt debug_urls_all.txt debug_media_candidates.txt debug_keys.txt
-          git commit -m 'Inspect AccurateScribe debug artifact' || true
+          git add -f debug_files.txt debug_urls_all.txt debug_media_candidates.txt debug_keys.txt debug_exact_media_urls.txt debug_storage.json debug_body.txt debug_r2_urls.txt debug_r2_context.txt
+          git commit -m 'Inspect exact AccurateScribe media responses' || true
           git push origin HEAD:hydrogen-guide-full-20260928
