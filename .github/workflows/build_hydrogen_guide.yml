@@ -33,12 +33,15 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y ffmpeg poppler-utils fonts-nanum fonts-noto-cjk
-      - name: Install Python dependencies
+      - name: Install Python dependencies and browser
         run: |
           python -m pip install --upgrade pip
-          pip install pymupdf requests beautifulsoup4 lxml faster-whisper numpy pillow
-      - name: Compile builder
-        run: python -m py_compile scripts/build_hydrogen_guide.py
+          pip install pymupdf requests beautifulsoup4 lxml faster-whisper numpy pillow playwright
+          python -m playwright install chromium
+      - name: Compile builders
+        run: |
+          python -m py_compile scripts/build_hydrogen_guide.py
+          python -m py_compile scripts/run_build.py
       - name: Build final PDF
         run: |
           python -m http.server 8765 >/tmp/base-http.log 2>&1 &
@@ -49,7 +52,7 @@ jobs:
           d['base_pdf_url']='http://127.0.0.1:8765/cached_base.pdf'
           json.dump(d,open(p,'w',encoding='utf-8'),ensure_ascii=False,indent=2)
           PY
-          python scripts/build_hydrogen_guide.py --config input_urls.json --output output/final.pdf
+          python scripts/run_build.py --config input_urls.json --output output/final.pdf
       - name: Inspect final PDF
         run: |
           pdfinfo output/final.pdf
@@ -57,6 +60,7 @@ jobs:
           test -s output/final.pdf
           test -s output/qa.json
           grep -q '"source_pages_identified": 115' output/qa.json
+          grep -q '"coverage_ratio": 1.0' output/qa.json
       - name: Commit deterministic deliverables
         run: |
           cp output/final.pdf hydrogen_energy_complete_final.pdf
@@ -68,6 +72,7 @@ jobs:
           git commit -m 'Build complete hydrogen energy study guide' || true
           git push origin HEAD:hydrogen-guide-full-20260928
       - name: Upload final artifacts
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: hydrogen-energy-complete-guide
@@ -76,4 +81,6 @@ jobs:
             output/qa.json
             output/transcripts
             output/mapping.csv
+            output/work/browser
+          if-no-files-found: warn
           retention-days: 7
