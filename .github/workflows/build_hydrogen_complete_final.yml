@@ -1,0 +1,46 @@
+name: Build hydrogen complete final guide
+on:
+  push:
+    paths:
+      - 'tools/build_hydrogen_complete_final.py'
+      - '.github/workflows/build_hydrogen_complete_final.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GUIDE_URL: 'https://sdmntprkoreacentral.oaiusercontent.com/files/00000000-b010-8206-8cc5-ef8acff2dd82/raw?se=2026-09-28T05%3A06%3A29Z&sp=r&sv=2026-02-06&sr=b&scid=1e2a0bb5-06d6-5b06-a2c0-17eaf5ad7c08&skoid=9063adf3-a524-4acf-b70a-8731b33f2f50&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-28T00%3A13%3A04Z&ske=2026-09-29T00%3A13%3A04Z&sks=b&skv=2026-02-06&sig=5%2BpAzsyuJxwT5h//rc8/TD0R1rNxvk4O4PO9MtxE8Bw%3D'
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-nanum poppler-utils
+      - run: python -m pip install --upgrade pymupdf requests
+      - run: python tools/build_hydrogen_complete_final.py
+      - run: pdfinfo artifacts/hydrogen_energy_complete_final.pdf | head -30
+      - run: pdftotext artifacts/hydrogen_energy_complete_final.pdf artifacts/final_text.txt
+      - name: Publish generated branch
+        run: |
+          mkdir -p /tmp/hydrogen_publish
+          cp artifacts/hydrogen_energy_complete_final.pdf /tmp/hydrogen_publish/
+          cp artifacts/qa_report.json /tmp/hydrogen_publish/
+          cp artifacts/slide_time_mapping.csv /tmp/hydrogen_publish/
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git checkout --orphan generated-hydrogen-final
+          git rm -rf .
+          mkdir -p artifacts
+          cp /tmp/hydrogen_publish/* artifacts/
+          git add artifacts
+          git commit -m 'Publish complete hydrogen energy study guide'
+          git push --force origin HEAD:generated-hydrogen-final
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hydrogen-energy-complete-final
+          path: |
+            artifacts/hydrogen_energy_complete_final.pdf
+            artifacts/qa_report.json
+            artifacts/slide_time_mapping.csv
+          retention-days: 7
+          compression-level: 0
