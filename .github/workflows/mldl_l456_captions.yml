@@ -1,4 +1,4 @@
-name: MLDL Lecture 4-6 Innertube captions
+name: MLDL Lecture 4-6 full transcripts
 on:
   push:
     branches: [mldl-l456-evidence-20260928]
@@ -6,31 +6,24 @@ on:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
-      - name: Fetch YouTube caption tracks through Innertube
+      - name: Download timestamped transcripts
         shell: bash
         run: |
-          set -u
-          rm -rf evidence && mkdir -p evidence/player evidence/captions evidence/logs
-          KEY='AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8'
+          set -eu
+          rm -rf evidence && mkdir -p evidence/transcripts evidence/logs
+          declare -A URLS
+          URLS[AyWYU2mmhKs]='https://api.allorigins.win/raw?url=https%3A%2F%2Fyoutube-transcript.ai%2Ftranscript%2FAyWYU2mmhKs.txt'
+          URLS[qArmG1FPQII]='https://api.allorigins.win/raw?url=https%3A%2F%2Fyoutube-transcript.ai%2Ftranscript%2FqArmG1FPQII.txt'
+          URLS[4SDi3kO0748]='https://api.allorigins.win/raw?url=https%3A%2F%2Fyoutube-transcript.ai%2Ftranscript%2F4SDi3kO0748.txt'
           for VID in AyWYU2mmhKs qArmG1FPQII 4SDi3kO0748; do
-            cat > /tmp/body.json <<JSON
-          {"context":{"client":{"clientName":"ANDROID","clientVersion":"20.10.38","androidSdkVersion":30,"hl":"ko","gl":"KR"}},"videoId":"$VID","contentCheckOk":true,"racyCheckOk":true}
-          JSON
-            curl -A 'com.google.android.youtube/20.10.38 (Linux; U; Android 11)' -sS -L --max-time 45 -H 'Content-Type: application/json' --data-binary @/tmp/body.json "https://www.youtube.com/youtubei/v1/player?key=$KEY&prettyPrint=false" -o "evidence/player/${VID}.json" 2>"evidence/logs/${VID}.player.log" || true
-            jq -r '.captions.playerCaptionsTracklistRenderer.captionTracks // []' "evidence/player/${VID}.json" > "evidence/player/${VID}.tracks.json" 2>"evidence/logs/${VID}.jq.log" || true
-            BASE=$(jq -r '[.[] | select(.languageCode=="ko")][0].baseUrl // .[0].baseUrl // empty' "evidence/player/${VID}.tracks.json" 2>/dev/null || true)
-            if [ -n "$BASE" ]; then
-              curl -A 'Mozilla/5.0' -sS -L --max-time 45 "${BASE}&fmt=json3" -o "evidence/captions/${VID}.json3" 2>"evidence/logs/${VID}.caption.log" || true
-              curl -A 'Mozilla/5.0' -sS -L --max-time 45 "${BASE}&fmt=vtt" -o "evidence/captions/${VID}.vtt" 2>>"evidence/logs/${VID}.caption.log" || true
-              echo "$BASE" > "evidence/captions/${VID}.baseurl.txt"
-            fi
+            curl -A 'Mozilla/5.0' -fL --retry 5 --retry-delay 3 --max-time 120 "${URLS[$VID]}" -o "evidence/transcripts/${VID}.txt" >"evidence/logs/${VID}.log" 2>&1
           done
           find evidence -type f -printf '%p %s bytes\n' | sort > evidence/manifest.txt
       - uses: actions/upload-artifact@v4
         with:
-          name: mldl-lecture4-6-innertube-captions
+          name: mldl-lecture4-6-full-transcripts
           path: evidence
           retention-days: 7
