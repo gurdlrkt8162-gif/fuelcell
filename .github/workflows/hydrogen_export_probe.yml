@@ -1,0 +1,23 @@
+name: Hydrogen transcript export probe
+on:
+  push:
+    paths:
+      - 'tools/hydrogen_export_probe.py'
+      - '.github/workflows/hydrogen_export_probe.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - run: python -m pip install playwright requests
+      - run: python -m playwright install --with-deps chromium
+      - run: python tools/hydrogen_export_probe.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hydrogen-export-probe
+          path: export_probe_out
+          retention-days: 2
