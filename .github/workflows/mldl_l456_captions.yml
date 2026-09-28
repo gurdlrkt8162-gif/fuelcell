@@ -1,4 +1,4 @@
-name: MLDL Lecture 4-6 evidence via Invidious
+name: MLDL Lecture 4-6 caption probe
 on:
   push:
     branches: [mldl-l456-evidence-20260928]
@@ -6,42 +6,40 @@ on:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
-      - name: Install media tools
-        run: |
-          sudo apt-get update -y
-          sudo apt-get install -y ffmpeg jq
-      - name: Fetch captions metadata and frames
+      - name: Probe and download public caption endpoints
         shell: bash
         run: |
           set -u
-          rm -rf evidence
-          mkdir -p evidence/captions evidence/metadata evidence/frames evidence/logs
-          BASE='https://inv.nadeko.net'
+          rm -rf evidence && mkdir -p evidence/captions evidence/logs
+          INSTANCES=(
+            'https://inv.nadeko.net'
+            'https://invidious.f5.si'
+            'https://yt.chocolatemoo53.com'
+            'https://invidious.tiekoetter.com'
+            'https://invidious.nerdvpn.de'
+          )
           for VID in AyWYU2mmhKs qArmG1FPQII 4SDi3kO0748; do
-            curl -fsSL --retry 4 --retry-delay 2 "$BASE/api/v1/videos/$VID" -o "evidence/metadata/${VID}.invidious.json" 2>"evidence/logs/${VID}.metadata.log" || true
-            curl -fsSL --retry 4 --retry-delay 2 "$BASE/api/v1/captions/$VID" -o "evidence/metadata/${VID}.caption_tracks.json" 2>"evidence/logs/${VID}.tracks.log" || true
-            curl -fsSL --retry 4 --retry-delay 2 "$BASE/api/v1/captions/$VID?label=Korean+%28auto-generated%29" -o "evidence/captions/${VID}.ko.auto.vtt" 2>"evidence/logs/${VID}.caption_ko.log" || true
-            curl -fsSL --retry 4 --retry-delay 2 "$BASE/api/v1/captions/$VID?label=English+%28United+States%29+%28auto-generated%29" -o "evidence/captions/${VID}.en.auto.vtt" 2>"evidence/logs/${VID}.caption_en.log" || true
-            mkdir -p "evidence/frames/$VID"
-            STREAM=$(jq -r '[.formatStreams[]? | select(.qualityLabel=="360p" or .qualityLabel=="480p")][0].url // .formatStreams[0].url // empty' "evidence/metadata/${VID}.invidious.json" 2>/dev/null || true)
-            if [ -n "$STREAM" ]; then
-              curl -fL --retry 3 --retry-delay 2 "$STREAM" -o "/tmp/${VID}.mp4" >"evidence/logs/${VID}.video_download.log" 2>&1 || true
-            fi
-            if [ -s "/tmp/${VID}.mp4" ]; then
-              ffprobe -v error -show_format -show_streams -of json "/tmp/${VID}.mp4" > "evidence/metadata/${VID}.ffprobe.json" 2>"evidence/logs/${VID}.ffprobe.log" || true
-              ffmpeg -hide_banner -loglevel warning -i "/tmp/${VID}.mp4" -vf 'fps=1/10,scale=640:-2' -q:v 5 "evidence/frames/${VID}/regular_%05d.jpg" >"evidence/logs/${VID}.frames_regular.log" 2>&1 || true
-              ffmpeg -hide_banner -loglevel warning -i "/tmp/${VID}.mp4" -vf "select='gt(scene,0.10)',scale=640:-2" -vsync vfr -q:v 4 "evidence/frames/${VID}/scene_%05d.jpg" >"evidence/logs/${VID}.frames_scene.log" 2>&1 || true
-              rm -f "/tmp/${VID}.mp4"
-            fi
+            FOUND=0
+            for BASE in "${INSTANCES[@]}"; do
+              HOST=$(echo "$BASE" | sed 's#https://##;s#[^A-Za-z0-9]#_#g')
+              curl -A 'Mozilla/5.0' -sS -L --max-time 30 -w '%{http_code} %{size_download}\n' -o "evidence/logs/${VID}.${HOST}.tracks.body" "$BASE/api/v1/captions/$VID" > "evidence/logs/${VID}.${HOST}.tracks.status" 2>&1 || true
+              curl -A 'Mozilla/5.0' -sS -L --max-time 30 -G --data-urlencode 'label=Korean (auto-generated)' -w '%{http_code} %{size_download}\n' -o "evidence/logs/${VID}.${HOST}.ko.body" "$BASE/api/v1/captions/$VID" > "evidence/logs/${VID}.${HOST}.ko.status" 2>&1 || true
+              SIZE=$(wc -c < "evidence/logs/${VID}.${HOST}.ko.body" 2>/dev/null || echo 0)
+              if [ "$SIZE" -gt 100 ]; then
+                cp "evidence/logs/${VID}.${HOST}.ko.body" "evidence/captions/${VID}.ko.auto.vtt"
+                echo "$BASE $SIZE" > "evidence/captions/${VID}.source.txt"
+                FOUND=1
+                break
+              fi
+            done
+            echo "found=$FOUND" > "evidence/logs/${VID}.result.txt"
           done
           find evidence -type f -printf '%p %s bytes\n' | sort > evidence/manifest.txt
-          for f in evidence/captions/*; do echo "==== $f ===="; head -n 8 "$f" || true; done > evidence/logs/caption_heads.log
       - uses: actions/upload-artifact@v4
         with:
-          name: mldl-lecture4-6-invidious-evidence
+          name: mldl-lecture4-6-caption-probe
           path: evidence
-          compression-level: 6
           retention-days: 7
