@@ -34,8 +34,14 @@ s = s.replace(
 
 # Direct text insertion is used only for concise labels / QA rows. Use MuPDF's
 # built-in Korean CJK font, avoiding malformed embedded font descriptors.
-s = s.replace("page.insert_font(fontname='nanum',fontfile=FONT);page.insert_font(fontname='nanumb',fontfile=FONT_B)\n", "")
-s = s.replace("p=doc.new_page(width=1024,height=576);p.insert_font(fontname='nanum',fontfile=FONT);p.insert_font(fontname='nanumb',fontfile=FONT_B)", "p=doc.new_page(width=1024,height=576)")
+s = s.replace(
+    "    page.insert_font(fontname='nanum',fontfile=FONT);page.insert_font(fontname='nanumb',fontfile=FONT_B)\n",
+    "",
+)
+s = s.replace(
+    "p=doc.new_page(width=1024,height=576);p.insert_font(fontname='nanum',fontfile=FONT);p.insert_font(fontname='nanumb',fontfile=FONT_B)",
+    "p=doc.new_page(width=1024,height=576)",
+)
 s = s.replace("fontname='nanumb'", "fontname='korea'")
 s = s.replace("fontname='nanum'", "fontname='korea'")
 
@@ -47,6 +53,7 @@ checks = {
     'summary_archive': 'archive=ARCHIVE,scale_low=0.76' in s,
     'qa_archive': 'archive=ARCHIVE,scale_low=.8' in s,
     'no_direct_nanum': "fontname='nanum'" not in s and "fontname='nanumb'" not in s,
+    'panel_indent_ok': "\n    header='교수 설명 · 쉬운 해설'" in s,
 }
 failed = [k for k,v in checks.items() if not v]
 if failed:
