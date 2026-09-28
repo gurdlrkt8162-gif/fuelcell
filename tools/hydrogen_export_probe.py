@@ -11,7 +11,10 @@ async def main():
   ctx=await b.new_context(accept_downloads=True,viewport={'width':1440,'height':1100})
   for name,url in URLS.items():
    page=await ctx.new_page(); reqs=[]
-   page.on('request',lambda r:reqs.append({'method':r.method,'url':r.url,'post':r.post_data}))
+   def record_request(r):
+    try:reqs.append({'method':r.method,'url':r.url})
+    except Exception as e:reqs.append({'error':repr(e)})
+   page.on('request',record_request)
    await page.goto(url,wait_until='domcontentloaded',timeout=120000);await page.wait_for_timeout(3000)
    buttons=await page.locator('button').all_inner_texts()
    links=await page.locator('a').evaluate_all("els=>els.map(e=>({text:e.innerText,href:e.href}))")
