@@ -1,0 +1,126 @@
+AccurateScribe.ai
+Home
+Tools
+Pricing
+FAQ
+Blog
+English
+Sign in / Sign up
+Start Transcribing
+260907 1.기초 전기화학 분석.mp4
+
+Sep 17, 2026, 2:27 AMDuration: 38:35
+
+Share
+(0:00) 안녕하세요 수소 에너지 실험 조기호 솔현택입니다. 
+(0:04) 오늘은 수소 에너지 실험과 관련돼서 기초 전기 화학 분석에 대해 설명드리겠습니다. 
+(0:09) 오늘 내용은 크게 세 부분으로 구성되어 있는데 저희는 오늘 앞부분 두 파트까지만 진행하도록 하겠습니다. 
+(0:16) 먼저 전기화학 분석이 어떤 분석이고 왜 필요한지 기본적인 내용을 설명하고 그 다음 선형 주사 전입법 영어로 linnial sweet boltarmatry 줄여서 lsv에 대해서 보도록 하겠습니다. 
+(0:29) 뒤쪽에 EIS 자료에는 포함되어 있지만 오늘은 LSV까지만 진행하도록 하겠습니다. 
+(0:35) 오늘 수업에서 몇 가지 식이 나오기도 하는데 식을 전부 암기하실 필요는 없습니다. 
+(0:43) 내용은 처음에는 전기화학분석이 무엇이고 왜 사용하는지 기본적인 내용을 보고 그 다음에는 선형주사 전입법 LSV를 보겠습니다. 
+(0:53) 마지막으로는 오늘 내용 중에서 가장 비중이 큰 전기화학 인피던스 분권법 EIS에 대해 설명 
+Export
+DOCX
+PDF
+TXT
+SRT
+VTT
+STL
+EDL
+XML
+CSV
+XLSX
+HTML
+JSON
+FCPXML
+Display Format
+Segmentation
+Show Timestamps
+ChatGPT
+Summarize and chat with this transcript
+Translate
+Translate this transcript to 134+ languages
+1x
+0:00
+0:59
+AccurateScribe.ai
+
+Enterprise-grade audio & video transcription powered by advanced AI technology.
+
+© 2026 AccurateScribe.ai.
+
+All rights reserved.
+
+Get AccurateScribe.ai
+
+Web App – Online AI Transcriber
+iOS App – Transcribe AI Voice Note Taker
+AI Transcriber – Microsoft Store
+Transcription Chrome Extension
+GPT Assistant
+
+Learn More
+
+Pricing
+FAQ
+Join Affiliate
+WhatsApp
+Contact Us
+Support
+About Us
+
+Tools
+
+Audio & Video Transcription
+AI Subtitle Generator
+Transcribe from URL
+Record & Transcribe Voice
+Screen Recorder — Capture & Transcribe
+Text to Speech - AI Voice Generator
+Humanize AI – Make AI Text Sound Human
+AI Humanizer GPT
+Authenticator
+Convert Audio/Video to MP3
+Convert to WAV: Audio & Video
+
+Legal
+
+Copyright Statement
+DMCA Notice & Takedown
+Terms of Use
+Disclaimer
+Privacy Policy
+INTELLECTUAL PROPERTY RIGHTS
+Subscription Terms
+Return Policy
+Upgrade to Pro
+Save 50%
+Most Popular
+New Customer Offer
+09:58:55.02
+$9.99
+/month
+Billed annually at $119.99/year
+Unlimited transcription usage
+Unlimited subtitle generation
+Supports files up to 10 hours each
+99.8% accuracy in transcription & subtitles
+Support 134+ languages
+Speaker identification
+Results within minutes
+Export DOCX, PDF, SRT, VTT, TXT, CSV, etc.
+Go Unlimited!
+Monthly
+$19.99
+/month
+Unlimited transcription usage
+Unlimited subtitle generation
+Supports files up to 10 hours each
+99.8% accuracy in transcription & subtitles
+Support 134+ languages
+Speaker identification
+Results within minutes
+Export DOCX, PDF, SRT, VTT, TXT, CSV, etc.
+Go Unlimited!
+Close
