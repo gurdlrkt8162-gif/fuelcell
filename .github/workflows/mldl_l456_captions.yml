@@ -1,4 +1,4 @@
-name: MLDL Lecture 4-6 caption probe
+name: MLDL Lecture 4-6 Innertube captions
 on:
   push:
     branches: [mldl-l456-evidence-20260928]
@@ -9,37 +9,28 @@ jobs:
     timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
-      - name: Probe and download public caption endpoints
+      - name: Fetch YouTube caption tracks through Innertube
         shell: bash
         run: |
           set -u
-          rm -rf evidence && mkdir -p evidence/captions evidence/logs
-          INSTANCES=(
-            'https://inv.nadeko.net'
-            'https://invidious.f5.si'
-            'https://yt.chocolatemoo53.com'
-            'https://invidious.tiekoetter.com'
-            'https://invidious.nerdvpn.de'
-          )
+          rm -rf evidence && mkdir -p evidence/player evidence/captions evidence/logs
+          KEY='AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8'
           for VID in AyWYU2mmhKs qArmG1FPQII 4SDi3kO0748; do
-            FOUND=0
-            for BASE in "${INSTANCES[@]}"; do
-              HOST=$(echo "$BASE" | sed 's#https://##;s#[^A-Za-z0-9]#_#g')
-              curl -A 'Mozilla/5.0' -sS -L --max-time 30 -w '%{http_code} %{size_download}\n' -o "evidence/logs/${VID}.${HOST}.tracks.body" "$BASE/api/v1/captions/$VID" > "evidence/logs/${VID}.${HOST}.tracks.status" 2>&1 || true
-              curl -A 'Mozilla/5.0' -sS -L --max-time 30 -G --data-urlencode 'label=Korean (auto-generated)' -w '%{http_code} %{size_download}\n' -o "evidence/logs/${VID}.${HOST}.ko.body" "$BASE/api/v1/captions/$VID" > "evidence/logs/${VID}.${HOST}.ko.status" 2>&1 || true
-              SIZE=$(wc -c < "evidence/logs/${VID}.${HOST}.ko.body" 2>/dev/null || echo 0)
-              if [ "$SIZE" -gt 100 ]; then
-                cp "evidence/logs/${VID}.${HOST}.ko.body" "evidence/captions/${VID}.ko.auto.vtt"
-                echo "$BASE $SIZE" > "evidence/captions/${VID}.source.txt"
-                FOUND=1
-                break
-              fi
-            done
-            echo "found=$FOUND" > "evidence/logs/${VID}.result.txt"
+            cat > /tmp/body.json <<JSON
+          {"context":{"client":{"clientName":"ANDROID","clientVersion":"20.10.38","androidSdkVersion":30,"hl":"ko","gl":"KR"}},"videoId":"$VID","contentCheckOk":true,"racyCheckOk":true}
+          JSON
+            curl -A 'com.google.android.youtube/20.10.38 (Linux; U; Android 11)' -sS -L --max-time 45 -H 'Content-Type: application/json' --data-binary @/tmp/body.json "https://www.youtube.com/youtubei/v1/player?key=$KEY&prettyPrint=false" -o "evidence/player/${VID}.json" 2>"evidence/logs/${VID}.player.log" || true
+            jq -r '.captions.playerCaptionsTracklistRenderer.captionTracks // []' "evidence/player/${VID}.json" > "evidence/player/${VID}.tracks.json" 2>"evidence/logs/${VID}.jq.log" || true
+            BASE=$(jq -r '[.[] | select(.languageCode=="ko")][0].baseUrl // .[0].baseUrl // empty' "evidence/player/${VID}.tracks.json" 2>/dev/null || true)
+            if [ -n "$BASE" ]; then
+              curl -A 'Mozilla/5.0' -sS -L --max-time 45 "${BASE}&fmt=json3" -o "evidence/captions/${VID}.json3" 2>"evidence/logs/${VID}.caption.log" || true
+              curl -A 'Mozilla/5.0' -sS -L --max-time 45 "${BASE}&fmt=vtt" -o "evidence/captions/${VID}.vtt" 2>>"evidence/logs/${VID}.caption.log" || true
+              echo "$BASE" > "evidence/captions/${VID}.baseurl.txt"
+            fi
           done
           find evidence -type f -printf '%p %s bytes\n' | sort > evidence/manifest.txt
       - uses: actions/upload-artifact@v4
         with:
-          name: mldl-lecture4-6-caption-probe
+          name: mldl-lecture4-6-innertube-captions
           path: evidence
           retention-days: 7
