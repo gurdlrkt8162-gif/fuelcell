@@ -1,0 +1,116 @@
+kind,slide,title,video,visual_range,pdf_part1,pdf_part2
+electro,1,수소에너지실험,260907,00:00-00:45,5,6
+electro,2,1. 전기화학 분석 개요,260907,00:45-01:35,7,8
+electro,3,전기화학 분석의기초,260907,01:35-03:20,9,10
+electro,4,전기화학 분석의기초,260907,03:20-03:50,11,12
+electro,5,전기화학 분석의기초,260907,03:50-04:40,13,14
+electro,6,전기화학 분석의기초,260907,04:40-05:50,15,16
+electro,7,전기화학 분석의기초,260907,05:50-06:35,17,18
+electro,8,전기화학 분석의기초,260907,06:35-07:35,19,20
+electro,9,전기화학 분석의기초,260907,07:35-08:05,21,22
+electro,10,전기화학 분석의기초,260907,08:05-09:10,23,24
+electro,11,전기화학 분석의기초,260907,09:10-10:15,25,26
+electro,12,전기화학 분석의기초,260907,10:15-11:25,27,28
+electro,13,전기화학 분석의기초,260907,11:25-12:10,29,30
+electro,14,전기화학 분석의기초,260907,12:10-12:55,31,32
+electro,15,전기화학 분석의기초,260907,12:55-13:40,33,34
+electro,16,전기화학분석 측정장비 예시,260907,13:40-14:15,35,36
+electro,17,전기화학분석 측정장비 예시,260907,14:15-15:21,37,38
+electro,18,전기화학 분석의기초,260907,15:21-16:28,39,40
+electro,19,전기화학 분석의기초,260907,16:28-17:35,41,42
+electro,20,전기화학 분석의기초,260907,17:35-18:42,43,44
+electro,21,선형주사전위법 (Linear Sweep Voltammetry; LSV),260907,18:42-19:49,45,46
+electro,22,선형주사전위법 (Linear Sweep Voltammetry; LSV),260907,19:49-20:56,47,48
+electro,23,선형주사전위법의전압-전류 그래프,260907,20:56-22:03,49,50
+electro,24,선형주사전위법의전압-전류 그래프,260907,22:03-23:10,51,52
+electro,25,선형주사전위법의전압-전류 그래프,260907,23:10-24:17,53,54
+electro,26,선형주사전위법의전압-전류 그래프,260907,24:17-25:24,55,56
+electro,27,선형주사전위법의전압-전류 그래프,260907,25:24-26:31,57,58
+electro,28,선형주사전위법의전압-전류 그래프,260907,26:31-27:38,59,60
+electro,29,Randles-Ševčík equation,260907,27:38-28:45,61,62
+electro,30,Nernst equation,260907,28:45-29:52,63,64
+electro,31,Ep=E0'+RT/(αnaF)[-0.78 + ln (k0/D0,260907,29:52-30:59,65,66
+electro,32,LSV 실험 방법,260907,30:59-32:06,67,68
+electro,33,LSV 분석 예시 1) LSV를 이용한 연료전지의 주요 손실 구간 분석 및 성능 평가,260907,32:06-33:13,69,70
+electro,34,LSV 분석 예시 2) 전기메탄생성법을 이용한 바이오전극에서의 직접 메탄 생산량 조사,260907,33:13-34:20,71,72
+electro,35,전기화학임피던스분광법 (Electrochemical Impedance Spectrosco...,Video Project,02:45-03:47,73,74
+electro,36,EIS 측정 과정,Video Project,03:47-04:49,75,76
+electro,37,임피던스 (Impedance),Video Project,04:49-05:52,77,78
+electro,38,임피던스 (Impedance),Video Project,05:52-06:54,79,80
+electro,39,Nyquist 선도,Video Project,06:54-07:56,81,82
+electro,40,Nyquist 선도,Video Project,07:56-08:59,83,84
+electro,41,EIS의 주파수 의존성,Video Project,08:59-10:01,85,86
+electro,42,EIS & Equivalent Circuit Modeling (ECM),Video Project,10:01-11:03,87,88
+electro,43,EIS & Equivalent Circuit Modeling (ECM),Video Project,11:03-12:06,89,90
+electro,44,EIS & Equivalent Circuit Modeling (ECM),Video Project,12:06-13:08,91,92
+electro,45,EIS & Equivalent Circuit Modeling (ECM),Video Project,13:08-14:11,93,94
+electro,46,EIS & Equivalent Circuit Modeling (ECM),Video Project,14:11-15:13,95,96
+electro,47,EIS & Equivalent Circuit Modeling (ECM),Video Project,15:13-16:15,97,98
+electro,48,EIS & Equivalent Circuit Modeling (ECM),Video Project,16:15-17:18,99,100
+electro,49,Nyquist 선도와 Bode 선도의 기초,Video Project,17:18-18:20,101,102
+electro,50,Nyquist 선도와 Bode 선도의 기초,Video Project,18:20-19:22,103,104
+electro,51,Bode 선도 (Bode Plot),Video Project,19:22-20:25,105,106
+electro,52,Bode 선도 (Bode Plot),Video Project,20:25-21:27,107,108
+electro,53,Bode 선도 (Bode Plot),Video Project,21:27-22:30,109,110
+electro,54,보드선도 (Bode Plot) 의 분석 방법,Video Project,22:30-23:32,111,112
+electro,55,보드선도 (Bode Plot) 의 분석 방법,Video Project,23:32-24:34,113,114
+electro,56,보드선도 (Bode Plot) 의 분석 방법,Video Project,24:34-25:37,115,116
+electro,57,EIS 분석 전 고려사항,Video Project,25:37-26:39,117,118
+electro,58,EIS 분석 전 고려사항,Video Project,26:39-27:41,119,120
+electro,59,EIS 분석을 위한 필수 조건 1: Stability,Video Project,27:41-28:44,121,122
+electro,60,EIS 분석을 위한 필수 조건 2: Causality,Video Project,28:44-29:46,123,124
+electro,61,EIS 분석을 위한 필수 조건 3: Linearity,Video Project,29:46-30:49,125,126
+electro,62,EIS 분석 전 고려사항: 데이터 검증 (Data Validation),Video Project,30:49-31:51,127,128
+electro,63,EIS 분석 절차,Video Project,31:51-32:53,129,130
+electro,64,EIS 분석 절차,Video Project,32:53-33:56,131,132
+electro,65,EIS 분석 절차,Video Project,33:56-34:58,133,134
+electro,66,EIS 분석 절차,Video Project,34:58-36:00,135,136
+electro,67,EIS 분석 절차,Video Project,36:00-37:03,137,138
+electro,68,EIS 분석 절차,Video Project,37:03-38:05,139,140
+electro,69,EIS 분석 절차,Video Project,38:05-39:08,141,142
+electro,70,EIS 분석 절차,Video Project,39:08-40:10,143,144
+electro,71,EIS 분석 절차,Video Project,40:10-41:12,145,146
+electro,72,EIS 분석 절차,Video Project,41:12-42:15,147,148
+electro,73,EIS 분석 절차,Video Project,42:15-43:17,149,150
+electro,74,전기화학셀의 EIS 측정 방법,Video Project,43:17-44:19,151,152
+electro,75,전기화학셀의 EIS 측정 방법,Video Project,44:19-45:22,153,154
+electro,76,전기화학셀의 EIS 측정 방법,Video Project,45:22-46:24,155,156
+electro,77,전기화학셀의 EIS 측정 방법,Video Project,46:24-47:27,157,158
+electro,78,전기화학셀의 EIS 측정 방법,Video Project,47:27-48:29,159,160
+electro,79,전기화학셀의 EIS 측정 방법,Video Project,48:29-49:31,161,162
+electro,80,전기화학셀의 EIS 측정 방법,Video Project,49:31-50:34,163,164
+electro,81,전기화학셀의 EIS 측정 방법,Video Project,50:34-51:36,165,166
+electro,82,EIS 분석 예시 1),Video Project,51:36-52:38,167,168
+electro,83,EIS 분석 예시 2),Video Project,52:38-53:41,169,170
+electro,84,EIS 분석 예시 3),Video Project,53:41-54:43,171,172
+electro,85,EIS 분석 예시 4),Video Project,54:43-55:46,173,174
+pemfc,1,수소에너지실험,260914,00:00-00:47,175,176
+pemfc,2,양성자교환막연료전지(PEMFC),260914,00:47-02:08,177,178
+pemfc,3,양성자교환막연료전지(PEMFC),260914,02:08-03:38,179,180
+pemfc,4,양성자교환막연료전지(PEMFC),260914,03:38-04:37,181,182
+pemfc,5,양성자교환막연료전지(PEMFC),260914,04:37-05:48,183,184
+pemfc,6,양성자교환막연료전지(PEMFC),260914,05:48-06:39,185,186
+pemfc,7,양성자교환막연료전지(PEMFC),260914,06:39-07:28,187,188
+pemfc,8,양성자교환막연료전지(PEMFC),260914,07:28-08:36,189,190
+pemfc,9,양성자교환막연료전지(PEMFC),260914,08:36-09:38,191,192
+pemfc,10,양성자교환막연료전지(PEMFC),260914,09:38-11:09,193,194
+pemfc,11,양성자교환막연료전지(PEMFC),260914,11:09-11:47,195,196
+pemfc,12,양성자교환막연료전지(PEMFC),260914,11:47-12:37,197,198
+pemfc,13,양성자교환막연료전지(PEMFC),260914,12:37-13:27,199,200
+pemfc,14,양성자교환막연료전지(PEMFC),260914,13:27-14:57,201,202
+pemfc,15,양성자교환막연료전지(PEMFC),260914,14:57-17:08,203,204
+pemfc,16,양성자교환막연료전지(PEMFC),260916,01:16-02:16,205,206
+pemfc,17,양성자교환막연료전지(PEMFC),260916,02:16-03:06,207,208
+pemfc,18,양성자교환막연료전지(PEMFC),260916,03:06-04:06,209,210
+pemfc,19,양성자교환막연료전지(PEMFC),260916,04:06-05:20,211,212
+pemfc,20,양성자교환막연료전지(PEMFC),260916,05:20-06:30,213,214
+pemfc,21,양성자교환막연료전지(PEMFC),260916,06:30-07:50,215,216
+pemfc,22,양성자교환막연료전지(PEMFC),260916,07:50-08:32,217,218
+pemfc,23,양성자교환막연료전지(PEMFC),260916,08:32-08:58,219,220
+pemfc,24,양성자교환막연료전지(PEMFC),260916,08:58-09:22,221,222
+pemfc,25,양성자교환막연료전지(PEMFC),260916,09:22-10:04,223,224
+pemfc,26,양성자교환막연료전지(PEMFC),260916,10:04-10:36,225,226
+pemfc,27,양성자교환막연료전지(PEMFC),260916,10:36-11:10,227,228
+pemfc,28,양성자교환막연료전지(PEMFC),260916,11:10-12:16,229,230
+pemfc,29,양성자교환막연료전지(PEMFC),260916,12:16-13:28,231,232
+pemfc,30,양성자교환막연료전지(PEMFC),260916,13:28-15:46,233,234

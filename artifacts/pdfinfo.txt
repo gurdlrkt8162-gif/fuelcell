@@ -1,0 +1,17 @@
+Title:           수소에너지 실험 완전학습서
+Subject:         Electrochemistry, EIS/DRT, PEMFC theory and experiment
+Author:          Integrated study guide
+Custom Metadata: no
+Metadata Stream: no
+Tagged:          no
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           238
+Encrypted:       no
+Page size:       1024 x 576 pts
+Page rot:        0
+File size:       55772194 bytes
+Optimized:       no
+PDF version:     1.7

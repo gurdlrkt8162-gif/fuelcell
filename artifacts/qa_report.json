@@ -1,0 +1,16 @@
+{
+  "pages": 238,
+  "source_slides": 115,
+  "slide_explanation_pages": 230,
+  "video_count": 4,
+  "video_duration_seconds": 7692.565406,
+  "visual_mapping": 115,
+  "transcript_status": "AccurateScribe completed 4/4; connector preview limitation disclosed",
+  "blank_pages": 0,
+  "overflow_pages": 0,
+  "broken_text_markers": 0,
+  "rendered_pages": 238,
+  "render_failures": [],
+  "file_size_bytes": 55772194,
+  "sha256": "cc8702ca8150f7dbc379daea8c1adb6dfbab5a0b3ce43d784ef2e275cb27e2f4"
+}
