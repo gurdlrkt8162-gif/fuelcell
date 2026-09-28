@@ -1,0 +1,2 @@
+https://static.hsappstatic.net/conversations-visitor-ui/static-1.9449/audio/notification.mp3
+https://ca9431584545be66e022f230ed69f051.r2.cloudflarestorage.com/audio/f47bde5b-aada-4551-9036-a17b9ec06f8a/4a2a26e5-5a63-4b8b-9c01-e1bb5385d9e3.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=7f5f2c2c3acbf37247e26dba9346eb1e%2F20260928%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260928T024254Z&X-Amz-Expires=86400&X-Amz-Signature=3cc5d9ddb3f2e43a2901ce5a5a1447250e63a5d4315fb5925772bb85f1dd3e88&X-Amz-SignedHeaders=host&x-id=GetObject

@@ -1,0 +1,21 @@
+{
+  "local": {
+    "hasVisitedBeforeUet2": "true",
+    "experiment_group132_4": "原始不引导ios",
+    "audio-cache-storage": "{\"state\":{\"audioCache\":{\"4a2a26e5-5a63-4b8b-9c01-e1bb5385d9e3\":{\"url\":\"https://ca9431584545be66e022f230ed69f051.r2.cloudflarestorage.com/audio/f47bde5b-aada-4551-9036-a17b9ec06f8a/4a2a26e5-5a63-4b8b-9c01-e1bb5385d9e3.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=7f5f2c2c3acbf37247e26dba9346eb1e%2F20260928%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260928T024254Z&X-Amz-Expires=86400&X-Amz-Signature=3cc5d9ddb3f2e43a2901ce5a5a1447250e63a5d4315fb5925772bb85f1dd3e88&X-Amz-SignedHeaders=host&x-id=GetObject\",\"filename\":\"260907 1.기초 전기화학 분석.mp4\",\"videoUrl\":null,\"timestamp\":1790563375258}}},\"version\":0}",
+    "mp_c3ea344ed9c4f5b32b6a922f09ccc557_mixpanel": "{\"distinct_id\": \"$device:1a0e5e4cd7254b-0ec265a585b7eb8-14543b4c-278d00-1a0e5e4cd7254b\",\"$device_id\": \"1a0e5e4cd7254b-0ec265a585b7eb8-14543b4c-278d00-1a0e5e4cd7254b\",\"$initial_referrer\": \"$direct\",\"$initial_referring_domain\": \"$direct\",\"__mps\": {\"$os\": \"Linux\",\"$browser\": \"Chrome\",\"$browser_version\": 153,\"guideios_abtest\": \"原始不引导ios\"},\"__mpso\": {\"$initial_referrer\": \"$direct\",\"$initial_referring_domain\": \"$direct\"},\"__mpus\": {},\"__mpa\": {},\"__mpu\": {},\"__mpr\": [],\"__mpap\": []}",
+    "_uetvid_exp": "Sat, 23 Oct 2027 02:42:53 GMT",
+    "_gcl_ls": "{\"schema\":\"gcl\",\"version\":1,\"gcl_ctr\":{\"value\":{\"value\":3,\"timeouts\":0,\"errors\":0,\"eopCount\":0,\"creationTimeMs\":1790563372899},\"expires\":1798339372899},\"gsid_dc\":{\"value\":{\"joinId\":\"-L3YPjQAHUeVgexyEcuo2bUcBmH9ItXaIw\",\"lastJoinedTimeMs\":1790563372845},\"expires\":1790563672845}}",
+    "_uetsid": "4dab02a0bae611f1b182758ba64b1a8b|17b516v|2|g9u|0|2462",
+    "auth-storage": "{\"state\":{\"userId\":null,\"userEmail\":null,\"displayName\":null,\"avatarUrl\":null},\"version\":0}",
+    "_uetsid_exp": "Tue, 29 Sep 2026 02:42:53 GMT",
+    "hasVisitedBefore": "true",
+    "_uetvid": "4dab3720bae611f1a9293bfa92a48024|44azy8|1790563373697|1|1|bat.bing.com/p/conversions/c/y",
+    "__mpq_c3ea344ed9c4f5b32b6a922f09ccc557_ev": "[]"
+  },
+  "session": {
+    "oaiq_cs:TpNumUUddYbfmBJKppVnGZ": "g",
+    "sentryReplaySession": "{\"id\":\"f4e2e44e36aa41b6847614c5c4cb3fcb\",\"started\":1790563372228,\"lastActivity\":1790563372683,\"segmentId\":0,\"sampled\":\"buffer\",\"dirty\":false}",
+    "_cltk": "1dvedt"
+  }
+}
