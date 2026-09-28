@@ -1,0 +1,29 @@
+name: Probe AccurateScribe exports
+on:
+  push:
+    branches: [hydrogen-guide-full-20260928]
+    paths: [export_probe_nonce.txt]
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: hydrogen-guide-full-20260928
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: |
+          pip install playwright
+          python -m playwright install chromium
+          python scripts/probe_accuratescribe_export.py
+      - name: Commit probe results
+        run: |
+          find export_probe -type f -maxdepth 2 -printf '%p\t%s\n' > export_probe_files.txt
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f export_probe export_probe_files.txt
+          git commit -m 'Probe AccurateScribe transcript exports' || true
+          git push origin HEAD:hydrogen-guide-full-20260928
