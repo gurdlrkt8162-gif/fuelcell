@@ -1,0 +1,33 @@
+name: Inspect hydrogen guide debug artifact
+on:
+  push:
+    branches: [hydrogen-guide-full-20260928]
+    paths: [inspect_nonce.txt]
+permissions:
+  actions: read
+  contents: write
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: hydrogen-guide-full-20260928
+      - uses: actions/download-artifact@v4
+        with:
+          name: hydrogen-energy-complete-guide
+          path: debug_artifact
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: gurdlrkt8162-gif/fuelcell
+          run-id: 36370803839
+      - name: Extract media candidates
+        run: |
+          find debug_artifact -maxdepth 6 -type f -printf '%p\t%s\n' | sort > debug_files.txt
+          grep -RhoE 'https?[^"<>[:space:]]+' debug_artifact | sed 's/\\u0026/\&/g;s#\\/#/#g' | sort -u > debug_urls_all.txt || true
+          grep -Ei 'cloudflare|r2|storage|audio|video|mp4|m3u8|download|original|upload|media' debug_urls_all.txt > debug_media_candidates.txt || true
+          grep -RniE 'original(File)?Url|fileUrl|mediaUrl|audioUrl|videoUrl|downloadUrl|storageUrl|objectKey|transcript|subtitle' debug_artifact > debug_keys.txt || true
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f debug_files.txt debug_urls_all.txt debug_media_candidates.txt debug_keys.txt
+          git commit -m 'Inspect AccurateScribe debug artifact' || true
+          git push origin HEAD:hydrogen-guide-full-20260928
