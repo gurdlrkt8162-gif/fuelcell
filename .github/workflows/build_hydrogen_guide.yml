@@ -21,6 +21,11 @@ jobs:
         with:
           ref: hydrogen-guide-full-20260928
           fetch-depth: 0
+      - name: Cache signed base PDF immediately
+        run: |
+          BASE_URL=$(python3 -c "import json; print(json.load(open('input_urls.json'))['base_pdf_url'])")
+          curl -L --fail --retry 3 --retry-delay 2 "$BASE_URL" -o cached_base.pdf
+          test -s cached_base.pdf
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
@@ -35,7 +40,16 @@ jobs:
       - name: Compile builder
         run: python -m py_compile scripts/build_hydrogen_guide.py
       - name: Build final PDF
-        run: python scripts/build_hydrogen_guide.py --config input_urls.json --output output/final.pdf
+        run: |
+          python -m http.server 8765 >/tmp/base-http.log 2>&1 &
+          python - <<'PY'
+          import json
+          p='input_urls.json'
+          d=json.load(open(p,encoding='utf-8'))
+          d['base_pdf_url']='http://127.0.0.1:8765/cached_base.pdf'
+          json.dump(d,open(p,'w',encoding='utf-8'),ensure_ascii=False,indent=2)
+          PY
+          python scripts/build_hydrogen_guide.py --config input_urls.json --output output/final.pdf
       - name: Inspect final PDF
         run: |
           pdfinfo output/final.pdf
