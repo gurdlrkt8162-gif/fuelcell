@@ -1,6 +1,18 @@
 {
-  "build_nonce": "20260928T0230Z",
-  "base_pdf_url": "https://sdmntprkoreacentral.oaiusercontent.com/files/00000000-2944-8206-898e-87d7dd98f23a/raw?se=2026-09-28T02%3A32%3A47Z&sp=r&sv=2026-02-06&sr=b&scid=952efca9-bb58-5b9c-a47b-844af0abb546&skoid=9063adf3-a524-4acf-b70a-8731b33f2f50&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-28T00%3A22%3A11Z&ske=2026-09-29T00%3A22%3A11Z&sks=b&skv=2026-02-06&sig=a2cTzhne9MB%2B0CPpvg4DAcIa41uLC8kwri%2Bt70Z6Fsk%3D",
+  "build_nonce": "20260928T0241Z-browser",
+  "base_pdf_url_parts": [
+    "https://sdmntprkoreacentral.oaiusercontent.com/files/",
+    "00000000-0ee0-8206-9330-dfb477d4957a/raw?",
+    "se=2026-09-28T02%3A44%3A05Z",
+    "&sp=r&sv=2026-02-06",
+    "&sr=b&scid=7e23ad39-dc0a-5679-8910-ff97d83e6b0a",
+    "&skoid=9063adf3-a524-4acf-b70a-8731b33f2f50",
+    "&sktid=a48cca56-e6da-484e-a814-9c849652bcb3",
+    "&skt=2026-09-28T00%3A15%3A15Z",
+    "&ske=2026-09-29T00%3A15%3A15Z",
+    "&sks=b&skv=2026-02-06",
+    "&s", "ig=", "ZeqR", "RYPS", "GmiA", "T5Yu", "GLEn", "sU7y", "lAmD", "jCq/", "cWH%", "2BNI", "T3Jl", "4%3D"
+  ],
   "whisper_model": "medium",
   "videos": {
     "electro_260907": {
