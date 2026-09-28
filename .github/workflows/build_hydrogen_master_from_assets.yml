@@ -1,0 +1,69 @@
+name: Build hydrogen master guide from committed assets
+on:
+  push:
+    paths:
+      - 'tools/build_hydrogen_master_from_assets.py'
+      - '.github/workflows/build_hydrogen_master_from_assets.yml'
+      - 'scripts/build_study_guide_pages.py'
+      - 'study_guide_assets/**'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install renderer and fonts
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-nanum poppler-utils
+          python -m pip install --upgrade pillow pymupdf
+      - name: Build complete guide
+        run: python tools/build_hydrogen_master_from_assets.py
+      - name: Technical preflight
+        run: |
+          pdfinfo artifacts/hydrogen_energy_complete_final.pdf | tee artifacts/pdfinfo.txt
+          pdftotext artifacts/hydrogen_energy_complete_final.pdf artifacts/extracted_text.txt
+          test "$(pdfinfo artifacts/hydrogen_energy_complete_final.pdf | awk '/^Pages:/ {print $2}')" -ge 238
+          test "$(stat -c%s artifacts/hydrogen_energy_complete_final.pdf)" -gt 10000000
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          q=json.loads(Path('artifacts/qa_report.json').read_text(encoding='utf-8'))
+          assert q['source_slides']==115
+          assert q['slide_explanation_pages']==230
+          assert q['blank_pages']==0
+          assert q['overflow_pages']==0
+          assert q['broken_text_markers']==0
+          assert q['render_failures']==[]
+          assert q['rendered_pages']==q['pages']
+          print(json.dumps(q,ensure_ascii=False,indent=2))
+          PY
+      - name: Publish generated branch
+        run: |
+          mkdir -p /tmp/hydrogen_publish
+          cp artifacts/hydrogen_energy_complete_final.pdf /tmp/hydrogen_publish/
+          cp artifacts/qa_report.json /tmp/hydrogen_publish/
+          cp artifacts/slide_video_mapping.csv /tmp/hydrogen_publish/
+          cp artifacts/pdfinfo.txt /tmp/hydrogen_publish/
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git checkout --orphan generated-hydrogen-final
+          git rm -rf .
+          mkdir -p artifacts
+          cp /tmp/hydrogen_publish/* artifacts/
+          git add artifacts
+          git commit -m 'Publish complete hydrogen energy master guide'
+          git push --force origin HEAD:generated-hydrogen-final
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hydrogen-energy-complete-final
+          path: |
+            artifacts/hydrogen_energy_complete_final.pdf
+            artifacts/qa_report.json
+            artifacts/slide_video_mapping.csv
+            artifacts/pdfinfo.txt
+          retention-days: 7
+          compression-level: 0
