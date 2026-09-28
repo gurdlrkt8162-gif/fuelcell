@@ -1,0 +1,95 @@
+name: MLDL Lecture 4-6 Capture
+on:
+  push:
+    branches: [mldl46-captions]
+  workflow_dispatch:
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install tools
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install yt-dlp youtube-transcript-api pillow
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+      - name: Capture evidence
+        shell: bash
+        run: |
+          set -uo pipefail
+          mkdir -p out/meta out/subs out/videos out/frames out/logs out/contact
+          cat > /tmp/fetch_transcript.py <<'PY'
+          import json, sys, traceback
+          from pathlib import Path
+          vid, lec, outdir = sys.argv[1], sys.argv[2], Path(sys.argv[3])
+          outdir.mkdir(parents=True, exist_ok=True)
+          result={"video_id":vid,"lecture":lec,"tracks":[]}
+          try:
+              from youtube_transcript_api import YouTubeTranscriptApi
+              api=YouTubeTranscriptApi()
+              try: tl=api.list(vid)
+              except Exception: tl=YouTubeTranscriptApi.list_transcripts(vid)
+              for idx,tr in enumerate(list(tl)):
+                  info={"language":getattr(tr,"language",None),"language_code":getattr(tr,"language_code",None),"is_generated":getattr(tr,"is_generated",None),"is_translatable":getattr(tr,"is_translatable",None)}
+                  try:
+                      fetched=tr.fetch()
+                      try: rows=fetched.to_raw_data()
+                      except Exception: rows=[dict(text=x.text,start=x.start,duration=x.duration) for x in fetched]
+                      code=info["language_code"] or f"track{idx}"; kind="auto" if info["is_generated"] else "manual"; stem=f"lecture{lec}_{vid}_{code}_{kind}"
+                      (outdir/f"{stem}.json").write_text(json.dumps(rows,ensure_ascii=False,indent=2),encoding="utf-8")
+                      lines=[]
+                      for row in rows:
+                          sec=float(row.get("start",0)); h=int(sec//3600); m=int((sec%3600)//60); s=int(sec%60); ts=f"{h}:{m:02d}:{s:02d}" if h else f"{m}:{s:02d}"; lines.append(f"[{ts}] {row.get('text','')}")
+                      (outdir/f"{stem}.md").write_text("\n\n".join(lines),encoding="utf-8")
+                      info["rows"]=len(rows); info["stem"]=stem
+                  except Exception as e: info["fetch_error"]=repr(e)
+                  result["tracks"].append(info)
+          except Exception as e:
+              result["error"]=repr(e); result["traceback"]=traceback.format_exc()
+          (outdir/f"lecture{lec}_{vid}_transcript_manifest.json").write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding="utf-8")
+          print(json.dumps(result,ensure_ascii=False))
+          PY
+          cat > /tmp/contact.py <<'PY'
+          from pathlib import Path
+          from PIL import Image,ImageDraw
+          import sys,math,json
+          root=Path(sys.argv[1]); out=Path(sys.argv[2]); out.mkdir(parents=True,exist_ok=True); files=sorted(root.glob('*.jpg')); manifest=[]
+          for f in files:
+              try: manifest.append({"file":f.name,"size":Image.open(f).size})
+              except Exception: pass
+          (out/'manifest.json').write_text(json.dumps(manifest,indent=2),encoding='utf-8')
+          cols=4; rows=4; tw=320; th=180; per=16
+          for si in range(math.ceil(len(files)/per)):
+              sheet=Image.new('RGB',(cols*tw,rows*(th+20)),'white'); draw=ImageDraw.Draw(sheet)
+              for i,f in enumerate(files[si*per:(si+1)*per]):
+                  try:
+                      im=Image.open(f).convert('RGB'); im.thumbnail((tw,th)); x=(i%cols)*tw+(tw-im.width)//2; y=(i//cols)*(th+20); sheet.paste(im,(x,y)); draw.text(((i%cols)*tw+3,y+th+2),f.name,fill='black')
+                  except Exception: pass
+              sheet.save(out/f'sheet_{si+1:03d}.jpg',quality=88)
+          PY
+          videos=("4|AyWYU2mmhKs" "5|qArmG1FPQII" "6|4SDi3kO0748")
+          for entry in "${videos[@]}"; do
+            IFS='|' read -r lec vid <<< "$entry"; url="https://www.youtube.com/watch?v=$vid"; echo "===== Lecture $lec / $vid =====" | tee "out/logs/lecture${lec}.log"
+            python /tmp/fetch_transcript.py "$vid" "$lec" out/subs 2>&1 | tee -a "out/logs/lecture${lec}.log" || true
+            yt-dlp --dump-single-json --skip-download --no-warnings "$url" > "out/meta/lecture${lec}_${vid}.info.json" 2>>"out/logs/lecture${lec}.log" || true
+            yt-dlp --skip-download --write-subs --write-auto-subs --sub-langs "ko.*,en.*" --sub-format vtt --convert-subs vtt --retries 3 -o "out/subs/lecture${lec}_${vid}.%(ext)s" "$url" >>"out/logs/lecture${lec}.log" 2>&1 || true
+            video="out/videos/lecture${lec}_${vid}.mp4"
+            yt-dlp -f "worst[height<=360]/worst" --merge-output-format mp4 --retries 3 -o "$video" "$url" >>"out/logs/lecture${lec}.log" 2>&1 || true
+            mkdir -p "out/frames/lecture${lec}_scene" "out/frames/lecture${lec}_sample"
+            if [ -s "$video" ]; then
+              ffprobe -v error -show_entries format=duration -of default=nw=1:nk=1 "$video" > "out/meta/lecture${lec}_${vid}.duration.txt" || true
+              ffmpeg -hide_banner -loglevel error -i "$video" -vf "select='gt(scene,0.10)',scale=640:-1" -vsync vfr -q:v 3 "out/frames/lecture${lec}_scene/scene_%05d.jpg" || true
+              ffmpeg -hide_banner -loglevel error -i "$video" -vf "fps=1/20,scale=640:-1" -q:v 4 "out/frames/lecture${lec}_sample/sample_%05d.jpg" || true
+            fi
+            python /tmp/contact.py "out/frames/lecture${lec}_scene" "out/contact/lecture${lec}_scene" || true
+            python /tmp/contact.py "out/frames/lecture${lec}_sample" "out/contact/lecture${lec}_sample" || true
+          done
+          find out -maxdepth 4 -type f -printf '%p %s bytes\n' | sort > out/manifest.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mldl-lecture4-6-evidence
+          path: out
+          if-no-files-found: error
+          retention-days: 7
