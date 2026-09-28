@@ -1,0 +1,60 @@
+name: MLDL Lecture 4-6 Third Party Transcripts
+on:
+  push:
+    branches: [mldl46-captions]
+  workflow_dispatch:
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch transcript fallbacks
+        shell: bash
+        run: |
+          set -u
+          mkdir -p out/logs out/responses
+          videos=("4|AyWYU2mmhKs" "5|qArmG1FPQII" "6|4SDi3kO0748")
+          demo=$(curl -LsS --max-time 30 https://youtube2text.org/api/demo-key || true)
+          echo "$demo" > out/responses/youtube2text_demo_key.json
+          key=$(python - <<'PY'
+          import json
+          try:
+              d=json.load(open('out/responses/youtube2text_demo_key.json')); print(d.get('apiKey',''))
+          except Exception: print('')
+          PY
+          )
+          for entry in "${videos[@]}"; do
+            IFS='|' read -r lec vid <<< "$entry"
+            url="https://www.youtube.com/watch?v=$vid"
+            log="out/logs/lecture${lec}.log"
+            echo "Lecture $lec $vid" > "$log"
+            endpoints=(
+              "ytaiko|https://youtube-transcript.ai/transcript/${vid}.txt?lang=ko"
+              "ytaino|https://youtube-transcript.ai/transcript/${vid}.txt"
+              "tubetext_ts|https://tubetext.vercel.app/youtube/transcript-with-timestamps?video_id=${vid}"
+              "tubetext|https://tubetext.vercel.app/youtube/transcript?video_id=${vid}"
+              "freeapi_ko|https://api.freetranscriptapi.com/v1/transcript?video_url=${vid}&lang=ko"
+              "freeapi|https://api.freetranscriptapi.com/v1/transcript?video_url=${vid}"
+              "crawlora1|https://crawlora.net/youtube/transcript/${vid}"
+              "crawlora2|https://api.crawlora.com/youtube/transcript/${vid}"
+            )
+            for item in "${endpoints[@]}"; do
+              IFS='|' read -r name ep <<< "$item"
+              echo "--- $name $ep" >> "$log"
+              curl -L -sS --compressed --max-time 120 -A 'Mozilla/5.0' -D "out/responses/lecture${lec}_${name}.headers" "$ep" -o "out/responses/lecture${lec}_${name}.body" 2>>"$log" || true
+              wc -c "out/responses/lecture${lec}_${name}.body" >> "$log" || true
+              head -c 300 "out/responses/lecture${lec}_${name}.body" >> "$log" || true
+              echo >> "$log"
+            done
+            if [ -n "$key" ]; then
+              curl -L -sS --compressed --max-time 180 -H "x-api-key: $key" --get 'https://youtube2text.org/api/transcribe' --data-urlencode "url=$url" --data-urlencode 'maxChars=200000' -D "out/responses/lecture${lec}_youtube2text.headers" -o "out/responses/lecture${lec}_youtube2text.body" 2>>"$log" || true
+            fi
+          done
+          find out -type f -printf '%p %s bytes\n' | sort > out/manifest.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mldl-lecture4-6-thirdparty
+          path: out
+          if-no-files-found: error
+          retention-days: 7
