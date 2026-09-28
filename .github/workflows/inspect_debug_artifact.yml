@@ -32,8 +32,9 @@ jobs:
           grep -RhoE 'https://[^"<>[:space:]]*(cloudflarestorage|r2)[^"<>[:space:]]*' "$ROOT" | sed 's/\\u0026/\&/g;s#\\/#/#g' | sort -u > debug_r2_urls.txt || true
           grep -RniE 'original(File)?Url|fileUrl|mediaUrl|audioUrl|videoUrl|downloadUrl|storageUrl|objectKey|signedUrl|fileKey|transcript|subtitle' "$ROOT" > debug_keys.txt || true
           grep -Rni -C 2 -E 'cloudflarestorage|r2\.cloud|audio/f47bde5b|4a2a26e5-5a63' "$ROOT" > debug_r2_context.txt || true
+          python scripts/analyze_debug_artifact.py
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -f debug_files.txt debug_urls_all.txt debug_media_candidates.txt debug_keys.txt debug_exact_media_urls.txt debug_storage.json debug_body.txt debug_r2_urls.txt debug_r2_context.txt
-          git commit -m 'Inspect exact AccurateScribe media responses' || true
+          git add -f debug_files.txt debug_urls_all.txt debug_media_candidates.txt debug_keys.txt debug_exact_media_urls.txt debug_storage.json debug_body.txt debug_r2_urls.txt debug_r2_context.txt debug_api_paths.txt debug_api_keys.txt debug_id_context.json
+          git commit -m 'Analyze AccurateScribe API response metadata' || true
           git push origin HEAD:hydrogen-guide-full-20260928
