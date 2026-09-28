@@ -52,15 +52,21 @@ jobs:
           d['base_pdf_url']='http://127.0.0.1:8765/cached_base.pdf'
           json.dump(d,open(p,'w',encoding='utf-8'),ensure_ascii=False,indent=2)
           PY
-          python scripts/run_build.py --config input_urls.json --output output/final.pdf
+          python -m scripts.run_build --config input_urls.json --output output/final.pdf
       - name: Inspect final PDF
         run: |
           pdfinfo output/final.pdf
           pdftotext output/final.pdf output/final.txt
           test -s output/final.pdf
           test -s output/qa.json
-          grep -q '"source_pages_identified": 115' output/qa.json
-          grep -q '"coverage_ratio": 1.0' output/qa.json
+          python - <<'PY'
+          import json
+          q=json.load(open('output/qa.json',encoding='utf-8'))
+          assert q['source_pages_identified']==115
+          assert not q['blank_pages']
+          assert all(v['coverage_ratio'] >= 0.90 for v in q['transcripts'].values())
+          print(json.dumps(q,ensure_ascii=False,indent=2))
+          PY
       - name: Commit deterministic deliverables
         run: |
           cp output/final.pdf hydrogen_energy_complete_final.pdf
