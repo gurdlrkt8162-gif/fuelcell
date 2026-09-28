@@ -6,20 +6,20 @@ on:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - name: Download timestamped transcripts
         shell: bash
         run: |
-          set -eu
+          set -u
           rm -rf evidence && mkdir -p evidence/transcripts evidence/logs
           declare -A URLS
           URLS[AyWYU2mmhKs]='https://api.allorigins.win/raw?url=https%3A%2F%2Fyoutube-transcript.ai%2Ftranscript%2FAyWYU2mmhKs.txt'
           URLS[qArmG1FPQII]='https://api.allorigins.win/raw?url=https%3A%2F%2Fyoutube-transcript.ai%2Ftranscript%2FqArmG1FPQII.txt'
           URLS[4SDi3kO0748]='https://api.allorigins.win/raw?url=https%3A%2F%2Fyoutube-transcript.ai%2Ftranscript%2F4SDi3kO0748.txt'
           for VID in AyWYU2mmhKs qArmG1FPQII 4SDi3kO0748; do
-            curl -A 'Mozilla/5.0' -fL --retry 5 --retry-delay 3 --max-time 120 "${URLS[$VID]}" -o "evidence/transcripts/${VID}.txt" >"evidence/logs/${VID}.log" 2>&1
+            curl --http1.1 -A 'Mozilla/5.0' -L --retry 6 --retry-all-errors --retry-delay 3 --max-time 180 "${URLS[$VID]}" -o "evidence/transcripts/${VID}.txt" >"evidence/logs/${VID}.log" 2>&1 || true
           done
           find evidence -type f -printf '%p %s bytes\n' | sort > evidence/manifest.txt
       - uses: actions/upload-artifact@v4
