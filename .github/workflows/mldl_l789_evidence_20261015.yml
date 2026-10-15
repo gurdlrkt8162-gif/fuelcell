@@ -8,70 +8,58 @@ permissions:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 10
     steps:
-      - name: Install public-media readers
-        run: python -m pip install --disable-pip-version-check requests yt-dlp
-      - name: Fetch only the three public lecture URLs
+      - name: Install browser
+        run: |
+          python -m pip install --disable-pip-version-check playwright
+          python -m playwright install --with-deps chromium
+      - name: Read public interactive transcripts
         shell: bash
         run: |
           mkdir -p artifact
-          cat > /tmp/collect_mldl789.py <<'PY'
-          import concurrent.futures, hashlib, json, pathlib, re, subprocess, time
-          import requests
+          cat > /tmp/browse_mldl789.py <<'PY'
+          import asyncio,json,pathlib,re
+          from playwright.async_api import async_playwright
           ROOT=pathlib.Path('artifact')
-          VIDEOS=[(7,'cvZxA04cj8w'),(8,'yDiAJ6FbhMM'),(9,'A0aJg5LpToo')]
-          def collect(pair):
-              lec,vid=pair
-              out=ROOT/f'L{lec}'; out.mkdir(parents=True,exist_ok=True)
-              meta={'lecture':lec,'video_id':vid,'video_url':f'https://www.youtube.com/watch?v={vid}','caption_complete':False,'video_downloaded':False,'frames_sample_seconds':30}
-              url=f'https://youtube-transcript.ai/transcript/{vid}.txt'
-              try:
-                  r=requests.get(url,timeout=75)
-                  meta['caption_http_status']=r.status_code
-                  meta['caption_source']=url
-                  if r.status_code==200 and f'Source video: https://www.youtube.com/watch?v={vid}' in r.text:
-                      raw=r.content; (out/'captions_raw.md').write_bytes(raw)
-                      cues=re.findall(r'^\[(\d+:\d+(?::\d+)?)\]',r.text,re.M)
-                      meta.update(caption_complete=bool(cues),caption_cues=len(cues),caption_first=cues[0] if cues else None,caption_last=cues[-1] if cues else None,caption_sha256=hashlib.sha256(raw).hexdigest(),caption_bytes=len(raw))
-                  else:
-                      (out/'caption_error.txt').write_text(r.text[:1500])
-              except Exception as e:
-                  meta['caption_error']=str(e)
-              try:
-                  r=requests.get(f'https://i.ytimg.com/vi/{vid}/hqdefault.jpg',timeout=25)
-                  if r.status_code==200: (out/'thumbnail.jpg').write_bytes(r.content)
-              except Exception as e: meta['thumbnail_error']=str(e)
-              media=pathlib.Path('/tmp')/f'mldl_{lec}.mp4'
-              cmd=['yt-dlp','--no-playlist','--no-progress','--retries','1','--fragment-retries','1','--socket-timeout','15','--js-runtimes','node','--remote-components','ejs:github','--max-filesize','350M','-f','best[height<=480][ext=mp4]/best[height<=480]/best','--write-info-json','-o',str(media),meta['video_url']]
-              try:
-                  run=subprocess.run(cmd,capture_output=True,text=True,timeout=240)
-                  (out/'video_fetch.log').write_text(run.stdout+'\n'+run.stderr)
-                  meta['video_exit_code']=run.returncode
-                  if run.returncode==0 and media.exists() and media.stat().st_size>100000:
-                      meta['video_downloaded']=True; meta['video_bytes']=media.stat().st_size
-                      probe=subprocess.run(['ffprobe','-v','quiet','-print_format','json','-show_format','-show_streams',str(media)],capture_output=True,text=True,timeout=30)
-                      (out/'media_probe.json').write_text(probe.stdout)
-                      frames=out/'frames'; frames.mkdir(exist_ok=True)
-                      ff=subprocess.run(['ffmpeg','-hide_banner','-loglevel','error','-i',str(media),'-vf','fps=1/30,scale=960:-2','-q:v','5',str(frames/'frame_%04d.jpg')],capture_output=True,text=True,timeout=180)
-                      meta['frame_exit_code']=ff.returncode; meta['frame_count']=len(list(frames.glob('*.jpg')))
-                      (out/'frame_extract.log').write_text(ff.stderr)
-                  info=media.with_suffix('.info.json')
-                  if info.exists(): (out/'video_info.json').write_bytes(info.read_bytes())
-              except Exception as e: meta['video_error']=str(e)
-              (out/'evidence.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2))
-              print(json.dumps({k:v for k,v in meta.items() if k not in ['video_error','caption_error']},ensure_ascii=False))
-              return meta
-          with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
-              metas=list(pool.map(collect,VIDEOS))
-          (ROOT/'manifest.json').write_text(json.dumps(metas,ensure_ascii=False,indent=2))
+          async def main():
+            async with async_playwright() as p:
+              browser=await p.chromium.launch(headless=True)
+              ctx=await browser.new_context(viewport={'width':1440,'height':1000})
+              for lec,vid in [(7,'cvZxA04cj8w'),(8,'yDiAJ6FbhMM'),(9,'A0aJg5LpToo')]:
+                out=ROOT/f'L{lec}';out.mkdir(exist_ok=True)
+                page=await ctx.new_page();responses=[];tasks=[]
+                async def capture(resp):
+                  if 'youtube-transcript.ai' not in resp.url:return
+                  try:
+                    ct=resp.headers.get('content-type','')
+                    if 'json' in ct:
+                      text=await resp.text()
+                      if len(text)>300 and len(text)<2500000:
+                        responses.append({'url':resp.url.split('?')[0],'status':resp.status,'body':text})
+                  except Exception:pass
+                page.on('response',lambda r:tasks.append(asyncio.create_task(capture(r))))
+                try:
+                  await page.goto(f'https://youtube-transcript.ai/transcript?v={vid}',wait_until='domcontentloaded',timeout=60000)
+                  await page.wait_for_timeout(35000)
+                  text=await page.locator('body').inner_text()
+                  (out/'workspace.txt').write_text(text)
+                  await page.screenshot(path=str(out/'workspace.png'),full_page=False)
+                  html=await page.content();(out/'workspace.html').write_text(html)
+                  if tasks:await asyncio.gather(*tasks,return_exceptions=True)
+                  (out/'public_caption_responses.json').write_text(json.dumps(responses,ensure_ascii=False,indent=2))
+                  print(lec,len(text),len(responses),text[-600:])
+                except Exception as e:(out/'error.txt').write_text(str(e))
+                await page.close()
+              await browser.close()
+          asyncio.run(main())
           PY
-          python /tmp/collect_mldl789.py
+          python /tmp/browse_mldl789.py
       - name: Retain evidence for this PDF task
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: mldl-l789-public-evidence-20261015
+          name: mldl-l789-browser-evidence-20261015
           path: artifact/
           retention-days: 1
           compression-level: 6
